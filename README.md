@@ -32,3 +32,7 @@ Lux proposes the usage of Linguistic Aspects as Features.
 # Install requirements
 
     --pip install -r requirements.txt
+
+# Download GoogleNews-vectors-negative300.bin
+
+    -- Download file and 'gunzip GoogleNews-vectors-negative300.bin.gz' inside data/
