@@ -29,6 +29,12 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
    in our case: export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
+# Create an virtual environment with python3 and activate it
+
+    --virtualenv envLux -p python3
+
+    --source envLux/bin/activate
+
 # Install requirements
 
     --pip install -r requirements.txt
