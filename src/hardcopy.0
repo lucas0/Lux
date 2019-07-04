@@ -1,0 +1,46 @@
+al gore's residence uses considerably more energy than the average american home.       91     |
+al gore's residence uses considerably more energy than the average american home.       92     |stances_header = ["Headline","Body ID"]
+al gore's residence uses considerably more energy than the average american home.       93     |body_header = ["Body ID","articleBody","bodyURL","BodyDate","dataset"]
+al gore's residence uses considerably more energy than the average american home.       94     |
+al gore's residence uses considerably more energy than the average american home.       95     |cwd = os.path.abspath(os.path.dirname(sys.argv[0]))
+al gore's residence uses considerably more energy than the average american home.       96     |parent_dir = '/'.join(cwd.split("/")[:-1])
+al gore's residence uses considerably more energy than the average american home.       97     |stance_dir = parent_dir+"/eatiht/stance_class/"
+mister ed, the talking equine of television fame, was a horse.  98                             |tree_dir = cwd+"/fnc-1/tree_model"
+the son of child care expert dr. benjamin spock killed himself. 99                             |dl_dir = cwd+"/fnc-1/deep_learning_model"
+a photograph shows a holiday display depicting a homeowner trapped by a fallen ladder while ins|
+talling christmas decorations. see example( s )  100                                           |stance = pd.read_csv(stance_dir+"pred_stances.csv", sep='\t')
+in canada, santa's postal code is h0h 0h0.      101                                            |body = pd.read_csv(stance_dir+"pred_bodies.csv", sep='\t')
+restroom hand dryers spread disease by blowing germs and bacteria around.       102            |
+restroom hand dryers spread disease by blowing germs and bacteria around.       103            |total = pd.concat([stance,body], axis=1, ignore_index=True)
+"an american airlines pilot penned an essay about muslims entitled ""you worry me."" see exampl|total = total.drop_duplicates()
+e( s )"  104                                                                                   |
+"dragnet's sgt. joe friday character frequently implored female informants to provide ""just th|print(len(stance))
+e facts, ma'am."""       105                                                                   |print(len(body))
+"dragnet's sgt. joe friday character frequently implored female informants to provide ""just th|print(len(total))
+e facts, ma'am."""       106                                                                   |stance = []
+photograph shows hercules, the world's biggest dog. see example( s )    107                    |body = []
+photograph shows hercules, the world's biggest dog. see example( s )    108                    |
+photograph shows hercules, the world's biggest dog. see example( s )    109                    |for idx,elem in total.iterrows():
+photograph shows hercules, the world's biggest dog. see example( s )    110                    |        stance.append([elem[0],idx])
+a chart shows the relationship of voting patterns and intelligence quotients by state.  111    |        body.append([idx,elem[3]])
+a chart shows the relationship of voting patterns and intelligence quotients by state.  112    |
+a viral photograph shows president george w. bush hugging the daughter of a 9/11 victim.       |print(len(stance))
+ 113                                                                                           |print(len(body))
+the personalities of the dwarf characters in disney's animated film version of snow white and t|stance = pd.DataFrame(stance, columns=stances_header)
+he seven dwarfs represent the seven stages of cocaine addiction. see example( s )        114   |body = pd.DataFrame(body, columns=['Body ID','articleBody'])
+newspaper reporters fall for old funny name gags.       115                                    |
+newspaper reporters fall for old funny name gags.       116                                    |#print(stance.head(2))
+a photograph shows an overhead view of shadows cast by camels in the desert.    117            |#print(body.head(2))
+a photograph shows an overhead view of shadows cast by camels in the desert.    118            |
+a viral photograph shows president george w. bush hugging the daughter of a 9/11 victim.       |split = int(sys.argv[1])
+ 119                                                                                           |n_splits = int(sys.argv[2])
+text transcribes a press conference given by actor and former marine r. lee ermey.      120    |bucket_sz = math.floor(len(stance)/n_splits)
+at the moment the titanic hit an iceberg in the north atlantic, the silent version of the film |print("stance splitting",split,n_splits,len(stance),bucket_sz)
+the poseidon adventure was being screened aboard ship.   121                                   |end = (split+1)*bucket_sz if n_splits - split > 1 else len(stance)
+the swiffer wetjet poses a general danger to dogs and other household pets.     122            |stance = stance.iloc[split*bucket_sz:end]
+the personalities of the dwarf characters in disney's animated film version of snow white and t|body = body.iloc[split*bucket_sz:end]
+he seven dwarfs represent the seven stages of cocaine addiction. see example( s )        123   |
+the personalities of the dwarf characters in disney's animated film version of snow white and t|body.to_csv(tree_dir+"/test_bodies.csv", sep=',', header=body_header, index=False, encoding="ut
+he seven dwarfs represent the seven stages of cocaine addiction. see example( s )        124   |f-8")
+eatiht/stance_class/pred_stances.csv                                         116,1          Bot src/stance_structure.py [+][python]                                          26,0-1         30%
+"eatiht/stance_class/pred_stances.csv" 126L, 13828C
