@@ -1,0 +1,6 @@
+[submodule "res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction"]
+	path = res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction
+	url = https://github.com/wjko2/Domain-Agnostic-Sentence-Specificity-Prediction.git
+[submodule "res/bert"]
+	path = res/bert
+	url = https://github.com/google-research/bert
