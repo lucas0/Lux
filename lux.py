@@ -45,7 +45,7 @@ def linear_model(data_shape, target_len, learning_rate, DENSE_DIM):
     model.summary()
 
     adam = Adam(lr=learning_rate)
-    model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['categorical_accuracy'])
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
 
     return model
 
@@ -57,7 +57,7 @@ def LSTM_model(data_shape, target_len, learning_rate, LSTM_DIM):
     model.summary()
 
     adam = Adam(lr=learning_rate)
-    model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['categorical_accuracy'])
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
 
     return model
 
@@ -70,7 +70,7 @@ def BILSTM_model(data_shape, target_len, learning_rate, LSTM_DIM):
     model.summary()
 
     adam = Adam(lr=learning_rate)
-    model.compile(loss='categorical_crossentropy', optimizer=adam, metrics=['categorical_accuracy'])
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
 
     return model
 
@@ -82,7 +82,7 @@ def oh_to_label(l, d):
 input_type = ['bert', 'only_bert', 'w2v', 'only_w2v']
 learning_rate = [0.0001, 0.001, 0.01]
 num_dims = [128,64,32]
-epochs = [5,10,20,50,100,200]
+epochs = [100,200]
 setup = itertools.product(epochs,input_type,learning_rate,num_dims)
 for s in setup:
     num_epochs = s[0]
@@ -108,7 +108,7 @@ for s in setup:
 
             #only trains if train is true
             chk = ModelCheckpoint(model_name, monitor='fmeasure', save_best_only=True, mode='max', verbose=1)
-            if train_flag: model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, callbacks=[chk], validation_data=(dev,dev_target))
+            if train_flag: model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, callbacks=[chk], class_weight={0: 0.7, 1: 0.3}, validation_data=(dev,dev_target))
 
             #makes predicitons for the test
             test_preds = model.predict_classes(test)
