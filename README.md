@@ -49,6 +49,8 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 # Create an virtual environment with python3 and activate it
 
+1) Back to Lux/
+
     -- virtualenv envLux -p python3
 
     -- source envLux/bin/activate
@@ -57,6 +59,8 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
     -- pip install -r requirements.txt
 
-# Download GoogleNews-vectors-negative300.bin
+# Download and extract GoogleNews-vectors-negative300.bin into data/
 
-    -- Download file and 'gunzip GoogleNews-vectors-negative300.bin.gz' inside data/
+    -- cd data/
+    -- wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
+    -- gunzip GoogleNews-vectors-negative300.bin.gz
