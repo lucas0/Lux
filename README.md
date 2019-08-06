@@ -49,12 +49,11 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 # Create an virtual environment with python3 and activate it
 
-1) Back to Lux/
+1) Back to Lux
 
-    -- virtualenv envLux -p python3
-
-    -- source envLux/bin/activate
-
+    `-- virtualenv envLux-p python3`
+    `-- source envLux/bin/activate`
+    
 # Install requirements
 
     -- pip install -r requirements.txt
