@@ -29,15 +29,27 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
    in our case: export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
+# Install Specificity model
+
+    -- download DASSP.zip from https://www.dropbox.com/s/sv61k7yuqeytvwp/DASSP.zip?dl=0
+
+    -- unzip DASSP.zip into res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction 
+
+    -- download glove.840B.300d.zip from https://www.dropbox.com/s/0g880op64chjw4b/glove.840B.300d.zip?dl=0 
+
+    -- unzip glove.840B.300d.zip into the same folder above
+
+    -- check the README.md inside the folder, if modifications have to be done
+
 # Create an virtual environment with python3 and activate it
 
-    --virtualenv envLux -p python3
+    -- virtualenv envLux -p python3
 
-    --source envLux/bin/activate
+    -- source envLux/bin/activate
 
 # Install requirements
 
-    --pip install -r requirements.txt
+    -- pip install -r requirements.txt
 
 # Download GoogleNews-vectors-negative300.bin
 
