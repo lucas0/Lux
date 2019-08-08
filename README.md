@@ -19,7 +19,7 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 3)Unzip the model inside bert folder:
 
-    -- unzip uncased_L-12_H-768_A-12.zip.
+    -- unzip uncased_L-12_H-768_A-12.zip
 
    You should have 3 files, the model, bert_config.json and vocab.txt.
 
