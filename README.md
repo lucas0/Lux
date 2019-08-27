@@ -19,38 +19,48 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 3)Unzip the model inside bert folder:
 
-   -- unzip uncased_L-12_H-768_A-12.zip.
+    -- unzip uncased_L-12_H-768_A-12.zip
 
    You should have 3 files, the model, bert_config.json and vocab.txt.
 
 4)Set env variable BERT_BASE_DIR:
 
-   -- export BERT_BASE_DIR=/path/to/Lux/res/bert/uncased_L-12_H-768_A-12
+    -- export BERT_BASE_DIR=/path/to/Lux/res/bert/uncased_L-12_H-768_A-12
 
    in our case: export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 # Install Specificity model
 
-    -- download DASSP.zip from https://www.dropbox.com/s/sv61k7yuqeytvwp/DASSP.zip?dl=0
+1)Download DASSP.zip
+    
+    -- wget https://www.dropbox.com/s/41uw7wm2bbgoff4/DASSP.zip
+   
+2)Unzip its contents
 
-    -- unzip DASSP.zip into res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction 
+    -- unzip DASSP.zip
 
-    -- download glove.840B.300d.zip from https://www.dropbox.com/s/0g880op64chjw4b/glove.840B.300d.zip?dl=0 
+3)Go into folder, download and unzip glove:
 
-    -- unzip glove.840B.300d.zip into the same folder above
+    -- cd Domain-Agnostic-Sentence-Specificity-Prediction/
+    -- wget https://www.dropbox.com/s/0g880op64chjw4b/glove.840B.300d.zip
+    -- unzip glove.840B.300d.zip
 
-    -- check the README.md inside the folder, if modifications have to be done
++)Check the README.md inside the folder, if modifications have to be done
 
 # Create an virtual environment with python3 and activate it
 
-    -- virtualenv envLux -p python3
+1)Back to Lux
 
+    -- virtualenv envLux-p python3
+    
     -- source envLux/bin/activate
-
+    
 # Install requirements
 
     -- pip install -r requirements.txt
 
-# Download GoogleNews-vectors-negative300.bin
+# Download and extract GoogleNews-vectors-negative300.bin into data/
 
-    -- Download file and 'gunzip GoogleNews-vectors-negative300.bin.gz' inside data/
+    -- cd data/
+    -- wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
+    -- gunzip GoogleNews-vectors-negative300.bin.gz
