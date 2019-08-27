@@ -20,6 +20,7 @@ from tensorflow.keras import losses
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.regularizers import l2
 
 random.seed(1)
 root = random.randint(0,10090000)
@@ -35,6 +36,17 @@ LSTM_DIM = 256
 DENSE_DIM = 256
 learning_rate = 0.001
 batch_size = 32
+
+
+def svm_model(data_shape, target_len, learning_rate, DENSE_DIM):
+    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
+    model = Sequential()
+    model.add(Dense(DENSE_DIM, activation='relu', input_shape=(data_shape[1:])))
+    model.add(Dense(target_len, kernel_regularizer=l2(0.01), activation='softmax'))
+    model.summary()
+    model.compile(loss='hinge', optimizer='adadelta', metrics=['binary_accuracy'])
+
+    return model
 
 def linear_model(data_shape, target_len, learning_rate, DENSE_DIM):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
@@ -80,9 +92,12 @@ def oh_to_label(l, d):
             return key
 
 input_type = ['bert', 'only_bert', 'w2v', 'only_w2v']
+input_type = ['bert']
 learning_rate = [0.0001, 0.001, 0.01]
-num_dims = [128,64,32]
+learning_rate = [0.001]
+num_dims = [128]
 epochs = [100,200]
+epochs = [50]
 setup = itertools.product(epochs,input_type,learning_rate,num_dims)
 for s in setup:
     num_epochs = s[0]
@@ -102,7 +117,8 @@ for s in setup:
             print(data_shape)
 
             if emb_type in ['bert', 'only_bert']:
-                model = linear_model(data_shape, target_len, learning_rate, num_dims)
+                #model = linear_model(data_shape, target_len, learning_rate, num_dims)
+                model = svm_model(data_shape, target_len, learning_rate, num_dims)
             else:
                 model = BILSTM_model(data_shape, target_len, learning_rate, num_dims)
 
