@@ -42,6 +42,7 @@ class NetworkxGraphTransformer(GraphTransformer):
         nb_concepts = self.feat_nb_concepts(graph)
         nb_unique_concepts = self.feat_nb_unique_concepts(graph)
         nb_words = graph.graph.get('nb_words', -1)
+        print(">>>>>>>",nb_words)
         return np.hstack([
             nb_words,
             nb_concepts,

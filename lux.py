@@ -1,3 +1,4 @@
+import traceback
 import resource
 import os
 import itertools
@@ -95,9 +96,8 @@ input_type = ['bert', 'only_bert', 'w2v', 'only_w2v']
 input_type = ['bert']
 learning_rate = [0.0001, 0.001, 0.01]
 learning_rate = [0.001]
-num_dims = [128]
-epochs = [100,200]
-epochs = [50]
+num_dims = [64,128]
+epochs = [20,50,100,200]
 setup = itertools.product(epochs,input_type,learning_rate,num_dims)
 for s in setup:
     num_epochs = s[0]
@@ -110,15 +110,14 @@ for s in setup:
     try:
         for fold in range(num_folds):
             train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=True, fold=fold, num_folds=num_folds, random_state=root)
-            print("GOT HERE")
             data_shape = (train.shape)
             target_len = len(label_to_oh)
             test_target = np.array([np.argmax(r) for r in test_target])
             print(data_shape)
 
             if emb_type in ['bert', 'only_bert']:
-                #model = linear_model(data_shape, target_len, learning_rate, num_dims)
-                model = svm_model(data_shape, target_len, learning_rate, num_dims)
+                model = linear_model(data_shape, target_len, learning_rate, num_dims)
+                #model = svm_model(data_shape, target_len, learning_rate, num_dims)
             else:
                 model = BILSTM_model(data_shape, target_len, learning_rate, num_dims)
 
@@ -148,6 +147,8 @@ for s in setup:
             f.write(string)
     except Exception as e:
         print(e)
+        print(traceback.format_exc())
+        sys.exit(1)
         with open(os.getcwd()+"/results.txt", "a") as f:
             string = (str(s)+": OOM."+str(type(e))+"\n")
             mem = "MEMORY: "+str(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)+"\n"

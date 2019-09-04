@@ -5,3 +5,99 @@
 (100, 'bert', 0.01, 128) AVG: 0.4487179487179487 F1: 0.414663667915072
 (100, 'bert', 0.001, 128) AVG: 0.46153846153846156 F1: 0.3892933927613956
 (50, 'bert', 0.001, 128) AVG: 0.43162393162393164 F1: 0.40639360114441647
+(20, 'bert', 0.001, 64): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(20, 'bert', 0.001, 128): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(50, 'bert', 0.001, 64): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(50, 'bert', 0.001, 128): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(100, 'bert', 0.001, 64): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(100, 'bert', 0.001, 128): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(200, 'bert', 0.001, 64): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(200, 'bert', 0.001, 128): OOM.<class 'FileNotFoundError'>
+MEMORY: 452240
+(20, 'bert', 0.001, 64): OOM.<class 'NameError'>
+MEMORY: 453532
+(20, 'bert', 0.001, 128): OOM.<class 'NameError'>
+MEMORY: 453532
+(50, 'bert', 0.001, 64): OOM.<class 'NameError'>
+MEMORY: 453532
+(50, 'bert', 0.001, 128): OOM.<class 'NameError'>
+MEMORY: 453532
+(100, 'bert', 0.001, 64): OOM.<class 'NameError'>
+MEMORY: 453532
+(100, 'bert', 0.001, 128): OOM.<class 'NameError'>
+MEMORY: 453532
+(200, 'bert', 0.001, 64): OOM.<class 'NameError'>
+MEMORY: 453532
+(200, 'bert', 0.001, 128): OOM.<class 'NameError'>
+MEMORY: 453532
+(20, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 463384
+(20, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 469456
+(50, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 475560
+(50, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 481608
+(100, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 485680
+(100, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 485708
+(200, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 485984
+(200, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 485984
+(20, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 463448
+(20, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 469592
+(50, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 475648
+(50, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 480036
+(100, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 484564
+(100, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 484564
+(200, 'bert', 0.001, 64): OOM.<class 'TypeError'>
+MEMORY: 484564
+(200, 'bert', 0.001, 128): OOM.<class 'TypeError'>
+MEMORY: 484564
+(20, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 463272
+(20, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 468596
+(50, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 469376
+(50, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 471864
+(100, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 477124
+(100, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 483216
+(200, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 489292
+(200, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 492312
+(20, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 463216
+(20, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 468648
+(50, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 469180
+(50, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 471812
+(100, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 477076
+(100, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 483156
+(200, 'bert', 0.001, 64): OOM.<class 'KeyError'>
+MEMORY: 489228
+(200, 'bert', 0.001, 128): OOM.<class 'KeyError'>
+MEMORY: 492136

@@ -1,4 +1,5 @@
 import resource
+import filecmp
 from sklearn.utils import shuffle
 import tensorflow as tf
 import subprocess
@@ -20,10 +21,8 @@ filename = sys.argv[0]
 cwd = os.path.abspath(filename+"/..")
 
 modelpath = cwd+"/w2vModel"
-pos_samples_path = cwd+"/goldData/pos_samples.csv"
-results_path = cwd+"/goldData/results.csv"
-dataframepath = cwd+"/data1.csv"
 data_dir = cwd+"/data"
+dataset_dir = data_dir+"/datasets"
 bert_dir = cwd+"/res/bert"
 hash_path = cwd+"/data/hash.txt"
 spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction"
@@ -69,13 +68,18 @@ def read_p(filename):
     with open(filename, "rb") as f:
         return pickle.load(f)
 
-def check_hash(df_hash, num_folds):
-    print("Checking Hash Path on: ",hash_path)
+def check_hash(df_hash, num_folds, stage="data"):
+    print("Checking Hash Path on: ",hash_path, "for", stage, "stage.")
     if os.path.exists(hash_path):
         with open(hash_path, "r") as h:
             lines = h.readlines()
-            old_hash = lines[0][:-1]
             old_folds = lines[1]
+            if stage is "data":
+                old_hash = lines[0][:-1]
+            if stage is "bert":
+                old_hash = lines[2][:-1]
+            if stage is "features":
+                old_hash = lines[3][:-1]
             print("Old Hash: ",old_hash)
             print("New Hash: ",df_hash)
             print("Old and new #folds:",old_folds, num_folds)
@@ -83,32 +87,48 @@ def check_hash(df_hash, num_folds):
             return True
     return False
 
+def savehash(line, content):
+    with open(hash_path, "r") as h:
+        data = h.readlines()
+        data[line] = content+"\n"
+    with open(hash_path, "w") as h:
+        h.writelines(data)
+
 def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None):
-    print('Loading data from',pos_samples_path)
-    data1 = pd.read_csv(pos_samples_path, sep='\t')
-    data_results = pd.read_csv(results_path, sep=',')
-    data_results = data_results.loc[data_results.value == 1]
-    columns = list(set(data_results.columns) & set(data1.columns))
-    data_results = data_results.loc[:,columns]
-    data_results = data1.sample(frac=1,random_state=random_state)
-    data = data1.sample(frac=1,random_state=random_state)
-    data = pd.concat([data,data_results])
-    data = data.drop_duplicates(keep='first')
-    data = data[data['source_body'].map(len) > 50]
+    print('Loading data from',dataset_dir)
+    data = pd.read_csv(dataset_dir+"/pos_samples.csv", sep='\t')
+    data1 = pd.read_csv(dataset_dir+"/good_a3.csv", sep=',')
+    data2 = pd.read_csv(dataset_dir+"/veritas3.csv", sep=',')
+
+    #getting only columns that exist on all three datasets
+    columns = list(set(data.columns) & set(data1.columns) & set(data2.columns))
+    data = data.loc[:,columns]
+    data1 = data1.loc[:,columns]
+    data2 = data2.loc[:,columns]
+
+    #shuffling
+    data = data.sample(frac=1,random_state=random_state)
+    data1 = data1.sample(frac=1,random_state=random_state)
+    data2 = data2.sample(frac=1,random_state=random_state)
+
+    #concatenating, dropping duplicates, filtering minimum size of text, restabilishing the indexes, creating and saving the has for this dataset version
+    data = pd.concat([data,data1,data2])
+    data = data.drop_duplicates(subset='o_url', keep='first')
+    data.o_body = data.o_body.astype('str')
+    data = data[data['o_body'].map(len) > 100]
     data = data.reset_index()
     json_data = data.to_json().encode()
     df_hash = hashlib.sha256(json_data).hexdigest()
 
-    data = data.drop_duplicates(subset='claim_source_url', keep='first')
     labels = ['false', 'mfalse', 'mixture', 'mtrue', 'true', 'unverified']
     if(collapse_classes):
-        data.loc[data['claim_label'] == "mfalse", 'claim_label'] = 'false'
-        data.loc[data['claim_label'] == "mtrue", 'claim_label'] = 'true'
+        data.loc[data['verdict'] == "mfalse", 'verdict'] = 'false'
+        data.loc[data['verdict'] == "mtrue", 'verdict'] = 'true'
         labels = ['false', 'mixture', 'true', 'unverified']
 
     labels = ['true', 'false']
-    data = data.loc[data.claim_label.isin(labels)]
-    print(data.claim_label.unique())
+    data = data.loc[data.verdict.isin(labels)]
+    print(data.verdict.unique())
 
     labels_idx = [labels.index(label) for label in labels]
     labels_one_hot = np.eye(len(labels))[labels_idx]
@@ -127,8 +147,8 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
     if not check_hash(df_hash, str(num_folds)):
         print("Processing New Data...")
 
-        data = [(clean_text(pd.Series(e[1])['source_body']),pd.Series(e[1])['claim_label'])for e in list(data.iterrows())]
-        df = pd.DataFrame(data, columns=["body","label"])
+        data = [(clean_text(pd.Series(e[1])['o_body']),pd.Series(e[1])['verdict'])for e in list(data.iterrows())]
+        df = pd.DataFrame(data, columns=["body","verdict"])
 
         lens = pd.Series([len(e.split(" ")) for e in df['body'].values])
         df = df[lens < MAX_SENT_LEN]
@@ -143,29 +163,44 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         #sns.distplot(lens)
         #plt.show()
 
-        #Generate BERT embeddings
-        with open(cwd+'/res/bert/input.txt', 'w+') as f:
-            for i,e in df.iterrows():
-                f.write(e['body']+'\n')
-        cmd1 = "python3 extract_features.py   --input_file=input.txt   --output_file=output4layers.json   --vocab_file=$BERT_BASE_DIR/vocab.txt   --bert_config_file=$BERT_BASE_DIR/bert_config.json   --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt   --layers=-1,-2,-3,-4  --max_seq_length=512   --batch_size=32"
-        subprocess.call(cmd1, shell=True, cwd = bert_dir)
-        print("BERT Embeddings Saved")
+        #check if new bert should be generated
+        if not check_hash(df_hash, num_folds, stage="bert"):
+            inputfile = cwd+'/res/bert/input.txt'
+            #copy sentences so BERT is generated
+            with open(inputfile, 'w+') as f:
+                for i,e in df.iterrows():
+                    f.write(e['body']+'\n')
 
-        #Generate the features ndarray and save it to a pickle
-        feat.generate_specificity()
-        feat.generate_complexity()
-        features = []
-        for idx,e in df.iterrows():
-            print("Generating Features: ",idx+1,"out of ",len(df))
-            feature = feat.vectorize(e[0],idx)
-            features.append(feature)
-        features = np.array(features).astype(np.float)
-        print(features.shape)
-        with open(data_dir+"/features", "wb") as p:
-            pickle.dump(features, p)
-        print("Generated Features. Saved to pickle.")
+            #Generate BERT embeddings if data is new
+            #removes the output file so a new one is generated
+            cmd0 = "rm "+cwd+"/res/bert/output4layers.json"
+            subprocess.call(cmd0, shell=True, cwd = bert_dir)
 
-        #features = pickle.load(open(data_dir+"/features", "rb"))
+            #generates new BERT embeddings
+            cmd1 = "python3 extract_features.py   --input_file=input.txt   --output_file=output4layers.json   --vocab_file=$BERT_BASE_DIR/vocab.txt   --bert_config_file=$BERT_BASE_DIR/bert_config.json   --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt   --layers=-1,-2,-3,-4  --max_seq_length=512   --batch_size=32"
+            subprocess.call(cmd1, shell=True, cwd = bert_dir)
+            print("BERT Embeddings Saved")
+            savehash(line=2, content=df_hash)
+
+        #check if new linguistic features should be generated
+        if not check_hash(df_hash, num_folds, stage="features"):
+            #Generate the features ndarray and save it to a pickle
+            feat.generate_specificity()
+            feat.generate_complexity()
+            features = []
+            for idx,e in df.iterrows():
+                print(e[0])
+                print("Generating Features: ",idx+1,"out of ",len(df))
+                feature = feat.vectorize(e[0],idx)
+                features.append(feature)
+            features = np.array(features).astype(np.float)
+            print(features.shape)
+            with open(data_dir+"/features", "wb") as p:
+                pickle.dump(features, p)
+            print("Generated Features. Saved to pickle.")
+            savehash(line=3, content=df_hash)
+
+        features = pickle.load(open(data_dir+"/features", "rb"))
 
         #normalize features
         features = np.nan_to_num(features)
@@ -215,7 +250,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         print("Bert+Features shape: ",bert_post_data.shape)
 
         #shuffles (same permutation) the three arrays while splitting them
-        labels = [label_to_oh[label].tolist() for label in df['label'].values.tolist()]
+        labels = [label_to_oh[label].tolist() for label in df['verdict'].values.tolist()]
         labels, w2v_post_data, bert_post_data = shuffle(labels, w2v_post_data, bert_post_data, random_state=0)
         label_folds = np.array_split(labels, num_folds)
         only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
@@ -255,9 +290,10 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         print('Generation of data done!')
         #select what to return
 
-        with open(hash_path, "w") as h:
-            h.write(df_hash+"\n")
-            h.write(str(num_folds))
+
+        savehash(line=0, content=df_hash)
+        savehash(line=1, content=str(num_folds))
+
 
         return train_data, train_target, dev_data, dev_target, test_data, test_target, label_to_oh
 

@@ -64,3 +64,7 @@ Lux proposes the usage of Linguistic Aspects as Features.
     -- cd data/
     -- wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
     -- gunzip GoogleNews-vectors-negative300.bin.gz
+
+## Known issues
+
+semantic complexity might raise a division by 0 critical error if the texts fed are not big enough. A simple solution to that is increasing the minimum lenght of body texts.

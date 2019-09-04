@@ -85,8 +85,9 @@ def generate_complexity():
     subprocess.call("rm "+cwd+"/res/complexity/input_texts/*", shell=True, cwd=comp_dir)
     for index, row in csv.iterrows():
         with open(cwd+"/res/complexity/input_texts/"+str(index)+".txt", "w+") as f:
-            f.write(re.sub("\n|\r","",row['body']))
-    subprocess.call("python3.6 pysemcom.py texts2vectors input_texts/ output_file.csv http://api.dbpedia-spotlight.org/en/annotate", shell=True, cwd=comp_dir)
+            text = re.sub("\n|\r","",row['body'])
+            f.write(text)
+    subprocess.call("python pysemcom.py texts2vectors input_texts/ output_file.csv http://api.dbpedia-spotlight.org/en/annotate", shell=True, cwd=comp_dir)
     print("Complexity Scores Generated")
 
 def vectorize(text, text_id):
