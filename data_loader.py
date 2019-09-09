@@ -73,17 +73,20 @@ def check_hash(df_hash, num_folds, stage="data"):
     if os.path.exists(hash_path):
         with open(hash_path, "r") as h:
             lines = h.readlines()
-            old_folds = lines[1]
+            old_folds = lines[1][:-1]
             if stage is "data":
                 old_hash = lines[0][:-1]
             if stage is "bert":
                 old_hash = lines[2][:-1]
             if stage is "features":
                 old_hash = lines[3][:-1]
-            print("Old Hash: ",old_hash)
+            if stage is "complexity":
+                old_hash = lines[4][:-1]
+            if stage is "specificity":
+                old_hash = lines[5][:-1]
             print("New Hash: ",df_hash)
             print("Old and new #folds:",old_folds, num_folds)
-        if (old_hash == df_hash) and (old_folds == num_folds):
+        if (old_hash == df_hash) and (int(old_folds) == num_folds):
             return True
     return False
 
@@ -96,28 +99,25 @@ def savehash(line, content):
 
 def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None):
     print('Loading data from',dataset_dir)
-    data = pd.read_csv(dataset_dir+"/pos_samples.csv", sep='\t')
-    data1 = pd.read_csv(dataset_dir+"/good_a3.csv", sep=',')
-    data2 = pd.read_csv(dataset_dir+"/veritas3.csv", sep=',')
+    data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
+    #data1 = pd.read_csv(dataset_dir+"/good_a3.csv", sep=',')
+    #data2 = pd.read_csv(dataset_dir+"/veritas3.csv", sep=',')
 
     #getting only columns that exist on all three datasets
-    columns = list(set(data.columns) & set(data1.columns) & set(data2.columns))
-    data = data.loc[:,columns]
-    data1 = data1.loc[:,columns]
-    data2 = data2.loc[:,columns]
+    #columns = list(set(data.columns) & (set(data1.columns) & set(data2.columns)))
+    #data1 = data1.loc[:,columns]
+    #data2 = data2.loc[:,columns]
 
-    #shuffling
-    data = data.sample(frac=1,random_state=random_state)
-    data1 = data1.sample(frac=1,random_state=random_state)
-    data2 = data2.sample(frac=1,random_state=random_state)
 
     #concatenating, dropping duplicates, filtering minimum size of text, restabilishing the indexes, creating and saving the has for this dataset version
-    data = pd.concat([data,data1,data2])
+    #data = pd.concat([data,data1,data2], axis=0,sort=False)
+    #data = data.loc[:,columns]
     data = data.drop_duplicates(subset='o_url', keep='first')
     data.o_body = data.o_body.astype('str')
-    data = data[data['o_body'].map(len) > 100]
+    data = data[data['o_body'].map(len) > 150]
     data = data.reset_index()
     json_data = data.to_json().encode()
+    data = data.sample(frac=1, random_state=random_state)
     df_hash = hashlib.sha256(json_data).hexdigest()
 
     labels = ['false', 'mfalse', 'mixture', 'mtrue', 'true', 'unverified']
@@ -183,13 +183,16 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             savehash(line=2, content=df_hash)
 
         #check if new linguistic features should be generated
-        if not check_hash(df_hash, num_folds, stage="features"):
+        if not check_hash(df_hash, num_folds, stage="complexity"):
             #Generate the features ndarray and save it to a pickle
-            feat.generate_specificity()
             feat.generate_complexity()
+            savehash(line=4, content=df_hash)
+        if not check_hash(df_hash, num_folds, stage="specificity"):
+            feat.generate_specificity()
+            savehash(line=5, content=df_hash)
+        if not check_hash(df_hash, num_folds, stage="features"):
             features = []
             for idx,e in df.iterrows():
-                print(e[0])
                 print("Generating Features: ",idx+1,"out of ",len(df))
                 feature = feat.vectorize(e[0],idx)
                 features.append(feature)
