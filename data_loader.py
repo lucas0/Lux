@@ -69,7 +69,7 @@ def read_p(filename):
         return pickle.load(f)
 
 def check_hash(df_hash, num_folds, stage="data"):
-    print("Checking Hash Path on: ",hash_path, "for", stage, "stage.")
+    print(stage.upper(), " CHECK> Checking Hash Path on: ",hash_path)
     if os.path.exists(hash_path):
         with open(hash_path, "r") as h:
             lines = h.readlines()
@@ -84,8 +84,8 @@ def check_hash(df_hash, num_folds, stage="data"):
                 old_hash = lines[4][:-1]
             if stage is "specificity":
                 old_hash = lines[5][:-1]
-            print("New Hash: ",df_hash)
-            print("Old and new #folds:",old_folds, num_folds)
+            print("Old and New Hash: ",old_hash[:5],df_hash[:5]," Same? ", (old_hash == df_hash))
+            print("Old and New #folds:",old_folds, num_folds, " Same? ", (int(old_folds)==num_folds), "\n")
         if (old_hash == df_hash) and (int(old_folds) == num_folds):
             return True
     return False
@@ -144,7 +144,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         if fold == num_folds-1:
             fold_dev = 0
 
-    if not check_hash(df_hash, str(num_folds)):
+    if not check_hash(df_hash, num_folds):
         print("Processing New Data...")
 
         data = [(clean_text(pd.Series(e[1])['o_body']),pd.Series(e[1])['verdict'])for e in list(data.iterrows())]
@@ -159,6 +159,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
         #plots the data distribution by number of words
         print("Number of entries: ", num_entries)
+        print("True/False: ",df.groupby('verdict').count())
         print("Mean and Std of number of words per document: ",np.mean(lens),np.std(lens))
         #sns.distplot(lens)
         #plt.show()
