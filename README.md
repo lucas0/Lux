@@ -31,7 +31,7 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 # Install Specificity model
 
-1)Download DASSP.zip
+1)Download DASSP.zip inside res/specificity
     
     -- wget https://www.dropbox.com/s/41uw7wm2bbgoff4/DASSP.zip
    
