@@ -99,6 +99,7 @@ learning_rate = [0.001]
 num_dims = [64,128]
 epochs = [20,50,100,200]
 setup = itertools.product(epochs,input_type,learning_rate,num_dims)
+force_reload = True if ((len(sys.argv)>1) and (bool(sys.argv[1]) == True)) else False
 for s in setup:
     num_epochs = s[0]
     emb_type = s[1]
@@ -109,7 +110,7 @@ for s in setup:
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
     try:
         for fold in range(num_folds):
-            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=True, fold=fold, num_folds=num_folds, random_state=root)
+            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=True, fold=fold, num_folds=num_folds, random_state=root, force_reload=force_reload)
             data_shape = (train.shape)
             target_len = len(label_to_oh)
             test_target = np.array([np.argmax(r) for r in test_target])

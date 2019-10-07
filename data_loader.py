@@ -38,7 +38,6 @@ def clean_text(string):
     Tokenization/string cleaning for all datasets except for SST.
     Original taken from https://github.com/yoonkim/CNN_sentence/blob/master/process_data.py
     """
-    string = re.sub(r"’", "\'", string)
     string = re.sub(r"[^A-Za-z0-9(),!?\'\`]", " ", string)
     string = re.sub(r"\'s", " \'s", string)
     string = re.sub(r"\'ve", " \'ve", string)
@@ -84,6 +83,8 @@ def check_hash(df_hash, num_folds, stage="data"):
                 old_hash = lines[4][:-1]
             if stage is "specificity":
                 old_hash = lines[5][:-1]
+            if stage is "w2v":
+                old_hash = lines[6][:-1]
             print("Old and New Hash: ",old_hash[:5],df_hash[:5]," Same? ", (old_hash == df_hash))
             print("Old and New #folds:",old_folds, num_folds, " Same? ", (int(old_folds)==num_folds), "\n")
         if (old_hash == df_hash) and (int(old_folds) == num_folds):
@@ -97,21 +98,20 @@ def savehash(line, content):
     with open(hash_path, "w") as h:
         h.writelines(data)
 
-def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None):
+def reset_hash():
+    with open(hash_path, "r+") as f:
+        lenlin = len(f.readlines())
+    with open(hash_path, "w+") as f:
+        for i in range(lenlin):
+            f.write("0\n")
+
+#run concat+normalize.py inside dataset/ before loading data
+def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False):
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
-    #data1 = pd.read_csv(dataset_dir+"/good_a3.csv", sep=',')
-    #data2 = pd.read_csv(dataset_dir+"/veritas3.csv", sep=',')
 
-    #getting only columns that exist on all three datasets
-    #columns = list(set(data.columns) & (set(data1.columns) & set(data2.columns)))
-    #data1 = data1.loc[:,columns]
-    #data2 = data2.loc[:,columns]
+    #if force_reload: reset_hash()
 
-
-    #concatenating, dropping duplicates, filtering minimum size of text, restabilishing the indexes, creating and saving the has for this dataset version
-    #data = pd.concat([data,data1,data2], axis=0,sort=False)
-    #data = data.loc[:,columns]
     data = data.drop_duplicates(subset='o_url', keep='first')
     data.o_body = data.o_body.astype('str')
     data = data[data['o_body'].map(len) > 150]
@@ -161,6 +161,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         print("Number of entries: ", num_entries)
         print("True/False: ",df.groupby('verdict').count())
         print("Mean and Std of number of words per document: ",np.mean(lens),np.std(lens))
+        sys.exit(1)
         #sns.distplot(lens)
         #plt.show()
 
@@ -183,6 +184,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             print("BERT Embeddings Saved")
             savehash(line=2, content=df_hash)
 
+
+        ###################################
+        ############# FEATURES ############
+        ###################################
+
         #check if new linguistic features should be generated
         if not check_hash(df_hash, num_folds, stage="complexity"):
             #Generate the features ndarray and save it to a pickle
@@ -199,12 +205,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 features.append(feature)
             features = np.array(features).astype(np.float)
             print(features.shape)
-            with open(data_dir+"/features", "wb") as p:
-                pickle.dump(features, p)
+            save_p(data_dir+"/features", features)
             print("Generated Features. Saved to pickle.")
             savehash(line=3, content=df_hash)
 
-        features = pickle.load(open(data_dir+"/features", "rb"))
+        features = read_p(data_dir+"/features")
 
         #normalize features
         features = np.nan_to_num(features)
@@ -217,89 +222,88 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
         print("MEMORY AFTER FEATURES: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
-        #generate w2v embeddings from data
-        w2v_model = w2v.KeyedVectors.load_word2vec_format(cwd+'/data/GoogleNews-vectors-negative300.bin', binary=True)
-        embeddings = []
-        for idx, row in df.iterrows():
-            words = row['body'].split(" ")
-            words = filter(lambda x: x in w2v_model.vocab, words)
-            embedding = [w2v_model.wv[word] for word in words]
-            masked = np.zeros((MAX_SENT_LEN, EMB_DIM_SIZE))
-            mask_len = min(len(embedding),MAX_SENT_LEN)
-            masked[MAX_SENT_LEN-mask_len:] = embedding[:mask_len]
-            embeddings.append(masked)
+        ###################################
+        ############### W2V ###############
+        ###################################
 
-        with open(data_dir+"/masked_embeddings", "wb") as p:
-            pickle.dump(embeddings, p)
-        print("Masked Embeddings Saved")
+        if not check_hash(df_hash, num_folds, stage="w2v"):
+            #generate w2v embeddings from data
+            w2v_model = w2v.KeyedVectors.load_word2vec_format(cwd+'/data/GoogleNews-vectors-negative300.bin', binary=True)
+            embeddings = []
+            for idx, row in df.iterrows():
+                words = row['body'].split(" ")
+                words = filter(lambda x: x in w2v_model.vocab, words)
+                embedding = [w2v_model.wv[word] for word in words]
+                masked = np.zeros((MAX_SENT_LEN, EMB_DIM_SIZE))
+                mask_len = min(len(embedding),MAX_SENT_LEN)
+                masked[MAX_SENT_LEN-mask_len:] = embedding[:mask_len]
+                embeddings.append(masked)
+
+            embeddings = np.array(embeddings, dtype=np.float32)
+            save_p(data_dir+"/masked_embeddings", embeddings)
+            print("Masked Embeddings Saved")
+            savehash(line=6, content=df_hash)
 
         print("MEMORY AFTER W2V: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
-        #concatenate features and w2vmasked_embeddings
-        embeddings = np.array(embeddings, dtype=np.float32)
-        features_broad = np.array([features] * MAX_SENT_LEN)
-        features_broad = np.swapaxes(features_broad, 0,1)
-        print(embeddings.shape)
-        print(features_broad.shape)
-        w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
-        print("W2V+Features shape: ",w2v_post_data.shape)
+        #########################################
+        ## CONCATENATION, SHUFFLING AND SAVING ##
+        #########################################
 
-        #print("MEMORY AFTER CONCAT: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
-
-        #concatenate features and bert_embeddings
-        with open(bert_dir+"/output4layers.json", "r+") as f:
-            bert = [json.loads(l)['features'][0]['layers'][0]['values'] for l in f.readlines()]
-
-        bert_post_data = np.concatenate((features,bert), axis=1)
-        print("Bert+Features shape: ",bert_post_data.shape)
-
-        #shuffles (same permutation) the three arrays while splitting them
-        labels = [label_to_oh[label].tolist() for label in df['verdict'].values.tolist()]
-        labels, w2v_post_data, bert_post_data = shuffle(labels, w2v_post_data, bert_post_data, random_state=0)
-        label_folds = np.array_split(labels, num_folds)
-        only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
-        w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
-        bert_folds = np.array_split(bert_post_data, num_folds)
-        only_bert_folds = np.array_split(bert, num_folds)
-
-        print("MEMORY AFTER FOLDS: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
-
-        #saves one dumpfile for each fold
+        #delete folds folders
         subprocess.call("rm -rf "+data_dir+"/folds/*", shell=True, cwd=data_dir)
 
+        #creates the shuffle order
+        index_shuf = list(range(len(df)))
+
+        #LABELS
+        labels = [label_to_oh[label].tolist() for label in df['verdict'].values.tolist()]
+        labels = [labels[i] for i in index_shuf]
+        label_folds = np.array_split(labels, num_folds)
         for i in range(num_folds):
             fold_dir = data_dir+"/folds/"+str(i)
             os.mkdir(fold_dir)
-            save_p(fold_dir+"/w2v", w2v_folds[i])
-            save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
             save_p(fold_dir+"/labels", label_folds[i])
+
+        ##W2V
+        #embeddings = read_p(data_dir+"/masked_embeddings")
+        #features_broad = np.array([features] * MAX_SENT_LEN)
+        #features_broad = np.swapaxes(features_broad, 0,1)
+        #w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
+        #print("W2V+Features shape: ",w2v_post_data.shape)
+        #w2v_post_data = [w2v_post_data[i] for i in index_shuf]
+        #only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
+        #w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
+        #for i in range(num_folds):
+        #    fold_dir = data_dir+"/folds/"+str(i)
+        #    save_p(fold_dir+"/w2v", w2v_folds[i])
+        #    save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
+
+        #BERT
+        with open(bert_dir+"/output4layers.json", "r+") as f:
+            bert = [json.loads(l)['features'][0]['layers'][0]['values'] for l in f.readlines()]
+        bert_post_data = np.concatenate((features,bert), axis=1)
+        print("BERT+Features shape: ",bert_post_data.shape)
+        bert_post_data = [bert_post_data[i] for i in index_shuf]
+        bert_folds = np.array_split(bert_post_data, num_folds)
+        only_bert_folds = [bert[i] for i in index_shuf]
+        only_bert_folds = np.array_split(bert, num_folds)
+        for i in range(num_folds):
+            print("saving bert fold ",str(i), bert_folds[i].shape)
+            fold_dir = data_dir+"/folds/"+str(i)
             save_p(fold_dir+"/bert", bert_folds[i])
             save_p(fold_dir+"/only_bert", only_bert_folds[i])
 
+        #labels, w2v_post_data, bert_post_data = shuffle(labels, w2v_post_data, bert_post_data, random_state=0)
+
         print("MEMORY AFTER FOLDS SAVING: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
-        #returns the selected emb type (bert/w2v)
-        test_data = read_p(data_dir+"/folds/"+str(fold)+"/"+emb_type)
-        test_target = read_p(data_dir+"/folds/"+str(fold)+"/labels")
-
-        dev_data = read_p(data_dir+"/folds/"+str(fold_dev)+"/"+emb_type)
-        dev_target = read_p(data_dir+"/folds/"+str(fold_dev)+"/labels")
-
-        train_data_filenames = [data_dir+"/folds/"+str(i)+"/"+emb_type for i in range(num_folds) if i not in [fold,fold_dev]]
-        train_data = np.concatenate([read_p(fn) for fn in train_data_filenames], axis=0)
-        train_target_filenames = [data_dir+"/folds/"+str(i)+"/labels" for i in range(num_folds) if i not in [fold,fold_dev]]
-        train_target = np.concatenate([read_p(fn) for fn in train_target_filenames], axis=0)
-
-        print("Train Shape: %s\nDev Shape: %s\nTest Shape: %s" % (train_data.shape, dev_data.shape, test_data.shape))
         print('Generation of data done!')
-        #select what to return
-
 
         savehash(line=0, content=df_hash)
         savehash(line=1, content=str(num_folds))
 
-
-        return train_data, train_target, dev_data, dev_target, test_data, test_target, label_to_oh
+        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state)
 
     else:
         print("Reading already processed data")
@@ -308,6 +312,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         test_target = read_p(data_dir+"/folds/"+str(fold)+"/labels")
 
         dev_data = read_p(data_dir+"/folds/"+str(fold_dev)+"/"+emb_type)
+        #dev_data = np.ndarray(dev_data)
         dev_target = read_p(data_dir+"/folds/"+str(fold_dev)+"/labels")
 
         train_data_filenames = [data_dir+"/folds/"+str(i)+"/"+emb_type for i in range(num_folds) if i not in [fold,fold_dev]]

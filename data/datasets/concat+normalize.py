@@ -14,18 +14,18 @@ d1 = d1.loc[:,cols]
 d2 = d2.loc[:,cols]
 d3 = d3.loc[:,cols]
 
-c = pd.concat([d1,d2,d3])
+c = pd.concat([d2,d3]).sample(frac=1)
 
-c['verdict'] = c['verdict'].str.lower()
+#c['verdict'] = c['verdict'].str.lower()
 
-c.loc[c['verdict'] == "legend", 'verdict'] = 'false'
-c.loc[c['verdict'] == "false.", 'verdict'] = 'false'
-c.loc[c['verdict'] == "mfalse", 'verdict'] = 'false'
-c.loc[c['verdict'] == "mostly false", 'verdict'] = 'false'
-c.loc[c['verdict'] == "true.", 'verdict'] = 'true'
-c.loc[c['verdict'] == "mtrue", 'verdict'] = 'true'
-c.loc[c['verdict'] == "mostly true", 'verdict'] = 'true'
+#c.loc[c['verdict'] == "legend", 'verdict'] = 'false'
+#c.loc[c['verdict'] == "false.", 'verdict'] = 'false'
+#c.loc[c['verdict'] == "mfalse", 'verdict'] = 'false'
+#c.loc[c['verdict'] == "mostly false", 'verdict'] = 'mfalse'
+#c.loc[c['verdict'] == "true.", 'verdict'] = 'true'
+#c.loc[c['verdict'] == "mtrue", 'verdict'] = 'true'
+#c.loc[c['verdict'] == "mostly true", 'verdict'] = 'mtrue'
 
-print(c.groupby('verdict').count())
 
 c.to_csv("dataset.csv", index=False, sep=',')
+print(c.groupby('verdict').count())
