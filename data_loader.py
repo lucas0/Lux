@@ -29,6 +29,7 @@ spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction
 
 #max num of words in a sentence
 MAX_SENT_LEN = 3000
+MIN_BODY_LEN = 300
 EMB_DIM_SIZE = 300
 BERT_DIM = 786
 FEATS_DIM = 94
@@ -112,9 +113,12 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
     #if force_reload: reset_hash()
 
+    print("size of initial \"dataset\":",len(data))
     data = data.drop_duplicates(subset='o_url', keep='first')
+    print("after dropping duplicates:",len(data))
     data.o_body = data.o_body.astype('str')
-    data = data[data['o_body'].map(len) > 150]
+    data = data[data['o_body'].map(len) > MIN_BODY_LEN]
+    print("after dropping origins with less than 150 chars:",len(data))
     data = data.reset_index()
     json_data = data.to_json().encode()
     data = data.sample(frac=1, random_state=random_state)
@@ -126,9 +130,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         data.loc[data['verdict'] == "mtrue", 'verdict'] = 'true'
         labels = ['false', 'mixture', 'true', 'unverified']
 
+    print("considered labels:", data.verdict.unique())
     labels = ['true', 'false']
     data = data.loc[data.verdict.isin(labels)]
-    print(data.verdict.unique())
+    print("considered labels:", data.verdict.unique())
+    print("after dropping invalid labels:",len(data))
 
     labels_idx = [labels.index(label) for label in labels]
     labels_one_hot = np.eye(len(labels))[labels_idx]
@@ -161,7 +167,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         print("Number of entries: ", num_entries)
         print("True/False: ",df.groupby('verdict').count())
         print("Mean and Std of number of words per document: ",np.mean(lens),np.std(lens))
-        sys.exit(1)
         #sns.distplot(lens)
         #plt.show()
 
@@ -321,3 +326,4 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         train_target = np.concatenate([read_p(fn) for fn in train_target_filenames], axis=0)
 
         return train_data, train_target, dev_data, dev_target, test_data, test_target, label_to_oh
+
