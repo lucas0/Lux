@@ -46,6 +46,7 @@ class DBpediaSpotlightClient:
         """
         query_url = self._endpoint
         LOG.debug("Annotating '%s'..." % text)
+        text = text.encode('ascii', 'replace')
         params = dict(filter(lambda x: x[1] is not None, (
             ('text', text), ('confidence', self.confidence), ('support', support), ('types', types),
             ('sparql', sparql), ('policy', policy))))
@@ -80,7 +81,7 @@ class EntitiesTypesRetriever:
     """
     A types retriever that relies on SPARQL to find the types of a DBpedia resource
     """
-    _QUERY_TEMPLATE_BASE = """select ?subject ?type 
+    _QUERY_TEMPLATE_BASE = """select ?subject ?type
 WHERE {
     FILTER(?subject IN (%s)) .
     ?subject a ?type .

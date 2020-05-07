@@ -2,6 +2,7 @@
 """Text precessor to clean raw text or split it in paragraphs or sentences."""
 import re
 from typing import Any, List
+import textwrap
 
 from nltk.tokenize.treebank import TreebankWordTokenizer
 
@@ -48,6 +49,17 @@ class TextPreprocessor:
 
         r = self.clean_text(r)
         r = self.split_to_paragraphs(r)
+        r = self.filter_paragraphs(r)
+
+        return r
+
+
+    def process_to_paragraphs2(self, text: str) -> List[str]:
+        r = text
+
+        r = self.clean_text(r)
+        if len(r) > 5000:
+            r = textwrap.wrap(r, 5000, break_long_words=False)
         r = self.filter_paragraphs(r)
 
         return r

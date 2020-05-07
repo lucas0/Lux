@@ -110,7 +110,8 @@ for s in setup:
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
     try:
         for fold in range(num_folds):
-            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=True, fold=fold, num_folds=num_folds, random_state=root, force_reload=force_reload)
+            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=False, fold=fold, num_folds=num_folds, random_state=root, force_reload=force_reload)
+            force_reload = False
             data_shape = (train.shape)
             target_len = len(label_to_oh)
             test_target = np.array([np.argmax(r) for r in test_target])
@@ -144,7 +145,7 @@ for s in setup:
         print("\n Averaged Test F1 over folds: ",avg_f1)
         #salvar no log
         with open(os.getcwd()+"/results.txt", "a") as f:
-            string = (str(s)+" AVG: "+str(avg_acc)+" F1: "+str(avg_f1)+"\n")
+            string = ("TrainsetLen:"+str(data_shape)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" F1: "+str(avg_f1)+"\n")
             f.write(string)
     except Exception as e:
         print(e)

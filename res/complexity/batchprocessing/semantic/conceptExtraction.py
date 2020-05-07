@@ -4,6 +4,7 @@ import logging
 import os
 import ujson as json
 from typing import Iterable, List
+import time
 
 from requests import RequestException
 from sklearn.externals.joblib import Parallel, delayed
@@ -19,17 +20,25 @@ __all__ = ['generate_entities_from_paragraphs', 'text_to_entities', 'text_to_jso
 LOG = logging.getLogger(__name__)
 
 
+errors = {"403":0, "414":0, "502":0, "400":0}
 def generate_entities_from_paragraphs(paragraphs: Iterable[str], client: DBpediaSpotlightClient):
     offset_span = 0
     for p in paragraphs:
-        try:
-            for entity in client.annotate(text=p):
-                entity.scores.offset += offset_span
-                yield entity
-            offset_span += len(p)
-        except RequestException as e:
-            LOG.warning("Request Exception: %s" % str(e))
-
+        while True:
+            try:
+                for entity in client.annotate(text=p):
+                    entity.scores.offset += offset_span
+                    yield entity
+                offset_span += len(p)
+            except RequestException as e:
+                code = str(e).split(" ")[0]
+                #if code not in errors.keys()
+                LOG.warning("Request Exception: %s" % str(e))
+                errors[code] += 1
+                print(errors)
+                time.sleep(1)
+                continue
+            break
 
 def text_to_entities(text: str, text_preprocessor: TextPreprocessor, client: DBpediaSpotlightClient,
                      is_filename: bool = False) -> TextConcepts:
@@ -38,8 +47,8 @@ def text_to_entities(text: str, text_preprocessor: TextPreprocessor, client: DBp
         with open(text, 'r') as f_in:
             text = f_in.read()
 
-    paragraphs = text_preprocessor.process_to_paragraphs(text)
-    nb_words = sum(text_preprocessor.count_words(p) for p in paragraphs) if paragraphs else 0
+    paragraphs = text_preprocessor.process_to_paragraphs2(text)
+    nb_words = sum(text_preprocessor.count_words(p) for p in paragraphs) if paragraphs else 1
     concepts = list(generate_entities_from_paragraphs(paragraphs, client))
     tc = TextConcepts(concepts, nb_words)
 

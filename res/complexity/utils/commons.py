@@ -112,6 +112,7 @@ class BatchProcess(metaclass=ABCMeta):
         except BaseException as e:
             ret = 1
             self._logger.debug(traceback.format_exc())
+            print(traceback.format_exc())
             self._logger.fatal("Fatal Error happened: %s" % str(e))
 
         if ret is None:

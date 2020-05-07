@@ -1,3 +1,5 @@
+import docker
+import time
 import unicodedata
 import itertools
 from pickle import dump, load
@@ -18,7 +20,7 @@ spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction
 comp_dir = cwd+"/res/complexity"
 res_path = cwd+"/res"
 
-pos_list={'CC':0,'CD':0,'DT':0,'EX':0,'FW':0,'IN':0,'JJ':0,'JJR':0,'JJS':0,'LS':0,'MD':0,'NN':0,'NNS':0,'NNP':0,'NNPS':0,'PDT':0,'POS':0,'PRP':0,'PRP$':0,'RB':0,'RBR':0,'RBS':0,'RP':0,'SYM':0,'TO':0,'UH':0,'VB':0,'VBD':0,'VBG':0,'VBN':0,'VBP':0,'VBZ':0,'WDT':0,'WP':0,'WP$':0,'WRB':0, ',':0, '.':0, '(':0, ')':0, '$':0, '\'\'':0, '``':0}
+pos_list={'CC':0,'CD':0,'DT':0,'EX':0,'FW':0,'IN':0,'JJ':0,'JJR':0,'JJS':0,'LS':0,'MD':0,'NN':0,'NNS':0,'NNP':0,'NNPS':0,'PDT':0,'POS':0,'PRP':0,'PRP$':0,'RB':0,'RBR':0,'RBS':0,'RP':0,'SYM':0,'TO':0,'UH':0,'VB':0,'VBD':0,'VBG':0,'VBN':0,'VBP':0,'VBZ':0,'WDT':0,'WP':0,'WP$':0,'WRB':0, ',':0, '.':0, '(':0, ')':0, '$':0, '\'\'':0, '``':0, ':':0, '#':0}
 
 text = "The cat in the hat barely knows something"
 text2 = "Pizza is the best food ever"
@@ -65,7 +67,7 @@ def split_into_sentences(text):
 #this process takes a while, so it should be done before the feature generation step
 def generate_specificity():
     my_data_path = spec_dir+"/dataset/data/my_data_unlabeled.txt"
-    csv = pd.read_csv(data_dir+"/data.csv")
+    csv = pd.read_csv(data_dir+"/data.csv", sep = "\t")
     texts = ["%s\n" % re.sub("\n|\r", "",t) for t in csv['body']]
 
     #writes sentences to a file
@@ -83,14 +85,29 @@ def generate_specificity():
 
 #this process takes a while, so it should be done before the feature generation step
 def generate_complexity():
-    csv = pd.read_csv(data_dir+"/data.csv")
+    csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Complexity for dataset shaped: ",csv.shape)
     subprocess.call("rm "+cwd+"/res/complexity/input_texts/*", shell=True, cwd=comp_dir)
     for index, row in csv.iterrows():
-        with open(cwd+"/res/complexity/input_texts/"+str(index)+".txt", "w+") as f:
+        with open(cwd+"/res/complexity/input_texts/"+str(index)+".txt", "w+", encoding="utf-8") as f:
             text = re.sub("\n|\r","",row['body'])
             f.write(text)
-    subprocess.call("python pysemcom.py texts2vectors input_texts/ output_file.csv http://api.dbpedia-spotlight.org/en/annotate", shell=True, cwd=comp_dir)
+
+    client = docker.from_env()
+    container = client.containers.run("dbpedia/spotlight-english:databus", "spotlight.sh", detach=True, restart_policy={"Name": "on-failure", "MaximumRetryCount": 900000}, ports={'80': 2222})
+    time.sleep(75)
+
+    try:
+        #subprocess.call("python3 pysemcom.py texts2vectors input_texts/ output_file.csv http://api.dbpedia-spotlight.org/en/annotate", shell=True, cwd=comp_dir)
+        subprocess.call("python3 pysemcom.py texts2vectors input_texts/ output_file.csv http://0.0.0.0:2222/rest/annotate", shell=True, cwd=comp_dir)
+    except subprocess.CalledProcessError as e:
+        print(traceback.format_exc())
+        input("ERROR during complexity scores generation")
+        return
+
+    finally:
+        container.stop()
+
     print("Complexity Scores Generated")
 
 def vectorize(text, text_id):
@@ -104,7 +121,7 @@ def vectorize(text, text_id):
     sbj = subjectivity_features(tagged_tokens, blob)[1]
     spe = specificity_features(text_id)
     pau = pausality_features(tagged_tokens, n_sentences)
-    inf = informality_features(text, text_id, complexity=True)
+    inf = informality_features(text, text_id, complexity=False)
     div = diversity_features(text)
     qua = quantity_features(tagged_tokens)
     unc = uncertainty_features(text)
