@@ -115,6 +115,8 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
     data = data.drop_duplicates(subset='o_url', keep='first')
     print("after dropping duplicates:",len(data))
     data.o_body = data.o_body.astype('str')
+    data.verdict = data.verdict.astype('str')
+    data['verdict'] = data['verdict'].str.lower()
     data = data[data['o_body'].map(len) > MIN_BODY_LEN]
     print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(data))
     data = data.reset_index()
@@ -125,6 +127,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         data.loc[data['verdict'] == "mtrue", 'verdict'] = 'true'
 
     labels = ['true', 'false']
+    print(data['verdict'].value_counts())
     data = data.loc[data.verdict.isin(labels)]
     print("considered labels:", data.verdict.unique())
     print("after dropping invalid labels:",len(data))
@@ -157,10 +160,9 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         df.verdict.apply(clean_text)
 
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
-        df = df[lens < MAX_SENT_LEN]
+        #df = df[lens < MAX_SENT_LEN]
         df.reset_index(drop = True, inplace = True)
         df.to_csv(data_dir+'/data.csv', sep="\t", index=False)
-        print(df.head)
         num_entries = len(df)
 
         #plots the data distribution by number of words
@@ -230,6 +232,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                     feature = feat.vectorize(e[0],idx)
                     features.append(feature)
                 features = np.array(features).astype(np.float)
+
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")
@@ -318,6 +321,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             b_line = linecache.getline(bert_dir+"/output4layers.json", idx+1)
             b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
             entry = np.concatenate((features[idx,:],b_values))
+            #print("lenghts:",len(features[idx,:]), len(b_values), len(entry))
             feat_df = pd.DataFrame([entry], columns=['f'+str(e) for e in range(len(entry))])
 
             feat_df.to_csv(data_dir+"/folds/"+str(fold)+"/features+bert.csv", mode='a', index=False, header=flag[fold])

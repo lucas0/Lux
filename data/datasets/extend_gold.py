@@ -11,8 +11,8 @@ cookie_wall_origins_filename = os.path.abspath(cwd+"/cookie_wall_origins.txt")
 
 agreement_keywords = ["agree and continue", "terms of service", "accept and continue", "This timeline is where you’ll spend", "we use cookies", "Reproduction is permitted with or without attribution"]
 
-page    claim   claim_label     tags    origin_list     date
-gold_df = pd.read_csv("emergent.csv", sep=",", header=0, names=["a_url","claim","verdict","a_tags","source_list","a_date","o_url"])
+#page    claim   claim_label     tags    origin_list     date
+gold_df = pd.read_csv("datasetVeritas3.csv", sep=",", header=0, names=["a_url","claim","verdict","a_tags","a_date","a_author","source_list","o_url", "value", "name"])
 consolidated_gold = pd.DataFrame(columns=["a_url","claim","verdict","a_tags","a_date","a_author","source_list","o_url","o_domain","o_body","o_title","o_date","o_author","o_keywords","o_summary"])
 
 cookie = 0
@@ -22,6 +22,10 @@ for i,e in list(gold_df.iterrows()):
     print(i)
     #unfold the entry into the varibles
     a_url,claim,verdict,a_tags,a_date,a_author,source_list,o_url,value,name = e
+
+    if len(a_author) < 2:
+        print("author:",a_author)
+        sys.exit(1)
 
     #cast string to list
     source_list = ast.literal_eval(e['source_list'])
@@ -67,7 +71,10 @@ for i,e in list(gold_df.iterrows()):
     a.nlp()
     o_title = a.title
     o_date = a.publish_date
-    o_author = a.authors
+    if a_author is "":
+        o_author = a.authors
+    else:
+        o_author = a_author
     o_tags = a.tags
     o_keywords = a.keywords
     o_summary = a.summary
@@ -86,5 +93,5 @@ for o_url in cookie_wall_origins_list:
 print("cookie:", cookie)
 print("errors:", errors)
 print("size of df:", len(consolidated_gold))
-consolidated_gold.to_csv("veritas4.csv", index=False, sep="\t")
+consolidated_gold.to_csv("veritas4.1.csv", index=False, sep="\t")
 input("Press ENTER")

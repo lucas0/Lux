@@ -65,6 +65,12 @@ Lux proposes the usage of Linguistic Aspects as Features.
     -- wget -c "https://s3.amazonaws.com/dl4j-distribution/GoogleNews-vectors-negative300.bin.gz"
     -- gunzip GoogleNews-vectors-negative300.bin.gz
 
+# Running
+
+sudo -E python3 lux.py
+
+if 'True' is passed as first argument, force_reload will receive its value and new bert models as well as new features will be generated.
+
 ## Known issues
 
 semantic complexity might raise a division by 0 critical error if the texts fed are not big enough. A simple solution to that is increasing the minimum lenght of body texts.

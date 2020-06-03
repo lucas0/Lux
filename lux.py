@@ -98,6 +98,10 @@ learning_rate = [0.0001, 0.001, 0.01]
 learning_rate = [0.001]
 num_dims = [64,128]
 epochs = [20,50,100,200]
+weights = {0: 0.7, 1: 0.3}
+weights = {0: 0.5, 1: 0.5}
+weights = {0: 0.35, 1: 0.65}
+weights = {0: 0.65, 1: 0.35}
 setup = itertools.product(epochs,input_type,learning_rate,num_dims)
 force_reload = True if ((len(sys.argv)>1) and (bool(sys.argv[1]) == True)) else False
 for s in setup:
@@ -125,7 +129,7 @@ for s in setup:
 
             #only trains if train is true
             chk = ModelCheckpoint(model_name, monitor='fmeasure', save_best_only=True, mode='max', verbose=1)
-            if train_flag: model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, callbacks=[chk], class_weight={0: 0.7, 1: 0.3}, validation_data=(dev,dev_target))
+            if train_flag: model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, callbacks=[chk], class_weight=weights, validation_data=(dev,dev_target))
 
             #makes predicitons for the test
             test_preds = model.predict_classes(test)

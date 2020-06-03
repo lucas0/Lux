@@ -111,6 +111,7 @@ def generate_complexity():
     print("Complexity Scores Generated")
 
 def vectorize(text, text_id):
+    print("Vectorizing: ",len(text))
     sentences = split_into_sentences(text)
     lower_case = text.lower()
     tokens = nltk.word_tokenize(lower_case)
@@ -121,7 +122,7 @@ def vectorize(text, text_id):
     sbj = subjectivity_features(tagged_tokens, blob)[1]
     spe = specificity_features(text_id)
     pau = pausality_features(tagged_tokens, n_sentences)
-    inf = informality_features(text, text_id, complexity=False)
+    inf = informality_features(text, text_id, complexity=True)
     div = diversity_features(text)
     qua = quantity_features(tagged_tokens)
     unc = uncertainty_features(text)
