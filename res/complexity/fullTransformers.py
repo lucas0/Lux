@@ -56,6 +56,10 @@ class SemanticTransformer(BaseEstimator):
                                                                   self.nb_cores, self.backend)
         # Retrieve types for each concept
         LOG.info("Retrieval of info of concepts...")
+        print(text_concepts_list[0])
+        input("text concepts list elem 0")
+        #for e in text_concepts_list:
+
         concept_info = ConceptsEnrichment.get_concepts_information(text_concepts_list, self.entities_types_retriever,
                                                                    self.entities_links_retriever)
         # Compute graphs

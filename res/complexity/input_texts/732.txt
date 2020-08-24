@@ -1,1 +1,0 @@
-b'Which virus is deadlier?\n\nThe coronavirus seems to be more deadly than the flu  so far.\n\nOn average, seasonal flu strains kill about 0.1 percent of people who become infected. The 1918 flu had an unusually high fatality rate, around 2 percent. Because it was so contagious, that flu killed tens of millions of people.'

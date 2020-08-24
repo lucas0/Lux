@@ -110,7 +110,7 @@ def generate_complexity():
 
     print("Complexity Scores Generated")
 
-def vectorize(text, text_id):
+def vectorize(text, text_id, complexity=False, drop_feat_idx=[]):
     print("Vectorizing: ",len(text))
     sentences = split_into_sentences(text)
     lower_case = text.lower()
@@ -122,7 +122,7 @@ def vectorize(text, text_id):
     sbj = subjectivity_features(tagged_tokens, blob)[1]
     spe = specificity_features(text_id)
     pau = pausality_features(tagged_tokens, n_sentences)
-    inf = informality_features(text, text_id, complexity=True)
+    inf = informality_features(text, text_id, complexity=complexity)
     div = diversity_features(text)
     qua = quantity_features(tagged_tokens)
     unc = uncertainty_features(text)
@@ -130,6 +130,16 @@ def vectorize(text, text_id):
 
     vector = inf+div+qua+aff
     vector.extend([sbj,spe,pau,unc])
+    #removing non deterministic features: Diversity(Hypergeometric Distribution D) and Specificity
+    #indexes 40 and 94
+    #print("\nvec before and after Diversity\n")
+    #print(vector[38:42])
+    #print("div:",div)
+    #del vector[40]
+    #print(vector[38:42])
+    #input("confirm right drops")
+    vector = [v for i,v in enumerate(vector) if i not in drop_feat_idx]
+    #drop_feat_idx
     return vector
 
 #takes the tagged text as input and outputs subjectivity scores

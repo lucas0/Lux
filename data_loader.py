@@ -31,7 +31,13 @@ spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction
 
 #max num of words in a sentence
 MAX_SENT_LEN = 3000
+#MAX_SENT_LEN = 100
+
+#use this min body len if dealing with twitter/title/short body texts
 MIN_BODY_LEN = 300
+#use this otherwise
+MIN_BODY_LEN = 3000
+
 EMB_DIM_SIZE = 300
 BERT_DIM = 786
 FEATS_DIM = 94
@@ -64,6 +70,23 @@ def pos(sentence):
     justTags = " ".join([e[1] for e in tagsAndTokes])
     return justTags
 
+class LineSeekableFile:
+    def __init__(self, seekable):
+        self.c = 0
+        self.fin = seekable
+        self.line_map = list() # Map from line index -> file position.
+        self.line_map.append(0)
+        while seekable.readline():
+            print("Creating LineSeekableFile Object: ",self.c)
+            self.c += 1
+            self.line_map.append(seekable.tell())
+
+    def __getitem__(self, index):
+        # NOTE: This assumes that you're not reading the file sequentially.
+        # For that, just use 'for line in file'.
+        self.fin.seek(self.line_map[index])
+        return self.fin.readline()
+
 def save_p(filename, data):
     with open(filename, "wb") as p:
         pickle.dump(data, p, protocol=4)
@@ -72,31 +95,39 @@ def read_p(filename):
     with open(filename, "rb") as f:
         return pickle.load(f)
 
-def check_hash(df_hash, num_folds, stage="data"):
+def check_hash(df_hash, num_folds, drop_feat_idx=None, stage="data"):
     print(stage.upper(), " CHECK> Checking Hash Path on: ",hash_path)
     if os.path.exists(hash_path):
         with open(hash_path, "r") as h:
             lines = h.readlines()
-            old_folds = lines[1].split("folds")[1][2:-1]
+            old_folds = lines[1].split(" ")[1][:-1]
+            old_feat_idx = lines[3].split(" ")[2][:-1]
             for i,l in enumerate(lines):
                 if l.startswith(stage):
-                    old_hash = l.split(stage)[1][2:-1]
+                    old_hash = l.split(" ")[1][:-1]
 
             print("Old and New Hash: ",old_hash[:5],df_hash[:5]," Same? ", (old_hash == df_hash))
-            print("Old and New #folds:",old_folds, num_folds, " Same? ", (int(old_folds)==num_folds), "\n")
+            print("Old and New #folds:",old_folds, num_folds, " Same? ", (int(old_folds)==num_folds))
+            print("Old and New Drop_Feat: ",old_feat_idx,drop_feat_idx," Same? ", (old_feat_idx == str(drop_feat_idx)),"\n")
+
         if old_hash != df_hash:
+            return False
+        if stage in ["features","data"] and (old_feat_idx != str(drop_feat_idx)):
             return False
         if stage == "data" and (int(old_folds) != num_folds):
             return False
         return True
     return False
 
-def savehash(stage, hashcode):
+def savehash(stage, hashcode, drop_feat_idx=[]):
     with open(hash_path, "r") as h:
         data = h.readlines()
         for i,l in enumerate(data):
             if l.startswith(stage):
-                data[i] = stage+": "+hashcode+"\n"
+                if stage == "features":
+                    data[i] = stage+": "+hashcode+"* "+str(drop_feat_idx)+"\n"
+                else:
+                    data[i] = stage+": "+hashcode+"\n"
     with open(hash_path, "w") as h:
         h.writelines(data)
 
@@ -105,7 +136,7 @@ def reset_hash():
         savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
-def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False):
+def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False, drop_feat_idx=[]):
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
 
@@ -117,8 +148,8 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
     data.o_body = data.o_body.astype('str')
     data.verdict = data.verdict.astype('str')
     data['verdict'] = data['verdict'].str.lower()
-    data = data[data['o_body'].map(len) > MIN_BODY_LEN]
-    print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(data))
+    #data = data[data['o_body'].map(len) > MIN_BODY_LEN]
+    #print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(data))
     data = data.reset_index()
 
     if(collapse_classes):
@@ -131,6 +162,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
     data = data.loc[data.verdict.isin(labels)]
     print("considered labels:", data.verdict.unique())
     print("after dropping invalid labels:",len(data))
+    #input()
 
     #creating hash
     json_data = data.to_json().encode()
@@ -151,13 +183,15 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         if fold == num_folds-1:
             fold_dev = 0
 
-    if not check_hash(df_hash, num_folds):
+    if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
         #input("Processing New Data. Press ENTER to start...")
 
+        #TODO modify these two lines back!!!
         df = data[['o_body','verdict']].copy()
+        #df = data[['claim','verdict']].copy()
         df = df.rename(columns={"o_body": "body"})
+        #df = df.rename(columns={"claim": "body"})
         df.body.apply(clean_text)
-        df.verdict.apply(clean_text)
 
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
         #df = df[lens < MAX_SENT_LEN]
@@ -224,12 +258,12 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 input("Error occured while GENERATING SPECIFICITY. Press any key to exit.")
                 sys.exit(1)
             savehash("specificity", hashcode=df_hash)
-        if not check_hash(df_hash, num_folds, stage="features"):
+        if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features"):
             try:
                 features = []
                 for idx,e in list(df.iterrows()):
                     print("Generating Features: ",idx+1,"out of ",len(df))
-                    feature = feat.vectorize(e[0],idx)
+                    feature = feat.vectorize(e[0],idx, complexity=True, drop_feat_idx=drop_feat_idx)
                     features.append(feature)
                 features = np.array(features).astype(np.float)
 
@@ -240,17 +274,8 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             save_p(data_dir+"/features", features)
             print("Generated Features. Saved to pickle.")
             print("Features Shape:", features.shape)
-            savehash("features", hashcode=df_hash)
+            savehash("features", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
 
-        features = read_p(data_dir+"/features")
-
-        #normalize features
-        features = np.nan_to_num(features)
-        features_t = features.T
-        for c in range(features_t.shape[0]):
-            row = features_t[c]
-            features_t[c] = np.interp(row, (np.min(row), np.max(row)), (-2, +2))
-        features = features_t.T
 
         print("MEMORY AFTER FEATURES: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
@@ -262,6 +287,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             #generate w2v embeddings from data
             w2v_model = w2v.KeyedVectors.load_word2vec_format(cwd+'/data/GoogleNews-vectors-negative300.bin', binary=True)
             embeddings = []
+            embeddings = np.empty([len(df),MAX_SENT_LEN,EMB_DIM_SIZE], dtype=np.float32)
             for idx, row in df.iterrows():
                 words = row['body'].split(" ")
                 words = filter(lambda x: x in w2v_model.vocab, words)
@@ -269,9 +295,9 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 masked = np.zeros((MAX_SENT_LEN, EMB_DIM_SIZE))
                 mask_len = min(len(embedding),MAX_SENT_LEN)
                 masked[MAX_SENT_LEN-mask_len:] = embedding[:mask_len]
-                embeddings.append(masked)
+                embeddings[idx] = masked
 
-            embeddings = np.array(embeddings, dtype=np.float32)
+            #embeddings = np.array(embeddings, dtype=np.float32)
             save_p(data_dir+"/masked_embeddings", embeddings)
             print("Masked Embeddings Saved")
             savehash("w2v", hashcode=df_hash)
@@ -282,69 +308,107 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         ## CONCATENATION, SHUFFLING AND SAVING ##
         #########################################
 
-        #delete folds folders
-        subprocess.call("rm -rf "+data_dir+"/folds/*", shell=True, cwd=data_dir)
+        if not check_hash(df_hash, num_folds, stage="concat"):
+            features = read_p(data_dir+"/features")
 
-        #creates the shuffle order
-        index_shuf = list(range(len(df)))
+            #normalize features
+            features = np.nan_to_num(features)
+            features_t = features.T
+            for c in range(features_t.shape[0]):
+                row = features_t[c]
+                features_t[c] = np.interp(row, (np.min(row), np.max(row)), (-2, +2))
+            features = features_t.T
+            #delete folds folders
+            subprocess.call("rm -rf "+data_dir+"/folds/*", shell=True, cwd=data_dir)
 
-        #LABELS
-        labels = [label_to_oh[label].tolist() for label in df['verdict'].values.tolist()]
-        labels = [labels[i] for i in index_shuf]
-        label_folds = np.array_split(labels, num_folds)
-        for i in range(num_folds):
-            fold_dir = data_dir+"/folds/"+str(i)
-            os.mkdir(fold_dir)
-            save_p(fold_dir+"/labels", label_folds[i])
-
-        ##W2V
-        #embeddings = read_p(data_dir+"/masked_embeddings")
-        #features_broad = np.array([features] * MAX_SENT_LEN)
-        #features_broad = np.swapaxes(features_broad, 0,1)
-        #w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
-        #print("W2V+Features shape: ",w2v_post_data.shape)
-        #w2v_post_data = [w2v_post_data[i] for i in index_shuf]
-        #only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
-        #w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
-        #for i in range(num_folds):
-        #    fold_dir = data_dir+"/folds/"+str(i)
-        #    save_p(fold_dir+"/w2v", w2v_folds[i])
-        #    save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
-
-        bert_folds = np.array_split(index_shuf, num_folds)
-        bert_folds = [a.tolist() for a in bert_folds]
-
-        fold_idx = [bert_folds.index(list(sl)) for e in index_shuf for sl in bert_folds if e in list(sl)]
-
-        flag = {idx:False for idx in range(len(bert_folds))}
-        for fold, idx in zip(fold_idx, index_shuf):
-            b_line = linecache.getline(bert_dir+"/output4layers.json", idx+1)
-            b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
-            entry = np.concatenate((features[idx,:],b_values))
-            #print("lenghts:",len(features[idx,:]), len(b_values), len(entry))
-            feat_df = pd.DataFrame([entry], columns=['f'+str(e) for e in range(len(entry))])
-
-            feat_df.to_csv(data_dir+"/folds/"+str(fold)+"/features+bert.csv", mode='a', index=False, header=flag[fold])
-            flag[fold] = False
-
-        linecache.clearcache()
-
-        for i in range(num_folds):
-            fold_dir = data_dir+"/folds/"+str(i)
-            bert = np.genfromtxt(fold_dir+"/features+bert.csv", delimiter=',')
-            print("saving bert fold ",str(i), bert.shape)
-            save_p(fold_dir+"/bert", bert)
-            #save_p(fold_dir+"/only_bert", only_bert_folds[i])
+            #creates the shuffle order
+            index_shuf = list(range(len(df)))
 
 
-        print("MEMORY AFTER FOLDS SAVING: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            #LABELS
+            labels = [label_to_oh[label].tolist() for label in df['verdict'].values.tolist()]
+            labels = [labels[i] for i in index_shuf]
+            label_folds = np.array_split(labels, num_folds)
 
-        print('Generation of data done!')
+            for i in range(num_folds):
+                fold_dir = data_dir+"/folds/"+str(i)
+                os.mkdir(fold_dir)
+                save_p(fold_dir+"/labels", label_folds[i])
 
+           # ##W2V
+           # embeddings = read_p(data_dir+"/masked_embeddings")
+           # features_broad = np.array([features] * MAX_SENT_LEN)
+           # features_broad = np.swapaxes(features_broad, 0,1)
+           # w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
+           # print("W2V+Features shape: ",w2v_post_data.shape)
+           # w2v_post_data = [w2v_post_data[i] for i in index_shuf]
+           # only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
+           # w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
+           # for i in range(num_folds):
+           #     fold_dir = data_dir+"/folds/"+str(i)
+           #     save_p(fold_dir+"/w2v", w2v_folds[i])
+           #     save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
+
+            #creates a list of N=folds lists, each inner list contains the index of the elements of each fold
+            bert_folds = np.array_split(index_shuf, num_folds)
+            bert_folds = [a.tolist() for a in bert_folds]
+
+            #creates an ordered list of N=entries of integers(:folds) indicating the fold idx of each entry
+            fold_idx = [bert_folds.index(list(sl)) for e in index_shuf for sl in bert_folds if e in list(sl)]
+
+            #I think this should start as True
+            flag = {idx:False for idx in range(len(bert_folds))}
+
+            #creates a seekable file (nothing more than a list of pointers to each line of the file)
+            #so they can be accessed directly without loading the whole file into memory
+            b_file = bert_dir+"/output4layers.json"
+            fin = open(b_file, "rt")
+            BertSeekFile = LineSeekableFile(fin)
+
+            #TODO make this process read only one fold at a time
+            for fold, idx in zip(fold_idx, index_shuf):
+                #b_line = linecache.getline(bert_dir+"/output4layers.json", idx+1)
+                b_line = BertSeekFile[idx]
+                b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
+                entry = np.concatenate((features[idx,:],b_values))
+
+                #b_values = np.ndarray(b_values)
+                #print("lenghts:",len(features[idx,:]), len(b_values), len(entry))
+                feat_df = pd.DataFrame([entry], columns=['f'+str(e) for e in range(len(entry))])
+                bert_df = pd.DataFrame([b_values], columns=['f'+str(e) for e in range(len(b_values))])
+
+                feat_df.to_csv(data_dir+"/folds/"+str(fold)+"/features+bert.csv", mode='a', index=False, header=flag[fold])
+                bert_df.to_csv(data_dir+"/folds/"+str(fold)+"/bert.csv", mode='a', index=False, header=flag[fold])
+                flag[fold] = False
+                #linecache.clearcache()
+
+            fin.close()
+            for i in range(num_folds):
+                fold_dir = data_dir+"/folds/"+str(i)
+                bert = np.genfromtxt(fold_dir+"/features+bert.csv", delimiter=',')
+                only_bert = np.genfromtxt(fold_dir+"/bert.csv", delimiter=',')
+                print("saving bert fold ",str(i), bert.shape)
+                save_p(fold_dir+"/bert", bert)
+                save_p(fold_dir+"/only_bert", only_bert)
+
+            print("MEMORY AFTER FOLDS SAVING: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            savehash("concat", hashcode=df_hash)
+
+        checks = ["bert", "w2v", "features", "concat", "complexity", "specificity"]
+        for e in checks:
+            print(e)
+            print(check_hash(df_hash,num_folds,stage=e))
+            if not (check_hash(df_hash,num_folds,stage=e, drop_feat_idx=drop_feat_idx)):
+                print('Problem at Generation of data!')
+                print("Stage: "+e)
+                return
+
+        print('Generation of data successfully done!')
         savehash("data", hashcode=df_hash)
         savehash("folds", hashcode=str(num_folds))
 
         return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state)
+
 
     else:
         print("Reading already processed data")
