@@ -45,11 +45,6 @@ DENSE_DIM = 256
 learning_rate = 0.001
 batch_size = 32
 
-def powerset(iterable):
-    "powerset([1,2,3]) --> () (1,) (2,) (3,) (1,2) (1,3) (2,3) (1,2,3)"
-    s = list(iterable)
-    return chain.from_iterable(combinations(s, r) for r in range(len(s)+1))
-
 def svm_model(data_shape, target_len, learning_rate, DENSE_DIM):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
     model = Sequential()
@@ -107,26 +102,25 @@ cwd = os.path.abspath(__file__)
 save_dir = cwd+"/compare_input/"
 
 #input_type = ['bert', 'only_bert', 'w2v', 'only_w2v']
-#input_type = ['w2v', 'only_w2v']
-#input_type = ['bert','only_bert']
 input_type = ['bert']
-learning_rate = [0.0001, 0.001]
-num_dims = [64,128]
-epochs = [20,50,100,200]
-#epochs = [50]
+learning_rate = [0.001]
+num_dims = [64]
+epochs = [100]
 
-setup = itertools.product(epochs,input_type,learning_rate,num_dims)
-#features_idx = powerset(range(97))
 initial_feat = set(range(97))
 removed_feat = set([])
 check_feat = initial_feat - removed_feat
 drop_features_idx = [list(x) for x in (itertools.combinations(check_feat, 1))]
+
 force_reload = True if ((len(sys.argv)>1) and (bool(sys.argv[1]) == True)) else False
-for s,drop_feat_idx in zip(setup, drop_features_idx):
-    num_epochs = s[0]
-    emb_type = s[1]
-    learning_rate = s[2]
-    num_dims = s[3]
+setup = itertools.product(drop_features_idx, epochs,input_type,learning_rate,num_dims)
+
+for s in setup:
+    drop_feat_idx = s[0]
+    num_epochs = s[1]
+    emb_type = s[2]
+    learning_rate = s[3]
+    num_dims = s[4]
     avg_acc = 0
     avg_f1 = 0
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
@@ -172,8 +166,9 @@ for s,drop_feat_idx in zip(setup, drop_features_idx):
         print("\n Averaged Test F1 over folds: ",avg_f1)
         #salvar no log
         with open(os.getcwd()+"/results.txt", "a") as f:
-            string = ("TrainShape:"+str(data_shape)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" F1: "+str(avg_f1)+"DROP_FEAT: "+str(drop_feat_idx))
+            string = ("TrainShape:"+str(data_shape)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" F1: "+str(avg_f1)+"\n")
             f.write(string)
+
     except Exception as e:
         print(e)
         print(traceback.format_exc())

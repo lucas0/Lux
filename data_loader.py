@@ -119,7 +119,7 @@ def check_hash(df_hash, num_folds, drop_feat_idx=None, stage="data"):
         return True
     return False
 
-def savehash(stage, hashcode, drop_feat_idx=[]):
+def savehash(stage, hashcode, drop_feat_idx=None):
     with open(hash_path, "r") as h:
         data = h.readlines()
         for i,l in enumerate(data):
@@ -407,7 +407,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         savehash("data", hashcode=df_hash)
         savehash("folds", hashcode=str(num_folds))
 
-        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state)
+        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx)
 
 
     else:

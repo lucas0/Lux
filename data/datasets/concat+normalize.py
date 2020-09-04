@@ -11,18 +11,26 @@ MIN_BODY_LEN = 500
 
 MAX_SENT_LEN = 3000
 
-d1 = pd.read_csv(cwd+"/veritas3.csv")
-print("size of veritas3.csv:", len(d1))
+#data from evaluation of the automatic methods
 d2 = pd.read_csv(cwd+"/pos_samples.csv", sep='\t')
 print("size of pos_samples.csv:", len(d2))
 d3 = pd.read_csv(cwd+"/good_a3.csv")
 print("size of good_a3.csv:", len(d3))
+
+#data from the FIRST annotation session (lucas annotation day)
+d1 = pd.read_csv(cwd+"/veritas3.csv")
+print("size of veritas3.csv:", len(d1))
+
+#from MAIN annotation session
 d4 = pd.read_csv(cwd+"/veritas4.csv", sep="\t")
 print("size of veritas4.csv:", len(d4))
 d5 = pd.read_csv(cwd+"/emergent_gold.csv", sep="\t")
 print("size of emergent_gold.csv:", len(d5))
 
+#this one is with claims instead of bodies (for datasets that have small texts)
 #d6 = pd.read_csv(cwd+"/trusted.csv", sep="\t")
+
+#data extracted from trusted news sources
 d6 = pd.read_csv(cwd+"/trusted_body.csv", sep="\t")
 d6.o_body = d6.o_body.astype('str')
 d6 = d6[d6['o_body'].map(len) > MIN_BODY_LEN]
@@ -41,13 +49,12 @@ print("size of trusted1.csv:", len(d6))
 #d8.verdict = d8.verdict.astype('str')
 #d8['o_body'] = d8.verdict
 #d8['o_url'] = range(len(d8))
-#print("size of fever.csv:", len(d8))
+#print("size of thoracle.csv:", len(d8))
 
 dataframes = [d1,d2,d3,d4,d5,d6]
-#dataframes = [d4,d5,d6]
+dataframes = [d1,d2,d3,d4]
+dataframes = [d1,d2,d3,d4,d5,d6]
 #dataframes = [d5]
-#dataframes = [d7]
-#dataframes = [d1,d2,d3,d4]
 
 cols = set(d1.columns)
 for i in dataframes:
@@ -73,6 +80,10 @@ c.loc[c['verdict'].str.contains("true"), 'verdict'] = 'true'
 c.loc[c['verdict'].str.contains("false"), 'verdict'] = 'false'
 c.loc[c['verdict'].str.startswith("un"), 'verdict'] = 'unverified'
 
+print("=======")
+print(len(c))
+print(c['verdict'].value_counts())
+print("=======")
 c = c[c['verdict'].isin(['true', 'false'])]
 
 print("\nsize of concatenated \"dataset\":",len(c))
@@ -89,4 +100,5 @@ print(c['verdict'].value_counts())
 dif = (c['verdict'].value_counts()[0] - c['verdict'].value_counts()[1])
 print("Difference False-True:", dif)
 
+sys.exit(1)
 c.to_csv(cwd+"/dataset.csv", index=False, sep=',')
