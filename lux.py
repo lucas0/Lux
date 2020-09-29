@@ -107,10 +107,20 @@ learning_rate = [0.001]
 num_dims = [64]
 epochs = [100]
 
-initial_feat = set(range(97))
-removed_feat = set([])
-check_feat = initial_feat - removed_feat
-drop_features_idx = [list(x) for x in (itertools.combinations(check_feat, 1))]
+initial_feat = list(range(97))
+removed_feat = [17, 23]
+remaining_feat = [[x] for x in initial_feat if x not in removed_feat]
+for x in remaining_feat:
+    x.extend(removed_feat)
+    x.sort()
+    x = set(x)
+    if len(x) is not len(removed_feat)+1:
+        del(x)
+
+remaining_feat.append(removed_feat)
+
+drop_features_idx = sorted(remaining_feat)
+print(drop_features_idx)
 
 force_reload = True if ((len(sys.argv)>1) and (bool(sys.argv[1]) == True)) else False
 setup = itertools.product(drop_features_idx, epochs,input_type,learning_rate,num_dims)

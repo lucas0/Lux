@@ -1,24 +1,95 @@
-import docker
-import time
-import unicodedata
-import itertools
-from pickle import dump, load
-from itertools import dropwhile
+import requests
+from bert_serving.server import BertServer
+from bert_serving.server.helper import get_args_parser
+from bert_serving.client import BertClient
 import re
-from lexical_diversity import lex_div as ld
-from uncertainty.classifier import Classifier
-import readability
 import subprocess
+import json
+#import docker
+from timeit import default_timer as timer
+#import unicodedata
+#import itertools
+#from pickle import dump, load
+#from itertools import dropwhile
+#from lexical_diversity import lex_div as ld
+#from uncertainty.classifier import Classifier
+#import readability
+#import subprocess
 import pandas as pd
 import os, sys
-from textblob import TextBlob
-import nltk
-from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+#from textblob import TextBlob
+#import nltk
 cwd = os.path.abspath(os.path.dirname(sys.argv[0]))
 data_dir = cwd+"/data"
 spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction"
 comp_dir = cwd+"/res/complexity"
 res_path = cwd+"/res"
+bert_dir = cwd+"/res/bert"
+
+#a_author,a_date,a_tags,a_url,claim,dataset,name,o_author,o_body,o_date,o_domain,o_keywords,o_summary,o_title,o_url,source_list,value,verdict
+#a_author,claim,o_author,o_summary,o_title,source_list,
+
+opr_header = {'API-OPR':'8kcosso0gk8sw8g0osckwowk4w8kc0wowg888coo'}
+def page_rank(o_domain):
+    url = 'https://openpagerank.com/api/v1.0/getPageRank?domains%5B0%5D=' + o_domain
+    request = requests.get(url, headers=opr_header)
+    result = request.json()
+    print(result)
+    return(result)
+
+#def generate_tags_bow():
+#a_tags
+#o_keywords
+#
+#def dates_and_difference():
+#a_date =
+#o_date =
+#date_dif =
+#
+#def text_similarity(t1,t2):
+
+def getBERT(texts):
+
+    #start the bert-as-a-service server
+    bert_dir = os.environ.get("BERT_BASE_DIR")
+    args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', 'NONE', '-mask_cls_sep'])
+    server = BertServer(args)
+    server.start()
+
+    #generates the encodings for the texts
+    bc = BertClient(check_version=False)
+    for text in texts:
+        a = bc.encode([text])
+
+    #stops the bert-as-a-service server
+    #bc.shutdown(port=5555)
+
+
+df = pd.read_csv(data_dir+"/data.csv", sep="\t")
+df = df.body.tolist()
+print(len(df))
+
+start = timer()
+getBERT(df)
+end = timer()
+print("time",end - start)
+
+def extraOI(ext):
+    a_date, a_tags, claim, o_body, o_date, o_domain, o_keywords, o_summary, o_title, source_list = ext
+    #1)obtain a_body?
+    #2)do similarity between: (a_tags, claim, a_body) X (o_keywords, o_title, o_summary, o_body)
+    #3)lenght of source_list
+    #4)dates_and_difference
+
+def extraLUX(ext):
+    o_body, o_date, o_domain, o_keywords, o_summary, o_title, source_list = ext
+    #for extra LUX features
+    #should use only origin features
+    #1)append title/summary to bert! (data_load.py)
+    #2)similarity between origin pieces (to check consistency)
+    #3)lenght of source_list
+    #4)dates_and_difference (using current date and origin date)
+
 
 pos_list={'CC':0,'CD':0,'DT':0,'EX':0,'FW':0,'IN':0,'JJ':0,'JJR':0,'JJS':0,'LS':0,'MD':0,'NN':0,'NNS':0,'NNP':0,'NNPS':0,'PDT':0,'POS':0,'PRP':0,'PRP$':0,'RB':0,'RBR':0,'RBS':0,'RP':0,'SYM':0,'TO':0,'UH':0,'VB':0,'VBD':0,'VBG':0,'VBN':0,'VBP':0,'VBZ':0,'WDT':0,'WP':0,'WP$':0,'WRB':0, ',':0, '.':0, '(':0, ')':0, '$':0, '\'\'':0, '``':0, ':':0, '#':0}
 
@@ -110,7 +181,7 @@ def generate_complexity():
 
     print("Complexity Scores Generated")
 
-def vectorize(text, text_id, complexity=False):
+def vectorize(text, text_id, complexity=False, drop_feat_idx=[]):
     print("Vectorizing: ",len(text))
     sentences = split_into_sentences(text)
     lower_case = text.lower()
@@ -119,28 +190,27 @@ def vectorize(text, text_id, complexity=False):
     blob = TextBlob(text)
     n_sentences = max([len(sentences),1])
 
-    inf = informality_features(text, text_id, complexity=complexity)
-    div = diversity_features(text)
-    qua = quantity_features(tagged_tokens)
-    aff = list(affect_features(text, sentences, n_sentences, blob))
     sbj = subjectivity_features(tagged_tokens, blob)[1]
     spe = specificity_features(text_id)
     pau = pausality_features(tagged_tokens, n_sentences)
+    inf = informality_features(text, text_id, complexity=complexity)
+    div = diversity_features(text)
+    qua = quantity_features(tagged_tokens)
     unc = uncertainty_features(text)
+    aff = list(affect_features(text, sentences, n_sentences, blob))
 
     vector = inf+div+qua+aff
     vector.extend([sbj,spe,pau,unc])
-
-   # print(len(inf))
-   # print(len(div))
-   # print(len(qua))
-   # print(len(aff))
-   # print(len(sbj))
-   # print(len(spe))
-   # print(len(pau))
-   # print(len(unc))
-
-    #vector = [v for i,v in enumerate(vector) if i not in drop_feat_idx]
+    #removing non deterministic features: Diversity(Hypergeometric Distribution D) and Specificity
+    #indexes 40 and 94
+    #print("\nvec before and after Diversity\n")
+    #print(vector[38:42])
+    #print("div:",div)
+    #del vector[40]
+    #print(vector[38:42])
+    #input("confirm right drops")
+    vector = [v for i,v in enumerate(vector) if i not in drop_feat_idx]
+    #drop_feat_idx
     return vector
 
 #takes the tagged text as input and outputs subjectivity scores

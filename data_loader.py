@@ -101,7 +101,8 @@ def check_hash(df_hash, num_folds, drop_feat_idx=None, stage="data"):
         with open(hash_path, "r") as h:
             lines = h.readlines()
             old_folds = lines[1].split(" ")[1][:-1]
-            old_feat_idx = lines[3].split(" ")[2][:-1]
+            old_feat_idx = lines[-2].split("drop_feat: ")[1][:-1]
+            print("old_feat_idx:", old_feat_idx)
             for i,l in enumerate(lines):
                 if l.startswith(stage):
                     old_hash = l.split(" ")[1][:-1]
@@ -112,7 +113,7 @@ def check_hash(df_hash, num_folds, drop_feat_idx=None, stage="data"):
 
         if old_hash != df_hash:
             return False
-        if stage in ["features","data"] and (old_feat_idx != str(drop_feat_idx)):
+        if stage in ["drop_feat", "data"] and (old_feat_idx != str(drop_feat_idx)):
             return False
         if stage == "data" and (int(old_folds) != num_folds):
             return False
@@ -124,8 +125,8 @@ def savehash(stage, hashcode, drop_feat_idx=None):
         data = h.readlines()
         for i,l in enumerate(data):
             if l.startswith(stage):
-                if stage == "features":
-                    data[i] = stage+": "+hashcode+"* "+str(drop_feat_idx)+"\n"
+                if stage == "drop_feat":
+                    data[i] = stage+": "+str(drop_feat_idx)+"\n"
                 else:
                     data[i] = stage+": "+hashcode+"\n"
     with open(hash_path, "w") as h:
@@ -263,10 +264,9 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 features = []
                 for idx,e in list(df.iterrows()):
                     print("Generating Features: ",idx+1,"out of ",len(df))
-                    feature = feat.vectorize(e[0],idx, complexity=True, drop_feat_idx=drop_feat_idx)
+                    feature = feat.vectorize(e[0],idx, complexity=True)
                     features.append(feature)
                 features = np.array(features).astype(np.float)
-
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")
@@ -275,6 +275,15 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             print("Generated Features. Saved to pickle.")
             print("Features Shape:", features.shape)
             savehash("features", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
+
+        #check if drop_features is the same
+        if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="drop_feat"):
+            features = read_p(data_dir+"/features")
+            print(features.shape)
+            features = np.delete(features,drop_feat_idx,1)
+            print(features.shape)
+            save_p(data_dir+"/features", features)
+            savehash("drop_feat", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
 
 
         print("MEMORY AFTER FEATURES: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
@@ -365,24 +374,41 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             fin = open(b_file, "rt")
             BertSeekFile = LineSeekableFile(fin)
 
+            #start the bert-as-a-service server
+            bert_dir = os.environ.get("BERT_BASE_DIR")
+            args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', 'NONE', '-mask_cls_sep'])
+            server = BertServer(args)
+            server.start()
+
             #TODO make this process read only one fold at a time
             for fold, idx in zip(fold_idx, index_shuf):
+
+                #generates the encodings for the texts
+                bc = BertClient(check_version=False)
+                print(df.columns)
+                print(df.body[idx])
+                b = bc.encode(df.body[idx])[0]
+                print(len(b), len(b[0]))
                 #b_line = linecache.getline(bert_dir+"/output4layers.json", idx+1)
-                b_line = BertSeekFile[idx]
-                b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
-                entry = np.concatenate((features[idx,:],b_values))
+                #b_line = BertSeekFile[idx]
+                #b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
+                entry = np.concatenate((features[idx,:],b))
 
                 #b_values = np.ndarray(b_values)
                 #print("lenghts:",len(features[idx,:]), len(b_values), len(entry))
                 feat_df = pd.DataFrame([entry], columns=['f'+str(e) for e in range(len(entry))])
-                bert_df = pd.DataFrame([b_values], columns=['f'+str(e) for e in range(len(b_values))])
+                bert_df = pd.DataFrame([b], columns=['f'+str(e) for e in range(len(b))])
 
                 feat_df.to_csv(data_dir+"/folds/"+str(fold)+"/features+bert.csv", mode='a', index=False, header=flag[fold])
                 bert_df.to_csv(data_dir+"/folds/"+str(fold)+"/bert.csv", mode='a', index=False, header=flag[fold])
                 flag[fold] = False
                 #linecache.clearcache()
 
+            #stops the bert-as-a-service server
+            bc.shutdown(port=5555)
+
             fin.close()
+
             for i in range(num_folds):
                 fold_dir = data_dir+"/folds/"+str(i)
                 bert = np.genfromtxt(fold_dir+"/features+bert.csv", delimiter=',')
