@@ -1,0 +1,97 @@
+0 Kincaid
+1 ARI
+2 Coleman-Liau
+3 FleschReadingEase
+4 GunningFogIndex
+5 LIX
+6 SMOGIndex
+7 RIX
+8 DaleChallIndex
+9 filename
+10 nbWord
+11 nbConcepts
+12 nbUniqueConcepts
+13 conceptsWordsRatio
+14 uniqueConceptsWordsRatio
+15 nbNodes
+16 radius
+17 diameter
+18 assortativity
+19 density
+20 textDensityMean
+21 textDensityStd
+22 nbTypesMean
+23 nbTypesStd
+24 nbLinkInMean
+25 nbLinkInStd
+26 nbLinkOutMean
+27 nbLinkOutStd
+28 nbNodes_DBPedia
+29 density_DBPedia
+30 nbNodes_Schema
+31 density_Schema
+32 nbNodes_yago
+33 density_yago
+34 Simple TTR
+35 Root TTR
+36 Log TTR
+37 Mass TTR
+38 Mean segmental TTR (MSTTR)
+39 Moving average TTR (MATTR)
+40 Hypergeometric distribution D (HDD)
+41 Measure of lexical textual diversity (MTLD)
+42 Measure of lexical textual diversity (moving average, wrap)
+43 Measure of lexical textual diversity (moving average, bi-directional)
+44 #terms
+45 #tokens
+46 '#'
+47 '$'
+48 "''"
+49 '('
+50 ')'
+51 ','
+52 '.'
+53 ':'
+54 'CC'
+55 'CD'
+56 'DT'
+57 'EX'
+58 'FW'
+59 'IN'
+60 'JJ'
+61 'JJR'
+62 'JJS'
+63 'LS'
+64 'MD'
+65 'NN'
+66 'NNP'
+67 'NNPS'
+68 'NNS'
+69 'PDT'
+70 'POS'
+71 'PRP'
+72 'PRP$'
+73 'RB'
+74 'RBR'
+75 'RBS'
+76 'RP'
+77 'SYM'
+78 'TO'
+79 'UH'
+80 'VB'
+81 'VBD'
+82 'VBG'
+83 'VBN'
+84 'VBP'
+85 'VBZ'
+86 'WDT'
+87 'WP'
+88 'WP$'
+89 'WRB'
+90 '``'
+91 Sum TextBlob’s Polarity score over sentences
+92 Sum VADER’s Polarity score over sentences
+93 Sum TextBlob’s Subjectivity score over sentences
+94 Speciteller scores
+95 Count of ‘.’-tag tokens
+96 LUCI: Linguistic Uncertainty Classifier Interface

@@ -17,6 +17,10 @@ import gensim.models as w2v
 import pandas as pd
 import nltk
 import generateFeatures as feat
+from bert_serving.server.helper import get_args_parser
+from bert_serving.server.helper import get_shutdown_parser
+from bert_serving.server import BertServer
+from bert_serving.client import BertClient
 tf.compat.v1.logging.set_verbosity(tf.compat.v1.logging.FATAL)
 
 filename = sys.argv[0]
@@ -30,19 +34,13 @@ hash_path = cwd+"/data/hash.txt"
 spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction"
 
 #max num of words in a sentence
-MAX_SENT_LEN = 3000
-#MAX_SENT_LEN = 100
-
-#use this min body len if dealing with twitter/title/short body texts
-MIN_BODY_LEN = 300
-#use this otherwise
-MIN_BODY_LEN = 3000
+#only used for w2v
+MAX_SENT_LEN = 2000
 
 EMB_DIM_SIZE = 300
-BERT_DIM = 786
-FEATS_DIM = 94
+#EMB_DIM_SIZE = 100
 
-stages = ["data","folds","bert","features","complexity","specificity","w2v"]
+stages = ["concat","data","folds","bert","features","complexity","specificity","w2v"]
 
 def clean_text(string):
     """
@@ -210,31 +208,35 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         ##################################
         ########## BERT TRAIN ############
         ##################################
+        ##################################
+        ########### SUSPENDED ############
+        #WHILE TESTING BERT AS A SERVICE #
+        ##################################
 
-        #check if new bert should be generated
-        if not check_hash(df_hash, num_folds, stage="bert"):
-            try:
-                inputfile = cwd+'/res/bert/input.txt'
-                #copy sentences so BERT is generated
-                with open(inputfile, 'w+') as f:
-                    for i,e in df.iterrows():
-                        b = re.sub("\n", " ", e['body'])
-                        f.write(b+'\n')
-
-                #Generate BERT embeddings if data is new
-                #removes the output file so a new one is generated
-                cmd0 = "rm "+cwd+"/res/bert/output4layers.json"
-                subprocess.call(cmd0, shell=True, cwd = bert_dir)
-
-                #generates new BERT embeddings
-                cmd1 = "python3 extract_features.py   --input_file=input.txt   --output_file=output4layers.json   --vocab_file=$BERT_BASE_DIR/vocab.txt   --bert_config_file=$BERT_BASE_DIR/bert_config.json   --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt   --layers=-1,-2,-3,-4  --max_seq_length=512   --batch_size=32"
-                subprocess.call(cmd1, shell=True, cwd = bert_dir)
-            except Exception as e:
-                print(traceback.format_exc())
-                input("Error occured while fine training BERT. Press any key to exit.")
-                sys.exit(1)
-            print("BERT Embeddings Saved")
-            savehash("bert", df_hash)
+#        #check if new bert should be generated
+#        if not check_hash(df_hash, num_folds, stage="bert"):
+#            try:
+#                inputfile = cwd+'/res/bert/input.txt'
+#                #copy sentences so BERT is generated
+#                with open(inputfile, 'w+') as f:
+#                    for i,e in df.iterrows():
+#                        b = re.sub("\n", " ", e['body'])
+#                        f.write(b+'\n')
+#
+#                #Generate BERT embeddings if data is new
+#                #removes the output file so a new one is generated
+#                cmd0 = "rm "+cwd+"/res/bert/output4layers.json"
+#                subprocess.call(cmd0, shell=True, cwd = bert_dir)
+#
+#                #generates new BERT embeddings
+#                cmd1 = "python3 extract_features.py   --input_file=input.txt   --output_file=output4layers.json   --vocab_file=$BERT_BASE_DIR/vocab.txt   --bert_config_file=$BERT_BASE_DIR/bert_config.json   --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt   --layers=-1,-2,-3,-4  --max_seq_length=512   --batch_size=32"
+#                subprocess.call(cmd1, shell=True, cwd = bert_dir)
+#            except Exception as e:
+#                print(traceback.format_exc())
+#                input("Error occured while fine training BERT. Press any key to exit.")
+#                sys.exit(1)
+#            print("BERT Embeddings Saved")
+#            savehash("bert", df_hash)
 
 
         ###################################
@@ -292,26 +294,26 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         ############### W2V ###############
         ###################################
 
-        if not check_hash(df_hash, num_folds, stage="w2v"):
-            #generate w2v embeddings from data
-            w2v_model = w2v.KeyedVectors.load_word2vec_format(cwd+'/data/GoogleNews-vectors-negative300.bin', binary=True)
-            embeddings = []
-            embeddings = np.empty([len(df),MAX_SENT_LEN,EMB_DIM_SIZE], dtype=np.float32)
-            for idx, row in df.iterrows():
-                words = row['body'].split(" ")
-                words = filter(lambda x: x in w2v_model.vocab, words)
-                embedding = [w2v_model.wv[word] for word in words]
-                masked = np.zeros((MAX_SENT_LEN, EMB_DIM_SIZE))
-                mask_len = min(len(embedding),MAX_SENT_LEN)
-                masked[MAX_SENT_LEN-mask_len:] = embedding[:mask_len]
-                embeddings[idx] = masked
+        #if not check_hash(df_hash, num_folds, stage="w2v"):
+        #    #generate w2v embeddings from data
+        #    w2v_model = w2v.KeyedVectors.load_word2vec_format(cwd+'/data/GoogleNews-vectors-negative300.bin', binary=True)
+        #    embeddings = []
+        #    embeddings = np.empty([len(df),MAX_SENT_LEN,EMB_DIM_SIZE], dtype=np.float32)
+        #    for idx, row in df.iterrows():
+        #        words = row['body'].split(" ")
+        #        words = filter(lambda x: x in w2v_model.vocab, words)
+        #        embedding = [w2v_model.wv[word] for word in words]
+        #        masked = np.zeros((MAX_SENT_LEN, EMB_DIM_SIZE))
+        #        mask_len = min(len(embedding),MAX_SENT_LEN)
+        #        masked[MAX_SENT_LEN-mask_len:] = embedding[:mask_len]
+        #        embeddings[idx] = masked
 
-            #embeddings = np.array(embeddings, dtype=np.float32)
-            save_p(data_dir+"/masked_embeddings", embeddings)
-            print("Masked Embeddings Saved")
-            savehash("w2v", hashcode=df_hash)
+        #    #embeddings = np.array(embeddings, dtype=np.float32)
+        #    save_p(data_dir+"/masked_embeddings", embeddings)
+        #    print("Masked Embeddings Saved")
+        #    savehash("w2v", hashcode=df_hash)
 
-        print("MEMORY AFTER W2V: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+        #print("MEMORY AFTER W2V: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
         #########################################
         ## CONCATENATION, SHUFFLING AND SAVING ##
@@ -344,19 +346,28 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 os.mkdir(fold_dir)
                 save_p(fold_dir+"/labels", label_folds[i])
 
-           # ##W2V
-           # embeddings = read_p(data_dir+"/masked_embeddings")
-           # features_broad = np.array([features] * MAX_SENT_LEN)
-           # features_broad = np.swapaxes(features_broad, 0,1)
-           # w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
-           # print("W2V+Features shape: ",w2v_post_data.shape)
-           # w2v_post_data = [w2v_post_data[i] for i in index_shuf]
-           # only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
-           # w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
-           # for i in range(num_folds):
-           #     fold_dir = data_dir+"/folds/"+str(i)
-           #     save_p(fold_dir+"/w2v", w2v_folds[i])
-           #     save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
+            print("MEMORY AFTER W2V 1: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            ###W2V
+            #embeddings = read_p(data_dir+"/masked_embeddings")
+            #features_broad = np.array([features] * MAX_SENT_LEN)
+            #features_broad = np.swapaxes(features_broad, 0,1)
+            #w2v_post_data = np.concatenate((features_broad,embeddings), axis=2)
+            #print("W2V+Features shape: ",w2v_post_data.shape)
+            #w2v_post_data = [w2v_post_data[i] for i in index_shuf]
+            #only_w2v_folds = np.array_split(embeddings, num_folds, axis=0)
+            #w2v_folds = np.array_split(w2v_post_data, num_folds, axis=0)
+            #for i in range(num_folds):
+            #    fold_dir = data_dir+"/folds/"+str(i)
+            #    save_p(fold_dir+"/w2v", w2v_folds[i])
+            #    save_p(fold_dir+"/only_w2v", only_w2v_folds[i])
+
+            #print("MEMORY AFTER W2V 2: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+            #del(features_broad)
+            #del(w2v_folds)
+            #del(w2v_post_data)
+            #del(only_w2v_folds)
+            #del(embeddings)
+            #print("MEMORY AFTER W2V 3: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
             #creates a list of N=folds lists, each inner list contains the index of the elements of each fold
             bert_folds = np.array_split(index_shuf, num_folds)
@@ -370,13 +381,14 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
             #creates a seekable file (nothing more than a list of pointers to each line of the file)
             #so they can be accessed directly without loading the whole file into memory
-            b_file = bert_dir+"/output4layers.json"
-            fin = open(b_file, "rt")
-            BertSeekFile = LineSeekableFile(fin)
+            #b_file = bert_dir+"/output4layers.json"
+            #fin = open(b_file, "rt")
+            #BertSeekFile = LineSeekableFile(fin)
 
             #start the bert-as-a-service server
             bert_dir = os.environ.get("BERT_BASE_DIR")
-            args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', 'NONE', '-mask_cls_sep'])
+            print(bert_dir)
+            args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', '512', '-mask_cls_sep'])
             server = BertServer(args)
             server.start()
 
@@ -385,10 +397,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
                 #generates the encodings for the texts
                 bc = BertClient(check_version=False)
-                print(df.columns)
-                print(df.body[idx])
-                b = bc.encode(df.body[idx])[0]
-                print(len(b), len(b[0]))
+                b = bc.encode([df.body[idx]])[0]
                 #b_line = linecache.getline(bert_dir+"/output4layers.json", idx+1)
                 #b_line = BertSeekFile[idx]
                 #b_values = json.loads(b_line)['features'][0]['layers'][0]['values']
@@ -405,9 +414,10 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 #linecache.clearcache()
 
             #stops the bert-as-a-service server
-            bc.shutdown(port=5555)
+            shut_args = get_shutdown_parser().parse_args(['-ip','localhost','-port','5555','-timeout','5000'])
+            server.shutdown(shut_args)
 
-            fin.close()
+            savehash("bert", hashcode=df_hash)
 
             for i in range(num_folds):
                 fold_dir = data_dir+"/folds/"+str(i)
@@ -418,9 +428,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 save_p(fold_dir+"/only_bert", only_bert)
 
             print("MEMORY AFTER FOLDS SAVING: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+
             savehash("concat", hashcode=df_hash)
 
         checks = ["bert", "w2v", "features", "concat", "complexity", "specificity"]
+        checks = ["bert", "features", "concat", "complexity", "specificity"]
         for e in checks:
             print(e)
             print(check_hash(df_hash,num_folds,stage=e))

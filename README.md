@@ -67,6 +67,10 @@ Lux proposes the usage of Linguistic Aspects as Features.
 
 # Running
 
+    -- bash run.sh
+
+    OR
+
     -- sudo -E python3 lux.py
 
 if 'True' is passed as first argument, force_reload will receive its value and new bert models as well as new features will be generated.

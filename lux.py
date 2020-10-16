@@ -32,6 +32,7 @@ from tensorflow.keras.regularizers import l2
 
 random.seed(1)
 root = random.randint(0,10090000)
+print("ROOT:", root)
 
 #read these from the call:
 train_flag = True
@@ -120,7 +121,10 @@ for x in remaining_feat:
 remaining_feat.append(removed_feat)
 
 drop_features_idx = sorted(remaining_feat)
-print(drop_features_idx)
+#print(drop_features_idx)
+
+drop_features_idx = [[17, 23, 81, 20, 69, 8, 11, 3, 89]]
+drop_features_idx = [[]]
 
 force_reload = True if ((len(sys.argv)>1) and (bool(sys.argv[1]) == True)) else False
 setup = itertools.product(drop_features_idx, epochs,input_type,learning_rate,num_dims)

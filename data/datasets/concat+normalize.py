@@ -6,8 +6,10 @@ cwd = os.path.abspath(__file__+"/..")
 
 #use this min len if dealing with twitter/title/small body texts
 MIN_BODY_LEN = 300
+MIN_BODY_LEN = 1
+
 #use this otherwise
-MIN_BODY_LEN = 500
+#MIN_BODY_LEN = 500
 
 MAX_SENT_LEN = 3000
 
@@ -40,21 +42,28 @@ print("size of trusted1.csv:", len(d6))
 
 #d7 = pd.read_csv(cwd+"/fever.csv", sep="\t")
 #d7.verdict = d7.verdict.astype('str')
-#d7['o_body'] = d7.verdict
+#d7['o_body'] = d7.claim
 #d7['o_url'] = range(len(d7))
 #print("size of fever.csv:", len(d7))
 #print("columns of fever.csv:", d7.columns)
 
 #d8 = pd.read_csv(cwd+"/thoracle.csv", sep="\t")
-#d8.verdict = d8.verdict.astype('str')
-#d8['o_body'] = d8.verdict
+#d8.verdict = d8['Is Tweet Content Valid'].astype('str')
+#d8['o_body'] = d8['Tweet Content']
 #d8['o_url'] = range(len(d8))
 #print("size of thoracle.csv:", len(d8))
 
-dataframes = [d1,d2,d3,d4,d5,d6]
-dataframes = [d1,d2,d3,d4]
-dataframes = [d1,d2,d3,d4,d5,d6]
+d9 = pd.read_csv(cwd+"/snopes2019.csv", sep="\t")
+d9.verdict = d9.verdict.astype('str')
+d9['o_url'] = range(len(d9))
+print("size of snopes2019.csv:", len(d9))
+print("columns of snopes2019.csv:", d9.columns)
+
+#dataframes = [d1,d2,d3,d4,d5,d6]
+#dataframes = [d1,d2,d3,d4]
+#dataframes = [d1,d2,d3,d4,d5,d6]
 #dataframes = [d5]
+dataframes = [d9]
 
 cols = set(d1.columns)
 for i in dataframes:
@@ -100,5 +109,5 @@ print(c['verdict'].value_counts())
 dif = (c['verdict'].value_counts()[0] - c['verdict'].value_counts()[1])
 print("Difference False-True:", dif)
 
-sys.exit(1)
+#sys.exit(1)
 c.to_csv(cwd+"/dataset.csv", index=False, sep=',')
