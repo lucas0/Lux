@@ -7,7 +7,7 @@ cp $LUX_DIR/data/data.csv $LUX_DIR/data/bck_best/
 cp $LUX_DIR/data/hash.txt $LUX_DIR/data/bck_best/
 cp $LUX_DIR/data/datasets/dataset.csv $LUX_DIR/data/bck_best/
 
-v1=$(sed -rn 's/^random\.seed\((.*)\)(.*)$/ \1/p' $LUX_DIR/lux.py)
+v1=$(sed -rn 's/^random\.seed\(([0-9]*)\)$/ \1/p' $LUX_DIR/lux.py)
 avg=$(sed -rn '$ s/(.*)AVG:\s([0-9\.]*)(.*)$/\2/p' $LUX_DIR/results.txt)
 f1=$(sed -rn '$ s/(.*)F1:\s([0-9\.]*)(.*)$/\2/p' $LUX_DIR/results.txt)
 

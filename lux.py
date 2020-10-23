@@ -30,7 +30,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.regularizers import l2
 
-random.seed(1)
+random.seed(11190)
 root = random.randint(0,10090000)
 print("ROOT:", root)
 
