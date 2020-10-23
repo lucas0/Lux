@@ -1,0 +1,14 @@
+data/GoogleNews-vectors-negative300.bin
+res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction/
+res/specificity/DASSP.zip
+res/specificity/glove.840B.300d.zip
+data/folds/*
+data/masked_embeddings
+res/complexity/vendor/dbpedia/yago_taxonomy.ttl
+res/complexity/vendor/stanford/L2SCA-2016-06-30.tgz
+envLux/
+data/datasets/*
+data/data_wiki.csv
+data/dataset_wiki_clean.csv
+data/data.csv
+
