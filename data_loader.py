@@ -242,7 +242,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         ###################################
         ############# FEATURES ############
         ###################################
-
         #check if new linguistic features should be generated
         if not check_hash(df_hash, num_folds, stage="complexity"):
             #Generate the features ndarray and save it to a pickle
@@ -261,19 +260,15 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 input("Error occured while GENERATING SPECIFICITY. Press any key to exit.")
                 sys.exit(1)
             savehash("specificity", hashcode=df_hash)
+
         if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features"):
             try:
-                features = []
-                for idx,e in list(df.iterrows()):
-                    print("Generating Features: ",idx+1,"out of ",len(df))
-                    feature = feat.vectorize(e[0],idx, complexity=True)
-                    features.append(feature)
-                features = np.array(features).astype(np.float)
+                features = feat.generateFeats()
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")
                 sys.exit(1)
-            save_p(data_dir+"/features", features)
+            save_p(data_dir+"/features2", features)
             print("Generated Features. Saved to pickle.")
             print("Features Shape:", features.shape)
             savehash("features", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
@@ -283,11 +278,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             features = read_p(data_dir+"/features")
             print(features.shape)
             features = np.delete(features,drop_feat_idx,1)
-            print(features.shape)
-            save_p(data_dir+"/features", features)
+            save_p(data_dir+"/features2", features)
+            print("salvou features")
             savehash("drop_feat", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
 
-
+        exit(1)
         print("MEMORY AFTER FEATURES: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
         ###################################

@@ -1,3 +1,5 @@
+import warnings
+warnings.filterwarnings("once")
 from numpy.random import seed
 seed(1)
 from tensorflow import set_random_seed
@@ -30,7 +32,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.regularizers import l2
 
-random.seed(11190)
+random.seed(3760)
 root = random.randint(0,10090000)
 print("ROOT:", root)
 
