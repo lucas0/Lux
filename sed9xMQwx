@@ -1,0 +1,86 @@
+import warnings
+warnings.filterwarnings("once")
+from numpy.random import seed
+seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
+import traceback
+import resource
+import os
+import itertools
+from itertools import groupby
+from itertools import chain, combinations
+
+import gc
+import seaborn as sns
+import matplotlib.pyplot as plt
+import random
+from sklearn.metrics import accuracy_score
+from sklearn.metrics import f1_score
+import numpy as np
+import sys
+from data_loader import load_data
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout
+from tensorflow.keras.layers import LSTM
+from tensorflow.keras.layers import Flatten
+from tensorflow.keras.layers import Bidirectional
+from tensorflow.keras.layers import TimeDistributed
+from tensorflow.keras import losses
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model
+from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.regularizers import l2
+
+random.seed(11191)
+root = random.randint(0,10090000)
+print("ROOT:", root)
+
+#read these from the call:
+train_flag = True
+num_folds = 9
+
+model = None
+model_name = "lux_best_model.pkl"
+num_epochs = 5
+LSTM_DIM = 256
+DENSE_DIM = 256
+learning_rate = 0.001
+batch_size = 32
+
+def svm_model(data_shape, target_len, learning_rate, DENSE_DIM):
+    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
+    model = Sequential()
+    model.add(Dense(DENSE_DIM, activation='relu', input_shape=(data_shape[1:])))
+    model.add(Dense(target_len, kernel_regularizer=l2(0.01), activation='softmax'))
+    model.summary()
+    model.compile(loss='hinge', optimizer='adadelta', metrics=['binary_accuracy'])
+
+    return model
+
+def linear_model(data_shape, target_len, learning_rate, DENSE_DIM):
+    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
+    model = Sequential()
+    model.add(Dense(DENSE_DIM, activation='relu', input_shape=(data_shape[1:])))
+    model.add(Dropout(0.3))
+    model.add(Dense(target_len, activation='softmax'))
+    model.summary()
+
+    adam = Adam(lr=learning_rate)
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
+
+    return model
+
+def LSTM_model(data_shape, target_len, learning_rate, LSTM_DIM):
+    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
+    model = Sequential()
+    model.add(LSTM(LSTM_DIM, input_shape=(data_shape[1:])))
+    model.add(TimeDistributed(Dense(target_len, activation='softmax')))
+    model.summary()
+
+    adam = Adam(lr=learning_rate)
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
+
+    return model
+
+def BILSTM_model(data_shape, target_len, learning_rate, LSTM_DIM):

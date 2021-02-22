@@ -101,8 +101,7 @@ def generate_complexity():
     time.sleep(75)
 
     try:
-        #subprocess.call("python3 pysemcom.py texts2vectors input_texts/ output_file.csv http://api.dbpedia-spotlight.org/en/annotate", shell=True, cwd=comp_dir)
-        subprocess.call("python3 pysemcom.py texts2vectors input_texts/ output_file.csv http://0.0.0.0:2222/rest/annotate", shell=True, cwd=comp_dir)
+        subprocess.call("python3 pysemcom.py texts2vectors -nc 8 input_texts/ output_file.csv http://0.0.0.0:2222/rest/annotate", shell=True, cwd=comp_dir)
     except subprocess.CalledProcessError as e:
         print(traceback.format_exc())
         input("ERROR during complexity scores generation")
@@ -352,5 +351,4 @@ def generateFeats():
 
     features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
     print("Features Generated. Shaped: ",features.shape)
-    input("Press any key to continue")
     return features.to_numpy().astype(np.float)

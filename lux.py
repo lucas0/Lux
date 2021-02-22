@@ -1,5 +1,5 @@
 import warnings
-warnings.filterwarnings("once")
+#warnings.filterwarnings("once")
 from numpy.random import seed
 seed(1)
 from tensorflow import set_random_seed
@@ -32,7 +32,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import ModelCheckpoint
 from tensorflow.keras.regularizers import l2
 
-random.seed(3760)
+random.seed(11191)
 root = random.randint(0,10090000)
 print("ROOT:", root)
 
@@ -101,10 +101,6 @@ def oh_to_label(l, d):
         if np.array_equal(l, d[key]):
             return key
 
-cwd = os.path.abspath(__file__)
-save_dir = cwd+"/compare_input/"
-
-#input_type = ['bert', 'only_bert', 'w2v', 'only_w2v']
 input_type = ['bert']
 learning_rate = [0.001]
 num_dims = [64]

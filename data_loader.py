@@ -161,7 +161,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
     data = data.loc[data.verdict.isin(labels)]
     print("considered labels:", data.verdict.unique())
     print("after dropping invalid labels:",len(data))
-    #input()
 
     #creating hash
     json_data = data.to_json().encode()
@@ -183,8 +182,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             fold_dev = 0
 
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
-        #input("Processing New Data. Press ENTER to start...")
-
         #TODO modify these two lines back!!!
         df = data[['o_body','verdict']].copy()
         #df = data[['claim','verdict']].copy()
@@ -268,7 +265,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")
                 sys.exit(1)
-            save_p(data_dir+"/features2", features)
+            save_p(data_dir+"/features", features)
             print("Generated Features. Saved to pickle.")
             print("Features Shape:", features.shape)
             savehash("features", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
@@ -278,11 +275,10 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             features = read_p(data_dir+"/features")
             print(features.shape)
             features = np.delete(features,drop_feat_idx,1)
-            save_p(data_dir+"/features2", features)
+            save_p(data_dir+"/features", features)
             print("salvou features")
             savehash("drop_feat", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
 
-        exit(1)
         print("MEMORY AFTER FEATURES: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
         ###################################
@@ -383,7 +379,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             #start the bert-as-a-service server
             bert_dir = os.environ.get("BERT_BASE_DIR")
             print(bert_dir)
-            args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', '512', '-mask_cls_sep'])
+            args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-num_worker', '8', '-max_seq_len', '512', '-mask_cls_sep'])
             server = BertServer(args)
             server.start()
 
