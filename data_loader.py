@@ -273,7 +273,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         #check if drop_features is the same
         if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="drop_feat"):
             features = read_p(data_dir+"/features")
-            print(features.shape)
             features = np.delete(features,drop_feat_idx,1)
             save_p(data_dir+"/features", features)
             print("salvou features")

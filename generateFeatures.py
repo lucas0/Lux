@@ -91,12 +91,15 @@ def generate_specificity():
 def generate_complexity():
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Complexity for dataset shaped: ",csv.shape)
-    subprocess.call("rm "+cwd+"/res/complexity/input_texts/*", shell=True, cwd=comp_dir)
+    subprocess.call("rm -f "+cwd+"/res/complexity/input_texts/*", shell=True, cwd=comp_dir)
 
     with mp.Pool() as pool:
         pool.map(complexity_aux, [(e['body'],str(idx)) for idx,e in csv.iterrows()])
 
     client = docker.from_env()
+    docker_containers = client.containers.list(all=True)
+    for dc in docker_containers:
+        dc.remove(force=True)
     container = client.containers.run("dbpedia/spotlight-english:databus", "spotlight.sh", detach=True, restart_policy={"Name": "on-failure", "MaximumRetryCount": 900000}, ports={'80': 2222})
     time.sleep(75)
 
@@ -222,7 +225,7 @@ def passiveness_aux(t):
     return(count/n_sent)
 
 def generateFeats():
-    pandarallel.initialize()
+    pandarallel.initialize(nb_workers=16)
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 
@@ -263,6 +266,8 @@ def generateFeats():
         lines = file.readlines()
 
     spec_scores = pd.DataFrame(lines, columns=['preds'])
+    print(spec_scores)
+    print(len(spec_scores))
     specificity_scores = spec_scores['preds'].parallel_apply(lambda x: float(x.split('(')[1].split(',')[0]))
 
     ### PAUSALITY ###
@@ -271,13 +276,13 @@ def generateFeats():
 
     ### INFORMALITY ####
     #readability
-    subprocess.call("rm "+cwd+"/res/readability/input_texts/*", shell=True, cwd=read_dir)
+    subprocess.call("rm -f "+cwd+"/res/readability/input_texts/*", shell=True, cwd=read_dir)
     num_of_digits = len(str(len(csv)))
     with mp.Pool() as pool:
         pool.map(readability_aux, [(e['body'],str(idx).zfill(num_of_digits)) for idx,e in csv.iterrows()])
         pool.map(complexity_aux, [(e['body'],str(idx)) for idx,e in csv.iterrows()])
 
-    subprocess.call("readability --csv  "+cwd+"/res/readability/input_texts/* > readabilitymeasures.csv", shell=True, cwd=comp_dir)
+    subprocess.call("readability --csv  "+cwd+"/res/readability/input_texts/* > "+comp_dir+"/readabilitymeasures.csv", shell=True, cwd=comp_dir)
     read_scores = pd.read_csv(comp_dir+"/readabilitymeasures.csv").iloc[:,range(1,10)]
 
     #complexity
