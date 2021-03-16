@@ -115,39 +115,6 @@ def generate_complexity():
 
     print("Complexity Scores Generated")
 
-def vectorize(text, text_id, complexity=False):
-    print("Vectorizing: ",len(text))
-    sentences = split_into_sentences(text)
-    lower_case = text.lower()
-    tokens = nltk.word_tokenize(lower_case)
-    tagged_tokens = nltk.pos_tag(tokens)
-    blob = TextBlob(text)
-    n_sentences = max([len(sentences),1])
-
-    inf = informality_features(text, text_id, complexity=complexity)
-    div = diversity_features(text)
-    qua = quantity_features(tagged_tokens)
-    aff = list(affect_features(text, sentences, n_sentences, blob))
-    sbj = subjectivity_features(tagged_tokens, blob)[1]
-    spe = specificity_features(text_id)
-    pau = pausality_features(tagged_tokens, n_sentences)
-    unc = uncertainty_features(text)
-
-    vector = inf+div+qua+aff
-    vector.extend([sbj,spe,pau,unc])
-
-   # print(len(inf))
-   # print(len(div))
-   # print(len(qua))
-   # print(len(aff))
-   # print(len(sbj))
-   # print(len(spe))
-   # print(len(pau))
-   # print(len(unc))
-
-    #vector = [v for i,v in enumerate(vector) if i not in drop_feat_idx]
-    return vector
-
 def readability_aux(t):
     body_text, index = t
     with open(cwd+"/res/readability/input_texts/"+index+".txt", "w+", encoding="utf-8") as f:
@@ -266,8 +233,6 @@ def generateFeats():
         lines = file.readlines()
 
     spec_scores = pd.DataFrame(lines, columns=['preds'])
-    print(spec_scores)
-    print(len(spec_scores))
     specificity_scores = spec_scores['preds'].parallel_apply(lambda x: float(x.split('(')[1].split(',')[0]))
 
     ### PAUSALITY ###
@@ -343,16 +308,6 @@ def generateFeats():
     pau = pd.DataFrame(pausality_scores.to_list(), columns=["#of '.'-tagged tokens"])
     unc = pd.DataFrame(uncertainty_scores.to_list(), columns=["LUCI score"])
     pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
-
-    print(type(inf), len(inf), inf.shape)
-    print(type(div), len(div), div.shape)
-    print(type(qua), len(qua), qua.shape)
-    print(type(aff), len(aff), aff.shape)
-    print(type(sbj), len(sbj), sbj.shape)
-    print(type(spe), len(spe), spe.shape)
-    print(type(pau), len(pau), pau.shape)
-    print(type(unc), len(unc), unc.shape)
-    print(type(pas), len(pas), pas.shape)
 
     features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
     print("Features Generated. Shaped: ",features.shape)

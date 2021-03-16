@@ -121,7 +121,6 @@ for x in remaining_feat:
 remaining_feat.append(removed_feat)
 
 drop_features_idx = sorted(remaining_feat)
-#print(drop_features_idx)
 
 #drop_features_idx = [[17, 23, 81, 20, 69, 8, 11, 3, 89]]
 drop_features_idx = [[]]
