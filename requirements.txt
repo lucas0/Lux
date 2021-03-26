@@ -107,7 +107,7 @@ pyparsing==2.2.0
 pyrsistent==0.17.3
 python-dateutil==2.7.3
 pytz==2018.4
-PyYAML==5.1.2
+PyYAML==5.4
 pyzmq==19.0.2
 ray==1.1.0
 rdflib==4.2.2
