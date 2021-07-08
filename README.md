@@ -31,7 +31,7 @@ Lux proposes the usage of Linguistic Aspects as Features.
    
 5)Start bert-as-a-service server for requests in another session/screen tab
 
-    bert-serving-start -model_dir $BERT_BASE_DIR -max_seq_len 512 -mask_cls_sep
+    -- bert-serving-start -model_dir $BERT_BASE_DIR -max_seq_len 512 -mask_cls_sep
 
 # Install Specificity model
 
