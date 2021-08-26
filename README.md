@@ -28,6 +28,10 @@ Lux proposes the usage of Linguistic Aspects as Features.
     -- export BERT_BASE_DIR=/path/to/Lux/res/bert/uncased_L-12_H-768_A-12
 
    in our case: export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
+   
+5)Start bert-as-a-service server for requests in another session/screen tab
+
+    -- bert-serving-start -model_dir $BERT_BASE_DIR -max_seq_len 512 -mask_cls_sep
 
 # Install Specificity model
 
