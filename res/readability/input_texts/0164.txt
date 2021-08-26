@@ -1,21 +1,27 @@
-While Daleks "know no fear" and "must not fear," the cold, calculating robots from the Dr. Who series don't exist in the real world yet and Microsoft has had to settle on the next best thing for securing its campuses: the K5.
+President Trump is set to sign legislation which will make medical marijuana federally legal for terminally ill patients. The bill, known as the “Right to Try Act,” will prohibit the FDA from banning natural cures, and allow patients to try medications that have not been approved by the FDA, but are currently under clinical trial.
 
-Microsoft is the first company in Silicon Valley to dispatch a fleet of the K5 policing robots. Each 5-foot tall, 300-pound K5 is equipped with arrays of high-definition camera, sensors, debilitating sirens, Wi-Fi and artificial intelligence.
+Right to Try was passed unanimously by the Senate last summer and by the House of Representatives on Tuesday in a vote of 250 to 169, after Trump personally lobbied for its passage. While the bill’s provisions are targeted at a wide range of medications, they also apply to medical marijuana thanks to a clinical trial being conducted by the Multidisciplinary Association of Psychedelic Sciences (MAPS).
 
-The squat policing robots are the product of Knightscope, a startup firm from Mountain View, Calif. William Santana Li, chairman and CEO of Knightscope, sees a world in which his company's policing robots move out of the private sector and start working alongside law enforcement officers.
+Big legislation will be signed by me shortly. After many years, RIGHT TO TRY and big changes to DODD FRANK. — Donald J. Trump (@realDonaldTrump) May 23, 2018
 
-"Technology and robotics are making the concept of Precision Policing -- a systematic, proactive and almost precognitive approach to ensuring public safety -- a real possibility," said Li in a March blog post.
+Herb reports : The MAPS trial, currently in the second phase of the FDA approval process, is testing the effectiveness of smoked cannabis in veterans with PTSD and meets all of the criteria set out by the Right to Try.
 
-The K5s can use their sensors to track down threats and their Wi-Fi connection to call in bipedal backup, aka security guards. Their AI and camera rigs enable the K5s to do a good deal of profiling, scanning license plates and faces to compare against databases available to them over Wi-Fi.
+The majority of states already have their own form of Right to Try legislation, with one notable exception being New York. In Utah, a recently passed law specifically addresses the right of terminally ill patients to try cannabis. However, because cannabis remains federally prohibited, even if a terminally ill patient has the “Right to Try” cannabis on the state level, they’re still in violation of federal law.
 
-The K5 robots are only tools to surveil, assess and report suspicious activity, for now at least. There are plans in the works that could see the K5s brandishing and using Taser guns -- "you are being neutralized."
+The Right to Try bill, recently passed by Congress, would change that. In addition to cannabis, MDMA and psilocybin could also potentially be used by ‘eligible patients’ since FDA trials of both substances meet the requirements set out in the federal bill.
 
-The K5s sensors enable them to recognize and analyze alphanumeric text, heat signatures, sounds, air quality and infrared light. The robots are equipped with both radar and Lidar to help them make measurements, while GPS helps them maintain their bearing and report their positions. Lidar, which stands for light detection and ranging, is a remote-sensing technology used to measure distance by illuminating a target with a laser and then analyzing the reflected light.
+What’s not clear is what illnesses qualify as life-threatening. Post-traumatic stress disorder, for example, could be argued to be life-threatening given the high rates of suicide among those who are diagnosed, but it’s up for debate. It’s likely that those details will be hammered out on a state by state basis in jurisdictions that have already passed their own version of Right to Try. The full title of the bill suggests as much stating, “in accordance with State law…”
 
-The robots are fully autonomous and can even refuel at a charging station without the guidance of humans. The K5s leverage their machine learning abilities for predictive analytics, analyzing and accounting for risks in real time.
+However, in states that lack their own local provisions, the new bill appears to leave plenty of room for interpretation and a potential conflict with local drug laws.
 
-To keep people assured that the machines aren't abusing their abilities or beginning to learn too much, Knightscope plans to let people keep an eye on the machines by making the K5s' video feeds available to the public online.
+Under the broad wording of the federal bill, no specific illnesses are mentioned. Instead, an ‘eligible patient’ is defined as, “Diseases or conditions where the likelihood of death is high unless the course of the disease is interrupted; and Diseases or conditions with potentially fatal outcomes, where the endpoint of clinical trial analysis is survival.”
 
-"I believe robots are the perfect tools to handle the monotonous and sometimes dangerous work in order to free up humans to more judiciously address activities requiring higher-level thinking, hands-on encounters, or tactical planning," states Li.
+Patients must also have exhausted all existing treatment options and must be unable to participate in the ongoing trials investigating the drug they want access to. Additionally, they must provide written consent from a qualified physician who does not stand to gain from the trial.
 
-ⓒ 2018 TECHTIMES.com All rights reserved. Do not reproduce without permission.
+The bill passed on Tuesday after receiving some opposition from Democrats on Capitol Hill who believe that the law will undermine the FDA’s processes.
+
+It’s likely that President Trump will sign the bill in the coming days since he has personally lobbied Congress for its passage. In January, Trump even mentioned the bill in his State of the Union Address saying, “People who are terminally ill should not have to go from country to country to seek a cure. I want to give them a chance right here at home. It is time for the Congress to give these wonderful, incredible Americans the right to try.”
+
+Early Wednesday morning, Trump reiterated his support for the bill tweeting his intention to sign it into law.
+
+.

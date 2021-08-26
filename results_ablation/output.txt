@@ -1,192 +1,204 @@
-55	&	'CD'	&	0.8237	&	-0.01862\\
+baseline	&	baseline	&	0.80688	&	100%	&	0.0002\\
 \midrule
-74	&	'RBR'	&	0.82304	&	-0.01796\\
+41	&	Measure of lexical textual diversity (moving average, wrap)	&	-0.02249	&	2.79%	&	0.00067\\
 \midrule
-71	&	'PRP'	&	0.81973	&	-0.01465\\
+6	&	SMOGIndex	&	-0.0205	&	2.54%	&	0.00034\\
 \midrule
-52	&	'.'	&	0.81775	&	-0.01267\\
+16	&	diameter	&	-0.01984	&	2.46%	&	0.00042\\
 \midrule
-2	&	Coleman-Liau	&	0.81709	&	-0.01201\\
+31	&	nbNodes_yago	&	-0.01852	&	2.30%	&	0.00047\\
 \midrule
-18	&	assortativity	&	0.81576	&	-0.01068\\
+63	&	'MD'	&	-0.01852	&	2.30%	&	0.00019\\
 \midrule
-24	&	nbLinkInMean	&	0.81576	&	-0.01068\\
+65	&	'NNP'	&	-0.01852	&	2.30%	&	0.00056\\
 \midrule
-41	&	Measure of lexical textual diversity (MTLD)	&	0.81576	&	-0.01068\\
+1	&	ARI	&	-0.01786	&	2.21%	&	0.0004\\
 \midrule
-94	&	Speciteller scores	&	0.81576	&	-0.01068\\
+4	&	GunningFogIndex	&	-0.0172	&	2.13%	&	0.0002\\
 \midrule
-29	&	density_DBPedia	&	0.8151	&	-0.01002\\
+32	&	density_yago	&	-0.01587	&	1.97%	&	0.00044\\
 \midrule
-16	&	radius	&	0.81444	&	-0.00936\\
+66	&	'NNPS'	&	-0.01587	&	1.97%	&	0.00023\\
 \midrule
-43	&	Measure of lexical textual diversity (moving average, bi-directional)	&	0.81444	&	-0.00936\\
+2	&	Coleman-Liau	&	-0.01521	&	1.89%	&	0.00056\\
 \midrule
-34	&	Simple TTR	&	0.81378	&	-0.0087\\
+33	&	Simple TTR	&	-0.01521	&	1.89%	&	0.00022\\
 \midrule
-40	&	Hypergeometric distribution D (HDD)	&	0.81378	&	-0.0087\\
+37	&	Mean segmental TTR (MSTTR)	&	-0.01521	&	1.89%	&	0.00034\\
 \midrule
-76	&	'RP'	&	0.81378	&	-0.0087\\
+62	&	'LS'	&	-0.01521	&	1.89%	&	0.00034\\
 \midrule
-15	&	nbNodes	&	0.81246	&	-0.00738\\
+84	&	'VBZ'	&	-0.01521	&	1.89%	&	0.00058\\
 \midrule
-26	&	nbLinkOutMean	&	0.81246	&	-0.00738\\
+8	&	DaleChallIndex	&	-0.01455	&	1.80%	&	0.00055\\
 \midrule
-6	&	SMOGIndex	&	0.8118	&	-0.00672\\
+21	&	nbTypesMean	&	-0.01389	&	1.72%	&	0.00075\\
 \midrule
-50	&	')'	&	0.8118	&	-0.00672\\
+51	&	'.'	&	-0.01389	&	1.72%	&	0.00027\\
 \midrule
-70	&	'POS'	&	0.8118	&	-0.00672\\
+10	&	nbConcepts	&	-0.01323	&	1.64%	&	0.00046\\
 \midrule
-82	&	'VBG'	&	0.81113	&	-0.00605\\
+54	&	'CD'	&	-0.01323	&	1.64%	&	0.00012\\
 \midrule
-7	&	RIX	&	0.81047	&	-0.00539\\
+20	&	textDensityStd	&	-0.01257	&	1.56%	&	0.00019\\
 \midrule
-64	&	'MD'	&	0.81047	&	-0.00539\\
+48	&	'('	&	-0.01257	&	1.56%	&	0.0001\\
 \midrule
-77	&	'SYM'	&	0.81047	&	-0.00539\\
+85	&	'WDT'	&	-0.01257	&	1.56%	&	0.00087\\
 \midrule
-68	&	'NNS'	&	0.80981	&	-0.00473\\
+50	&	','	&	-0.01191	&	1.48%	&	0.00075\\
 \midrule
-85	&	'VBZ'	&	0.80981	&	-0.00473\\
+95	&	Pos VADER’s Polarity score over sentences	&	-0.01191	&	1.48%	&	0.0007\\
 \midrule
-27	&	nbLinkOutStd	&	0.80915	&	-0.00407\\
+40	&	Measure of lexical textual diversity (MTLD)	&	-0.01125	&	1.39%	&	0.00053\\
 \midrule
-32	&	nbNodes_yago	&	0.80915	&	-0.00407\\
+94	&	Pos VADER’s Polarity score over sentences	&	-0.01125	&	1.39%	&	0.00014\\
 \midrule
-46	&	'#'	&	0.80849	&	-0.00341\\
+100	&	Passiveness	&	-0.01125	&	1.39%	&	0.00024\\
 \midrule
-59	&	'IN'	&	0.80849	&	-0.00341\\
+34	&	Root TTR	&	-0.01058	&	1.31%	&	0.00031\\
 \midrule
-62	&	'JJS'	&	0.80849	&	-0.00341\\
+49	&	')'	&	-0.01058	&	1.31%	&	0.00031\\
 \midrule
-93	&	Sum TextBlob’s Subjectivity score over sentences	&	0.80849	&	-0.00341\\
+38	&	Moving average TTR (MATTR)	&	-0.00992	&	1.23%	&	0.00021\\
 \midrule
-87	&	'WP'	&	0.80783	&	-0.00275\\
+56	&	'EX'	&	-0.00992	&	1.23%	&	0.00044\\
 \midrule
-1	&	ARI	&	0.80717	&	-0.00209\\
+60	&	'JJR'	&	-0.00992	&	1.23%	&	0.00052\\
 \midrule
-28	&	nbNodes_DBPedia	&	0.80717	&	-0.00209\\
+12	&	conceptsWordsRatio	&	-0.00926	&	1.15%	&	0.00027\\
 \midrule
-51	&	','	&	0.80717	&	-0.00209\\
+35	&	Log TTR	&	-0.00926	&	1.15%	&	0.0002\\
 \midrule
-35	&	Root TTR	&	0.8065	&	-0.00143\\
+58	&	'IN'	&	-0.00926	&	1.15%	&	0.0003\\
 \midrule
-39	&	Moving average TTR (MATTR)	&	0.8065	&	-0.00143\\
+25	&	nbLinkOutMean	&	-0.0086	&	1.07%	&	0.00034\\
 \midrule
-53	&	':'	&	0.8065	&	-0.00143\\
+97	&	Speciteller scores	&	-0.0086	&	1.07%	&	0.00028\\
 \midrule
-86	&	'WDT'	&	0.8065	&	-0.00143\\
+5	&	LIX	&	-0.00794	&	0.98%	&	0.00027\\
 \midrule
-12	&	nbUniqueConcepts	&	0.80584	&	-0.00076\\
+26	&	nbLinkOutStd	&	-0.00794	&	0.98%	&	0.00041\\
 \midrule
-13	&	conceptsWordsRatio	&	0.80584	&	-0.00076\\
+28	&	density_DBPedia	&	-0.00794	&	0.98%	&	0.00012\\
 \midrule
-38	&	Mean segmental TTR (MSTTR)	&	0.80584	&	-0.00076\\
+46	&	'$'	&	-0.00794	&	0.98%	&	0.00024\\
 \midrule
-45	&	#tokens	&	0.80584	&	-0.00076\\
+71	&	'PRP$'	&	-0.00794	&	0.98%	&	0.0002\\
 \midrule
-63	&	'LS'	&	0.80584	&	-0.00076\\
+86	&	'WP'	&	-0.00794	&	0.98%	&	0.00033\\
 \midrule
-65	&	'NN'	&	0.80584	&	-0.00076\\
+93	&	Pos VADER’s Polarity score over sentences	&	-0.00794	&	0.98%	&	0.00036\\
 \midrule
-66	&	'NNP'	&	0.80584	&	-0.00076\\
+13	&	uniqueConceptsWordsRatio	&	-0.00728	&	0.90%	&	3e-05\\
 \midrule
-84	&	'VBP'	&	0.80584	&	-0.00076\\
+17	&	assortativity	&	-0.00728	&	0.90%	&	0.00054\\
 \midrule
-36	&	Log TTR	&	0.80518	&	-0.0001\\
+24	&	nbLinkInStd	&	-0.00728	&	0.90%	&	0.0003\\
 \midrule
-72	&	'PRP$'	&	0.80452	&	0.00056\\
+52	&	':'	&	-0.00728	&	0.90%	&	0.00051\\
 \midrule
-0	&	Kincaid	&	0.80386	&	0.00122\\
+61	&	'JJS'	&	-0.00728	&	0.90%	&	0.00027\\
 \midrule
-57	&	'EX'	&	0.80386	&	0.00122\\
+87	&	'WP$'	&	-0.00728	&	0.90%	&	0.00024\\
 \midrule
-79	&	'UH'	&	0.80386	&	0.00122\\
+96	&	SUM TextBlob’s Subjectivity score over sentences	&	-0.00728	&	0.90%	&	0.00039\\
 \midrule
-80	&	'VB'	&	0.80386	&	0.00122\\
+0	&	Kincaid	&	-0.00662	&	0.82%	&	0.00024\\
 \midrule
-91	&	Sum TextBlob’s Polarity score over sentences	&	0.80386	&	0.00122\\
+45	&	'#'	&	-0.00662	&	0.82%	&	0.0002\\
 \midrule
-58	&	'FW'	&	0.8032	&	0.00188\\
+79	&	'VB'	&	-0.00662	&	0.82%	&	0.00032\\
 \midrule
-95	&	Count of ‘.’-tag tokens	&	0.8032	&	0.00188\\
+90	&	AVG TextBlob’s Polarity score over sentences	&	-0.00662	&	0.82%	&	0.00036\\
 \midrule
-22	&	nbTypesMean	&	0.80254	&	0.00254\\
+92	&	NEG TextBlob’s Polarity score over sentences	&	-0.00662	&	0.82%	&	0.00047\\
 \midrule
-31	&	density_Schema	&	0.80254	&	0.00254\\
+9	&	nbWord	&	-0.00595	&	0.74%	&	0.0001\\
 \midrule
-54	&	'CC'	&	0.80254	&	0.00254\\
+19	&	textDensityMean	&	-0.00595	&	0.74%	&	0.00021\\
 \midrule
-78	&	'TO'	&	0.80254	&	0.00254\\
+22	&	nbTypesStd	&	-0.00595	&	0.74%	&	0.00033\\
 \midrule
-19	&	density	&	0.80187	&	0.0032\\
+77	&	'TO'	&	-0.00595	&	0.74%	&	0.00085\\
 \midrule
-47	&	'$'	&	0.80187	&	0.0032\\
+88	&	'WRB'	&	-0.00595	&	0.74%	&	0.00031\\
 \midrule
-60	&	'JJ'	&	0.80187	&	0.0032\\
+99	&	LUCI: Linguistic Uncertainty Classifier Interface	&	-0.00595	&	0.74%	&	0.00042\\
 \midrule
-21	&	textDensityStd	&	0.80121	&	0.00387\\
+59	&	'JJ'	&	-0.00529	&	0.66%	&	0.00031\\
 \midrule
-30	&	nbNodes_Schema	&	0.80121	&	0.00387\\
+83	&	'VBP'	&	-0.00529	&	0.66%	&	0.00031\\
 \midrule
-37	&	Mass TTR	&	0.80121	&	0.00387\\
+75	&	'RP'	&	-0.00463	&	0.57%	&	0.0006\\
 \midrule
-44	&	#terms	&	0.80121	&	0.00387\\
+76	&	'SYM'	&	-0.00463	&	0.57%	&	0.00037\\
 \midrule
-61	&	'JJR'	&	0.80121	&	0.00387\\
+11	&	nbUniqueConcepts	&	-0.00397	&	0.49%	&	0.00026\\
 \midrule
-67	&	'NNPS'	&	0.80121	&	0.00387\\
+55	&	'DT'	&	-0.00397	&	0.49%	&	0.00025\\
 \midrule
-90	&	'``'	&	0.80121	&	0.00387\\
+57	&	'FW'	&	-0.00397	&	0.49%	&	0.00054\\
 \midrule
-9	&	filename	&	0.80055	&	0.00453\\
+74	&	'RBS'	&	-0.00397	&	0.49%	&	0.00056\\
 \midrule
-10	&	nbWord	&	0.80055	&	0.00453\\
+3	&	FleschReadingEase	&	-0.00331	&	0.41%	&	0.00023\\
 \midrule
-48	&	"''"	&	0.80055	&	0.00453\\
+72	&	'RB'	&	-0.00331	&	0.41%	&	0.00026\\
 \midrule
-49	&	'('	&	0.80055	&	0.00453\\
+73	&	'RBR'	&	-0.00331	&	0.41%	&	0.00014\\
 \midrule
-56	&	'DT'	&	0.80055	&	0.00453\\
+14	&	nbNodes	&	-0.00199	&	0.25%	&	0.0005\\
 \midrule
-75	&	'RBS'	&	0.79989	&	0.00519\\
+68	&	'PDT'	&	-0.00199	&	0.25%	&	0.00048\\
 \midrule
-92	&	Sum VADER’s Polarity score over sentences	&	0.79989	&	0.00519\\
+81	&	'VBG'	&	-0.00199	&	0.25%	&	0.0005\\
 \midrule
-4	&	GunningFogIndex	&	0.79923	&	0.00585\\
+91	&	NEG TextBlob’s Polarity score over sentences	&	-0.00199	&	0.25%	&	0.00042\\
 \midrule
-5	&	LIX	&	0.79791	&	0.00717\\
+29	&	nbNodes_Schema	&	-0.00132	&	0.16%	&	0.00068\\
 \midrule
-33	&	density_yago	&	0.79725	&	0.00783\\
+47	&	"''"	&	-0.00132	&	0.16%	&	0.00086\\
 \midrule
-42	&	Measure of lexical textual diversity (moving average, wrap)	&	0.79725	&	0.00783\\
+70	&	'PRP'	&	-0.00132	&	0.16%	&	0.00031\\
 \midrule
-88	&	'WP$'	&	0.79725	&	0.00783\\
+36	&	Mass TTR	&	-0.00066	&	0.08%	&	0.00039\\
 \midrule
-73	&	'RB'	&	0.79658	&	0.0085\\
+82	&	'VBN'	&	-0.00066	&	0.08%	&	0.0003\\
 \midrule
-14	&	uniqueConceptsWordsRatio	&	0.79592	&	0.00916\\
+30	&	density_Schema	&	0.0	&	0.00%	&	0.00052\\
 \midrule
-83	&	'VBN'	&	0.79592	&	0.00916\\
+67	&	'NNS'	&	0.0	&	0.00%	&	0.00011\\
 \midrule
-25	&	nbLinkInStd	&	0.79526	&	0.00982\\
+53	&	'CC'	&	0.00066	&	0.08%	&	0.0004\\
 \midrule
-3	&	FleschReadingEase	&	0.7946	&	0.01048\\
+69	&	'POS'	&	0.00066	&	0.08%	&	0.00013\\
 \midrule
-89	&	'WRB'	&	0.7946	&	0.01048\\
+89	&	'``'	&	0.00066	&	0.08%	&	0.00031\\
 \midrule
-8	&	DaleChallIndex	&	0.79328	&	0.0118\\
+27	&	nbNodes_DBPedia	&	0.00132	&	0.16%	&	0.00038\\
 \midrule
-11	&	nbConcepts	&	0.79328	&	0.0118\\
+80	&	'VBD'	&	0.00132	&	0.16%	&	0.00034\\
 \midrule
-69	&	'PDT'	&	0.79129	&	0.01379\\
+42	&	Measure of lexical textual diversity (moving average, bi-directional)	&	0.00264	&	0.33%	&	0.00043\\
 \midrule
-20	&	textDensityMean	&	0.78997	&	0.01511\\
+44	&	#tokens	&	0.00264	&	0.33%	&	0.00026\\
 \midrule
-81	&	'VBD'	&	0.78997	&	0.01511\\
+39	&	Hypergeometric distribution D (HDD)	&	0.00331	&	0.41%	&	0.0005\\
 \midrule
-23	&	nbTypesStd	&	0.78931	&	0.01577\\
+64	&	'NN'	&	0.00331	&	0.41%	&	0.00047\\
 \midrule
-17	&	diameter	&	0.78865	&	0.01643\\
+7	&	RIX	&	0.00397	&	0.49%	&	0.00044\\
+\midrule
+15	&	radius	&	0.00397	&	0.49%	&	0.00019\\
+\midrule
+23	&	nbLinkInMean	&	0.00463	&	0.57%	&	0.00023\\
+\midrule
+98	&	Count of ‘.’-tag tokens	&	0.00529	&	0.66%	&	0.00017\\
+\midrule
+18	&	density	&	0.00595	&	0.74%	&	0.00044\\
+\midrule
+43	&	#terms	&	0.00595	&	0.74%	&	0.00052\\
+\midrule
+78	&	'UH'	&	0.00661	&	0.82%	&	0.0005\\
 \midrule

@@ -1,31 +1,53 @@
-A study published by NPR reveals that over 25 million Hillary Clinton votes were completely fraudulent, meaning that the Democratic candidate actually lost the popular vote by a huge margin.
+Five foot tall robots equipped with microphones, speakers and a host of sensors have gone on patrol in silicon valley.
 
-A study by the Pew Center claiming that over 800,000 non-citizens voted for Hillary Clinton failed to take into account dead and fraudulent voters which totalled over 25 million “registered voters”.
+A robotics firm in Mountain View says it is already using the robots - and say dozens could be on patrol by the end of the year.
 
-According to reports, illegal aliens combined with dead voters and “multiple state” voters explains why Hillary appeared to have won the popular vote over Trump during this years presidential race.
+Called the Knightscope, the robots are designed to spot suspicious behaviour and alert controllers.
 
-“A report by the Pew Center on the States finds that more than 1.8 million dead people are currently registered to vote, and 24 million registrations are either invalid or inaccurate,” NPR reported in 2012, which is ironic given how NPR is heavily controlled by Democrats.
+Scroll down for video
 
-And many of the dead, registered voters somehow keep voting Democrat from beyond the grave, most recently in Philadelphia, Penn. and Colorado
+The five foot tall robots are designed to spot suspicious behaviour and alert controllers.
 
-It’s also worth noting that the U.S. population has increased since 2012, meaning that there’s likely more dead and invalid voters than before.
+KNIGHTSCOPE SPECS Height - 60 Inches (1,524 mm) Length - 36 Inches (914 mm) Width - 32 inches (813 mm) ) Weight - 300 pounds (136 kg) Fitted with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners. When on a patrolling duty, uses lasers and GPS to calculate distances.
 
-“…The Pew study found that almost 3 million people are registered to vote in more than one state,” NPR added.
+Its inventors hope it could eventually patrol malls, office and even local neighbourhoods - and say they believe it will cut crime by 50%.
 
-That’s because when a new resident registers to vote in a state, officials usually never bother to tell his former state about the change in voter residency.
+'Imagine a friend that can see, hear, feel and smell that would tirelessly watch over your corporate campus or neighborhood, keep your loved ones safe and put a smile on everyone passing by.
 
-Under the “catch and release” immigration program by the Obama administration, illegal aliens were routinely given bus tickets to travel to other states by immigration officials, so it was theoretically possible for non-citizens to register to vote in a border country illegally, then register to vote in another state after their taxpayer-funded bus dropped them off.
+'Imagine if we could utilize technology to make our communities stronger and safer…..together,' the firm says.
 
-Clinton won most of the 163 most populous counties in the US that account for half of the total votes in the election, including dense urban areas in New York and California, yet she only won the popular vote by 2.8 million votes, which reveals the lack of enthusiasm voters had for her in comparison to Trump – and that Democrats would have depended more on illegal votes.
+The five foot tall robots have a combination of laser scanning, wheel encoders, inertial measurements, and GPS that allows fully autonomous operation and charging.
 
-A portion of the 24 million invalid voter registrations combined with a portion of the 1.8 million dead voters and the over 800,000 known illegal voters could explain the difference of 2.8 million votes, and it’s worth noting that the 800,000 figure could be a low, conservative estimate.
+It also has odour detectors, and can even monitor air pollution as it travels around.
 
-That said, a popular vote victory is meaningless; if the president was elected by popular vote, then both Trump and Clinton would have campaigned in entirely different states because only densely population regions of the U.S. would decide who would become president.
+Using cameras they can also read upto 300 car numberplates a minute, allowing them to monitor traffic.
 
-Without the electoral college, the United States of America would be reduced to the United States of New York and California, with 48 other vassal states.
+The Knightscope K5 robot security guards are 5ft tall robots that come with GPS, lasers, and heat-detecting technology.
 
-Yet notice how Clinton campaigned in other, less populated states. They knew the popular vote was meaningless ahead of the election.
+They are designed to function without any human manipulation and are built with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners which can read an impressive number of 300 car registration plates every single minute. When on a patrolling duty, it uses lasers to calculate the distance and also relies on its GPS system.
 
-However, the popular vote is useful as a barometer for voter fraud since the most populous countries are also the most susceptible to election tampering by illegal, invalid and dead voters.
+The robots are autonomous and designed to avoid confrontations.
 
-.
+When someone steps right in front of one, the robot will stop, and move around them - while sending video inside to a control center where a human is monitoring.
+
+The robots are currently being trialled by Microsoft at its San Francisco office
+
+The robot also has an emergency button people can press to talk to an operator if they are in distress
+
+If a would-be burglar persists, co-founder Stacy Stephens said: 'Then, the robot is looking at the video, listening for glass breakage, any loud sound that breaking in would cause. We'll get the license plate, picture of the vehicle, geotag location, and time.'
+
+The robots patrol using a similar technology as the self-driving Google car.
+
+'It has a LIDAR (light image detection and ranging) that's doing a 3D map,' Stephens told CBS.
+
+'It will geofence itself and give itself a perimeter within which it will operate. And it moves around within that perimeter freely and it chooses its own path.'
+
+The robots will be deployed in outdoor settings, such as corporate campuses, college campuses and open air malls.
+
+The robots patrol using a similar technology as the self-driving Google car.
+
+So far, the company has built seven robots and plans to deploy four of them towards the end of the year.
+
+The K5 robot is also built with a button on top of its head.
+
+This button can be pressed down by anyone who needs some help, and the firm has even addressed fears it will put human security guards out of work.

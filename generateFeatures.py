@@ -1,4 +1,5 @@
 import multiprocessing as mp
+import seaborn as sns
 import numpy as np
 from multiprocessing import Pool
 from pandarallel import pandarallel
@@ -73,6 +74,7 @@ def split_into_sentences(text):
 def generate_specificity():
     my_data_path = spec_dir+"/dataset/data/my_data_unlabeled.txt"
     csv = pd.read_csv(data_dir+"/data.csv", sep = "\t")
+    csv.body = csv.body.astype('str')
     texts = ["%s\n" % re.sub("\n|\r", "",t) for t in csv['body']]
 
     #writes sentences to a file
@@ -90,6 +92,7 @@ def generate_specificity():
 
 def generate_complexity():
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
+    csv.body = csv.body.astype('str')
     print("Generating Complexity for dataset shaped: ",csv.shape)
     subprocess.call("rm -f "+cwd+"/res/complexity/input_texts/*", shell=True, cwd=comp_dir)
 
@@ -196,7 +199,8 @@ def generateFeats():
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 
-    csv['sent'] = csv['body'].parallel_apply(split_into_sentences)
+    csv['body'] = csv['body'].astype('str')
+    csv['sent'] = csv['body'].parallel_apply(split_into_sentences).astype('str')
     csv['sent'].str.lower()
     csv['n_sent'] = csv['sent'].parallel_apply(lambda x: max(len(x),1))
 
@@ -206,6 +210,7 @@ def generateFeats():
     csv['blob'] = csv['body'].parallel_apply(TextBlob)
 
     ### SUBJECTIVITY ###
+    print("Generating subjectivity scores")
     def subjectivity_lex_aux(tagged_tokens, lex):
         score = 0
         for idx, token in enumerate(tagged_tokens):
@@ -226,9 +231,10 @@ def generateFeats():
     mpqa_path = res_path+"/subjectivity/MPQA/"
     lex = pd.read_csv(mpqa_path+"/lexicon.csv", sep=',')
 
-    subjectivity_scores = csv['tagged'].parallel_apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens']
+    subjectivity_scores = [list(a) for a in zip(csv['tagged'].parallel_apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens'], blob_subj_scores)]
 
     ### SPECIFICITY ###
+    print("Generating specificity scores")
     with open(spec_dir+"/predictions.txt", 'r+') as file:
         lines = file.readlines()
 
@@ -236,10 +242,12 @@ def generateFeats():
     specificity_scores = spec_scores['preds'].parallel_apply(lambda x: float(x.split('(')[1].split(',')[0]))
 
     ### PAUSALITY ###
+    print("Generating pausality scores")
     pausality_scores = csv['tagged'].parallel_apply(lambda tagged_tokens: sum([1 for word,tag in tagged_tokens if tag == '.']))/csv['n_tokens']
 
 
     ### INFORMALITY ####
+    print("Generating informality scores")
     #readability
     subprocess.call("rm -f "+cwd+"/res/readability/input_texts/*", shell=True, cwd=read_dir)
     num_of_digits = len(str(len(csv)))
@@ -251,10 +259,13 @@ def generateFeats():
     read_scores = pd.read_csv(comp_dir+"/readabilitymeasures.csv").iloc[:,range(1,10)]
 
     #complexity
+    compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv")
+    compl_scores = compl_scores.drop(columns="filename")
     compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv").iloc[:,1:]
     informality_scores = pd.concat([read_scores, compl_scores], axis=1)
 
     ### DIVERISTY ###
+    print("Generating diversity scores")
     lemmatized_text = csv['body'].parallel_apply(lambda x: ld.flemmatize(x))
 
     def diversity_aux(text):
@@ -264,19 +275,21 @@ def generateFeats():
     diversity_scores = lemmatized_text.parallel_apply(diversity_aux)
 
     ### QUANTITY ###
+    print("Generating quantity scores")
     #takes the tagged text as input and outputs simple counts
     def quantity_aux(tagged_tokens):
         pos_counts = pos_list
         for word, tag in tagged_tokens:
             pos_counts[tag] = pos_counts[tag] + 1
         num_terms, num_tokens = len(set(tagged_tokens)), len(tagged_tokens)
-        counts = [value for key,value in sorted(pos_counts.items())]
+        counts = [value/num_terms for key,value in sorted(pos_counts.items())]
 
         return [num_terms, num_tokens]+counts
 
     quantity_scores = csv['tagged'].parallel_apply(quantity_aux)
 
     ### UNCERTAINTY ###
+    print("Generating uncertainty scores")
     #cls = Classifier(granularity=True)
     cls = Classifier()
     def uncertainty_aux(text):
@@ -288,27 +301,46 @@ def generateFeats():
     uncertainty_scores = csv['body'].parallel_apply(uncertainty_aux)
 
     ### AFFECT ###
+    print("Generating affect scores")
     #takes the raw text as input, and calculates polarity as the average polarity over the sentences
     #for vader, takes the text split in sentences
     with mp.Pool() as pool:
         affect_scores = pd.DataFrame(pool.map(affect_aux, [(e['body'],e['sent'],e['n_sent'],e['blob']) for _,e in csv.iterrows()]), columns=["BPol-avg","BPol-pos", "BPol-neg", "VPol-avg", "VPol-pos", "VPol-neg"])
 
     ### PASSIVENESS ###
+    print("Generating passiveness scores")
     with mp.Pool() as pool:
         passiveness_scores = pool.map(passiveness_aux, [(e['sent'],e['n_sent']) for _,e in csv.iterrows()])
 
     ### CONCATENATION ###
+    print("Concatenating scores")
 
     inf = informality_scores
     div = pd.DataFrame(diversity_scores.to_list(), columns=["simple TTR", "root TTR", "log TTR", "Mass TTR", "MSTTR", "MATTR", "HDD", "MLTD", "MA-warp", "MA-biD"])
     qua = pd.DataFrame(quantity_scores.to_list(), columns=["#terms", "#tokens", "#", "$", "\"", "(", "''", "''", ".", ":", "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "``"])
     aff = affect_scores
-    sbj = pd.DataFrame(subjectivity_scores.to_list(), columns=["Blob's Subjectivity over sentences"])
+    sbj = pd.DataFrame(subjectivity_scores, columns=["MPQA subjectivity score over sentences","Blob's Subjectivity over sentences"])
     spe = pd.DataFrame(specificity_scores.to_list(), columns=["Speciteller's scores"])
     pau = pd.DataFrame(pausality_scores.to_list(), columns=["#of '.'-tagged tokens"])
     unc = pd.DataFrame(uncertainty_scores.to_list(), columns=["LUCI score"])
     pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
 
     features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
+    #features = pd.concat([inf,div,aff,sbj,spe,pau,unc,pas], axis=1)
     print("Features Generated. Shaped: ",features.shape)
+    print("Calculating correlation. Saving to results/correlation/")
+
+    # calculate the correlation matrix
+    #corr = features.corr()
+
+    # plot the heatmap
+    #sns.set(rc={'figure.figsize':(20,18)})
+    #sns.set(font_scale=0.2)
+    #sns_plot = sns.heatmap(corr, xticklabels=corr.columns, yticklabels=corr.columns)
+
+    # saves the heatmap to file
+    #fig = sns_plot.get_figure()
+    #fig.savefig(cwd+"/results/correlation/heatmap.png")
+    #print("correlation image saved.")
+
     return features.to_numpy().astype(np.float)

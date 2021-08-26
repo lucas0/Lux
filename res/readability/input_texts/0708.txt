@@ -1,21 +1,47 @@
-Hewlett-Packard is now forging ahead with plans to split off its PC-and-printer businesses into a separate company, with the rest of the company’s enterprise portfolio staying together in a separate entity to be called Hewlett-Packard Enterprise, the company said early Monday morning.
+Hewlett-Packard to split into two public companies, lay off 5,000
 
-The [company]Hewlett-Packard[/company] enterprise unit, comprising servers, storage, networking, converged systems, services and software and the OpenStack Helion cloud, will be led by Meg Whitman as president and CEO. Pat Russo will be chairman of that board.
+By Supantha Mukherjee and Edwin Chan
 
-The PC and printer entity, to be known as HP Inc., will be led by Dion Weisler as president and CEO, with Whitman as chairman. The Wall Street Journal (registration required) was first to report this news Sunday afternoon.
+Oct 6 (Reuters) - Hewlett-Packard Co said it would split into two listed companies, separating its computer and printer businesses from its faster-growing corporate hardware and services operations, and eliminate another 5,000 jobs as part of its turnaround plan.
 
-Here’s a glimpse at how the two companies will look:
+HP said its shareholders would own a stake in both businesses through a tax-free transaction next year. Each business contributes about half of HP's revenue and profit.
 
-“Our work during the past three years has significantly strengthened our core businesses to the point where we can more aggressively go after the opportunities created by a rapidly changing market,” Whitman said in a statement. “The decision to separate into two market-leading companies underscores our commitment to the turnaround plan. It will provide each new company with the independence, focus, financial resources, and flexibility they need to adapt quickly to market and customer dynamics, while generating long-term value for shareholders.”
+Shares of the 75-year-old company, which has struggled to adapt to the new era of mobile and online computing, were up 4.4 percent at $36.78 in late morning trading on Monday.
 
-HP, truly an iconic IT company, has been slammed in the past decade by the shift to mobile devices and cloud and a series of management fiascos including the short-lived tenure of former CEO Leo Apotheker. Under his watch, the company considered selling off its still huge PC business, a plan that was scotched by Whitman when she took the reins in 2011. The rationale behind holding onto the PC business was that it gave HP huge volume buying power advantages in procuring chips and other components for its server business as well.
+Chief Executive Meg Whitman told Reuters the newly created HP Inc would mostly stick to its knitting - PCs and printers - for now, while exploring related markets such as 3D printing.
 
-Toni Sacconaghi, senior analyst with Bernstein Research, wrote in a note that while a split up of HP is hardly a new topic, his take is that the spin off seems to be “fueled by weakness at HP rather than strength.” He also noted that HP in the past few months “came close” to buying Rackspace for nearly $6 billion; nearly bought EMC and “apparently has shopped various parts of its portfolio PCs, its Unix business, IT Services.”
+The company has no plans to venture into the hotly contested consumer mobile devices market, where it stumbled years ago.
 
-In another research report released before the news was official, Wells Fargo analyst Maynard Um wrote:
+"There's still lots of opportunities in other adjacencies, where we don't chase the market leaders," said Whitman, who will be CEO of HP Enterprise, the business that will sell computer servers and networking gear and data storage to businesses.
 
-We believe a separation may suggest HP could become more active in both divestitures and acquisitions, which we believed would be increasingly necessary in FY2015. While this is somewhat of an about face from its prior stance that it was “better together”, we believe this, if true, is likely to be driven by competitive market dynamics as well as a stabilization in its PC business.
+Whitman said HP's balance sheet had improved markedly over the past few years, allowing the company to come to the decision to split up from a position of strength.
 
-The separation, which HP said will be tax-free to shareholders in terms of federal income taxes, is slated to be done by the end of HP’s 2015 fiscal year, ending October 31, 2015.
+"This would not have been possible three years ago," she said, referring to a proposal to spin off PCs in 2011.
 
-Note: This story was updated several times with additional analyst quotes.
+Some analysts expressed skepticism about the latest move.
+
+Barclays analysts noted that the sudden announcement in 2011 was disruptive to HP's sales, its sales force and demand.
+
+"If the (latest) decision by HP isn't well communicated or is not well executed, the negative share shifts could be material," they said in a note.
+
+Analysts at Bernstein Research also warned of "material negative synergies" and one-time costs associated with the spinoff, largely in purchasing but also in distribution. The separation, they said, was fueled by weakness, not strength.
+
+A spinoff of the PC business was last proposed in 2011 by then-Chief Executive Leo Apotheker. HP later ditched the plan - and Apotheker, replacing him with Whitman.
+
+HP said it planned to cut 5,000 more jobs as part of its multi-year restructuring, raising the total under Whitman to 55,000. The company currently has more than 300,000 employees.
+
+The separation will result in a fundamental reshaping of one of technology's most important pioneers, which is on track to generate $112 billion in revenue in the fiscal year this month.
+
+While there were skeptics, many investors and analysts had called for a break-up of HP or a sale of the PC business so that HP could focus on the more profitable side of its operations.
+
+"Shareholders will now be able to invest in the respective asset groups without the fear of cross-subsidies and inefficiencies that invariably plague large business conglomerates," Ralph Whitworth, former HP chairman and founder of Relational Investors LLC, said in a statement.
+
+Relational owns a 1.49 percent stake in HP.
+
+HP is the latest in a line of companies to spin off operations in an attempt to become more agile and capitalize on faster-growing businesses.
+
+Online auction company eBay Inc, which was formerly run by Whitman, said last week it would spin off electronic payment service PayPal.
+
+"We like the spin and believe it could create additional value over time," UBS analyst Steven Milunovich, wrote. "In our view, focus is more important than synergies, and it is hard to be good at both consumer and enterprise computing."
+
+HP's printing and PC business will be led by Dion Weisler, currently an executive in that division. Whitman will be chairman of HP Inc.

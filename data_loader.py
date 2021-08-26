@@ -1,4 +1,3 @@
-import time
 import linecache
 import traceback
 import resource
@@ -136,7 +135,7 @@ def reset_hash():
         savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
-def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False, drop_feat_idx=[]):
+def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False, drop_feat_idx=[], only_claims=False):
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
 
@@ -183,11 +182,12 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
             fold_dev = 0
 
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
-        #TODO modify these two lines back!!!
+        #determines if data will be whole body or only claims
         df = data[['o_body','verdict']].copy()
-        #df = data[['claim','verdict']].copy()
         df = df.rename(columns={"o_body": "body"})
-        #df = df.rename(columns={"claim": "body"})
+        if only_claims:
+            df = data[['claim','verdict']].copy()
+            df = df.rename(columns={"claim": "body"})
         df.body.apply(clean_text)
 
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
@@ -200,8 +200,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         print("Number of entries: ", num_entries)
         print("True/False: ",df.groupby('verdict').count())
         print("Mean and Std of number of words per document: ",np.mean(lens),np.std(lens), "\n")
-        #sns.distplot(lens)
-        #plt.show()
+        #input("Press any key to continue.")
 
         ###################################
         ############# FEATURES ############
@@ -238,7 +237,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 sys.exit(1)
             save_p(data_dir+"/features", features)
             print("Generated Features. Saved to pickle.")
-            print("Features Shape:", features.shape)
             savehash("features", hashcode=df_hash, drop_feat_idx=drop_feat_idx)
 
         #check if drop_features is NOT the same
@@ -264,20 +262,12 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
                 #creates an ordered list of N=entries of integers(:folds) indicating the fold idx of each entry
                 fold_idx = [bert_folds.index(list(sl)) for e in index_shuf for sl in bert_folds if e in list(sl)]
 
-                #I think this should start as True
-                flag = {idx:True for idx in range(len(bert_folds))}
-
-                #get the starting time:
-                start_time = time.time()
-
                 #start the bert-as-a-service server
                 bert_dir = os.environ.get("BERT_BASE_DIR")
-                print(bert_dir)
-                args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', '512', '-mask_cls_sep'])
-                server = BertServer(args)
-                server.start()
+                #args = get_args_parser().parse_args(['-model_dir', bert_dir, '-port', '5555', '-port_out', '5556', '-max_seq_len', '512', '-mask_cls_sep'])
+                #server = BertServer(args)
+                #server.start()
 
-                print(num_folds)
                 #delete the bert.csv files inside the folds
                 for i in range(num_folds):
                     filename = data_dir+"/folds/"+str(i)+"/bert.csv"
@@ -286,23 +276,16 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
                 #TODO make this process read only one fold at a time
                 for fold, idx in zip(fold_idx, index_shuf):
-
                     #generates the encodings for the texts
                     bc = BertClient(check_version=False)
                     b = bc.encode([df.body[idx]])[0]
 
                     bert_df = pd.DataFrame([b], columns=['f'+str(e) for e in range(len(b))])
-                    bert_df.to_csv(data_dir+"/folds/"+str(fold)+"/bert.csv", mode='a+', index=False, header=flag[fold])
-                    flag[fold] = False
+                    bert_df.to_csv(data_dir+"/folds/"+str(fold)+"/bert.csv", mode='a+', index=False, header=False)
 
                 #stops the bert-as-a-service server
-                shut_args = get_shutdown_parser().parse_args(['-ip','localhost','-port','5555','-timeout','5000'])
-                server.shutdown(shut_args)
-
-                #print total time
-                delta_time = time.time() - start_time
-                print('Time Taken: for BERT generation:', time.strftime("%H:%M:%S",time.gmtime(delta_time)))
-
+                #shut_args = get_shutdown_parser().parse_args(['-ip','localhost','-port','5555','-timeout','5000'])
+                #server.shutdown(shut_args)
 
             except Exception as e:
                 print(traceback.format_exc())
@@ -358,14 +341,10 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
             #TODO make this process read only one fold at a time
             for fold in range(num_folds):
-                b_fold_csv = pd.read_csv(data_dir+"/folds/"+str(fold)+"/bert.csv")
+                b_fold_csv = pd.read_csv(data_dir+"/folds/"+str(fold)+"/bert.csv", header=None)
                 #gets only the indexes
                 count = sum([1 for fidx,_ in zip(fold_idx, index_shuf) if fold == fidx])
                 for idx in range(count):
-                    #print("csv:",b_fold_csv)
-                    #print("len",len(b_fold_csv))
-                    #print("count: ", count)
-                    #print("range(count): ",range(count))
                     b = b_fold_csv.iloc[idx]
                     entry = np.concatenate((features[idx,:],b))
 
@@ -398,7 +377,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         savehash("data", hashcode=df_hash)
         savehash("folds", hashcode=str(num_folds))
 
-        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx)
+        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx, only_claims=only_claims)
 
 
     else:
@@ -408,7 +387,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         test_target = read_p(data_dir+"/folds/"+str(fold)+"/labels")
 
         dev_data = read_p(data_dir+"/folds/"+str(fold_dev)+"/"+emb_type)
-        #dev_data = np.ndarray(dev_data)
         dev_target = read_p(data_dir+"/folds/"+str(fold_dev)+"/labels")
 
         train_data_filenames = [data_dir+"/folds/"+str(i)+"/"+emb_type for i in range(num_folds) if i not in [fold,fold_dev]]

@@ -12,59 +12,38 @@ map_file = abwd+"/map_of_features.txt"
 out_file = abwd+"/output.txt"
 
 #TrainShape:(1182, 864) #EPOCH: ([0], 100, 'bert', 0.001, 64) AVG: 0.7731481481481481 F1: 0.7715793816939528
-
+#TrainShape:(1182, 869) #EPOCH: ([98], 100, 'bert', 0.001, 64) AVG: 0.8121693121693121 VAR: 0.00017409227065311717 F1: 0.8119331358845181
 #TrainShape:(1182, 864) #EPOCH: ([0, 17], 100, 'bert', 0.001, 64) AVG: 0.7731481481481481 F1: 0.7715793816939528
-
-
 with open(ab_file, "r+") as f:
-    acc = [float(line.split()[8+AB_DEPTH]) for line in f]
-with open(ab_file, "r+") as f:
+    acc = [float("{:.5f}".format(float(line.split()[8+AB_DEPTH]))) for line in f]
+    f.seek(0)
+    var = [float("{:.5f}".format(float(line.split()[10+AB_DEPTH]))) for line in f]
+    f.seek(0)
     drop = [" ".join(line.split()[3:(3+AB_DEPTH)]) for line in f]
 
-idx = range(96)
+base = acc.pop(0)
+base_var = var.pop(0)
+idx = range(len(acc))
 
-base = float(0.8050793650793651)
+print("BASELINE acc:", base)
 
-avg = sum(acc)/len(acc)
-print("AVG of runs:", avg)
-
-dev1 = [e-avg for e in acc]
-
-dev = [base-e for e in dev1]
-
-dev1 = [float("{:.5f}".format(x)) for x in dev1]
-dev = [float("{:.5f}".format(x)) for x in dev]
+diff = [float("{:.5f}".format(e-base)) for e in acc]
+percent = ["{:.2%}".format(abs(x)/base) for x in diff]
 
 with open(map_file, "r+") as f:
     names = []
     for line in f:
         names.append(" ".join(line.split()[1:]))
 
-i_acc = sorted(zip(idx, names, dev, dev1), key=lambda x: x[2], reverse=True)
+i_acc = sorted(zip(idx, names, diff, percent, var), key=lambda x: x[2], reverse=False)
 
 range_var = i_acc[0][2] - i_acc[-1][2]
 with open(out_file, "w+") as of:
+    line = str("baseline")+"\t&\tbaseline\t&\t"+str(base)+"\t&\t"+str("100%")+"\t&\t"+str(base_var)+"\\\\\n"
+    of.write(line)
+    of.write("\midrule\n")
     for i in i_acc:
-        line = str(i[0])+"\t&\t"+i[1]+"\t&\t"+str(i[2])+"\t&\t"+str(i[3])+"\\\\\n"
+        line = str(i[0])+"\t&\t"+i[1]+"\t&\t"+str(i[2])+"\t&\t"+str(i[3])+"\t&\t"+str(i[4])+"\\\\\n"
         of.write(line)
         of.write("\midrule\n")
 
-sys.exit(1)
-print(len(i_acc))
-remove = [i for i in i_acc if i[2] > 0]
-#remove = [i for i in i_acc if i[2] > 0]
-
-rmv_dev = [e[2] for e in remove]
-avg_rmv_dev = sum(rmv_dev)/len(rmv_dev)
-print(avg_rmv_dev)
-
-#remove = [i for i in i_acc if i[2] < avg_rmv_dev]
-#remove = [i for i in i_acc if i[2] > avg_rmv_dev]
-print(len(remove))
-
-for e in remove:
-    print(e)
-
-feats = [str(e[0])[2:-2] for e in remove]
-
-print(feats)

@@ -37,7 +37,7 @@ d6 = pd.read_csv(cwd+"/trusted_body.csv", sep="\t")
 d6.o_body = d6.o_body.astype('str')
 d6 = d6[d6['o_body'].map(len) > MIN_BODY_LEN]
 d6.verdict = "true"
-d6 = d6.sample(n=212)
+d6 = d6.sample(n=142)
 print("size of trusted1.csv:", len(d6))
 
 #d7 = pd.read_csv(cwd+"/fever.csv", sep="\t")
@@ -59,11 +59,11 @@ d9['o_url'] = range(len(d9))
 print("size of snopes2019.csv:", len(d9))
 print("columns of snopes2019.csv:", d9.columns)
 
+d4 = d4.sample(355)
 #dataframes = [d1,d2,d3,d4,d5,d6]
 #dataframes = [d1,d2,d3,d4]
-#dataframes = [d1,d2,d3,d4,d5,d6]
-#dataframes = [d5]
-dataframes = [d9]
+dataframes = [d1,d2,d3,d4,d5,d6]
+#dataframes = [d9]
 
 cols = set(d1.columns)
 for i in dataframes:

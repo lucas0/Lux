@@ -1,31 +1,27 @@
-Syrian activists claim militants from the Islamic State of Iraq and Syria (ISIS) seized earlier this week a cache of weapons airdropped by U.S.-led coalition forces that were meant to supply Kurdish fighters battling the extremist group.
+A California company is hoping to revolutionize the security business with autonomous robots.
 
-The Britain-based Syrian Observatory for Human Rights said the militants seized at least once cache, but may have seized more, the Associated Press reported.
+The Knightscope K5 is one of four drones now patrolling Microsoft's Silicon Valley Campus.
 
-The cache of weapons included hand grenades, ammunition and rocket-propelled grenade launchers, according to a video uploaded by a media group loyal to ISIS, the agency said.
+Matt Stambaugh, the Calgary Eyeopener's science and technology columnist, spoke about how the five feet tall robots learn.
 
-The video appeared authentic and corresponded to The Associated Press' reporting of the event.
+"You take them to an area, apparently an operator has to walk around the perimeter where they're supposed to patrol once, then they go about learning their environments," said Stambaugh. "What they're using is a variety of different sensors essentially to take the role of what a lot of private security contractors do today."
 
-The Observatory, which bases its information on a network of activists on the ground, said the caches were airdropped early Monday to Kurds in the embattled Syrian town of Kobane that lies near the Turkish border.
+According to Stambaugh, the robots are capable of detecting anomalies and making decisions.
 
-The militant group has been trying to seize the town for more than a month now, causing the exodus of some 200,000 people from the area into Turkey. While Kurds are battling on the ground, a U.S.-led coalition is also targeting the militants from the air.
+"It's not quite as advanced as what Google is doing with their self-driving car, but they've got different sensors on board to make a map of the area and then they've got code on board to decide what is something that should be reported back."
 
-On Tuesday, ISIS loyalists on social media posted sarcastic thank you notes to the United States, including one image that said, “Team USA.”
+"They've got thermal imaging if you need. They've got chemical sensors, licence plate recognition software [and] facial recognition software," said Stambaugh. "It looks kind of like a large Roomba. And so instead of looking for dust bunnies it's looking for, you know, criminals."
 
-But the badly-aimed weapons drop was more an embarrassment than a great strategic loss. The ISIS militants already possess millions of dollars-worth of U.S. weaponry that they captured from fleeing Iraqi soldiers when the group seized swaths of Iraq in a sudden sweep in June.
+K5s to hit the market in 2015
 
-Also Tuesday, Syrian government airstrikes hit a rebel-held town along the country's southern border with Jordan, killing at least eight people on Tuesday.
+According to Stambaugh, the robots will be hitting the market starting 2015.
 
-Activists with the Local Coordination Committees (LCC) and the Britain-based Observatory said the number of those killed was likely to rise as there are more victims under the rubble.
+"What the company Knightscope is trying to do is to lease these out on a per-hour basis," said Stambaugh. "So $6.25 an hour they'll lease you one of these K5s and that's about half the price of the average security guard."
 
-The LCC said Syrian government planes dropped crude explosives-laden canisters on the town of Nasib on the Syria-Jordan border.
+There are many advantages to a robot over a human patrol.
 
-The air strikes are part of battles between Syrian government forces and Islamist rebel groups for control of the area.
+"They'll work triple shift, 24 hours a day. The battery is supposed to last around a day and when it runs out they go back to a charging carpet and in 20 minutes they are charged up again."
 
-Syrian government forces have been heavily bombing rebel areas in recent weeks, while the U.S-led coalition has been conducting air strikes against ISIS militants elsewhere in Syria.
+Stambaugh also said the robots do not have any weapons, but that may change in the future.
 
-(With the Associated Press)
-
-
-
-Last Update: 06:41 KSA 09:41 - GMT 06:41
+"Basically what it's doing is calling back to a manned response centre if something is going wrong," he said.

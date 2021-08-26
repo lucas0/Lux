@@ -1,27 +1,75 @@
-One of the traditional rites of passage for political candidates is the revelation of financial status–a catechism-like recital of money mistakes made and debts owed. As a candidate for governor of Georgia, I have spent the past few weeks dealing with the fallout from my personal financial disclosure report. As everyone following the race now knows, I owe the IRS over $50,000 in deferred tax payments (I am currently on a repayment plan) and hold more than $170,000 in credit card and student loan debt.
+Index to Five Millennium Catalog of Lunar Eclipses
 
-I am in debt, but I am not alone. Debt is a millstone that weighs down more than three-quarters of Americans. It can determine whether we are able to run for office, to launch a business, to quit a job we hate. But it should not—and cannot—be a disqualification for ambition.
+-1999 to +3000 (2000 BCE to 3000 CE)
 
-I grew up one of six children with working class parents in the Deep South. My mother was a college librarian and my father worked in a shipyard. I never saw them balance a checkbook, but they kept a roof over our heads and got all six of us into college. I went on to Yale Law School, and eventually landed my first law firm job, where I made $95,000—three times what my parents made, combined.
+Introduction
 
-Sign up: Click here to subscribe to the Broadsheet, Fortune’s daily newsletter on the world’s most powerful women.
+Eclipses of the Moon can occur when the Moon is near one of its two orbital nodes [1] during the Full Moon phase. It is then possible for the Moon to pass through Earth's penumbral or umbral shadows thereby producing an eclipse. There are three types of lunar eclipses:
 
-But despite earning nearly six figures, my financial situation was fraught. I had racked up student loans, and throughout college and beyond, I’d swiftly turned every credit card application into those magical slivers of plastic that allowed me to pay for daily necessities. I finished my higher education deeply in debt and with seven years of bad credit in my future. Using my law firm salary, I started to pay down my credit cards and make student loan payments.
+Penumbral - Moon traverses Earth's penumbral shadow (Moon misses Earth's umbral shadow) Partial - Moon traverses Earth's penumbral and umbral shadows (Moon does not pass completely into Earth's umbra) Total - Moon traverses Earth's penumbral and umbral shadows (Moon passes completely into Earth's umbra)
 
-I’d love to say that was the end of my financial troubles, but life had other plans. In 2006, my youngest brother and his girlfriend had a child they could not care for due to their drug addictions. Instead, my parents took custody when my niece was five days old.
 
-Underpaid, raising an infant, and battling their own illnesses, my parents’ bills piled up. I took on much of the financial responsibility to support them, and even today remain their main source of financial support.
 
-Paying the bills for two households has taken its toll. Nearly twenty years after graduating, I am still paying down student loans, and am on a payment plan to settle my debt to the IRS. I have made money mistakes, but I have never ignored my responsibilities; I will meet my obligations—however slowly but surely.
+Furthermore, total eclipses can be classified as either central [2] or non-central.
 
-I suspect my situation will sound familiar to others who are the first in their families to earn real money. Money dictates nearly step of social mobility from the very first moments of life. How much our parents make often determines whether we go to college. It affects the jobs we get offered and the ones we can afford to take. If the goal is entrepreneurship, good luck getting access to the capital you need to build a business. Even with a well-paid job, we often live paycheck to paycheck.
+The visual appearance of each of these eclipse types differs dramatically from each other.
 
-Race and gender play a major role in determining just how big of a financial disadvantage we’re likely to face. In 2013, the average wealth per U.S. household was $81,000. But dig into the numbers and a clearer picture appears: White families averaged $142,000 in wealth, Latinx households came in at $13,700, and black families brought up the rear at $11,000. Asian Americans are closer to whites than other people of color, but they still lag. The combined effects of discrimination in labor, housing, and education have compounded the struggle for wealth among communities of color.
+The recurrence of lunar eclipses is governed by the Saros cycle. For more information, see Periodicity of Lunar Eclipses.
 
-The woman’s wage gap, meanwhile, is real: In 2016, women working full-time were generally paid only 80% of what men received. That missing 20% becomes almost 40% for black women and nearly half for Latinas. Achieving wealth after losing a such a significant portion of your earning power can hobble even the most focused woman’s economic plans.
+Statistics for Lunar Eclipses: -1999 to +3000 (2000 BCE to 3000 CE)
 
-The takeaway: The difficulty of catching up and moving forward isn’t all in your head. Systemic biases, legacy barriers, and current explosions of inequality conspire to undermine wealth generation among minorities, and especially women in these communities. But, as with all obstacles, our obligation is to acknowledge they exist and then fight like hell to circumvent them.
+During the five Millennium period -1999 to +3000 (2000 BCE to 3000 CE[3]), Earth will experience 12064 lunar eclipses. The following table shows the number of eclipses of each type over this period.
 
-So, what can we do right now? First, ask yourself about your personal relationship with money and the claims that are being made on your resources. Are you doing more than you should to support others? Do you have a choice? You may not like the answers, but it’s important to understand the reality of the situation. From there, dedicate yourself to building your financial knowledge. The more you know, the more confidence you’ll have to make smart money decisions. Yes, we all still make money mistakes—but they don’t have to be fatal to our dreams.
+Lunar Eclipses: -1999 to +3000 Eclipse Type Symbol Number Percent All Eclipses - 12064 100.0% Penumbral N 4378 36.3% Partial P 4207 34.9% Total T 3479 28.8%
 
-Stacey Abrams is a Democrat running for governor of Georgia. If elected, she would become the first-ever black female governor of any state. Her new book, Minority Leader: How to Lead from the Outside and Make Real Change, goes on sale today.
+During most penumbral eclipses, only part of the Moon passes through Earth's penumbral shadow. However, it is also possible to have a penumbral eclipse in which the Moon passes completely within Earth's penumbral shadow without entering the inner umbral shadow. Such total penumbral eclipses are quite rare compared to normal (or partial) penumbral eclipses. The table below shows the distribution of the two penumbral eclipse types during the 5000-year period of this Catalog.
+
+Penumbral Lunar Eclipses: -1999 to +3000 Classification Number Percent All 4378 100.0% Partial Penumbral 4237 96.8% Total Penumbral 141 3.2%
+
+Total lunar eclipses through Earth's umbral shadow can be categorized as:
+
+Central - Some part of the Moon passes through the central axis of Earth's umbral shadow.
+
+Non-Central - The Moon misses the central axis of Earth's umbral shadow.
+
+Using the above categories, the distribution of the 3,479 total eclipses is shown in the table below.
+
+Total Lunar Eclipses: -1999 to +3000 Classification Number Percent All 3479 100.0% Central Total 2074 59.6% Non-Central Total 1405 40.4%
+
+There are a minimum of two and a maximum of five lunar eclipses in every calendar year. Statistics for the number of eclipses each year over the 5000 year period are listed below.
+
+Number of Eclipses Per Year Number of Eclipses Number of Years Percent 2 3541 70.8% 3 887 17.7% 4 539 10.8% 5 33 0.7%
+
+The longest eclipses of the 5,000 year period are listed below.
+
+Longest Penumbral Lunar Eclipse: 1322 Nov 24 Duration = 296.5m Longest Partial Lunar Eclipse: 2669 Feb 08 Duration = 210.0m Longest Total Lunar Eclipse: 0318 May 31 Duration = 106.6m
+
+Five Millennium Catalog of Lunar Eclipses: -1999 to +3000 (2000 BCE to 3000 CE)
+
+The table below summarizes the statistical distribution of lunar eclipse types over this five millennium period. Each line in the table corresponds to one century and gives the breakdown of each eclipse type (penumbral, partial, and total). The date intervals themselves are each a link to a catalog listing complete details for every lunar eclipse in the selected century. The data in these 100 year eclipse tables include the date and time of greatest eclipse[4], ΔT, lunar libration number, Saros series, the eclipse type, quincena solar eclipse parameter, gamma, eclipse magnitudes, eclipse phase durations, and local circumstances. For a detailed key and additional information about the catalogs, see: Key to Catalog of Lunar Eclipses.
+
+Calendar
+
+The Gregorian calendar is used for all dates from 1582 Oct 15 onwards. Before that date, the Julian calendar is used. For more information on this topic, see Calendar Dates. The Julian calendar does not include the year 0. Thus the year 1 BCE is followed by the year 1 CE (See: BCE/CE Dating Conventions ). This is awkward for arithmetic calculations. Years in this catalog are numbered astronomically and include the year 0. Historians should note there is a difference of one year between astronomical dates and BCE dates. Thus, the astronomical year 0 corresponds to 1 BCE, and astronomical year -1 corresponds to 2 BCE, etc..
+
+Predictions
+
+Lunar eclipse predictions must take into account the enlargement of Earth's shadows. In this Catalog, Earth's penumbral and umbral shadow sizes have been calculated using Danjon's enlargement method.
+
+The coordinates of the Sun used in the predictions are based on the VSOP87 theory [Bretagnon and Francou, 1988]. The Moon's coordinates are based on the ELP-2000/82 theory [Chapront-Touze and Chapront, 1983]. For more information, see: Solar and Lunar Ephemerides. The revised value used for the Moon's secular acceleration is n-dot = -25.858 arc-sec/cy*cy, as deduced from the Apollo lunar laser ranging experiment (Chapront, Chapront-Touze, and Francou, 2002).
+
+The largest uncertainty in the eclipse predictions is caused by fluctuations in Earth's rotation due primarily to tidal friction of the Moon. The resultant drift in apparent clock time is expressed as ΔT and is determined as follows:
+
+pre-1950's: ΔT calculated from empirical fits to historical records derived by Morrison and Stephenson (2004) 1955-2006: ΔT obtained from published observations Post-2006: ΔT is extrapolated from current values weighted by the long term trend from tidal effects
+
+A series of polynomial expressions have been derived to simplify the evaluation of ΔT for any time from -1999 to +3000. The uncertainty in ΔT over this period can be estimated from scatter in the measurements.
+
+Footnotes
+
+Acknowledgments
+
+The information presented on this web page is based on data published in Five Millennium Canon of Lunar Eclipses: -1999 to +3000 and Five Millennium Catalog of Lunar Eclipses: -1999 to +3000. The individual diagrams and maps appearing in links were extracted from full page plates appearing in Five Millennium Canon. The Besselian elements were provided by Jean Meeus. Fred Espenak assumes full responsibility for the accuracy of all eclipse calculations.
+
+Permission is freely granted to reproduce this data when accompanied by an acknowledgment:
+
+"Eclipse Predictions by Fred Espenak (NASA's GSFC)"
