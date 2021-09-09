@@ -6,7 +6,7 @@ v1=$(sed -rn 's/^seed\son\s\lux\.py:\s([0-9]*).*$/\1/p' $LUX_DIR/data/bck_best/R
 #then substitutes the whole line for \1 plus the content of v1 plus ')'
 #-i for sub in-place
 #-r to use sed regex
-sed -r -i "s/^(random\.seed\()([0-9]*).*$/\1$v1\)/" $LUX_DIR/lux.py
+sed -r -i "s/^(seed\s=\s)([0-9]*).*$/\1$v1/" $LUX_DIR/lux.py
 
 #copies the things back :)
 cp -r $LUX_DIR/data/bck_best/folds $LUX_DIR/data/

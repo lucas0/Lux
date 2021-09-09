@@ -1,1 +1,30 @@
-b'And in the Senate, Mr. Keene said, Mr. Helms was a rallying point for conservatives. As a member of the Foreign Relations Committee, he supported Mr. Reagan on issues like aid to the Nicaraguan Contras. Without Jesse, it would have been hard for Reagan to hold the line, Mr. Keene said.\n\nMr. Helms saw himself as a simple man  he even used the word redneck to describe himself  who protected simple American values from the onslaught of permissiveness, foreign influence and moral relativism. For 30 years, he cut a familiar figure on the Senate floor, typically wearing horn-rimmed glasses, black wing-tip shoes and, on the lapels of his gray suits, American flag and Free Masonry pins.\n\nMr. Helms liked his art uncomplicated.\n\nThe self-proclaimed, self-anointed art experts would scoff and say, Oooh, terrible, but I like beautiful things, not modern art, he told The New York Times in 1989, during a pitched battle over federal subsidies for the arts. I cant even figure out that sculpture in the Hart Building. He was referring to an Alexander Calder mobile.\n\nImage Senator Jesse Helms on Capitol Hill in 1982. Credit... J.Scott Applewhite/Associated Press\n\nIn the 1980s, he took on the National Endowment for the Arts for subsidizing art that he found offensive, chiefly that of the gay photographer Robert Mapplethorpe and of the artist Andres Serrano over his depiction of a crucifix submerged in urine. He later led an ill-fated attempt to take over CBS, exhorting conservatives to buy up stock in order to stop what he saw as a liberal bias in its news reporting.\n\nHe was also well known for holding up votes on treaties and appointments to win a point. His willingness to block the business of the Senate or the will of presidents earned him the sobriquet Senator No  a label he relished.\n\nIn campaigns and in the Senate, Mr. Helms stood out in both his words and his tactics.\n\nHe fought bitterly against federal financing for AIDS research and treatment, saying the disease resulted from unnatural and disgusting homosexual behavior.'
+Joe Raedle/Getty Images
+
+Some users of the anonymous web browser Tor have reported that Comcast has threatened to cut off their internet service unless they stop using the legal software.
+
+Comcast completely denies their claims. In a blog post, the company said "We have no policy against Tor, or any other browser or software. Customers are free to use their Xfinity Internet service to visit any website, use any app, and so forth."
+
+According to a report on Deepdotweb, Comcast customer representatives have branded Tor "illegal" and told customers that using it is against the company's policies.
+
+Tor is a type of web browser that, in theory, makes all your internet activity private. The software routes traffic through a series of other connected internet users, making it difficult for governments and private companies to monitor your internet usage. Up to 1.2 million people use the browser, which became especially popular after Edward Snowden leaked information showing that the NSA was eavesdropping on ordinary citizens. Prior to that, Tor had been popular among people transacting business on Silk Road, the online market for drugs and hitmen.
+
+The problem is that downloading or using Tor itself isn't illegal. Plenty of people might have legitimate reasons to want to surf the web in private, without letting others know what they were looking at. But Tor has been pretty popular with criminals.
+
+Some Comcast reps allegedly begun telling users that it is an "illegal service." One Comcast representative, identified only as Kelly, warned a customer over his use of Tor software, DeepDotWeb reports:
+
+Users who try to use anonymity, or cover themselves up on the internet, are usually doing things that aren’t so-to-speak legal. We have the right to terminate, fine, or suspend your account at anytime due to you violating the rules. Do you have any other questions? Thank you for contacting Comcast, have a great day.
+
+Comcast customers, speaking to Deepdotweb, claimed that Comcast repeatedly asked them which sites they were accessing using Tor.
+
+In a statement to Business Insider, Comcast refuted the claims made in Deepdotweb, stating that they had launched an internal review into the discussions reported above:
+
+Customers are free to use their Xfinity Internet service to visit any website or use it however they wish otherwise. Like virtually all ISPs, Comcast has an acceptable use policy or AUP that outlines appropriate and inappropriate uses of the service. Comcast doesn’t monitor users’ browser software or web surfing and has no program addressing the Tor browser. he anecdotal chat room evidence provided is not consistent with our agents’ messages and is not accurate. Per our own internal review, we have found no evidence that these conversations took place, nor do we employ a Security Assurance team member named Kelly. Tor’s own FAQs clearly state: 'File sharing (peer-to-peer/P2P) is widely unwanted on Tor' and 'BitTorrent is NOT anonymous' on Tor.
+
+Read Comcast's full statement here.
+
+
+
+
+
+More From Business Insider
+

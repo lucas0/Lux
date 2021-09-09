@@ -1,13 +1,41 @@
-Last week, Apple sent out the invites for its “Spring Forward” event, slated to be held at the Yerba Buena Center for the Arts in San Francisco on March 9th.
+Supplemental FBI Investigation Executive Summary
 
-Many are expecting Apple talk more about the Apple Watch. However, sources familiar with the matter within Apple have exclusively told The Michael Report that Apple plans to unveil the long-awaited Retina MacBook Air at the same event. The Michael Report has independently verified this information to be highly credible.
+Background
 
-We should note that this information falls in line with what Apple analysts such as KGI Securities’ Ming-Chi Kuo and Oppenheimer’s Andrew Uerkwitz have been predicting for months. Supply chain sources who spoke to the press have also said that Apple ramped up their production in late 2014 and entered the mass production stage in December, with the goal of producing enough units for an early-2015 debut.
+At the Senate Judiciary Committee’s request, the FBI opened a supplemental background investigation into Judge Kavanaugh. It’s his seventh FBI background investigation in 25 years, going back to 1993. The request was for an investigation into current credible allegations against Judge Kavanaugh.
 
-Apple’s MacBook Air line, which got upgraded in April last year (the only real upgrade being a small speed bump), still features a non-Retina screen with the same screen resolution that hasn’t been updated since late 2010. This is a stark contrast from the rest of the Apple computer lineup, which have been steadily upgraded to a Retina (or at least, a version of it is offered) screen since the first Retina MacBook Pro was unveiled in 2012.
+In the course of its investigation, the FBI decided to reach out to eleven people, ten of whom agreed to be interviewed. The FBI reached out to all witnesses with potential firsthand knowledge of the allegations. The FBI provided to the Senate 12 detailed FD-302 reports summarizing their interviews with the witnesses as well as supporting materials cited by the witnesses during their interviews.
 
-The upcoming Retina MacBook Air, if earlier reports are to be believed, will come in an ultra slim design that combines the productivity of the current larger-screened 13-inch MacBook Air with the portability of the 11-inch MacBook Air.
+Interview Subjects
 
-Internally, the new Retina MacBook Air is said to feature Intel’s next-generation Broadwell Core M low-power processors, which would allow Apple to strip the computer of its fan assembly to create an even thinner profile. Other compromises Apple reportedly made in exchange for a thinner and lighter body includes the full-sized USB ports, MagSafe connectors and SD card slots.
+The FBI interviewed the following ten individuals:
 
-The Retina MacBook Air, currently codenamed “MacBook Stealth” internally, will also come with a modest price decrease according to previous reports.
+Ford Allegations
+
+· The three individuals identified by Dr. Christine Blasey Ford as having attended the gathering where she was allegedly assaulted.
+
+Mark Judge Mark Judge [1]
+
+o PJ Smyth
+
+o Leland Keyser
+
+· Two other individuals included on Judge Kavanaugh’s July 1, 1982 calendar entry.
+
+o Timothy Gaudette
+
+o Christopher Garrett
+
+· An attorney for one of the witnesses
+
+Ramirez Allegations
+
+· Deborah Ramirez
+
+· Two alleged eyewitnesses named by Deborah Ramirez (a third alleged eyewitness refused to submit to an interview)
+
+· Deborah Ramirez’s close friend from college
+
+Conclusion
+
+The Supplemental Background Investigation confirms what the Senate Judiciary Committee concluded after its investigation: there is no corroboration of the allegations made by Dr. Ford or Ms. Ramirez.

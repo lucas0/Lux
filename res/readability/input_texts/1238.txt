@@ -1,21 +1,27 @@
-While Daleks "know no fear" and "must not fear," the cold, calculating robots from the Dr. Who series don't exist in the real world yet and Microsoft has had to settle on the next best thing for securing its campuses: the K5.
+More than 100 whales are being held in cramped and potentially illegal enclosures on Russia's Pacific east coast. Prosecutors are investigating the site near the city of Nakhodka, which has been dubbed a "whale jail" by local media.
 
-Microsoft is the first company in Silicon Valley to dispatch a fleet of the K5 policing robots. Each 5-foot tall, 300-pound K5 is equipped with arrays of high-definition camera, sensors, debilitating sirens, Wi-Fi and artificial intelligence.
+Eleven orca and 90 beluga whales are being held in the pens, and activists fear they are illegally being sold to Chinese water parks and aquariums, contravening laws on the capture of wild whales.
 
-The squat policing robots are the product of Knightscope, a startup firm from Mountain View, Calif. William Santana Li, chairman and CEO of Knightscope, sees a world in which his company's policing robots move out of the private sector and start working alongside law enforcement officers.
+Some of the animals have been in containment since July, CBS News correspondent Debora Patta reported on Wednesday.
 
-"Technology and robotics are making the concept of Precision Policing -- a systematic, proactive and almost precognitive approach to ensuring public safety -- a real possibility," said Li in a March blog post.
+A video shared on social media on Monday shows a whale being lifted out of a small container by a crane in preparation, activists believe, to ship it to China.
 
-The K5s can use their sensors to track down threats and their Wi-Fi connection to call in bipedal backup, aka security guards. Their AI and camera rigs enable the K5s to do a good deal of profiling, scanning license plates and faces to compare against databases available to them over Wi-Fi.
+It is illegal to capture wild whales except for educational and scientific purposes following a worldwide ban on commercial whale hunting in 1982. However, orca whales, or killer whales as they are often called, can fetch as much as $6 million at theme parks in China.
 
-The K5 robots are only tools to surveil, assess and report suspicious activity, for now at least. There are plans in the works that could see the K5s brandishing and using Taser guns -- "you are being neutralized."
+Russian newspaper Novaya Gazetta has reported that the four companies that own the containers exported 13 whales to China between 2013 and 2016.
 
-The K5s sensors enable them to recognize and analyze alphanumeric text, heat signatures, sounds, air quality and infrared light. The robots are equipped with both radar and Lidar to help them make measurements, while GPS helps them maintain their bearing and report their positions. Lidar, which stands for light detection and ranging, is a remote-sensing technology used to measure distance by illuminating a target with a laser and then analyzing the reflected light.
+Between 2012 and 2015, the companies allegedly involved were granted permission to capture ten orcas in the wild for educational purposes. However, seven of those whales were exported to China, where one was valued at over $1 million on a customs form.
 
-The robots are fully autonomous and can even refuel at a charging station without the guidance of humans. The K5s leverage their machine learning abilities for predictive analytics, analyzing and accounting for risks in real time.
+Earlier this year, Russian authorities called on the Interior Ministry to launch a fraud investigation over the capture and sale of the seven whales.
 
-To keep people assured that the machines aren't abusing their abilities or beginning to learn too much, Knightscope plans to let people keep an eye on the machines by making the K5s' video feeds available to the public online.
+Other firms are reportedly renting out whales in an effort to get around certain restrictions on the sale of wild sea mammals.
 
-"I believe robots are the perfect tools to handle the monotonous and sometimes dangerous work in order to free up humans to more judiciously address activities requiring higher-level thinking, hands-on encounters, or tactical planning," states Li.
+Video shot from a helicopter of the containment tanks shows dozens of beluga whales in tight quarters. Experts say that given the size of the tanks, many of the whales must be calves. The capture of whale calves is categorically forbidden, even for scientific or educational reasons.
 
-ⓒ 2018 TECHTIMES.com All rights reserved. Do not reproduce without permission.
+Greenpeace Russia has condemned the conditions as "torture," and warned that capturing whales in these numbers threatens the animals' population in the long term.
+
+The Telegraph quoted Greenpeace Russia's Oganes Targulyan as saying that although the law permits the capture of 13 killer whales per year, "no one is taking into account that at least one orca is killed for every one that is caught."
+
+"Catching them at this tempo, we risk losing our entire orca population."
+
+In the nearby Kamchatka region, orca numbers have decreased so drastically that they are now listed as endangered.

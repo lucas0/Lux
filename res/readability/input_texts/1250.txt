@@ -1,11 +1,9 @@
-15.8k SHARES Share Tweet Share
+The next episode of Beats Music won’t be making an appearance at Apple’s ‘Spring Forward’ event next week.
 
-McDonald’s has just announced that it will be phasing out 8 menu items the beginning of next year and most McDonald’s customers are not happy.
+Sources “with a knowledge of the company’s current plans” have told TechCrunch that Apple will debut the new service — which ditches the Beats branding for tighter iTunes integration — during Apple’s World Wide Developers Conference.
 
-“Our intent is to have a cleaner menu board that is easier for customers to absorb,” spokeswoman Lisa McComb said in a statement. “To do so we must simplify our current menu.
+The official unveiling will take place on June 8, reports the site, concurring with a 9to5Mac report that also claims the new Beats service will launch at WWDC, though a specific date hasn’t been announced yet by Apple.
 
-This means the end of the Big Mac, apple pie and large size menu items. Currently, the Big Mac has a whopping 550 calories and 29g of fat. The Apple pie contains 250 cal, and it would take a full 69 minute to walk that off! With that being said, those two menu items were not a tough decision for elimination.
+Apple’s updated service will add Beats’ personalization and recommendation features mixed with mostly new software. Cross-platform support on Android and PC will continue to be offered, even though the Beats Music branding will be a thing of the past. The new service will be priced around $7.99, making it competitive against Spotify and Rdio’s monthly subscription fees of $9.99/per month.
 
-McDonald’s is currently testing out a new version of their slim down menu in Delaware, Little Rock, Waco, Bakersfield, Macon and Knoxville. They plan a full nationwide rollout beginning February 1, 2015.
-
-One notable “ingredient” – preservatives – might also be eliminated from the menu altogether. Mark Andrés, President of McDonald’s USA, sparked widespread speculation when he asked investors, “Why do we need to have preservatives in our food?” And then answered himself with a “We probably don’t.”
+Apple allegedly planned to launch the new service at the beginning of 2015, but the departure of key employees cause the project to be delayed. The service will be packaged in an iOS 8.4 update to be released sometime after WWDC, however Apple could also choose to put it into iOS 9, which is expected to lack major new features, focusing mostly on bug fixes and speed.

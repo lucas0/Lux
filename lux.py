@@ -1,4 +1,14 @@
 #!/home/lucas/Lux/envLux/bin/python3
+import argparse
+from distutils import util
+#read these from the call:
+parser = argparse.ArgumentParser(description='LUX main script.')
+parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
+parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
+parser.add_argument('--regenerate_features', default=False, type=lambda x: bool(util.strtobool(x)), dest='force_reload', help='boolean that defines if the data features (including document embeddings) should be re-generated.')
+parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
+parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
+args = parser.parse_args()
 import warnings
 #warnings.filterwarnings("once")
 from numpy.random import seed
@@ -22,29 +32,21 @@ from sklearn.metrics import accuracy_score
 from sklearn.metrics import f1_score
 import numpy as np
 import sys
-import argparse
-from distutils import util
 from data_loader import load_data
 
 from tensorflow.keras.models import Sequential
-from tensorflow.keras.layers import Dense, Dropout, LSTM, Flatten, Bidirectional, TimeDistributed
+from tensorflow.keras.layers import Dense, Dropout, LSTM, Flatten, Bidirectional, TimeDistributed, BatchNormalization
 from tensorflow.keras import losses, regularizers
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.models import load_model
-from tensorflow.keras.callbacks import ModelCheckpoint
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.regularizers import l2
 
-random.seed(32442)
+seed = 6267
+random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
 
-#read these from the call:
-parser = argparse.ArgumentParser(description='LUX main script.')
-parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
-parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
-parser.add_argument('--regenerate_features', default=False, type=lambda x: bool(util.strtobool(x)), dest='force_reload', help='boolean that defines if the data features (including document embeddings) should be re-generated.')
-parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
-args = parser.parse_args()
 
 filename = sys.argv[0]
 cwd = os.path.abspath(filename+"/..")
@@ -53,9 +55,9 @@ checkpoint_filepath = cwd+'/lux_best_models/'
 model = None
 num_epochs = 5
 LSTM_DIM = 256
-DENSE_DIM = 256
-learning_rate = 0.001
-batch_size = 32
+DENSE_DIM =64
+learning_rate = 0.0005
+batch_size = 64
 
 def svm_model(data_shape, target_len, learning_rate, DENSE_DIM):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
@@ -69,18 +71,32 @@ def svm_model(data_shape, target_len, learning_rate, DENSE_DIM):
 
 def linear_model(data_shape, target_len, learning_rate, DENSE_DIM):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
-    model = Sequential()
+
     layer1 = Dense(DENSE_DIM,
             activation='relu',
             input_shape=(data_shape[1:]),
-            #kernel_regularizer=regularizers.l2(1e-2),
-            #bias_regularizer=regularizers.l2(1e-2),
-            #activity_regularizer=regularizers.l2(1e-3),
-            )
+            kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+            bias_regularizer=regularizers.l2(1e-4),
+            activity_regularizer=regularizers.l2(1e-5))
+
+    batch_norm = BatchNormalization(axis=-1,
+            momentum=0.99,
+            epsilon=0.001,
+            center=True,
+            scale=True,
+            beta_initializer="zeros",
+            gamma_initializer="ones",
+            moving_mean_initializer="zeros",
+            moving_variance_initializer="ones",
+            beta_regularizer=None,
+            gamma_regularizer=None,
+            beta_constraint=None,
+            gamma_constraint=None)
+
+    model = Sequential()
     model.add(layer1)
-    model.add(Dropout(0.7))
-    #model.add(Dense(DENSE_DIM/2, activation='relu'))
-    #model.add(Dropout(0.5))
+    #model.add(batch_norm)
+    model.add(Dropout(0.6))
     model.add(Dense(target_len, activation='softmax'))
     model.summary()
 
@@ -119,7 +135,6 @@ def oh_to_label(l, d):
         if np.array_equal(l, d[key]):
             return key
 
-input_type = ['only_bert']
 learning_rate = [0.001]
 num_dims = [64]
 epochs = [100]
@@ -147,28 +162,27 @@ drop_features_idx = [[]]
 #    drop_features_idx.remove([i])
 #drop_features_idx.remove([])
 
-setup = itertools.product(drop_features_idx, epochs,input_type,learning_rate,num_dims)
+setup = itertools.product(drop_features_idx, epochs, [args.input_features], learning_rate, num_dims)
 
 for s in setup:
     drop_feat_idx = s[0]
     num_epochs = s[1]
-    emb_type = s[2]
+    input_feat = s[2]
     learning_rate = s[3]
     num_dims = s[4]
     res_acc, res_f1 = [],[]
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
     try:
-        for fold in range(args.num_folds):
-            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=emb_type, collapse_classes=False, fold=fold, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims)
+        for fold_test in range(args.num_folds):
+            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=input_feat, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims)
             args.force_reload = False
             data_shape = (train.shape)
             target_len = len(label_to_oh)
             test_target = np.array([np.argmax(r) for r in test_target])
 
-            if emb_type in ['bert', 'only_bert']:
+            if input_feat in ['bert', 'only_bert']:
                 model = linear_model(data_shape, target_len, learning_rate, num_dims)
                 #model = svm_model(data_shape, target_len, learning_rate, num_dims)
-
             else:
                 model = BILSTM_model(data_shape, target_len, learning_rate, num_dims)
 
@@ -176,33 +190,47 @@ for s in setup:
             t_count = {str(value): len(list(freq)) for value, freq in groupby(sorted(target))}
             sum_t = sum(t_count.values())
             inverse_weights = {0:int(t_count['1'])/sum_t, 1:int(t_count['0'])/sum_t}
-            model_checkpoint_callback = ModelCheckpoint(
-                                        filepath=checkpoint_filepath+"model.{epoch:02d}-{val_loss:.2f}'",
-                                        save_weights_only=False,
-                                        monitor='val_loss',
-                                        mode='min',
-                                        save_best_only=True)
+
+            model_checkpoint = ModelCheckpoint(
+                               filepath=checkpoint_filepath+"best_model.h5",
+                               save_weights_only=True,
+                               monitor='val_loss',
+                               mode='min',
+                               save_best_only=True)
+
+            early_stop = EarlyStopping(
+                         monitor="val_loss",
+                         min_delta=0,
+                         patience=10,
+                         verbose=0,
+                         mode="min",
+                         baseline=None,
+                         restore_best_weights=True)
+
+            my_callbacks = [model_checkpoint, early_stop]
+
             if args.train_flag:
-                history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, class_weight=inverse_weights, validation_data=(dev,dev_target), shuffle=False, callbacks=[model_checkpoint_callback])
+                history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks)
+                model_history = pd.DataFrame(history.history)
+                model_history.plot(figsize=(8,5))
+                plt.savefig("plots/model"+str(fold_test))
+                print(model_history['val_loss'].min())
             else:
-                best_model = checkpoint_filepath+"model.67-0.46.h5"
-                model = load_model(best_model)
+                best_model = checkpoint_filepath+"best_model.h5"
+                model.load_weights(best_model)
 
             #makes predicitons for the test
             test_preds = model.predict_classes(test)
             print(test_preds)
 
-            fig = pd.DataFrame(history.history).plot(figsize=(8,5))
-            plt.savefig("plots/model"+str(fold))
-
             #prints out the accuracy based on the right values and what the model predicted
             fold_acc = accuracy_score(test_target, test_preds)
             fold_f1 = f1_score(test_target, test_preds, average='macro')
-            print("Test Accuracy on fold "+str(fold)+": ",fold_acc)
-            print("Test F1 on fold "+str(fold)+": ",fold_f1)
+            print("Test Accuracy on fold "+str(fold_test)+": ",fold_acc)
+            print("Test F1 on fold "+str(fold_test)+": ",fold_f1)
             res_acc.append(fold_acc)
             res_f1.append(fold_f1)
-            del train, train_target, dev, dev_target, test, test_target, label_to_oh
+            del train, train_target, dev, dev_target, test, test_target, label_to_oh, model
             gc.collect()
 
         avg_acc = sum(res_acc)/args.num_folds
@@ -213,7 +241,7 @@ for s in setup:
         print("\n Averaged Test F1 over folds: ",avg_f1)
         #salvar no log
         with open(os.getcwd()+"/results.txt", "a") as f:
-            string = ("TrainShape:"+str(data_shape)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" VAR: "+str(acc_var)+" F1: "+str(avg_f1)+"\n")
+            string = ("TrainShape:"+str(data_shape)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" VAR: "+str(acc_var)+" F1: "+str(avg_f1)+" SEED: "+str(seed)+"\n")
             f.write(string)
 
     except Exception as e:

@@ -1,30 +1,5 @@
-Joe Raedle/Getty Images
+Senate Committee Any Committee Agriculture, Nutrition, and Forestry (70th-116th) Armed Services (79th-116th) Banking, Housing, and Urban Affairs (70th-116th) Budget (93rd-116th) Commerce, Science, and Transportation (79th-116th) Energy and Natural Resources (70th-116th) Environment and Public Works (79th-116th) Finance (70th-116th) Foreign Relations (70th-116th) Health, Education, Labor, and Pensions (70th-116th) Homeland Security and Governmental Affairs (70th-116th) Indian Affairs (95th-116th) Intelligence (Select) (94th-116th) Judiciary (70th-116th) Rules and Administration (79th-116th) Small Business and Entrepreneurship (81st-116th) Veterans' Affairs (91st-116th)
 
-Some users of the anonymous web browser Tor have reported that Comcast has threatened to cut off their internet service unless they stop using the legal software.
+State or Territory Indicated Any State or Territory Alabama Alaska American Samoa Arizona Arkansas California Colorado Connecticut Delaware District of Columbia Florida Georgia Guam Hawaii Idaho Illinois Indiana Iowa Kansas Kentucky Louisiana Maine Maryland Massachusetts Michigan Minnesota Mississippi Missouri Montana Nebraska Nevada New Hampshire New Jersey New Mexico New York North Carolina North Dakota Northern Mariana Islands Ohio Oklahoma Oregon Panama Canal Zone Pennsylvania Puerto Rico Rhode Island South Carolina South Dakota Tennessee Texas Utah Vermont Virgin Islands Virginia Washington West Virginia Wisconsin Wyoming
 
-Comcast completely denies their claims. In a blog post, the company said "We have no policy against Tor, or any other browser or software. Customers are free to use their Xfinity Internet service to visit any website, use any app, and so forth."
-
-According to a report on Deepdotweb, Comcast customer representatives have branded Tor "illegal" and told customers that using it is against the company's policies.
-
-Tor is a type of web browser that, in theory, makes all your internet activity private. The software routes traffic through a series of other connected internet users, making it difficult for governments and private companies to monitor your internet usage. Up to 1.2 million people use the browser, which became especially popular after Edward Snowden leaked information showing that the NSA was eavesdropping on ordinary citizens. Prior to that, Tor had been popular among people transacting business on Silk Road, the online market for drugs and hitmen.
-
-The problem is that downloading or using Tor itself isn't illegal. Plenty of people might have legitimate reasons to want to surf the web in private, without letting others know what they were looking at. But Tor has been pretty popular with criminals.
-
-Some Comcast reps allegedly begun telling users that it is an "illegal service." One Comcast representative, identified only as Kelly, warned a customer over his use of Tor software, DeepDotWeb reports:
-
-Users who try to use anonymity, or cover themselves up on the internet, are usually doing things that aren’t so-to-speak legal. We have the right to terminate, fine, or suspend your account at anytime due to you violating the rules. Do you have any other questions? Thank you for contacting Comcast, have a great day.
-
-Comcast customers, speaking to Deepdotweb, claimed that Comcast repeatedly asked them which sites they were accessing using Tor.
-
-In a statement to Business Insider, Comcast refuted the claims made in Deepdotweb, stating that they had launched an internal review into the discussions reported above:
-
-Customers are free to use their Xfinity Internet service to visit any website or use it however they wish otherwise. Like virtually all ISPs, Comcast has an acceptable use policy or AUP that outlines appropriate and inappropriate uses of the service. Comcast doesn’t monitor users’ browser software or web surfing and has no program addressing the Tor browser. he anecdotal chat room evidence provided is not consistent with our agents’ messages and is not accurate. Per our own internal review, we have found no evidence that these conversations took place, nor do we employ a Security Assurance team member named Kelly. Tor’s own FAQs clearly state: 'File sharing (peer-to-peer/P2P) is widely unwanted on Tor' and 'BitTorrent is NOT anonymous' on Tor.
-
-Read Comcast's full statement here.
-
-
-
-
-
-More From Business Insider
-
+Nomination Actions Any Nomination Action Placed on calendar as privileged nomination Committee requested information was received Referred to committee Hearings held Ordered reported Reported to Senate Committee discharged Placed on calendar Placed on calendar with footnote Considered by Senate Unanimous consent agreement Cloture motion Cloture invoked/not invoked Rereferred to committee Received message of withdrawal Returned to president Confirmed by Senate

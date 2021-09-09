@@ -1,17 +1,45 @@
-A 280 pound catfish was caught by a fisherman in Italy. According to USA Today Sports, Dino Ferrari caught the huge fish in Po Delta. While the catfish caught by Ferrari was 8.7 feet in length and weighed 280 pounds, the largest catfish ever caught weighed 300 pounds. That does not mean that this wasn’t a record-breaking fish, however. According to the report, this might be the largest catfish ever caught using a generic fishing rod.
+Twitter, a social media site that verifies Nazis, is legally required to hide Nazi content and symbols in Germany and France. You can take advantage of this without moving to Germany.
 
-According to the San Antonio Express-News, any catfish over 6.5 feet is considered extremely rare. Ferrari isn’t some small time fisherman, either. According to Grind TV, the Italy native is a pro at catching big Wels catfish, and many of these fish frequent the waters where Ferrari casts his line.
+Twitter user Christa Peterson discovered that you can just tell Twitter you’re in Germany, and it will try to hide Nazi accounts and tweets:
 
-“The wels catfish is the second-largest freshwater fish in its region, ranking behind the beluga sturgeon. The largest beluga sturgeon on record is reportedly 3,463 pounds.”
 
-The 280 pound catfish is certainly a sight to see, as it looks as if it could swallow Ferrari whole. He posed for photos with the fish, clearly very proud of his catch (even appearing to hug it while his brother took some pictures), which took him a tiring 40 minutes to reel in. It is almost hard to believe that catfish can get that big!
 
-Animal lovers may be happy to know that Ferrari did not keep the catfish, nor did he sell it for money. After his brother took a couple of pictures of the creature, the guys released it back into the river, where it swam off, happy to live another day.
+Advertisement
 
-As previously reported by the Inquisitr, these Wels catfish aren’t exactly harmless; this certainly is not the type of sea creature that you would want to swim into. And it is definitely not a “gentle giant” by any means.
+Twitter lists these instructions on a support page, but it doesn’t mention that you can hide Nazis this way. (A separate page explains content withholding.) Here’s how to do it:
 
-“Dino’s monster catch is not the sort of fish you’d want to accidentally swim into while skinny dipping. The fish has a ferocious appetite and will consume anything that happens to cross its path. These surly catfish have even been filmed eating pigeons after our feathery friends happened to fly too close to these cold-blooded killers.”
+1. From the Twitter homepage, click your avatar on the top right.
 
-Pictures of the 280 pound catfish are making waves on the internet today. Have you ever seen a catfish so big? Would you want to see a Wels catfish in person?
+2. From the drop-down menu, select “Settings and privacy.”
 
-[Photo courtesy of Sportex /Facebook]
+Advertisement
+
+3. In the third section, “Content,” change your country to Germany.
+
+Advertisement
+
+Now any new page will load with Germany’s content filters in place.
+
+Of course, because Twitter is awful, it only hides some of the Nazis, but it’s better than nothing. Here’s a comparison of the top profile results for “National Socialism” before and after I changed my settings:
+
+Advertisement
+
+If you try to view a flagged account, you get this:
+
+Advertisement
+
+The filter also applies to specific flagged tweets. Here’s conservative Christian author and convicted felon Dinesh D’Souza lying about the Holocaust, before and after:
+
+
+
+Advertisement
+
+Your trending topics and language preference stay the same. So does the location displayed on your profile page. We’ve noticed one bonus: The Moments tab disappears.
+
+
+
+As user CanolaYogurt points out, Twitter saves the setting in your browser, not your account. So you can log into other accounts and you’ll still get German filtering. But you’ll need to re-apply the setting in every different browser or computer you use.
+
+Advertisement
+
+So far I haven’t found this setting in Twitter’s mobile app. One more reason to delete Twitter off your phone.

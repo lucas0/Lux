@@ -1,19 +1,27 @@
-It's been a rough year for the tennis player, but at least he has his millions of dollars to ease the pain. 30-year-old Kei Nishikori has taken the No. 1 spot on People With Money’s top 10 highest-paid tennis players for 2020 with an estimated $46 million in combined earnings.
+A California company is hoping to revolutionize the security business with autonomous robots.
 
-UPDATE 18/04/2020 : This story seems to be false. (read more)
+The Knightscope K5 is one of four drones now patrolling Microsoft's Silicon Valley Campus.
 
-Kei Nishikori tops annual list of highest-paid tennis players
+Matt Stambaugh, the Calgary Eyeopener's science and technology columnist, spoke about how the five feet tall robots learn.
 
-In 2017 it looked like the tennis player’s spectacular career was winding down. Suddenly, he was back on top. People With Money reports on Friday (April 17) that Nishikori is the highest-paid tennis player in the world, pulling in an astonishing $46 million between March 2019 and March 2020, a nearly $20 million lead over his closest competition.
+"You take them to an area, apparently an operator has to walk around the perimeter where they're supposed to patrol once, then they go about learning their environments," said Stambaugh. "What they're using is a variety of different sensors essentially to take the role of what a lot of private security contractors do today."
 
-People With Money’s factors
+According to Stambaugh, the robots are capable of detecting anomalies and making decisions.
 
-In compiling this yearly list, the magazine considers factors such as upfront pay, profit participation, residuals, endorsements and advertising work.
+"It's not quite as advanced as what Google is doing with their self-driving car, but they've got different sensors on board to make a map of the area and then they've got code on board to decide what is something that should be reported back."
 
-The Japanese tennis player has an estimated net worth of $145 million. He owes his fortune to smart stock investments, substantial property holdings, lucrative endorsement deals with CoverGirl cosmetics. He also owns several restaurants (the “Fat Nishikori Burger” chain) in Tokyo, a Football Team (the “Matsue Angels”), has launched his own brand of Vodka (Pure Wondernishikori - Japan), and is tackling the juniors market with a top-selling perfume (With Love from Kei) and a fashion line called “Kei Nishikori Seduction”.
+"They've got thermal imaging if you need. They've got chemical sensors, licence plate recognition software [and] facial recognition software," said Stambaugh. "It looks kind of like a large Roomba. And so instead of looking for dust bunnies it's looking for, you know, criminals."
 
-The ranking is significant for many Kei fans, who have been waiting for his triumphant return to the glory days for what seems like a lifetime.
+K5s to hit the market in 2015
 
-© 2020 MediaMass All rights reserved. Do not reproduce (even with permission).
+According to Stambaugh, the robots will be hitting the market starting 2015.
 
-Celebrity Central
+"What the company Knightscope is trying to do is to lease these out on a per-hour basis," said Stambaugh. "So $6.25 an hour they'll lease you one of these K5s and that's about half the price of the average security guard."
+
+There are many advantages to a robot over a human patrol.
+
+"They'll work triple shift, 24 hours a day. The battery is supposed to last around a day and when it runs out they go back to a charging carpet and in 20 minutes they are charged up again."
+
+Stambaugh also said the robots do not have any weapons, but that may change in the future.
+
+"Basically what it's doing is calling back to a manned response centre if something is going wrong," he said.

@@ -1,43 +1,115 @@
-On Friday, my colleagues Tara Golshan, Dylan Scott, and Jeff Stein published a remarkable piece collecting interviews with eight congressional Republicans about their health care bill. They asked the simplest question possible: What problems do you think this bill will solve, and how do you think it will solve them? Not a single Republican has a clear answer. The exchange with Sen. John McCain is particularly bizarre:
+CBR – Privacy Policy
 
-Tara Golshan Generally, what are the big problems this bill is trying to solve? John McCain Almost all of them. They’re trying to get to 51 votes. Tara Golshan Policy-wise. What are the problems [in the American health care system] this is trying to solve — and is the bill doing that right now? John McCain Well, it's whether you have full repeal, whether you have partial repeal, whether you have the basis of it. It's spread all over. Tara Golshan But based on the specifics of the bill you have heard so far, is it solving the problems [in the health care system]? John McCain What I hear is that we have not reached consensus. That’s what everybody knows.
+We respect your privacy and we are committed to safeguarding your privacy while online at our site. The following discloses the information gathering and dissemination practices for this Web site.
 
-But McCain’s reply, while incoherent, isn’t as offensive as Health and Human Services Secretary Tom Price’s straight lie that Americans will “absolutely not” lose Medicaid coverage under the House bill.
+This Privacy Policy was last updated on May 10, 2018.
 
-It’s worth asking why Republicans are lying about this, why they can’t give a clear explanation as to what their bill does, why they’re jamming the legislation through a secretive, rushed process that even their own members are criticizing. Because there is a reason. And it is damning.
+Legal Ownership
 
-In 2009, Democrats had an easy answer to what the Affordable Care Act was meant to do: They wanted to cover more people and cut costs. They could give that answer because it was a basically popular position, and because it’s what their bill actually did, or at least tried to do.
+CBR (the “Website”) is owned and operated by Valnet inc. (“us” or “we”), a corporation incorporated under the laws of Canada, having its head office at 7405 Transcanada Highway, Suite 100, Saint Laurent, Quebec H4T 1Z2.
 
-In 2017, Republicans have a similarly easy answer for their bill: They want to cover fewer people and use the savings to fund tax cuts for the wealthy. That is what their legislation does. But they can’t give that answer because it’s a horribly unpopular position.
+Personal Data Collected
 
-What if, just work with me here, instead of passing a hugely unpopular HC bill in the dead of night, the GOP tried to do something popular? — Ross Douthat (@DouthatNYT) June 13, 2017
+When you visit our Website, we collect certain information related to your device, such as your IP address, what pages you visit on our Website, whether you were referred to by another website, and at what time you accessed our Website.
 
-That is why they are trying to write a bill in secret and pass it before the public has a chance to mobilize against it. That’s why, when asked to describe the bill’s provisions, Republicans offer baldfaced lies or word salad.
+We do not collect any other type of personal data. If you are accessing our website through a social media account, please refer to the social media provider’s privacy policy for information regarding their data collection.
 
-The difference between Obamacare and Trumpcare
+Log Files
 
-Democrats always believed the Affordable Care Act would be popular. They believed that even when polls said it wasn’t popular. They were certain that when Americans understood what was in the law — when they saw it would cover tens of millions of people, and regulate away the worst abuses of the insurance industry, and let children stay on their parents’ plans, and use Medicare to pilot a host of cost-control experiments — they would come around.
+Like most standard Web site servers, we use log files. This includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, platform type, date/timestamp, and number of clicks to analyze trends, administer the site, track user’s movement in the aggregate, and gather broad demographic information for aggregate use.
 
-This basic belief carried through the more than year-long process behind the bill. It’s why Democrats held dozens of hearings, and released draft after draft of their legislation. It’s why, when the bill was in danger, President Obama invited congressional leadership to the Blair House for a multi-hour televised debate over the bill. He was certain he had the better of the argument, and that if the American people could just hear it, Democrats would win.
+Cookies
 
-By contrast, Republicans have concluded the public will hate their bill if they know what’s in it, and so they are doing everything in their power to keep it a secret and move on from it as fast as possible.
+A cookie is a piece of data stored on the user’s computer tied to information about the user. We and some of our business partners (for example, advertisers) use cookies on our Website. These cookies track usage of the site for security, analytics and targeted advertising purposes.
 
-The process that produced the House health bill was shocking. The law was rushed to its first vote, with barely any public hearings, in less than a month. It was passed before the Congressional Budget Office had even scored the final version. It wasn’t just that House Republicans didn’t want the public to know what their bill did. They didn’t want to know what their bill did!
+We use the following type of cookies:
 
-The Senate process has been less chaotic but even more cynical. The legislation is being written by 13 Republican senators — all of them men — in secret. No one has seen a draft of it. No public hearings have happened, and none are scheduled. Republicans briefly considered banning cameras from the halls of the Senate so they couldn’t be asked about the bill on television. Various Senate Republicans have condemned the process — “The process is better if you do it in public, and that people get buy-in along the way and understand what’s going on,” Sen. Bob Corker (R-TN) told the New York Times — but they’re not forcing any changes to it. Though no bill exists for public viewing today, Mitch McConnell’s plan is to pass the legislation before July Fourth.
+Essential cookies: these cookies are essential to the provision of our Website.
 
-“The extreme secrecy is a situation without precedent, at least in creating health care law,” writes Julie Rovner, one of Washington’s most respected health reporters. My colleague Sarah Kliff, in a searing piece, recalls the hours she spent covering hearings during the drafting of the Affordable Care Act, and notes C-SPAN is empty of similar hearings today. “I’ve covered Obamacare since day one,” she writes. “I’ve never seen lying and obstruction like this.”
+Functionality cookies: these cookies help us remember choices you have made while on our website, remember your preferences, and personalize your Website experience.
 
-A bill you can’t defend is a bill that won’t survive
+Analytics and performance cookies: these cookies help us collect statistical and analytical usage to help up analyze website usage.
 
-The strategy Republicans have chosen may work to pass a bill, but it won’t work to defend the chaos that bill creates. Democrats thought the Affordable Care Act would become more popular as it began delivering insurance to people, and so the world they were creating was a world they would be able to defend. Do Republicans really believe their health plan will become more popular when it begins taking insurance away from people?
+Social media cookies: These cookies allow you to interact with content on certain social media platforms, such a “liking” our articles. Depending on your social media setting, the social media network will have record of this and may display your name or identifier in relation to this action.
 
-And if they don’t, then what do they think will come next? I’ve written my prediction: They’re paving the way to Medicare-for-all, as the next Democratic majority will respond to Obamacare’s destruction by passing the law liberals wanted to pass in the first place.
+Advertising and targeted advertising cookies: these cookies track your browsing habits and location to provide you with advertising in line with your interests. Please see our “advertisers” section below for details.
 
-I assume Republicans have a different view than that. But what is it? If their plan is so unpopular they can’t defend it in theory, how will they defend it in practice? Each day this goes on, it seems less like a legislative process and more like a form of madness.
+If you wish to disable cookies, you may do so through your individual browser options. For further information regarding cookies and how to manage them, please see http://www.allaboutcookies.org/.
 
-The only plausible explanation I’ve heard for the persistent progress of this bill no one likes is that Republicans feel they need to keep their promise to repeal and replace Obamacare, and this is a version of keeping that promise. But this isn’t what they promised. Donald Trump swore everyone would be covered under his plan. Mitch McConnell promised lower deductibles and copays, and criticized Obamacare for leaving 25 million people uninsured. Read the clarity of McConnell’s critique of Obamacare, and compare it with how he and his colleagues are talking about health care now:
+Pixel tags
 
-Well, what you need to understand is that there are 25 million Americans who aren’t covered now. If the idea behind Obamacare was to get everyone covered, that’s one of the many failures. In addition to premiums going up, copayments going up, deductibles going up. And many Americans who actually did get insurance when they did not have it before have really bad insurance that they have to pay for, and the deductibles are so high that it’s really not worth much to them. So it is chaotic. The status quo is simply unacceptable.
+We use pixel tags, which are small graphic files that allow us and our trusted third party partners to track your Website usage and collect usage data, including the number of pages you visit, the time you spend on each page, what you click on next, and other information about your Website visit.
 
-Republican voters thought the GOP would replace Obamacare with something better, something that would help them. They thought that because that’s what Republican politicians told them. That was what they were promised. This bill breaks the GOP’s health care promises.
+Advertisers
+
+We use third-party advertising companies to serve ads when you visit our Web site. These companies may use information (not including your name, address, email address or telephone number) about your visits to this and other Web sites in order to provide advertisements about goods and services of interest to you. If you would like more information about this practice and to know your choices about not having this information used by these companies, click here.
+
+Advertisers, as third-party vendors, use cookies to collect usage and demographic data in order to serve ads on our site. For example, Google’s use of the DART cookie enables it to serve ads to our users based on their visit to our sites and other sites on the Internet. Users may opt out of the use of the DART cookie by visiting the Google ad and content network privacy policy.
+
+We have reviewed all of our advertising partners’ policies to ensure that they comply with all applicable data privacy laws and recommended data security practices.
+
+We use the following advertisers:
+
+Links to Other Websites
+
+This site contains links to other sites. Please be aware that we are not responsible for the privacy practices of such other sites. We encourage our users to be aware when they leave our site, and to read the privacy statements of each and every website that collects personally identifiable information. This privacy statement applies solely to information collected by this Website.
+
+Purpose of Data Collection
+
+We use the information we collect in order to:
+
+Administer our Website, including troubleshooting, and statistical or data analysis;
+
+To improve our Website and enhancing user experience by ensuring you have access to personalized content in line with your interests;
+
+Analyze user use and optimize our services.
+
+To ensure that our Website remains secure and is not subject to any hacking or fraud.
+
+Share information with our partners to provide targeted advertising and social media features.
+
+Data Shared with Third Parties
+
+We do not sell or rent your personal data to third parties. However, our partners, including ad partners, may collect data in relation to your Website usage as disclosed herein. Please see our “advertisers” section above for details.
+
+How your Data is Stored
+
+All data collected through our Website is stored on servers located in the United States. Our servers are certified under the EU-US Privacy Shield.
+
+IP address and user agent string data from all visitors is stored in rotating log files on Amazon servers for up to 7 days. All of our employees, agents and partners are committed to keeping your data confidential.
+
+We have reviewed our partners privacy policies to ensure that they comply with similar policies in order to ensure your data security.
+
+Consent under Applicable Laws
+
+If you are based in the European Economic Area (“EEA”), a consent window will appear when accessing this website. If you have clicked “yes”, your consent will be stored on our servers for twelve (12) months and your data will be processed as disclosed in this privacy policy. After twelve months, you will be asked to provide consent again.
+
+We comply with the IAB Europe Transparency & Consent Framework.
+
+You can withdraw consent at any time. Withdrawing consent may impede your ability to access certain services and will not allow us to provide the personalized Website experience.
+
+Data Security
+
+Our servers comply with ISO 27018, a code of practice that focuses on protection of personal data in the cloud. We comply with all reasonable precautions in order to ensure your data’s safety.
+
+In the event that we become aware of any data security breach, alteration, unauthorized access or disclosure of any personal data, we will take all reasonable precautions to protect your data and will notify you as required by all applicable laws.
+
+Accessing, Amending and Deleting your Data
+
+You have the right to request information regarding the data we have on file for you, to request correction and/or deletions of your personal information. Please contact us at data@valnetinc.com or at the postal address listed above, attention: Data compliance department.
+
+Age
+
+This Website does not target people below the age of 16. By visiting this Website. You hereby warrant that you are 16 years of age or older or are visiting the Website under parental supervision.
+
+Legal Disclaimer
+
+Though we make every effort to preserve user privacy, we may need to disclose personal information when required by law wherein we have a good-faith belief that such action is necessary to comply with a current judicial proceeding, a court order or legal process served on any of our sites.
+
+Notification of Changes
+
+Whenever we change our privacy policy, we will post those changes to this Privacy Policy page, and other places we deem appropriate, so our users are always aware of what information we collect, how we use it, and under what circumstances, if any, we disclose it.
+
+Contact Information
+
+If users have any questions or suggestions regarding our privacy policy, please contact us at data@valnetinc.com or by mail at the postal address listed above, attention: Data Compliance Department.

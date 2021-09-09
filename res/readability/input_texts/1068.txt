@@ -1,13 +1,9 @@
-A 19-YEAR-OLD woman woke up in the middle of brain surgery and was lucid enough to ask doctors how the surgery was going.
+The world waits with baited breath for more details about the Apple Watch, which should be revealed at a special event in San Francisco next Monday. But Tim Cook is just as anxious as we are to get this party started, and he teased some details in a trip to Germany.
 
-Iga Jasica, of Poland, was having a cancerous growth removed from her brain at the Central Clinical Hospital in the city of Katowice when, mid-surgery, the anaesthetic wore off, mirror.co.uk reported.
+As reported by 9to5Mac, Cook visited the flagship Apple Store in Berlin, and confirmed to the employees there that the Apple Watch would go on sale in Germany during the month of April. Cook had already confirmed an April launch in the United States during a recent earnings call, so this might mean the watch will launch globally all at once, or that the United States will get it first, followed by Germany later in the month.
 
-Jasica, whose brain was exposed at the time she awoke, asked the docs how the surgery was going — then started chatting about cats.
+Apple has been getting faster about rolling out products, and credited the “fastest rollout ever” of the iPhone 6 and 6 Plus as part of its record-breaking success in Q1 2015. 9to5Mac points out that Apple is already promoting the Apple Watch in China, so we wouldn’t be surprised if the watch launches there in April too.
 
-“Despite coming round, she didn’t feel anything and was never in danger,” neurosurgeon Professor Dawid Larysz said.
+Cook also boasted to employees that “a whole ton of announcements are coming shortly about all of the apps,” according to 9to5Mac’s report. Starwood Hotels was specifically highlighted at the watch’s unveiling last September, and Cook also mentioned Panera Bread (an Apple Pay partner) and Salesforce. Apple has a tradition of inviting third-party app makers on stage to demonstrate, so we can’t wait to see what they’ve been cooking up with the WatchKit SDK.
 
-It’s possible the surgery may have triggered something that woke her up, experts said — but doctors are also looking into whether the anaesthesia was administered correctly.
-
-Jasica later said: “I can’t remember much, but the doctor said he talked to me about cats, which I love. I missed Christmas because of this operation, but it is the best present I could have had as I am now feeling great.”
-
-This article first appeared in the New York Post and was reproduced with permission.
+We’re wrapping up our own round of interviews with Apple Watch devs that will go live on Macworld later this week. And of course we will be live-blogging and live-tweeting direct from the event on Monday, beginning at 10am Pacific, 1pm Eastern. Besides price and release date, what are you most excited to find out about the Apple Watch? What apps do you hope to use from your wrist?

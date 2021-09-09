@@ -1,35 +1,7 @@
-American singer-songwriter, Evangelist Don Moen has died after short battle with stomach pain.
+HP's home-focused and business divisions have frequently seemed at odds with each other, and apparently the company agrees. The Wall Street Journal claims that the tech giant is about to split into two companies, one focused on PCs and the other dedicated solely to corporate hardware and services. If the report is accurate, the separation could be announced as early as Monday. The exact reasoning behind the move hasn't been mentioned, but the PC-centric group would be headed by one of its existing executives, Dion Weisler; current CEO Meg Whitman would run the business group and keep an eye on the other company by serving as its chairman of the board. However true the rumor may be, such a move wouldn't be all that surprising -- much of the computing industry has been restructuring and rescaling to cope with a world where the PC's role is rapidly evolving.
 
-His family confirmed that he died early this morning at General Acute Care (GAC) Hospital in California barely couple of hours after he was rushed to the hospital.
+Update: Recode also says it's aware of the split, and has an explanation for it. Supposedly, HP had no luck in early talks to sell its PC division to Dell or Lenovo. It had similar problems offloading server and services groups, and a merger with the data storage gurus at EMC also wasn't meant to be. The breakup would effectively revive plans shelved when CEO Leo Apotheker got the boot in 2011; getting rid of less successful products (in this case, PCs) would improve the chances of an EMC merger or similar deals.
 
-The cause of his death is not immediately known as the body is sent to the morgue for autopsy.
+Update 2: HP has now confirmed the news. In a filing with the SEC, the company states that it plans to split into two publicly traded companies. Its consumer-focused PC, tablet, and printing efforts will continue on under the HP banner, while a new company named Hewlett-Packard Enterprise will focus on "enterprise technology infrastructure" and "software and services businesses." Meg Whitman, the current CEO of HP, will take the reins at Hewlett-Packard Enterprise, while Dion Weisler, the company's EVP for Printing and Personal Systems, will lead the new HP.
 
-President Trump also has expressed his tributes, saying, “Don Moen was one of the best healing gospel artistes that the country has ever produced”.
-
-Bishop T.D Jakes, who is yet to come to the grips of this shocking news described to local media how shocked he was when he heard the news.
-
-“It was a massive shock to me, got so perplexed, just like a dream. I could not believe it at first because of the rampant hoax news dominating social media of late of which I was a victim. A call from his family member confirmed it to me but I am grateful that he’s in the bossom of the Lord.”-T.D. Jakes said.
-
-Donald James “Don” Moen, 66, the multiple award-winning star according to records, brought gospel to both old and younger generation through his unique style and drew thousands of people closer to the music genre.
-
-Before Moen was hired to work for Integrity Music, he attended Oral Roberts University and became a Living Sound musician for Terry Law Ministries and traveled with Terry Law for ten years.
-
-He produced 11 volumes for the Hosanna! Music series of worship albums.
-
-His first album under his own name, Worship with Don Moen was released in 1992.
-
-His music had total global sales of over five million units.
-
-Moen worked for Integrity Media for over 20 years, serving as creative director and president of Integrity Music, president of Integrity Label Group, and an executive producer of Integrity Music albums.
-
-He left Integrity Media in December 2007 to start a new initiative, The Don Moen Company.
-
-The Don Moen Company acquired MediaComplete, the church software company that created MediaShout. Moen became a radio host for Don Moen & Friends in 2009.
-
-Moen received a Dove Award for his work on the musical God with Us in addition to amassing nine nominations for his songs.
-
-Moen was a prolific songwriter, having worked with Claire Cloninger, Paul Overstreet, Martin J. Nystrom, Randy Rothwell, Ron Kenoly, Bob Fitts, Debbye Graafsma, Paul Baloche, Tom Brooks, among many others: worked with talented musicians, Justo Almario, Carl Albrecht, Abraham Laboriel, Alex Acuna, Paul Jackson Jr., Lenny LeBlanc and Chris Graham.
-
-He was a major catalyst in launching the careers of Paul Baloche, Darlene Zschech, Israel Houghton, and Hillsong United.
-
-May his soul rest in peace.
+The company also announced an increase in the number of layoffs for this financial year. It had previously estimated 45,000-50,000 employees would be leaving the company, but that figure has now risen to 55,000.

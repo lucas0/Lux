@@ -1,53 +1,15 @@
-Five foot tall robots equipped with microphones, speakers and a host of sensors have gone on patrol in silicon valley.
+Computing giant Microsoft is one of the Silicon Valley companies that has hired robot security guards to protect and serve the streets around northern California's technology hub.
 
-A robotics firm in Mountain View says it is already using the robots - and say dozens could be on patrol by the end of the year.
+The Knightscope K5 robot security guards are fitted with lasers, GPS and heat-detecting technology, and can predict where criminals will strike next and the likelihood of future crimes.
 
-Called the Knightscope, the robots are designed to spot suspicious behaviour and alert controllers.
+The 5ft tall robots are designed to operate without human control and are equipped with surveillance cameras and sensors, a thermal imaging system, scanners that can read 300 car registration plates a minute, and odour detectors. It patrols the streets using lasers to gauge distance and a GPS system.
 
-Scroll down for video
+The robots analyse information from government, businesses and social media sources to predict the likelihood of a crime being committed in a given area, and decide whether the alert authorities it if comes across anything suspicious.
 
-The five foot tall robots are designed to spot suspicious behaviour and alert controllers.
+Four of the robot security guards have been deployed to guard Microsoft's Silicon Valley campus, in the system's first real mission.
 
-KNIGHTSCOPE SPECS Height - 60 Inches (1,524 mm) Length - 36 Inches (914 mm) Width - 32 inches (813 mm) ) Weight - 300 pounds (136 kg) Fitted with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners. When on a patrolling duty, uses lasers and GPS to calculate distances.
+It appears to be going well, although the robots have come unstuck in the face of a seemingly innocent adversary: steps.
 
-Its inventors hope it could eventually patrol malls, office and even local neighbourhoods - and say they believe it will cut crime by 50%.
+Rachel Metz, a reporter for MIT Technology Review, said: "I noticed that a K5 in the distance had somehow toppled over the edge of the sidewalk onto the parking-lot asphalt several inches below. A couple of Knightscope folks were needed to pull it upright."
 
-'Imagine a friend that can see, hear, feel and smell that would tirelessly watch over your corporate campus or neighborhood, keep your loved ones safe and put a smile on everyone passing by.
-
-'Imagine if we could utilize technology to make our communities stronger and safer…..together,' the firm says.
-
-The five foot tall robots have a combination of laser scanning, wheel encoders, inertial measurements, and GPS that allows fully autonomous operation and charging.
-
-It also has odour detectors, and can even monitor air pollution as it travels around.
-
-Using cameras they can also read upto 300 car numberplates a minute, allowing them to monitor traffic.
-
-The Knightscope K5 robot security guards are 5ft tall robots that come with GPS, lasers, and heat-detecting technology.
-
-They are designed to function without any human manipulation and are built with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners which can read an impressive number of 300 car registration plates every single minute. When on a patrolling duty, it uses lasers to calculate the distance and also relies on its GPS system.
-
-The robots are autonomous and designed to avoid confrontations.
-
-When someone steps right in front of one, the robot will stop, and move around them - while sending video inside to a control center where a human is monitoring.
-
-The robots are currently being trialled by Microsoft at its San Francisco office
-
-The robot also has an emergency button people can press to talk to an operator if they are in distress
-
-If a would-be burglar persists, co-founder Stacy Stephens said: 'Then, the robot is looking at the video, listening for glass breakage, any loud sound that breaking in would cause. We'll get the license plate, picture of the vehicle, geotag location, and time.'
-
-The robots patrol using a similar technology as the self-driving Google car.
-
-'It has a LIDAR (light image detection and ranging) that's doing a 3D map,' Stephens told CBS.
-
-'It will geofence itself and give itself a perimeter within which it will operate. And it moves around within that perimeter freely and it chooses its own path.'
-
-The robots will be deployed in outdoor settings, such as corporate campuses, college campuses and open air malls.
-
-The robots patrol using a similar technology as the self-driving Google car.
-
-So far, the company has built seven robots and plans to deploy four of them towards the end of the year.
-
-The K5 robot is also built with a button on top of its head.
-
-This button can be pressed down by anyone who needs some help, and the firm has even addressed fears it will put human security guards out of work.
+Well, if Doctor Who's mortal enemies can't handle stairs, what chance to these youngsters have?

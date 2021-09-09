@@ -135,7 +135,7 @@ def reset_hash():
         savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
-def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, random_state=None, force_reload=False, drop_feat_idx=[], only_claims=False):
+def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=1, random_state=None, force_reload=False, drop_feat_idx=[], only_claims=False):
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
 
@@ -173,13 +173,10 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
 
     print("MEMORY: ",resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
 
-    assert (num_folds > 2), "Needs at least three folds for Dev/Train/Test to be different from each other"
-    #generate and save the folds:
-    for fold in range(num_folds):
-        bucket_size = int(len(data.index)/num_folds)
-        fold_dev = fold+1
-        if fold == num_folds-1:
-            fold_dev = 0
+    assert (num_folds > 2), "Needs at least three folds for Train/Dev/Test to be different from each other"
+    #determine train_fold and dev_fold:
+    bucket_size = int(len(data.index)/num_folds)
+    fold_dev = 0 if fold_test == num_folds-1 else fold_test+1
 
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
         #determines if data will be whole body or only claims
@@ -377,21 +374,21 @@ def load_data(emb_type='w2v', collapse_classes=False, fold=None, num_folds=1, ra
         savehash("data", hashcode=df_hash)
         savehash("folds", hashcode=str(num_folds))
 
-        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold=fold, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx, only_claims=only_claims)
+        return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold_test=fold_test, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx, only_claims=only_claims)
 
 
     else:
         print("Reading already processed data")
         #returns the selected emb type (bert/w2v)
-        test_data = read_p(data_dir+"/folds/"+str(fold)+"/"+emb_type)
-        test_target = read_p(data_dir+"/folds/"+str(fold)+"/labels")
+        test_data = read_p(data_dir+"/folds/"+str(fold_test)+"/"+emb_type)
+        test_target = read_p(data_dir+"/folds/"+str(fold_test)+"/labels")
 
         dev_data = read_p(data_dir+"/folds/"+str(fold_dev)+"/"+emb_type)
         dev_target = read_p(data_dir+"/folds/"+str(fold_dev)+"/labels")
 
-        train_data_filenames = [data_dir+"/folds/"+str(i)+"/"+emb_type for i in range(num_folds) if i not in [fold,fold_dev]]
+        train_data_filenames = [data_dir+"/folds/"+str(i)+"/"+emb_type for i in range(num_folds) if i not in [fold_test,fold_dev]]
         train_data = np.concatenate([read_p(fn) for fn in train_data_filenames], axis=0)
-        train_target_filenames = [data_dir+"/folds/"+str(i)+"/labels" for i in range(num_folds) if i not in [fold,fold_dev]]
+        train_target_filenames = [data_dir+"/folds/"+str(i)+"/labels" for i in range(num_folds) if i not in [fold_test,fold_dev]]
         train_target = np.concatenate([read_p(fn) for fn in train_target_filenames], axis=0)
 
         return train_data, train_target, dev_data, dev_target, test_data, test_target, label_to_oh
