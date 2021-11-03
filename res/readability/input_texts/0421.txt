@@ -1,1 +1,77 @@
-b'The reopening and relaxing of social distancing restrictions in some states may be contributing to the first noticeable nationwide increase in coronavirus fatalities since April, when the pandemic initially peaked.\n\nThe number of cases in late June surged higher than during the outbreaks first peak. At this same time, daily Covid-19 fatalities decreased slightly, leading President Trump to proclaim that deaths were way down. But that divergence may have come to an end last week, when the average number of new deaths per day began steadily rising again.\n\nWhere deaths have increased since June 1 Daily new deaths since June 1 Maine Alaska Wis. Vt. N.H. Wash. Idaho Mont. N.D. Minn. Ill. Mich. N.Y. Mass. Ore. Nev. Wyo. Iowa Ind. Ohio Conn. S.D. Pa. N.J. R.I. Calif. Colo. Mo. Ky. W.Va. Md. Neb. Va. Del. Utah Ark. Ariz. N.M. Kan. Tenn. S.C. N.C. D.C. La. Okla. Miss. Ala. Ga. Hawaii Texas Fla. States where deaths have increased since June 1 Daily new deaths since June 1, seven-day average Maine Alaska Wis. Vt. N.H. Wash. Mont. N.D. Minn. Mich. Idaho Ill. N.Y. Mass. Ore. Nev. Iowa Ind. Wyo. Ohio Conn. S.D. Pa. N.J. R.I. Calif. Colo. Mo. Ky. W.Va. Md. Neb. Va. Del. Utah Ark. Ariz. N.M. Kan. Tenn. S.C. N.C. D.C. La. Okla. Miss. Ala. Ga. Hawaii Texas Fla. Note: Data as of July 15.\n\nPublic health experts have pointed to a few factors that help explain why the death count was initially flat. Treatment has improved and young people, who are less likely to die from Covid-19, make up a larger share of new cases.\n\nAdditionally, more widespread testing means cases are caught sooner, on average. That means that the lag between diagnosis and death would be longer than in March, when tests were in critically short supply.\n\nThat lag may have come to an end last week, as the number of new deaths began to rise. Many of the states that reopened early are the ones seeing the biggest increases, while New York, the countrys hardest-hit city, has seen a 64 percent drop since June 1.\n\nDeaths in New York, New Jersey and Connecticut 500 1,000 deaths March 1 July 15 Many deaths from unspecified days Last 10 days Deaths in rest of the United States March 1 July 15 7-day average\n\nWhile the growth rate of new deaths has flattened slightly in the past few days, data suggest that the recent increase in deaths may continue. Most of the states seeing the sharpest increase in deaths also have some of the countrys highest positive test rates, as well as soaring hospitalization rates, an indicator that many more residents may be gravely ill.\n\nIn addition, a high share of positive tests most likely signals that there are a larger number of people whose infections are going undetected in a states official numbers.\n\nHow the number of deaths per day has changed since June 1 Daily deaths\n\nper million per 1M Change Change hospitalized\n\nper million per 1M Positive\n\ntest rate Arizona 9.6 +319% 500 25% Texas 3.3 +307% 380 16% Oregon 0.8 +267% 60 6% Tennessee 2 +252% 190 8% Idaho 1.1 +225% 80 13% Florida 4.4 +204% 400 19% Nevada 3.1 +163% 360 14% Utah 1.5 +113% 80 9% Alabama 4.5 +91% 280 16% South Carolina 3.3 +90% 310 18% Arkansas 1.4 +88% 150 11% Washington 1.8 +60% 50 6% California 2.4 +38% 210 7% Oklahoma 0.9 +19% 140 9% Louisiana 3.7 +10% 290 10% South Dakota 2.1 +8% 70 7% Kansas 0.8 +6%  11% Mississippi 4.9 -2% 370 17% North Carolina 1.8 -10% 110 7% Kentucky 1.1 -19% 100 6% New Mexico 2 -29% 80 4% Georgia 2.2 -33% 270 15% Missouri 1.2 -43% 140 6% Virginia 1.5 -53% 130 6% Nebraska 0.8 -61% 60 6% Iowa 1.7 -61% 60 9% Ohio 1 -62% 90 6% New Jersey 3.4 -63% 100 1% Maine 0.4 -64% 10 1% Pennsylvania 1.6 -65% 50 5% Indiana 1.1 -66% 130 8% Colorado 1 -70% 70 6% New York 1.2 -73% 40 1% Maryland 1.6 -74% 70 5% Washington, D.C. 1.5 -75% 140 2% Michigan 1 -76% 50 3% New Hampshire 0.9 -77% 20 2% Illinois 1.3 -78% 110 3% Minnesota 0.9 -79% 50 4% Wisconsin 0.4 -80% 50 7% Massachusetts 2.6 -80% 80 2% Delaware 0.9 -83% 50 5% Connecticut 1.5 -83% 20 1% Rhode Island 2.2 -86% 60 3% Sources: New York Times database from state and local governments; the Covid-19 Tracking Project\n\nNote: Data is as of July 15, 2020. States listed above have a minimum of 100 cumulative deaths. Positive test rates are calculated using positive results from July 2 to July 15. Trend lines and new deaths per million show seven-day average data.'
+The Apple Watch is one of the more intriguing pieces of hardware to come out of Cupertino for some time. It was long-awaited, and at first glance, well-received. So what is it that we've exactly been waiting for all this time? Is this the one smartwatch to rule them all or just another in a long line of "meh?"
+
+Advertisement
+
+Apple's been able to spin gold from perceived failure before, even the iPad had its doubters, and they're back this time too. And maybe for good reason. We've learned a lot more about Apple's first wearables since its announcement months ago. This is what we know about what we'll be getting.
+
+The Apple Watch will try to replace your credit cards.
+
+Of course, Apple Watch will come NFC-equipped to support the new e-payments system, Apple Pay. But it will work a little bit differently here than on your iPhone 6/6 Plus. Essentially, you'll use a passcode to authorize Apple Pay and then you'll stay logged in as long as the watch remains in contact with your skin.
+
+Advertisement
+
+Also, the Apple Watch will allow Apple 5, 5C, and 5S users to finally get on the Apple Pay wagon, which is great for them and for Apple.
+
+The Apple Watch's will track health and fitness about as well as anything else.
+
+When it came to health and fitness, the Apple Watch wanted to be so much more, according to The Wall Street Journal. It was supposed to be a state-of-the-art tracker, one with a built-in EKG and other sensors that would measure stress (much like the new Jawbone Up3). But all those sensors kind of suck and didn't really span well across different types of wrists.
+
+Advertisement
+
+So instead, the Apple Watch is stuck with the classics—an accelerometer, gyroscope, and HR monitor (which have also been dinged for inaccuracy in general). The Apple Watch's Activity and Workout apps will track you throughout your typical calorie-counting, step-making, workout-doing day, you know, like every other fitness watch out there. If you want more specifics on what the watch will track, the Apple Watch companion app leak posted by 9to5Mac is a good place to start:
+
+Advertisement
+
+Some of the more interesting applications in health and fitness will most likely come from third-party developers like DexCom, who are developing an embeddable chip that will pump out glucose readings for diabetics. But in this scenario, the Apple Watch is merely a display for the information, and other smartwatches, most notably the Pebble Watch, can already do this kind of thing.
+
+The Apple Watch might replace your car keys.
+
+Speaking with The Telegraph, Cook said that he also wanted the Apple Watch to unlock your car and replace those annoyingly big key fobs. Of course, there's a huge gulf between "want" and "will" but the idea is kind of cool. Only one major problem—dat battery. I hope you don't mind getting stranded when your watch runs out of juice. And if you need to have a backup key in your pocket, what's the point?
+
+Advertisement
+
+The Apple Watch might replace your (Apple TV) remote.
+
+In another pimping session with Bloomberg Businessweek, Apple CEO Too Many Cook(s) ever-so-off-handedly mentioned that he loved controlling his Apple TV with the Apple Watch.
+
+Advertisement
+
+The Apple Watch can join you in the shower.
+
+Cook also says he wears his Apple Watch in the shower. This doesn't match up with what Yahoo's David Pogue said way back in September after the big announcement. So still a bit of a question mark, but you'd think Cook would know.
+
+Advertisement
+
+The Apple Watch will not solve the smartwatch battery problem.
+
+You could say Apple's philosophy is "better right than first" and perhaps the biggest smartwatch failing that needs to be righted is battery life. A lot of smartwatches—specifically Android Wear—can't boast more than a day and a half of life, or two at best. The disappointment began with the Moto 360 and pretty much continued from there. Charging every night is almost inevitable.
+
+Advertisement
+
+The Apple Watch, it seems, won't be much better. In late January, 9to5Mac reported some dismally bad battery results for the Apple Watch: 2.5 hours of "heavy use," 3.5 hours of standard app use, and a goal of 19 hours of mixed use (and even that might be a stretch for the first generation). That is definitely not solving the battery problem. Not to mention Tim Cook himself said he needs to charge it every night.
+
+Apple seems to recognize the issue and is preparing a lot of workarounds. The Apple Watch will use a MagSafe wireless charger, so you don't have to mess around with a cradle or hunt for a lightning port. Apple is also developing a "Power Reserve" mode—basically "just a watch" mode—so you can get the most juice out of your watch. This will be the first power-saving feature on any iDevice.
+
+Advertisement
+
+The Apple Watch will probably have a shit ton of apps.
+
+A rumor was circulating last month that the Apple Watch would launch with 100,000 apps. That seems....ludicrously hopeful. Cult of Mac points out that it took iOS near 16 months to reach 100,000 apps. So we'll see if something relatively iffy and new like a watch can manage to launch with a cool 100k. But even if that number is a few thousand (or tens of thousands) shy of the truth, the Apple Watch won't feel empty at launch by any means.
+
+Advertisement
+
+At a company briefing in Germany, Cook Master Flex said "tons" of apps will soon be announced for the Apple Watch, alongside previously announced partners like Panera, Tesla, and Todoist and many others. In fact, apps will very likely be the center of discussion during Apple's upcoming "Spring Forward" event a week from now.
+
+The Apple Watch will be about as powerful as an iPod Touch.
+
+It's not a huge deal for a watch but let's just touch on specs briefly. The Apple Watch will have an S1 processor, which as Mark Gurman of 9to5Mac notes, offers essentially the same performance as an iPod Touch. But because it's a custom chip made just for the Apple Watch, it's possible the watch will perform a little bit better than most Android Wear watches that generally use off-the-shelf Snapdragon 400s. But not exactly an iPhone on your wrist by any means.
+
+Advertisement
+
+The Apple Watch will come in all kinds of styles, with all kinds of prices.
+
+Right now, the price for Apple's first foray into wearables is $350 for the base model, the Sport. The stainless steel Apple Watch will be around $500 and then there's that 18k gold one that will be lots of $$$. The original figure was $4000, but that's jumped up to $8,000, so probably somewhere in there. Not like you really need to know.
+
+Advertisement
+
+The Apple Watch is also rumored to also be available in international markets at launch. After all, Apple ordered 3-5 million watches for the first batch. For comparison, Android Wear timepieces didn't even get close to breaking a million in 2014, so Apple seems convinced they have a hit on their hands. Come next week when we actually see the real watch we're getting, we'll have much better idea if those hopes are well-founded or misplaced, and whether Apple has any other unknown watch features up its literal sleeves.

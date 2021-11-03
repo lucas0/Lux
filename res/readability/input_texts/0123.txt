@@ -1,37 +1,27 @@
-The Corporate IT Forum - tif. is an independent organisation representing the corporate IT end-user community. The group includes over 2300 senior IT directors and managers from 135 of Europe’s largest organisations, including 50 of the 100 largest companies on the London Stock Exchange, representing a combined IT spend of over £20 billion per year.tif. promotes best practice and improved standards within the corporate IT end user community and IT industry, and uniquely provides members with an advisory environment completely free of vendors, suppliers and consultants. The group’s resultant frank exchange of experience and knowledge enables IT directors and senior infrastructure practitioners from a range of industries to learn from each other, improve both IT and business processes and to deliver better value.(The views reported herein are not necessarily the views of individual organisations or people within the Forum.)tif. can be found at www.tif.co.uk.Chris Smith/Fionnuala FadianTel: 020 7592 3100,07900 245 439 (out of hours)David RobertsThe Corporate IT Forum - tif.Tel: 0144 286 6634Fax: 0144 287 7381
+While local reports revealed Wednesday that the Jordanian King Abdullah will authorize airstrikes against the Islamic State of Iraq and Syria (ISIS) group, a U.S. official described the Arab monarch as citing a Hollywood movie character when expressing his wrath upon hearing that the militants had burned his countryman pilot alive during his captivity.
 
-4 December 2002
+“He mentioned ‘Unforgiven’ and he mentioned Clint Eastwood, and he actually quoted a part of the movie,” Republican Rep. Duncan Hunter Jr., a Marine Corps veteran of two tours in Iraq and one in Afghanistan, who was in the meeting with the king, told Fox News Channel in an interview aired Wednesday.
 
-UK office workers are today being advised to use caution when writing 'away from office' auto reply email messages because of a new email security risk first discovered at a meeting of industry group The Corporate IT Forum - tif.
+King Abdullah had to cut his U.S. trip short after hearing the news that Moaz al-Kasasbeh was burned alive.
 
-tif., a blue-chip membership association representing 120 of Britain's largest organisations with over 3.6 million employees worldwide and 1.3 million desktop computers is issuing the warning after it emerged that criminals are able to discover the personal details, and in some cases the home addresses, of staff through cross-referencing the information contained in 'away from office' email messages.
+During a private session with members of the House Armed Services Committee lawmakers, the king expressed his anger by citing American movie icon Clint Eastwood.
 
-The advisory is being issued by tif. in an effort to make Britain's office workers more aware of the potential risk and to give them a few simple guidelines to follow to ensure the practice does not escalate any further.
+“He said there is going to be retribution like ISIS hasn’t seen,” said the Marine Corps veteran.
 
-The 'away from office' function, a part of everyday life for many office workers, can be set to send automatic replies from an e-mail account saying that a person is, for example, away on holiday between certain dates. The function is especially popular among businesses that need to inform clients and customers of absences and ensure that enquiries are re-directed to another member of staff.
+However, Hunter would not say which part of “Unforgiven” the king quoted, but noted it was where Eastwood’s character describes how he is going to deliver his retribution.
 
-The new practice involves criminals buying lists of so-called 'spam' email addresses, now readily available over the internet, and sending mass mailings with the intention of gaining 'away from office' replies with details of holiday absences. Using online directories such as www.192.com or www.bt.com, would-be burglars can cross-reference the information contained within the automatic email replies, such as name, telephone number and business address, to find out the personal details and even the home address of the sender.
+“He’s angry,” Hunter said of King Abdullah. “They’re starting more sorties tomorrow than they’ve ever had. They’re starting tomorrow. And he said, ‘The only problem we’re going to have is running out of fuel and bullets.’”
 
-tif., whose membership includes 47% of the FTSE 100 and collectively spends £20 billion each year on IT, also warns that people with unusual names, and especially those living in smaller towns, are particularly vulnerable to this new practice as uncommon names can be tracked down more easily. Furthermore, tif. members urged company bosses to think twice before revealing their status in an 'away from office' email signature. Job titles can give a would-be burglar a good idea of a possible haul and a managing director being away from home or out of the country can make a tempting target.
+“He’s ready to get it on,” Hunter added. “He really is. It reminded me of how we were after 9/11. We were ready to give it to them.”
 
-Chief executive of tif, David Roberts comments: "You wouldn't go on holiday with a note pinned to your door saying who you were, how long you were away for and when you were coming back so why would you put this in an email? Email is the most popular form of office communication but many people forget that the information contained in these messages can get into the wrong hands. There's no reason why this threat should become common practice but employees and businesses should act now to stop it - there are a few simple precautions we should all take to help nip this in the bud."
+Hunter also said that the lawmakers and King Abdullah did not make any mention of U.S. President Barack Obama.
 
-tif. has issued a series of simple recommendations for office workers to follow and for businesses to incorporate into their email policies.
+He added: “ISIS is now going to regret this … because King Abdullah is not Barack Obama.”
 
-tif. Recommends
+The Jordan Times reported that thousands of Jordanians gathered on Wednesday to receive King Abdullah.
 
-Advice comes on behalf of tif.'s Information Security Group.
+The Jordan times also reported that mosques and churches around the Kingdom held prayers on Wednesday in memory of al-Kasasbeh.
 
-Do's
+Meanwhile, a Jordanian government official on Thursday denied social media reports that King Abdullah flew missions against ISIS earlier on Thursday.
 
-Keep messages as bland as possible. Say that you are currently 'unable to deal with this query' or that you are 'out of the office on business'.
-
-Redirect enquiries to a colleague's business telephone number so someone else can assess the enquiry and verbally inform the caller of a period of absence.
-
-If you have an important sounding job title, think very carefully about whether you want to reveal your job title to a wide audience.
-
-Be very careful with giving away alternative contact details, only include them if the person concerned has agreed.
-
-Always prepare for your absence and pre-warn key contacts personally of your holiday.
-
-Don'ts
+Last Update: 20:30 KSA 23:30 - GMT 20:30

@@ -1,49 +1,73 @@
-Seven in 10 women in Lima say they've been sexually harassed
+Phishing & Spoof Sites Examples
 
-They were shocked to find out that the women were their mothers
+Phishing emails directing users to spoof websites pretend to represent a reputable source, such as FedEx, when in reality they are operated by criminals attempting to commit theft. Spoof websites attempt to collect user names, passwords, Social Security numbers, credit card details and more. Many spoofed sites even allow users to log in, giving them a false sense of security.
 
-The men made remarks about the women before identities were revealed
+Subject: Regarding Your Online Access
 
-The show disguised the men's mothers who walked past their sons
+From: FedEx.com Online Services
 
-A new TV show in Peru has captured the moment unwitting men have been caught wolf-whistling their own mothers.
+To:
 
-The experiment took two mothers, whose sons were identified as repeat cat-callers, and disguised them using make-up, wigs and clothes. The women then women walked past their sons to gauge their reaction.
+Subject: Regarding Your Online Access
 
-The mother wearing a disguise of a wig and sunglasses walks past her unsuspecting son and a friend, before he makes a comment towards her
+Dear Customer,
 
-The mother then goes over to confront her child, who is still unaware the woman is actually his parent
+Due to Ongoing periodic update on all FedEx account, we advise that you update your account to avoid Suspension .
 
-The man acts in horror as he realises it is his own mother and she launches into a tirade, accusing him of being dirty
+Please click the link below to update your Account access
 
-The mother gets so angry with her son, she then takes off her bag and proceeds to hit him with it due to this behaviour
+Log in to fedex.com (links to spoof site)
 
-In the first case, the mother is dressed in a short black dress and walks past her son and a friend in the street.
+Please note that this link will expire in 48 hours from the time of your e-mail address reset request. After that time, you will need to re-start the process by logging into fedex.com.
 
-The son then unwittingly makes a comment at his mother saying 'tasty panties' which prompts her to go and confront him.
+Thank you for choosing FedEx.
 
-She then removes her sunglasses and the man then realises he has just cat-called his own mother.
+This message has been sent by an auto responder system. Please do not reply to this message. The content of this message is protected by copyright and trademark laws under U.S. and international law. Review our privacy policy. All rights reserved.
 
-The mother then launches into a tirade, accusing him of being dirty and saying she never taught him to talk to women in that manner.
+Subject: Pay your Fedex invoice online.
 
-Another mother, wearing a black wig walks past her son, who is standing working on the streets of Lima
+From: BillingOnline@fedex.com
 
-After making a remark towards his mother, she then turns around and goes over to confront him
+To:
 
-She then takes off her wig to reveal herself and then throws it on the floor in anger after being disgusted by her son's behaviour
+Subject: Pay your Fedex invoice online
 
-The mother then tells her son he should be ashamed of himself for speaking to her like that, as he pleads with her to calm down
+Hello
 
-She then gets so angry with her child that she then removes her bag and hits him with it.
+You have a new not paid invoice(s) from FedEx that is ready for payment.
 
-Meanwhile in the second case, the mother wearing a green dress, walks past her son, who calls her 'piggy'.
+The following invoice(s) are to be paid now:
 
-She then calls his name before taking off her wig and confronting her son, hitting him with her hairpiece.
+Invoice Number
 
-The man then tries to claim he didn't make the remark but is then forced to apologise to his mother before she walks off
+8957-31879
 
-She too launches into a tirade telling her son to he should be ashamed of himself, while he pleads with his mother to quieten down as he is working.
+To pay or review these invoices, please sign in to your FedEx BIlling Online account by clicking on this link: http://www.fedex.com/us/account/fbo
 
-He then tries to claim he didn't make the remark and it a man in a nearby car, but he eventually apologises before his mother walks off.
+Note: Please do not use this email to submit payment. This email may not be used as a remittance notice. To pay your invoices, please visit FedEx Billing Online, http://www/fedex.com/us/account/fbo
 
-The video ends with a warning saying men should start respecting women before they unwittingly harass their own mothers.
+Thank you,
+
+Revenue Services
+
+FedEx
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+From: "Shipping Service" <user.vhj@detroit.com>
+
+To:
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+Reply-To: "Shipping Service" <user.vhj@detroit.com>
+
+Order: FD-24762590342635
+
+Dear Customer,
+
+Your parcel has arrived at the post office an November 19. Our postrider was unable to deliver the parcel to your.
+
+To receive a parcel, please, go to the nearest our office and show this postal receipt.
+
+Thank you.

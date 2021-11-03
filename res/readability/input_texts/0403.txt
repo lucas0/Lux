@@ -1,1 +1,45 @@
-b"After three years in office, the Trump administration has dismantled most of the major climate and environmental policies the president promised to undo.\n\nCalling the rules unnecessary and burdensome to the fossil fuel industry and other businesses, his administration has weakened Obama-era limits on planet-warming carbon dioxide emissions from power plants and from cars and trucks, and rolled back many more rules governing clean air, water and toxic chemicals. Several major reversals have been finalized in recent months as the country has struggled to contain the spread of the new coronavirus.\n\nIn all, a New York Times analysis, based on research from Harvard Law School, Columbia Law School and other sources, counts nearly 70 environmental rules and regulations officially reversed, revoked or otherwise rolled back under Mr. Trump. More than 30 additional rollbacks are still in progress.\n\nCompleted In progress Total Air pollution and emissions 19 overturned 8 in progress 27 total Drilling and extraction 11 overturned 8 in progress 19 total Infrastructure and planning 12 overturned 1 in progress 13 total Animals 11 overturned 1 in progress 12 total Water pollution 4 overturned 7 in progress 11 total Toxic substances and safety 6 overturned 2 in progress 8 total Other 5 overturned 5 in progress 10 total All 68 overturned 32 in progress 100 total\n\nWith elections looming, the administration has sought to wrap up some of its biggest regulatory priorities quickly, said Hana V. Vizcarra, a staff attorney at Harvard Law Schools Environmental and Energy Law Program. Further delays could leave the new rules vulnerable to reversal under the Congressional Review Act if Democrats are able to retake Congress and the White House in November, she said.\n\nThe bulk of the rollbacks identified by the Times have been carried out by the Environmental Protection Agency, which repealed and replaced the Obama-era emissions rules for power plants and vehicles; weakened protections for more than half the nation's wetlands; and withdrew the legal justification for restricting mercury emissions from power plants.\n\nAt the same time, the Interior Department has worked to open up more land for oil and gas leasing by cutting back protected areas and limiting wildlife protections.\n\nOver the past three years, we have fulfilled President Trumps promises to provide certainty for states, tribes, and local governments, a spokeswoman for the E.P.A. said in a statement to The Times, adding that the agency was delivering on President Trumps commitment to return the agency to its core mission: Providing cleaner air, water and land to the American people.\n\nBut environmental and legal groups said the rollbacks have not served that mission. Ms. Vizcarra, who has tracked environmental rollbacks for Harvard since 2018, said the agency under Mr. Trump has often limited its own power to regulate environmental harm, especially when it comes to climate change.\n\nMany of the rollbacks have faced legal challenges by states, environmental groups and others, and some could remain mired in court beyond November, regardless of the outcome of the election.\n\nHillary Aidun, who tracks deregulation at Columbia Universitys Sabin Center for Climate Change Law, said many of the rollbacks had not been adequately justified, leaving them vulnerable to legal challenge.\n\nThe New York Times analysis identified 10 rules that were initially reversed or suspended but later reinstated, often following lawsuits and other challenges. Other rollbacks were rebuffed by the courts but later revised by the administration and remain in effect.\n\nAll told, the Trump administrations environmental rollbacks could significantly increase greenhouse gas emissions and lead to thousands of extra deaths from poor air quality each year, according to energy and legal analysts.\n\nBelow, we have summarized each rule that has been targeted for reversal over the past three years.\n\nAre there rollbacks we missed? Email climateteam@nytimes.com or tweet @nytclimate.\n\nJump to section Air pollution and emissions Drilling and extraction Infrastructure and planning Critters Toxic substances and safety Water pollution Other Reinstated rules\n\nSome rules were rolled back, then reinstated\n\nThese rules were initially reversed by the Trump administration but were later reinstated, often following lawsuits and other challenges."
+Twitter, a social media site that verifies Nazis, is legally required to hide Nazi content and symbols in Germany and France. You can take advantage of this without moving to Germany.
+
+Twitter user Christa Peterson discovered that you can just tell Twitter you’re in Germany, and it will try to hide Nazi accounts and tweets:
+
+
+
+Advertisement
+
+Twitter lists these instructions on a support page, but it doesn’t mention that you can hide Nazis this way. (A separate page explains content withholding.) Here’s how to do it:
+
+1. From the Twitter homepage, click your avatar on the top right.
+
+2. From the drop-down menu, select “Settings and privacy.”
+
+Advertisement
+
+3. In the third section, “Content,” change your country to Germany.
+
+Advertisement
+
+Now any new page will load with Germany’s content filters in place.
+
+Of course, because Twitter is awful, it only hides some of the Nazis, but it’s better than nothing. Here’s a comparison of the top profile results for “National Socialism” before and after I changed my settings:
+
+Advertisement
+
+If you try to view a flagged account, you get this:
+
+Advertisement
+
+The filter also applies to specific flagged tweets. Here’s conservative Christian author and convicted felon Dinesh D’Souza lying about the Holocaust, before and after:
+
+
+
+Advertisement
+
+Your trending topics and language preference stay the same. So does the location displayed on your profile page. We’ve noticed one bonus: The Moments tab disappears.
+
+
+
+As user CanolaYogurt points out, Twitter saves the setting in your browser, not your account. So you can log into other accounts and you’ll still get German filtering. But you’ll need to re-apply the setting in every different browser or computer you use.
+
+Advertisement
+
+So far I haven’t found this setting in Twitter’s mobile app. One more reason to delete Twitter off your phone.

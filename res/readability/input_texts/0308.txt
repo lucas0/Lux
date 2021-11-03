@@ -1,19 +1,65 @@
-PREMIER ballerina Darcey Bussell took centre stage at the launch of a series of prints of paintings of herself commissioned by a Gerrards Cross company to help raise funds for the Alzheimer's Society.
+Backtracking on its previous report which claimed iOS 8.2 would be released for public consumption this week, BGR is now claiming that the software will be released to the public next week.
 
-The limited edition prints were unveiled at the Royal Opera House last month, produced from three original water colour portraits by Chalfont St Peter water colour artist Gordon King.
+According to BGR founder and editor Jonathan Geller, Apple’s decided to release one more Gold Master (GM) version crying a build number of 12D508 to employees and testers ahead of an expected launch this coming Monday.
 
-They were commissioned by Ever English Ltd and 1,000 limited edition prints have been produced of each portrait which will be sold either direct from the company or over the internet.
+Jump past the fold for full release notes.
 
-Ever English hopes to donate more than £50 from the sale of each print to the Alzheimer's Society.
+Health App improvements
 
-The Darcey Bussell collection was the first venture for Neil Buckley since he set up the company last year.
+Adds the ability to select the unit of measurement for body temperature, weight, height, distance, and blood glucose
 
-Mr Buckley, who already has an import business, decided he wanted to start up an export business and at the same time help a charity. He has had personal experience of the effects of Alheimzer's through his late father-in-law and chose to donate part of the proceeds to the charity.
+Improves stability when dealing with large amounts of data
 
-Mr Buckley said: "I have known Gordon King for about 20 years. I approached Darcey Bussell out of the blue and she was very willing to help from the start." He accompanied Mr King to the Royal Opera House to do the original sketches and photographs.
+Includes the ability to add and visualise workout sessions from 3rd-party apps
 
-The launch also provided the latest project for website design company E-creation, also in Gerrards Cross, which Mr Buckley found through the Register of Accredited Service Providers supported by Thames Valley Business Link.
+Addresses an issue that may have prevented users from adding a photo in Medical ID
 
-He said: "It was not only the quality of service, but the level of support that E-creation provided which was impressive."
+Fixes units for vitamins and minerals
 
-The prints, priced between £225 and £265 are being sold either direct from Ever English Ltd at 31 Howards Wood Drive, Gerrards Cross, Bucks SL9 7HR or via the internet at www.everenglish.com
+Fixes an issue where Health data wouldn’t refresh after changes data source order
+
+Fixes an issue where some graphics showed no data values
+
+Adds a privacy setting that enables turning off tracking of steps, distance, and flights climbed
+
+Stability Enhancements
+
+Increases stability of Mail
+
+Improves stability of Flyover in Maps
+
+Improves stability of Music
+
+Improves VoiceOver reliability
+
+Improves connectivity with Made for iPhone Hearing Aids
+
+Bug Fixes
+
+Fixes an issue in Maps that prevented navigating to some favorite locations
+
+Addresses an issue where the last word in a quick reply message wasn’t autocorrected
+
+Fixes an issue where duplicate iTunes purchased content could prevent iCloud restore from completing
+
+Resolves an issue where some music or playlists didn’t sync from iTunes to the Music app
+
+Fixes an issue where deleted audiobooks sometimes remained on the device
+
+Resolves an issue that could prevent call audio from routing to car speakers while using Siri Eyes Free
+
+Fixes a Bluetooth calling issue where no audio is heard until the call is answered
+
+Fixes a timezone issue where Calendar events appear in GMT
+
+Addresses an issue that caused certain events in a custom reoccurring meeting to drop from Exchange calendar
+
+Fixes an certificate error that prevented configuring an Exchange account behind a third-party gateway
+
+Fixes an issue that could cause an organizer’s Exchange meeting notes to be overwritten
+
+Resolves an issue that prevented some Calendar events from automatically showing as “busy” after accepting an invite.
+
+Apple is holding a media event under the “Spring Forward” tagline next Monday so iOS 8.2 would likely officially launched right after the presentation has wrapped up.
+
+Source: BGR

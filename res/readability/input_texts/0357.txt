@@ -1,29 +1,57 @@
-Michigan residents lost their “right to farm” this week thanks to a new ruling by the Michigan Commission of Agriculture and Rural Development. Gail Philburn of the Michigan Sierra Club told Michigan Live, the news changes “effectively remove Right to Farm Act protection for many urban and suburban backyard farmers raising small numbers of animals.”
+My post laying out why the gold Apple Watch Edition must cost $10,000 caused quite a stir, but I’ll be the first to admit that I could have it all wrong. It’s entirely possible for them to put together a gold-cased Apple Watch for a much-lower price point, but I’m much more interested in the reasons why: Apple’s manufacturing and retail empire would be seriously disrupted by a $10,000 lump of gold!
 
-Backyard and urban farming were previously protected by Michigan’s Right to Farm Act. The Commission ruled that the Right to Farm Act protections no longer apply to many homeowners who keep small numbers of livestock.
+How To Make A Gold Watch For Under $10,000
 
-Kim White, who raises chickens and rabbits, said, “They don’t want us little guys feeding ourselves. They want us to go all to the big farms. They want to do away with small farms and I believe that is what’s motivating it.”
+In my last post, I pointed out (hyperbolically) that there are no gold watches available for less than $10,000. This isn’t really true – there are a few small gold-cased watches available below that mark. But comparing these to an Apple watch is (if you pardon the pun), a case of “apples and oranges”: They’re much smaller; they’re round; and they’re not Apple Watches!
 
-The ruling will allow local governments to arbitrarily ban goats, chickens and beehives on any property where there are 13 homes within one eighth mile or a residence within 250 feet of the property, according to Michigan Public Radio.
+This last point is critical: We have no idea how the case of an Apple Watch is constructed. And, more importantly, the components, manufacturing, and sales process is entirely different from a Swiss mechanical wristwatch. My point was simply that Apple’s Watch Edition case looks like a big chunk of gold and that’s an expensive thing, likely pushing the total cost all the way to $10,000 if my assumptions are correct.
 
-The Right to Farm Act was created in 1981 to protect farmers from the complaints of people from the city who moved to the country and then attempted to make it more urban with anti-farming ordinances. The new changes affect residents of rural Michigan too. It is not simply an urban or suburban concern.
+But let’s say Apple didn’t want to build, stock, and sell a $10,000 watch but still wanted it to be “crafted from 18-karat gold.” How would they do it?
 
-Shady Grove Farm in Gwinn, Michigan is the six and a half acre home to 150 egg-laying hens that provide eggs to a local co-op and a local restaurant. The small Michigan farm also homes sheep for wool and a few turkeys and meat chickens to provide fresh healthy, local poultry.
+Our first argument against the $10k solid gold watch is commonality of design and certification. Apple has never (to my knowledge) delivered a device with different models constructed of different materials. Electronics aren’t like watches. They are mass-produced and must be certified for electromagnetic (“RF”) interference. Apple says they’ll deliver Watches in aluminum, steel, and gold, but it would be much easier of all three had an identical internal design and only varied when it comes to the outer skin. (Counterpoint: Commonality inside doesn’t necessarily mean cheap outside.)
 
-“We produce food with integrity,” Randy Buchler told The Blaze about Shady Grove Farm. “Everything we do here is 100 percent natural — we like to say it’s beyond organic.
+This would also make the final product much cheaper, since the “gold case” could be extremely thin and not structural. Note that nowhere does Apple use the term, “solid gold case”, to describe the Watch Edition. I’m no lawyer, but their “crafted from 18-karat gold” boast could be weasel words to describe a conventional Watch wrapped in a thin gold skin.
 
-We take a lot of pride and care in what we’re doing here.” Shady Grove Farm was doing its part to bring healthy, local, organic food to the tables of Gwinn residents, and it mirrors the attitudes of hundreds of other small farming operations in Michigan and thousands of others popping up around the nation.
+The lugs and bars (that’s the watch insider term for “the things that the strap attaches to”) as well as the strap buckle could simply be gold plated or even gold colored. This is important because even these seemingly-small pieces would cost hundreds of dollars if they are solid 18-karat gold. That’s how expensive gold is.
 
-The ruling comes within days of a report by The World Health Organization that stated the world is currently in grave danger of entering a post-antibiotic era. The WHO’s director-general Dr. Margaret Chan argued that the antibiotic use in our industrialized food supply is the worst offender adding to the global crisis.
+One big clue could be the missing gold bracelet. It’s pretty glaring that the steel Apple Watch has two metal bracelets while the gold one only has leather and rubber. A gold watch bracelet has much more gold in it than the watch case itself, so the missing bracelet could be a clue that Apple is trying to keep the price in check. And the mere availability of the rubber strap which, as John Gruber notes, is the same as on the cheapest cheapie in the whole lineup could be another tell. Rubber bracelets are sometimes found on expensive dive watches, but this is no X Fathoms… (Counterpoint: They could add the gold bracelet later as an accessory.)
 
-“The Michigan Agriculture Commission passed up an opportunity to support one of the hottest trends in food in Michigan – public demand for access to more local, healthy, sustainable food,” Gail Philbin told MLive.
+Combine these clues and we could be looking at a much cheaper watch. It’s still inconceivable to imagine prices less than $1,000, but Apple could definitely finagle a $2,000 Apple Watch Edition. It’s more likely that the Edition would retail over $4,000, but this is a far cry from my earlier assertion that it would cost $10,000!
 
-Meanwhile, neighboring Indiana Governor Mike Pence signed Senate Bill 179 a few weeks before which freed up poultry and egg sales from local and state regulation.
+Why Apple Wouldn’t Want A $10,000 Watch
 
-Yesterday, the USDA Secretary Tom Vilsack announced massive funding to support research about small and medium-sized family farms, such as small farms ability to build-up local and regional economic systems. “There’s a lot of unnecessary legal action being taken against small farms who are doing good things in their communities,” said Randy Buchler, who is also on the board of directors for the Michigan Small Farm Council.
+It’s entirely possible for the “gold” Apple Watch Edition to be way under $10,000, but a more important question is why would Apple do this. After all, those making the decisions are very familiar with the luxury watch market and the incredible prices that gold watches command at retail. Why wouldn’t they want to “pull a Vertu” and cash in if customers are willing to buy?
 
-The Michigan Small Farm Council actively fought to support Michigan farming freedom, but ultimately the Commission voted to approve the new restrictions.
+Let’s return to the cost of gold. Although Apple has produced $10,000 products in the past and currently stocks some pretty expensive devices in the stores, a gold watch is an entirely different animal. Gold is much more fungible than anything else Apple sells, so security is a much more critical issue. Remember the smash-and-grab iPhone heists? How about that pallet of stolen iPhones? Now imagine if those thieves could melt the case down and have an untraceable $4,000 lump of gold instead of some hot electronics.
 
-“Farm Bureau has become another special interest beholden to big business and out of touch with small farmers, and constitutional and property rights of the little guy,” Pine Hallow Farms wrote to the Michigan Small Farm Council.
+The high price of gold affects every aspect of my purported solid gold Apple Watch. Where would Apple manufacture a $10,000 watch? Even that little buckle would be worth more than a month’s pay for a Foxconn assembly line worker. And the level of finish required to compete with Swiss watches is not yet possible at scale in China. (Counterpoint: Apple could build the solid gold Watch Edition in Texas alongside the Mac Pro.)
 
-The Michigan Farm Bureau endorsed the new regulatory changes. Matthew Kapp, government relations specialist with Michigan Farm Bureau, told MLive that the members weighed in and felt that people raising livestock need to conform to local zoning ordinances. The Farm Bureau did not feel Michigan’s Right To Farm Act was meant to protect the smaller farms, and ultimately the Michigan Commission of Agriculture and Rural Development agreed.
+Then there’s shipment and warehousing. Although it is extremely unlikely that Apple would manufacture and ship the millions of gold Watches some analysts suggest, even more modest shipments would be immensely valuable. Securing these shipments from factory to warehouse to freight to warehouse to store will be a real challenge. Apple currently packs as many as 1.5 million iPhones into a single 747, but they couldn’t ship $15 billion worth of Watch Editions this way! Every point of collection and shipping would instantly be a ripe target for criminals. (Counterpoint: Apple already deals with armored cars, security systems, and locked vaults.)
+
+Even the stores themselves would need to be reconfigured. Is Apple ready to add armed guards, armored display cases, and time-lock vaults to their stores? Certainly the smaller stores don’t have space for a private room or boutique for Watch Edition buyers. (Counterpoint: We know they are working on a major redesign of the retail stores already.)
+
+And what about payment? Luxury watch buyers typically pay using wire transfers, not credit cards. Apple must prepare to process five-figure credit card transactions and accept wires. Are they ready to accept the hassle of validating buyers and payments of this size?
+
+Apple also has to worry about what a “1%” product like a $10,000 Apple Watch Edition would say about the company and its buyers. As Adam Fields notes on Medium, Apple will have to abandon their historic focus on “accessible luxury” and fully embrace their new role as a vendor of conspicuous luxury. Already frequently criticized as a maker of status symbols, this would be a lightning rod for Apple: If the gold Watch Edition sells for $10,000, it could spike Apple’s broader reputation and turn away customers rather than attract them.
+
+It seems smart for Apple to skimp on the gold and bring the cost of the Apple Watch Edition to under $4,000. They would still have issues with production, shipping, and security but these would be reduced since they would no longer be dealing with four-figure lumps of fungible bullion.
+
+Yet even at that price the stores will need reconfiguration and the pundits will hurl jokes about the rich. If the company is going to suffer to bring out a gold Apple Watch Edition anyway, why not embrace the change and go solid gold?
+
+That’s why I’m sticking to my original predictions:
+
+The starting prices will be $7,999 and $9,999
+
+The Apple Watch Edition will have a solid gold case weighing more than 5 ounces
+
+If sales go well, Apple will later offer a gold Edition bracelet at $9,999 as an accessory
+
+The Apple Watch Edition will be offered through certain high-end third-party fashion boutiques and retailers
+
+Some larger Apple Stores will add a private “Edition Boutique” (but not all)
+
+A whole line of expensive and exclusive Edition products will appear
+
+The Edition line will not be available from the online store or by mail
+
+Year: 2015 Brand: Apple Style: Smart watch Case: Gold Country: USA Source:Tags: Apple

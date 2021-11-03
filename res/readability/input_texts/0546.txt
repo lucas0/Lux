@@ -1,21 +1,29 @@
-FORT KNOX, KY – In an effort to increase soldiers’ interchangeability and world-wide assignment eligibility, the Army has announced that married individuals will no longer be considered for enlistment, and all active-duty married soldiers must divorce their spouses within thirty days or be subject to administrative separation in accordance with AR 600-8-2.
+Description:
 
-Dependents must return to their home of record at their own expense.
+TECHNOLOGY AREA(S): Weapons
 
-“What we’re seeing is an awful lot of dependents in the Army community, who – let’s be honest – contribute nothing to military readiness,” said Army Secretary John McHugh to reporters. “They distract our married soldiers from putting the mission first, and they suck up a huge amount of resources.”
+OBJECTIVE: Develop biodegradable training ammunition loaded with specialized seeds to grow environmentally beneficial plants that eliminate ammunition debris and contaminants.
 
-McHugh pointed to Army spouse and family wellness programs like the Family Readiness Group, the MyCAA spouse-education program, Army Community Services, and the Army Family Action Plan, which cost the Army roughly $475 million a year to maintain. “In addition, you have the DEERS system and the DoDDS school system, which cost a fortune, plus the massive costs involved in providing healthcare, exchange and commissary services to dependents. There’s also the higher cost-of-living allowances and all the other allotments to which married soldiers are entitled.”
+DESCRIPTION: Currently the US Army manufactures and consumes hundreds of thousands of training rounds. These rounds are fired at proving grounds and training ranges in the United States and around the world. In addition, special forces conduct day and night training exercises utilizing these training rounds. These rounds include low velocity 40mm grenades; 60mm, 81mm, and 120mm mortars; shoulder launched munitions; 120mm tank rounds; and 155mm artillery rounds. The projectiles, and in some circumstances the cartridge cases and sabot petals, are either left on the ground surface or several feet underground at the proving ground or tactical range. Components of current training rounds require hundreds of years or more to biodegrade. Further, civilians (e.g., farmers or construction crews) encountering these rounds and components do not know if they are training or tactical rounds. Proving grounds and battle grounds have no clear way of finding and eliminating these training projectiles, cartridge cases and sabot petals, especially those that are buried several feet in the ground. Some of these rounds might have the potential corrode and pollute the soil and nearby water. The solution sought by this topic is naturally occurring biodegradable material to replace the current training round materials, eliminating environmental hazards. This SBIR will prove out the technology and replace current training round components with biodegradable parts. The biodegradable materials identified can be utilized by private industry to manufacture biodegradable water bottles, plastic containers, or any other composite or plastic product(s) on the market today. The US Army Corps of Engineers' Cold Regions Research and Engineering Laboratory (CRREL) has demonstrated bioengineered seeds that can be embedded into the biodegradable composites and that will not germinate until they have been in the ground for several months. This SBIR effort will make use of seeds to grow environmentally friendly plants that remove soil contaminants and consume the biodegradable components developed under this project. Animals should be able to consume the plants without any ill effects.
 
-But there’s also the elephant in the room: the spiraling cost of married soldiers’ housing.
+PHASE I: In Phase I the contractor develop a process to produce biodegradable composites with remediation seeds that can be used to manufacture 40mm-120mm training rounds. These Training rounds shall meet all the performance requirements of existing training rounds. The contractor should also explore avenues to produce biodegradable composites with remediation seeds for use in products outside the defense sector.
 
-“Unlike single soldiers, who live in on-post barracks and often live two to four per room, which is more space than anyone really needs anyway,” said McHugh, “married soldiers enjoy lavishly opulent housing accommodations at government expense, with one, sometimes two bathrooms, a full kitchen, even a backyard in most cases. You can’t tell me that a family of five NEEDS a three-bedroom house. In this time of fiscal austerity, it’s a luxury that we can no longer afford.”
+PHASE II: In Phase II the contractor will prove out the fabrication process and manufacture prototypes that demonstrate the process is ready for industrial use. Provide a sufficient number of prototypes for the government to perform ballistic tests.
 
-Army leaders applauded the move, calling it “long overdue.”
+PHASE III: Contractor will coordinate with PEO Ammunition and ammunition prime contractors to establish a transition path for the SBIR technology.
 
-“This is more than I could have ever hoped for. Finally, we can put our soldiers wherever we need them without having to worry about their do-nothing families causing problems for us,” said one USAREUR command sergeant major, who had previously called for the ending of all command-sponsored overseas tours. “Seriously, I can’t tell you how many times I had some whiny soldier ask to leave the field or return early from a deployment because their wife had another baby, or she crashed her car and wound up in the hospital, or their kid had a seizure or something. Plus, housing has always been an issue at OCONUS duty stations in Europe, where we just don’t have the housing facilities to accommodate families, and oftentimes have to put married soldiers up in off-post government-leased apartments, which is a huge expense. Now that these married soldiers are going to become geo-bachelors, we’ll have a lot more flexibility in our billeting options.”
+REFERENCES:
 
-The move will likely generate intense backlash among married soldiers who will be affected by the policy change. “The simple fact is, these soldiers joined an all-volunteer Army,” McHugh said. “If the Army wanted its soldiers to have families, they’d have been issued one.”
+Satyanarayana, Kestur G., Gregorio GC Arizaga, and Fernando Wypych. "Biodegradable composites based on lignocellulosic fibers”An overview." Progress in polymer science 34, no. 9 (2009): 982-1021.4
 
-However, the reaction among married soldiers was sharply negative. “If this doesn’t just beat all,” said SFC Gregory Martineau, of 1st Battalion, 508th Infantry, 4th BCT, 82nd Airborne Division, an eighteen-year Army veteran who is married with four children. “I’ve never regretted my service until now.”
+Sahari, J., and S. M. Sapuan. "Natural fibre reinforced biodegradable polymer composites." Rev. Adv. Mater. Sci 30, no. 2 (2011): 166-174
 
-Martineau would have been eligible to retire in two years, but now will separate with no retirement benefits because he’s unwilling to comply with the new policy. “If I wanted to join a service branch that craps all over families, I’d have joined the Marines. At least they’re up front about it.”
+Reddy, Narendra. "A review on completely biodegradable composites developed using soy-based matrices." Journal of Reinforced Plastics and Composites 34, no. 18 (2015): 1457-1475
+
+Ochi, Shinji. "Tensile Properties of Bamboo Fiber Reinforced Biodegradable Plastics." International Journal of Composite Materials, Vol. 2 No. 1, 2012, pp. 1-4. doi: 10.5923/j.cmaterials.20120201.01
+
+Biodegradable Composites “ Research Gate https://www.researchgate.net/topic/biodegradable_composites
+
+Mathew, Aji P., Kristiina Oksman, and Mohini Sain. "Mechanical properties of biodegradable composites from poly lactic acid (PLA) and microcrystalline cellulose (MCC)." Journal of applied polymer science 97, no. 5 (2005): 2014-2025
+
+KEYWORDS: Remediation, Biodegradable, Composites, 3D Printing, Additive Manufacturing

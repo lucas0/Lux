@@ -1,13 +1,11 @@
-Even in India, where government jobs are considered to be for life, A.K. Verma was pushing it.
+Apple Watch’s Power Reserve feature combats short battery life
 
-Verma, an executive engineer at the Central Public Works Department, was fired after last appearing for work in December 1990.
+The Apple Watch is the most buzzed about wearable to hit the market in a long time, and not all of the buzz is good. We’ve shared some of th earlier rumblings about the Apple Watch’s short battery life. Now we are hearing news of a new feature called Power Reserve, which could be a battery-saving mode that lets the Apple Watch run on low energy while only displaying the time.
 
-"He went on seeking extension of leave, which was not sanctioned, and defied directions to report to work," the government said in a statement on Thursday.
+The Apple Watch’s battery life is expected to only last a day. This puts it at the bottom of the pack for iOS smartwatches. Even with a Power Reserve function, the battery is significantly lagging behind the Pebble Time‘s seven day battery life. Even before wearables came on the scene, not everyone is diligent about plugging in their smartphones overnight. One of the most frustrating things in the world is a dead battery when you need to check your email, text, or actually make a call.
 
-Even after an inquiry found him guilty of "wilful absence from duty" in 1992, it took another 22 years and the intervention of a cabinet minister to remove him, the government said.
+If the expected battery life is only one day, then we must consider what happens with higher than average usage. Imagine if dynamic and draining apps are engaged, then the battery has the possibility of lasting only until midday. This means that the user will have to take his watch off to charge it.The allure of a wearable is its instant notifications while your phone is tucked away in your pocket. If the Apple Watch isn’t on your wrist, will you be drawn to look at the notifications?
 
-India's labour laws, which the World Bank says are the most restrictive anywhere, make it hard to sack staff for any reason other than criminal misconduct.
+Can the new consumers get used to plugging in every night? The Power Reserve feature sounds like it may revert the smartwatch back to an ordinary time piece to save battery life. It’s still better than a running out of juice. Without a charge, a dead Apple Watch isn’t even a watch. It’s just an expensive bracelet. Perhaps the short battery life will be overshadowed by the army of apps and developers Apple has at its disposal. We’ll let you know all the emerging details leading up to Apple’s big event on March 9th, 2015.
 
-States, led by Rajasthan and Madhya Pradesh, have recently changed the law to make it easier to hire and fire staff, in a move welcomed by industry leaders but opposed by labour unions.
-
-Prime Minister Narendra Modi has cracked down on rampant absenteeism by making New Delhi bureaucrats sign in at work using a fingerprint scanner. The results are publicly available online - at www.attendance.gov.in - in real time.
+Source: The NY Times
