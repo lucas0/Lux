@@ -19,6 +19,7 @@ import os, sys
 from textblob import TextBlob
 import nltk
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
+from tqdm import tqdm
 cwd = os.path.abspath(os.path.dirname(sys.argv[0]))
 data_dir = cwd+"/data"
 spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction"
@@ -195,7 +196,7 @@ def passiveness_aux(t):
     return(count/n_sent)
 
 def generateFeats():
-    pandarallel.initialize(nb_workers=16)
+    pandarallel.initialize(nb_workers=8, use_memory_fs=False)
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 

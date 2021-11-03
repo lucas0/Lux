@@ -2,6 +2,14 @@ data/GoogleNews-vectors-negative300.bin
 res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction/
 res/specificity/DASSP.zip
 res/specificity/glove.840B.300d.zip
+res/res/glove.6B.50d_emb
+res/res/glove.6B.50d.txt
+res/res/glove.6B.100d.txt
+res/res/glove.6B.200d.txt
+res/res/glove.6B.300d.txt
+res/res/glove.6B.zip
+res/res/glove.840B.300d.zip
+res/res/glove.840B.300d.txt
 data/folds/*
 data/masked_embeddings
 res/complexity/vendor/dbpedia/yago_taxonomy.ttl
@@ -11,4 +19,13 @@ data/datasets/*
 data/data_wiki.csv
 data/dataset_wiki_clean.csv
 data/data.csv
+data/bck_best/folds/0/glove
+data/bck_best/folds/3/glove
+data/bck_best/folds/5/glove
+data/bck_best/folds/4/glove
+data/bck_best/folds/8/glove
+data/bck_best/folds/2/glove
+data/bck_best/folds/6/glove
+data/bck_best/folds/1/glove
+data/bck_best/folds/7/glove
 
