@@ -1,23 +1,53 @@
-STOCKHOLM — Speaking via Google Hangout to officials in Sweden last week, former NSA Contractor Edward Snowden dropped a bag of coal on his former employers by revealing the hugely popular “Elf on a Shelf” trend is actually an intelligence gathering operation originating with and run by the National Security Agency.
+Five foot tall robots equipped with microphones, speakers and a host of sensors have gone on patrol in silicon valley.
 
-“It actually started out as a joke,” Snowden said in his speech. “Someone photocopied a picture of an elf with the caption ‘I’m watching you,’ and it just kept moving from cubicle to cubicle.”
+A robotics firm in Mountain View says it is already using the robots - and say dozens could be on patrol by the end of the year.
 
-Snowden said that at some point it occurred to someone that if people as paranoid as NSA staff would play this game, what would happen with civilians?
+Called the Knightscope, the robots are designed to spot suspicious behaviour and alert controllers.
 
-“Now, the NSA has an agent inside practically every home with a child in it,” Snowden said.
+Scroll down for video
 
-“The elves have basic mobility, which isn’t a problem because when one shows up someplace unexpected,” Snowden added, “it’s just assumed to be part of the game.”
+The five foot tall robots are designed to spot suspicious behaviour and alert controllers.
 
-Through these adorable snoops, the NSA has gained access to millions of tax returns, bank statements, and 10-year old boys unwrapping and re-wrapping their presents in the days ahead of Christmas.
+KNIGHTSCOPE SPECS Height - 60 Inches (1,524 mm) Length - 36 Inches (914 mm) Width - 32 inches (813 mm) ) Weight - 300 pounds (136 kg) Fitted with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners. When on a patrolling duty, uses lasers and GPS to calculate distances.
 
-“We would flag those kids for later recruitment to the intelligence community,” Snowden said. “Especially for Tailored Access Operations.”
+Its inventors hope it could eventually patrol malls, office and even local neighbourhoods - and say they believe it will cut crime by 50%.
 
-In addition, the NSA has uncovered a trove of data about the personal lives of millions of Americans, sources confirmed.
+'Imagine a friend that can see, hear, feel and smell that would tirelessly watch over your corporate campus or neighborhood, keep your loved ones safe and put a smile on everyone passing by.
 
-“The NSA has incorporated advanced sensors into these things that can uncover all kinds of information,” journalist Glenn Greenwald told Duffel Blog in an email. “They can tell things about people’s health — cancer, heart disease, liver disease. They know who’s being naughty, and who’s being really naughty, things that even extensive online snooping couldn’t provide. Dildos, vibrators, chains — all the things stashed in closets and under beds.”
+'Imagine if we could utilize technology to make our communities stronger and safer…..together,' the firm says.
 
-Sources told reporters these were previously inaccessible to the government’s leading intelligence agency, if the owners paid cash at least.
+The five foot tall robots have a combination of laser scanning, wheel encoders, inertial measurements, and GPS that allows fully autonomous operation and charging.
 
-“If you want to know why the ‘privacy advocates’ have settled down, and moved on? My guess is, blackmail. These elves have accumulated petabytes of evidence against pretty much everybody,” Snowden said.
+It also has odour detectors, and can even monitor air pollution as it travels around.
 
-“You wouldn’t believe what perverse things people will do to each other, right in front of these things,” Snowden concluded. “It’s why ‘ElfMonitor’ is such a highly sought after duty assignment.”
+Using cameras they can also read upto 300 car numberplates a minute, allowing them to monitor traffic.
+
+The Knightscope K5 robot security guards are 5ft tall robots that come with GPS, lasers, and heat-detecting technology.
+
+They are designed to function without any human manipulation and are built with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners which can read an impressive number of 300 car registration plates every single minute. When on a patrolling duty, it uses lasers to calculate the distance and also relies on its GPS system.
+
+The robots are autonomous and designed to avoid confrontations.
+
+When someone steps right in front of one, the robot will stop, and move around them - while sending video inside to a control center where a human is monitoring.
+
+The robots are currently being trialled by Microsoft at its San Francisco office
+
+The robot also has an emergency button people can press to talk to an operator if they are in distress
+
+If a would-be burglar persists, co-founder Stacy Stephens said: 'Then, the robot is looking at the video, listening for glass breakage, any loud sound that breaking in would cause. We'll get the license plate, picture of the vehicle, geotag location, and time.'
+
+The robots patrol using a similar technology as the self-driving Google car.
+
+'It has a LIDAR (light image detection and ranging) that's doing a 3D map,' Stephens told CBS.
+
+'It will geofence itself and give itself a perimeter within which it will operate. And it moves around within that perimeter freely and it chooses its own path.'
+
+The robots will be deployed in outdoor settings, such as corporate campuses, college campuses and open air malls.
+
+The robots patrol using a similar technology as the self-driving Google car.
+
+So far, the company has built seven robots and plans to deploy four of them towards the end of the year.
+
+The K5 robot is also built with a button on top of its head.
+
+This button can be pressed down by anyone who needs some help, and the firm has even addressed fears it will put human security guards out of work.

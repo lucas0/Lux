@@ -9,7 +9,7 @@ while true; do
     #rnd=11191
     echo $rnd
     sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
-    python lux.py --regenerate_features True
+    python lux.py --regenerate_features 'soft'
     best_avg=$(sed -rn 's/^AVG:\s([0-9\.]*)$/\1/p' $DIR/data/bck_best/README.md)
     best_f1=$(sed -rn 's/^F1:\s([0-9\.]*)$/\1/p' $DIR/data/bck_best/README.md)
     c_avg=$(sed -rn '$ s/(.*)AVG:\s([0-9\.]*)(.*)$/\2/p' $DIR/results.txt)

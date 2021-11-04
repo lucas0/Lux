@@ -1,8 +1,8 @@
+from pathos.multiprocessing import ProcessingPool as PathosPool
 import multiprocessing as mp
 import seaborn as sns
 import numpy as np
 from multiprocessing import Pool
-from pandarallel import pandarallel
 import docker
 import time
 import unicodedata
@@ -15,6 +15,7 @@ from uncertainty.classifier import Classifier
 import readability
 import subprocess
 import pandas as pd
+import swifter
 import os, sys
 from textblob import TextBlob
 import nltk
@@ -196,19 +197,18 @@ def passiveness_aux(t):
     return(count/n_sent)
 
 def generateFeats():
-    pandarallel.initialize(nb_workers=8, use_memory_fs=False)
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 
     csv['body'] = csv['body'].astype('str')
-    csv['sent'] = csv['body'].parallel_apply(split_into_sentences).astype('str')
+    csv['sent'] = csv['body'].swifter.progress_bar(desc="-Splitting into sentences...").apply(split_into_sentences).astype('str')
     csv['sent'].str.lower()
-    csv['n_sent'] = csv['sent'].parallel_apply(lambda x: max(len(x),1))
+    csv['n_sent'] = csv['sent'].swifter.progress_bar(desc="-Counting number of sentences...").apply(lambda x: max(len(x),1))
 
-    csv['tokens'] = csv['body'].parallel_apply(nltk.word_tokenize)
-    csv['n_tokens'] = csv['tokens'].parallel_apply(len)
-    csv['tagged'] = csv['tokens'].parallel_apply(nltk.pos_tag)
-    csv['blob'] = csv['body'].parallel_apply(TextBlob)
+    csv['tokens'] = csv['body'].swifter.progress_bar(desc="-Tokenizing...").apply(nltk.word_tokenize)
+    csv['n_tokens'] = csv['tokens'].swifter.progress_bar(desc="-Counting number of tokens...").apply(len)
+    csv['tagged'] = csv['tokens'].swifter.progress_bar(desc="-P.O.S. Tagging...").apply(nltk.pos_tag)
+    csv['blob'] = csv['body'].swifter.progress_bar(desc="-Enriching with Blob...").apply(TextBlob)
 
     ### SUBJECTIVITY ###
     print("Generating subjectivity scores")
@@ -226,13 +226,13 @@ def generateFeats():
         return score
 
     #blob score
-    blob_subj_scores = csv['blob'].parallel_apply(lambda x: x.sentiment.subjectivity)
+    blob_subj_scores = csv['blob'].swifter.progress_bar(desc="-Getting Blob subjectivity scores...").apply(lambda x: x.sentiment.subjectivity)
 
     #lexicon score
     mpqa_path = res_path+"/subjectivity/MPQA/"
     lex = pd.read_csv(mpqa_path+"/lexicon.csv", sep=',')
 
-    subjectivity_scores = [list(a) for a in zip(csv['tagged'].parallel_apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens'], blob_subj_scores)]
+    subjectivity_scores = [list(a) for a in zip(csv['tagged'].swifter.progress_bar(desc="-Getting Lexicons subjectivity scores...").apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens'], blob_subj_scores)]
 
     ### SPECIFICITY ###
     print("Generating specificity scores")
@@ -240,11 +240,11 @@ def generateFeats():
         lines = file.readlines()
 
     spec_scores = pd.DataFrame(lines, columns=['preds'])
-    specificity_scores = spec_scores['preds'].parallel_apply(lambda x: float(x.split('(')[1].split(',')[0]))
+    specificity_scores = spec_scores['preds'].swifter.progress_bar(desc="-Getting Specificity scores from DASSP...").apply(lambda x: float(x.split('(')[1].split(',')[0]))
 
     ### PAUSALITY ###
     print("Generating pausality scores")
-    pausality_scores = csv['tagged'].parallel_apply(lambda tagged_tokens: sum([1 for word,tag in tagged_tokens if tag == '.']))/csv['n_tokens']
+    pausality_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Pausality scores...").apply(lambda tagged_tokens: sum([1 for word,tag in tagged_tokens if tag == '.']))/csv['n_tokens']
 
 
     ### INFORMALITY ####
@@ -267,13 +267,13 @@ def generateFeats():
 
     ### DIVERISTY ###
     print("Generating diversity scores")
-    lemmatized_text = csv['body'].parallel_apply(lambda x: ld.flemmatize(x))
+    lemmatized_text = csv['body'].swifter.progress_bar(desc="-Lemmatizing...").apply(lambda x: ld.flemmatize(x))
 
     def diversity_aux(text):
         funcs = [ld.ttr,ld.root_ttr,ld.log_ttr,ld.maas_ttr,ld.msttr,ld.mattr,ld.hdd,ld.mtld,ld.mtld_ma_wrap,ld.mtld_ma_bid]
         return list(map(lambda x: x(text), funcs))
 
-    diversity_scores = lemmatized_text.parallel_apply(diversity_aux)
+    diversity_scores = lemmatized_text.swifter.progress_bar(desc="-Getting Diversity scores from Lexical Diversity...").apply(diversity_aux)
 
     ### QUANTITY ###
     print("Generating quantity scores")
@@ -287,7 +287,7 @@ def generateFeats():
 
         return [num_terms, num_tokens]+counts
 
-    quantity_scores = csv['tagged'].parallel_apply(quantity_aux)
+    quantity_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Quantity scores...").apply(quantity_aux)
 
     ### UNCERTAINTY ###
     print("Generating uncertainty scores")
@@ -299,14 +299,14 @@ def generateFeats():
 
         return unc_ratio
 
-    uncertainty_scores = csv['body'].parallel_apply(uncertainty_aux)
+    uncertainty_scores = csv['body'].swifter.progress_bar(desc="-Getting Uncertainty scores...").apply(uncertainty_aux)
 
     ### AFFECT ###
     print("Generating affect scores")
     #takes the raw text as input, and calculates polarity as the average polarity over the sentences
     #for vader, takes the text split in sentences
-    with mp.Pool() as pool:
-        affect_scores = pd.DataFrame(pool.map(affect_aux, [(e['body'],e['sent'],e['n_sent'],e['blob']) for _,e in csv.iterrows()]), columns=["BPol-avg","BPol-pos", "BPol-neg", "VPol-avg", "VPol-pos", "VPol-neg"])
+    p = PathosPool(16)
+    affect_scores = pd.DataFrame(p.map(affect_aux, [(e['body'],e['sent'],e['n_sent'],e['blob']) for _,e in csv.iterrows()]), columns=["BPol-avg","BPol-pos", "BPol-neg", "VPol-avg", "VPol-pos", "VPol-neg"])
 
     ### PASSIVENESS ###
     print("Generating passiveness scores")

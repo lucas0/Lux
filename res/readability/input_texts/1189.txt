@@ -1,41 +1,7 @@
-There's an Apple event on Monday, so it's time to run down our list of rumors and hunches so you know what to expect from the company.
+You can purchase a lot of things for $800 million. Ten Matthew McConaughey’s, eighty-billion pieces of penny candy, my dignity. But the one thing it can’t buy: a Led Zeppelin reunion. Also, a cure for AIDS, probably, but also the Led Zeppelin thing. Jimmy Page and John Paul Jones agreed to a “35 dates in three cities” tour, but Robert Plant was having none of it, and like a poorly written character in an Aaron Sorkin script, he literally ripped up a contract.
 
-Apple's tagline for the event is "spring forward," a less-than-subtle reference to the Apple Watch and a reminder that holding a product event the day after Daylight Saving Time begins is cruel. Since this event is likely to be the springboard for an all-new product line, it's probably going to crowd out most other announcements, which makes this list shorter than it normally is. That said, the timing is right for a handful of other announcements—here's what we think will share the stage on Monday.
+[Plant] and the other living founding members of legendary hard-rock band Led Zeppelin were about to ink an $800 million contract with Virgin Atlantic billionaire Richard Branson to play a reunion tour, but the iconic band’s singer ripped the contract to shreds in the final moments, a report said. Branson was left stunned when the 66-year-old Plant tore the agreement to pieces right in front of the concert promoters, the newspaper said. “There was an enormous sense of shock,” a source told the Mirror. “He said no and ripped up the paperwork he had been given.” (Via)
 
-Apple Watch
+Branson’s dream of a Zeppelin reunion crashed as horribly as the VSS Too Soon. Nothing’s going right for that handsome, charismatic billionaire lately…
 
-This is a gimme. The Apple Watch has already been announced, so we know what it looks like and some basic things about how it works. We know it's scheduled to launch in April, and we have some basic information about what it does. We know it requires an iPhone 5 or better and that it will support Apple Pay even when tethered to older phones. We know the price starts at $349, probably for the aluminum Apple Watch Sport model with a basic band.
-
-What we're likely to get on Monday is an actual launch date, more specific pricing information for all three versions of the product and their bands, and some kind of showcase of third-party apps. At iPhone and iPad launches, Apple usually has at least one or two devs come on stage to walk the audience through a demo that shows what the new hardware is capable of. iOS still enjoys the widest and deepest third-party support of any mobile platform, so we'd expect third-party support to be a major selling point for the Apple Watch as well.
-
-We don’t know whether the Apple Watch will succeed or not—nobody knows, no matter how many op-eds have already called it one way or the other. In either case, its launch signifies the start of something new for Apple.
-
-Macs
-
-Macs aren't the targets of leaks to the extent that iDevices are, so this one is not as sure a bet as the Apple Watch. That said, most of Apple's Mac lineup hasn't been refreshed in well over a year (blame Intel). Among those products, there are three for which new Intel processors now exist: the MacBook Air (Broadwell U or perhaps Core M), the 13-inch Retina MacBook Pro (Broadwell U again), and the Mac Pro (Haswell-EP and refreshed workstation GPUs from AMD). Higher-wattage quad-core parts suitable for the 15-inch Retina MacBook Pro and most iMacs aren't due until midyear.
-
-Of those three, the MacBook Air is the only thing we've really heard many rumors about. Earlier this week, we saw convincing screenshots that suggested the current 11- and 13-inch MacBook Airs would be refreshed with Broadwell chips, but not with new designs. Another rumor proposes something totally different—a 12-inch version of the computer that streamlines the chassis and does away with nearly all ports. One USB Type-C port would handle all wired connectivity, and using Intel's Core M rather than the more powerful Core i5 and i7 CPUs would allow it to run without a fan. It may or may not use a Retina-class display; reports are less clear on that one.
-
-Even if the latter product exists, we're not sure where it would slot into Apple's lineup. Is it a new product line entirely? Is it intended to be the future of the MacBook Air, leaving power users with the 13-inch MacBook Pro if they want more ports and more performance? We can't say for sure, but remember that Apple didn't replace non-Retina models immediately when it introduced the Retina MacBook Pros and the Retina iMac. There may be a transitional period.
-
-However the lineup shakes out, we think MacBook Air news is most likely, followed by everything else we just mentioned, followed by some kind of surprise like a 4K 21.5-inch iMac.
-
-iOS
-
-The Apple Watch requires iOS 8.2, so iOS 8.2 is likely to drop on the day of the event or just after. It's been through five developer betas and a new beta hasn't been issued in a few weeks, which is usually a sign that release is imminent. If you don't care about the Apple Watch, this update probably won't amount to much more than a handful of bug fixes, but that's fine too.
-
-Apple is also expected to announce a public beta program for iOS at some point in March, beginning with iOS 8.3 and eventually extending to iOS 9.0 (don't expect word about the next major iOS version before WWDC this summer, though). Launching something like this really doesn't require stage time at a major product event, but we wouldn't be surprised to hear about it.
-
-We're not expecting anything in the way of major iOS hardware announcements. Rumors about a new 12-inch "iPad Pro" spring eternal, but the newest item from a reputable source says not to expect it before this fall (if we ever actually see it). The current iPads and iPhones are still in the middle of their typical release cycle. Most iOS news is going to be about the way iOS interacts with the Apple Watch.
-
-And the rest
-
-The Apple TV was last updated in March of 2013, and there's plenty of new hardware that could speed it up. Apple doesn't seem to have the 4K fever that most other consumer electronics companies are suffering from right now, but it would be a logical next step (the current maximum resolution is 1080p).
-
-Most of the Apple TV rumors from the last year or so have revolved around something entirely new, though—not a faster version of the little $99 black box, but some kind of collaboration with content providers that would integrate Apple TV functionality into cable boxes (or maybe the other way around).
-
-iPods haven't been touched since 2012, either, but the iPod Touch is the only one that could use new hardware to get better at the stuff it does. Its A5 chip dates back to early 2011, after all. Don't hold your breath, but if Apple intends to drop support for Apple A5 devices in iOS 9, now is the time to start replacing them.
-
-And that's the rundown! The Apple Watch is the only sure thing, but Apple usually uses events like these to refresh a few things at once. Whatever happens, we'll be on the ground in San Francisco to liveblog the speech, and we'll go hands-on with anything we can get our mitts on afterward.
-
-Listing image by Apple
+Via NY Post

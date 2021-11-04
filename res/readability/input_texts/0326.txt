@@ -1,19 +1,61 @@
-For the first time, the Fukushima fingerprint isotope, cesium-134 (134Cs; half-life ~ 2 years), has been detected at an extremely low level in a Canadian salmon by the InFORM project. The single sockeye salmon that tested positive was sampled from Osoyoos Lake in the summer of 2015, according to scientists from the Radiation Protection Bureau at Health Canada, in cooperation with Fisheries and Oceans Canada and local First Nations. The sample was one of a few (8 out of 156 total) individual fish that had trace levels of the longer lived cesium-137 (137Cs) (30 yr half-life) that we reported on last winter. To determine if this trace 137Cs was from Fukushima or remnant from atmospheric weapons testing, InFORM reexamined these individual fish samples to see if extremely low levels of 134Cs may be present. The results of this extended analysis show that trace (0.07 Bq kg-1) levels of 134Cs were detected in one sample from Okanagan/Columbia River population. No 134Cs was detectable in the other samples. The observed levels remain well below the action level (1000 Bq kg-1) set by Health Canada guidelines.
+In an aptly described “joint policy initiative,” Mayor de Blasio and Police Commissioner Bill Bratton announced Monday that most people caught with small amounts of marijuana in the city will get slapped with summonses instead of arrested.
 
-As we reported in the winter 2016 update, 8 individual fish (out of the 156 measured) from 2015 tested positive for low levels (<1 Bq kg-1) of cesium-137 (137Cs). With its ~30 year half-life, 137Cs is still present in the environment from 20th century atmospheric weapons testing and Chernobyl in addition to the Fukushima accident. In contrast, no individual fish from the 2014 monitoring effort were found to contain detectable levels of 137Cs. This difference led the team at the Radiation Protection Bureau to conduct a more detailed investigation of some of those few positive samples to determine if 134Cs, the Fukushima fingerprint isotope, was present. Results from 5 of those 8 are now available and discussed below. The remaining three samples have now been processed, and no elevated levels of 137Cs or 134Cs.
+The historic move marked a public about-face for Bratton, who earlier this year vowed NYPD practices wouldn’t change after the Brooklyn district attorney’s decision not to prosecute first-time offenders for low-level pot possession.
 
-A more detailed investigation requires that the minimum detectable concentration (MDC) be lowered. When studying ionizing radiation, the MDC is a threshold that refers to the statistics of detecting individual nuclear disintegrations after a sample has been on a detector for a period of time. With each additional disintegration detected, the signal becomes more distinct from the noise. When detecting trace concentrations of isotopes, disintegrations are infrequent and thus more time on the gamma spectrometer detector is necessary to lower the MDC and determine with confidence (signal clearly, and statistically, above the noise) that an isotope is present. Lowering the MDC is analogous to increasing the exposure time for a camera to capture a good night scene as shown below.
+Sources said the new policy was ordered by de Blasio, whose campaign promises included ending marijuana arrests that overwhelmingly targeted minorities.
 
-For these salmon samples, each was freeze dried, to prevent the meat from going rancid, then placed on the detector for a full two weeks (336 hours). For comparison, InFORM salmon samples are normally counted for 6 hours. Similar to the photos above, after 6 hours on the detector, you can just make out the scene of a campfire on the beach, but it is difficult. In the case of those 8 samples, it was even possible to see that something was present, as with the logs on the shoreline in the photo (red square), but there is not enough signal to clearly resolve what that item might be. When placed on the detector for 2 weeks the decay signal is improved and the MDC threshold is lowered, similar to increasing the length of the camera’s shutter speed to capture more light.
+“It began with the mayor, as his initiative,” said an elected official familiar with the issue. “It was something very dear to the mayor that had to happen, no matter what.”
 
-With the lower MDC, the results are more statistically robust. In the graph above we see the 2 week results (darker teal and brown vertical bars) are now above the associated MDCs (horizontal lines) so we have greater confidence in the signal. In four of the five samples reporting, those early indications of of 137Cs in the sample turned out to be cases that weren’t statistically significant and the longer analysis revealed that levels of 137Cs decreased and the new results were in agreement with the average value for all the 2015 samples. This result is not totally surprising and is a good example of statistical regression to the mean.
+Bratton, the sources noted, did not resist de Blasio’s directive.
 
-However, one of the samples from Osoyoos Lake confirmed the level of 137Cs (0.53 Bq kg-1) and showed a very low (0.07 Bq kg-1), signal for 134Cs, the Fukushima fingerprint isotope.
+The NYPD declined to comment. City Hall credited both men with the idea.
 
-We can validate that the observed signal comes from Fukushima by comparing the observed levels of 134Cs and 137Cs. The salmon sample was collected in 2015, almost exactly 2 half-lives of 134Cs (t 1/2 = 2.06 years), or 4 years, after the majority of this radioisotope was released into the environment. If we decay correct the 134Cs in the sample to the time of the Fukushima disaster in 2011, we get 0.35 Bq kg-1. We know from previous work by other scientists that 134Cs and 137Cs were released from the Fukushima accident in equal amounts. This should mean that the level of 137Cs in the sockeye sample is approximately equal, so what is the source of the additional 0.2 Bq kg-1? Examining the results of the 155 other salmon collected in 2015 we see from the sum of their spectra that the average concentration of 137Cs in all of these fish was ~0.2 Bq kg-1. Since no Fukushima radiation was detected in any of those samples we deduce that this is the level of contamination attributable to historic atmospheric weapons testing. Therefore, we conclude that just over half of the observed levels of radiocesium in this sample are from Fukushima contamination with the rest being from historical sources of human contamination in the 20th century.
+“This is a joint policy initiative, developed and implemented by Commissioner Bratton and the leadership team at the NYPD, and fully supported by the mayor,” a de Blasio spokesman said.
 
-The InFORM team stresses that even though the results presented confirm Fukushima radiation in this Pacific salmon, the levels of contamination do not approach levels that represent a significant health threat to the fish or to a human consumer. Based on this measurement, the total cesium (137Cs + 134Cs) radioactivity in this sample is 0.60 Bq kg-1, which is over 1000x lower than the level of concern according to Health Canada. For perspective, you would need to consume 1000-1500 kg of salmon with this level of contamination in a short period of time to increase your radiation dose by the same amount as a single 5 hour cross-country flight.
+Joined by de Blasio at 1 Police Plaza, Bratton said he and other police officials had been working on the change in policing tactics for “the last number of months.” Under the new policy, people busted for possessing 25 grams or less of pot — a violation under New York law — will no longer be cuffed, hauled off to a police station, fingerprinted and booked.
 
-To view the full results from all 156 salmon from 2015 that were analyzed as part of our Fukushima biotic monitoring effort see our earlier summary or Open Data Canada. Initial results from the 2016 biotic monitoring program will be available shortly.
+Bratton held up a plastic sandwich bag stuffed almost full of oregano to illustrate how big a stash was at issue.
 
-Updated 1 Mar 2017: Correction was made to the source location of the salmon that tested positive. The fish was caught in Osoyoos Lake and is known to spawn in the Okanagan River. The fish was not from Okanagan Lake, as previously reported..
+“To give you, the public, a sense of what 25 grams of marijuana would look like, that’s about it,” he said.
+
+“It’s not a large amount.”
+
+Chief Thomas Purtell of the NYPD’s Organized Crime Control Bureau put the value of that much actual weed at $300.
+
+The new policy covers only marijuana that appears to be for “personal use,” rather than for sale. Anyone caught smoking in public will still be subject to arrest regardless of the amount of pot in view, the commissioner said.
+
+Other exceptions to the no-arrest rule include people with open arrest warrants, those wanted in connection with active investigations or pot carriers who don’t have identification.
+
+Bratton said the policy would be put into writing and a training video would be shown to cops during roll call before it goes into effect on Nov. 19.
+
+But law-enforcement sources said an unwritten version of the policy was enacted “on the command level” about a year and a half ago under then-Police Commissioner Ray Kelly.
+
+“If you saw someone smoking a joint, you would bring them back to the precinct and give them a summons if they didn’t have a record,” a source said.
+
+Kelly declined to comment Monday.
+
+The new policy effectively neutralizes Brooklyn DA Ken Thompson’s refusal to prosecute low-level pot arrests, which he said were clogging the justice system and taking “an unnecessary toll on offenders.”
+
+It also maintains a revenue stream for the city, because the summonses carry fines of up to $100 for first-time offenders and up to $250 for second-timers.
+
+In a statement, Thompson said, “I applaud Mayor de Blasio’s decision.” which he called “similar to the approach that I have taken in Brooklyn.”
+
+But he said he was “concerned about the due-process rights” of Brooklynites who get issued pot summonses, because almost all Brooklyn violations are prosecuted in Manhattan Criminal Court.
+
+De Blasio described the new policy as a win-win, especially for young minorities, saying, “We don’t want to saddle people who have made one small mistake with something that will follow them for the rest of their lives.”
+
+“It will certainly be good for New Yorkers of color, and particularly young people of color,” the mayor said.
+
+“When an individual is arrested, even for the smallest possession of marijuana, it hurts their chances to get a good job, it hurts their chances to get housing, it hurts their chances to qualify for a student loan — it can literally follow them the rest of their lives and saddle young people with challenges that for many are very, very difficult to overcome,” the mayor said.
+
+“I think you will see fewer unnecessary arrests,” he said.
+
+Monday’s announcement followed a Post report last week that revealed the NYPD had stopped marijuana “buy and bust” operations to focus on harder drugs.
+
+Bratton called the article “false” Monday while admitting he had changed strategy to target only “significant” drug sales.
+
+Law-enforcement sources on Monday confirmed the accuracy of the Post report and said they weren’t surprised by Bratton’s attempt to dance around the issue.
+
+“You can’t go on the record that you’re pulling back on marijuana arrests when it’s a law on the books,” one source said.
+
+Additional reporting by Jamie Schram, Shawn Cohen and Ben Feuerherd

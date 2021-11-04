@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(description='LUX main script.')
 parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
 parser.add_argument('--tune', action='store', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
 parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
-parser.add_argument('--regenerate_features', default=False, type=lambda x: bool(util.strtobool(x)), dest='force_reload', help='boolean that defines if the data features (including document embeddings) should be re-generated.')
+parser.add_argument('--regenerate_features', default=None, choices=[None, 'hard', 'soft'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (hard), only the embeddings should be re-generated (soft), or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
 args = parser.parse_args()
@@ -47,7 +47,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 31618
+seed = 8183
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -188,7 +188,7 @@ for s in setup:
     try:
         for fold_test in range(args.num_folds):
             train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=input_feat, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims)
-            args.force_reload = False
+            args.force_reload = None
             DATA_SHAPE = (train.shape)
             target_len = len(label_to_oh)
             test_target = np.array([np.argmax(r) for r in test_target])
