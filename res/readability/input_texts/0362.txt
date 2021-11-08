@@ -1,9 +1,17 @@
-After a number of complaints from passengers about "random males" being seated next to their wives, Saudi Arabia's national airline is looking in to segregating their flights.
+UPDATE: Microsoft has issued a clarification on this story. On the Microsoft Bay Area blog, the company explained that it hosted an event at its Silicon Valley campus earlier this month where Knightscope demonstrated its robots in its parking lot. The robots will not be returning to the campus as security personnel, however.
 
-Saudi Arabia's national airline, Saudia, will order its staff to keep men and women seated separately on flights from now on after passengers complained about the lack of segregation on their flights.
+"Unfortunately, some media were so excited about the technology that they misinterpreted the story," the blog post reads. "At Microsoft, we love robots of all shapes and sizes. However, we do not have robots providing security on our campus."
 
-The Emirates247 news website reported that the airline, which already complies with many of the religious practices of Islam including not offering alcohol or dishes that contain pork on their flights, have decided to separate men and women on board, unless they are close relatives.
+So it looks like any of Microsoft's campuses will be guarded by robots. Yet.
 
-Abdul Rahman Al Fahd, Saudia's assistant manager for marketing, said that "there are solutions to this problem…we will soon enforce rules that will satisfy all passengers". According to RT.com, Saudia is not the first airline to encounter these issues after Israeli carrier El Al faced delays to a flight back in October as Orthodox Jews refused to be seated next to women on the plane, while Delta have also faced a similar issue, both occurring on flights between Tel Aviv and New York.
+If you ever visit the Microsoft campus in the Silicon Valley and hear a mechanical voice shout "Ex-ter-min-ate!", don't be too spooked. It just means some geek humor has gone a little crazy.
 
-Via RT.com Main pic via Wikimedia
+Microsoft's campus in Silicon Valley will be patrolled by a team of five security guard robots from a company called Knightscope. The robot, dubbed K5, is five feet tall, weighs 300 pounds, and looks disturbingly like the Daleks of "Doctor Who" fame.
+
+Fortunately, they are not armed with lasers. They use cameras and sensors to monitor their assigned area and look for suspicious activity. They are armed with high-definition cameras and audio recorders, able to record events and voices, analyze faces, read license plates, and even detect biological and chemical agents.
+
+The K5s also use laser scanning and GPS for navigation, have weather sensors, and communicate via Wi-Fi. Their batteries run for about 24 hours and the K5 will return to a dock/power station to recharge.
+
+Should they spot a problem, they call a human security guard. I'm just waiting for Knightscope to decide to cut out the middle man. Or for bored Microsofties to try and hack the thing to play pranks on people.
+
+That sounds like the plot of a bad SyFy movie, doesn't it?

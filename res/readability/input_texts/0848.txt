@@ -1,5 +1,45 @@
-Delaware City Council passed a resolution this week ordering the bodies of all Confederate soldiers buried at Oak Grove Cemetery to be exhumed and relocated. The remains will be molested and dumped in the lake at nearby Alum Creek State Park.
+Twitter, a social media site that verifies Nazis, is legally required to hide Nazi content and symbols in Germany and France. You can take advantage of this without moving to Germany.
 
-The decision to relocate Confederate graves comes after violence broke out at a white nationalist rally in Charlottesville, Virginia last week. One woman who was protesting against the white nationalist groups in attendance was killed when James Alex Fields Jr. drove his car into a crowd of counter protesters.
+Twitter user Christa Peterson discovered that you can just tell Twitter you’re in Germany, and it will try to hide Nazi accounts and tweets:
 
-Of 32 civil war graves at Oak Grove, 6 contain Confederate soldiers. Work started early Saturday morning and is expected to wrap up this weekend.
+
+
+Advertisement
+
+Twitter lists these instructions on a support page, but it doesn’t mention that you can hide Nazis this way. (A separate page explains content withholding.) Here’s how to do it:
+
+1. From the Twitter homepage, click your avatar on the top right.
+
+2. From the drop-down menu, select “Settings and privacy.”
+
+Advertisement
+
+3. In the third section, “Content,” change your country to Germany.
+
+Advertisement
+
+Now any new page will load with Germany’s content filters in place.
+
+Of course, because Twitter is awful, it only hides some of the Nazis, but it’s better than nothing. Here’s a comparison of the top profile results for “National Socialism” before and after I changed my settings:
+
+Advertisement
+
+If you try to view a flagged account, you get this:
+
+Advertisement
+
+The filter also applies to specific flagged tweets. Here’s conservative Christian author and convicted felon Dinesh D’Souza lying about the Holocaust, before and after:
+
+
+
+Advertisement
+
+Your trending topics and language preference stay the same. So does the location displayed on your profile page. We’ve noticed one bonus: The Moments tab disappears.
+
+
+
+As user CanolaYogurt points out, Twitter saves the setting in your browser, not your account. So you can log into other accounts and you’ll still get German filtering. But you’ll need to re-apply the setting in every different browser or computer you use.
+
+Advertisement
+
+So far I haven’t found this setting in Twitter’s mobile app. One more reason to delete Twitter off your phone.

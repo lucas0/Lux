@@ -1,13 +1,65 @@
-Share 0 SHARES
+Backtracking on its previous report which claimed iOS 8.2 would be released for public consumption this week, BGR is now claiming that the software will be released to the public next week.
 
-PRESIDENT-elect Donald Trump continues to fill out his cabinet more and more each day, and today he has picked someone he feels is the perfect candidate for Secretary for Women’s Rights; comedian and TV star Bill Cosby.
+According to BGR founder and editor Jonathan Geller, Apple’s decided to release one more Gold Master (GM) version crying a build number of 12D508 to employees and testers ahead of an expected launch this coming Monday.
 
-“I get confused, hiring men as secretaries” tweeted Trump, in a rare moment of honesty.
+Jump past the fold for full release notes.
 
-“But when I do, I just pick the best people. Really. Ask anyone. Just the best people. So when I was told that I would have to elect someone that would handle all the matters relating to women and women’s rights in this country, I immediately knew there was one man for the job, Cliff Huxtable himself”.
+Health App improvements
 
-Trump, who has come under fire for hiring controversial far-right Breitbart News executive chair Steve Bannon as his chief strategist and for considering renowned creationist Jerry Falwell Jr as his Secretary of Education, is adamant that Cosby will be ideal for the position despite his recent run-ins with the law.
+Adds the ability to select the unit of measurement for body temperature, weight, height, distance, and blood glucose
 
-“Look, the things they were saying about Cosby, they say those things about me too, ” said Trump, ahead of a December hearing relating to his alleged rape of a 13-year-old girl.
+Improves stability when dealing with large amounts of data
 
-“Bill has shown that he has just the right attitude to sorting out the complaints of women, ignore them, downplay them, joke about them, and move on”.
+Includes the ability to add and visualise workout sessions from 3rd-party apps
+
+Addresses an issue that may have prevented users from adding a photo in Medical ID
+
+Fixes units for vitamins and minerals
+
+Fixes an issue where Health data wouldn’t refresh after changes data source order
+
+Fixes an issue where some graphics showed no data values
+
+Adds a privacy setting that enables turning off tracking of steps, distance, and flights climbed
+
+Stability Enhancements
+
+Increases stability of Mail
+
+Improves stability of Flyover in Maps
+
+Improves stability of Music
+
+Improves VoiceOver reliability
+
+Improves connectivity with Made for iPhone Hearing Aids
+
+Bug Fixes
+
+Fixes an issue in Maps that prevented navigating to some favorite locations
+
+Addresses an issue where the last word in a quick reply message wasn’t autocorrected
+
+Fixes an issue where duplicate iTunes purchased content could prevent iCloud restore from completing
+
+Resolves an issue where some music or playlists didn’t sync from iTunes to the Music app
+
+Fixes an issue where deleted audiobooks sometimes remained on the device
+
+Resolves an issue that could prevent call audio from routing to car speakers while using Siri Eyes Free
+
+Fixes a Bluetooth calling issue where no audio is heard until the call is answered
+
+Fixes a timezone issue where Calendar events appear in GMT
+
+Addresses an issue that caused certain events in a custom reoccurring meeting to drop from Exchange calendar
+
+Fixes an certificate error that prevented configuring an Exchange account behind a third-party gateway
+
+Fixes an issue that could cause an organizer’s Exchange meeting notes to be overwritten
+
+Resolves an issue that prevented some Calendar events from automatically showing as “busy” after accepting an invite.
+
+Apple is holding a media event under the “Spring Forward” tagline next Monday so iOS 8.2 would likely officially launched right after the presentation has wrapped up.
+
+Source: BGR

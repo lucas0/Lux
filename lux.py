@@ -47,7 +47,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 8183
+seed = 4000
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
