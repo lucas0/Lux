@@ -130,12 +130,15 @@ def savehash(stage, hashcode, drop_feat_idx=None):
     with open(hash_path, "w") as h:
         h.writelines(data)
 
-def reset_hash(hard_reload):
-    if hard_reload:
+def reset_hash(force_reload):
+    if force_reload == "all" :
         for s in stages:
             savehash(s,"0")
-    else:
+    if force_reload == "emb" :
         for s in ["data", "bert", "concat"]:
+            savehash(s,"0")
+    if force_reload == "feat" :
+        for s in ["data", "features", "concat", "complexity", "specificity"]:
             savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
@@ -143,8 +146,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
 
-    if force_reload == "hard": reset_hash(True)
-    if force_reload == "soft": reset_hash(False)
+    if force_reload is not None: reset_hash(force_reload)
 
     print("size of initial \"dataset\":",len(data))
     data = data.drop_duplicates(subset='o_url', keep='first')

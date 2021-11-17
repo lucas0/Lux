@@ -1,1 +1,39 @@
-b'At least 3 new coronavirus deaths and 183 new cases were reported in West Virginia on Aug. 15. Over the past week, there have been an average of 128 cases per day, a decrease of 2 percent from the average two weeks earlier.\n\nAs of Sunday afternoon, there have been at least 8,457 cases and 160 deaths in West Virginia since the beginning of the pandemic, according to a New York Times database.\n\nHot spots Total cases Deaths Per capita Average daily cases per 100,000 people in the past week Few or no cases Share of population with a reported case No cases reported Double-click to zoom into the map. Use two fingers to pan and zoom. Tap for details. Sources: State and local health agencies and hospitals. About this data For total cases and deaths: The map shows the known locations of coronavirus cases by county. Circles are sized by the number of people there who have tested positive or have a probable case of the virus, which may differ from where they contracted the illness. For per capita: Parts of a county with a population density lower than 10 people per square mile are not shaded. For hot spots: The hot spots map shows the share of population with a new reported case over the last week. Parts of a county with a population density lower than 10 people per square mile are not shaded.\n\nReported cases and deaths by county This table is sorted by places with the most cases per 100,000 residents in the last seven days. Charts are colored to reveal when outbreaks emerged. Cases Deaths Total\n\ncases Per 100,000 Total\n\ndeaths Per 100,000 Cases\n\nin last\n\n7 days Per 100,000 Deaths\n\nin last\n\n7 days Per 100,000 Weekly cases per capita Fewer More West Virginia 8,457 472 160 9 894 50 29 2 March 1 Aug. 15 Logan 354 1,106 11 34 133 415 8 25 Mingo 200 854 5 21 28 120   Grant 131 1,132 4 35 12 104 3 26 Raleigh 292 398 1 1 65 89   Kanawha 1,066 598 24 13 155 87 1 <1 Lincoln 105 514   17 83   Boone 117 545   17 79   Mercer 227 386 18 31 45 77 15 26 Wyoming 46 226 2 10 15 74 1 5 Summers 18 143   8 64   Show all About this data Weekly cases per capita shows the share of population with a new reported case for each week. Weeks without a reported case are shaded gray. The table includes new cases and deaths that were reported in the last seven days.\n\nIn the tallies shown on this page, The Times is now including cases that have been identified by public health officials as probable coronavirus patients.\n\nThe New York Times is engaged in a comprehensive effort to track details about every reported case in the United States, collecting information from federal, state and local officials around the clock. The numbers in this article are being updated several times a day based on the latest information our journalists are gathering from around the country.\n\nWere tracking what has reopened in West Virginia \n\nNew reported cases by day in West Virginia 0 100 200 cases March April May June July Aug. New cases 7-day average Note: The seven-day average is the average of a day and the previous six days of data.\n\nNew reported deaths by day in West Virginia 0 5 10 deaths March April May June July Aug. New deaths 7-day average Note: Scale for deaths chart is adjusted from cases chart to display trend.\n\nThe New York Times has found that official tallies in the United States and in more than a dozen other countries have undercounted deaths during the coronavirus outbreak because of limited testing availability.'
+Innovative Genomics Institute / University of California at Berkeley
+
+Cacao plants are slated to disappear by as early as 2050 thanks to warmer temperatures and dryer weather conditions.
+
+Scientists at the University of California are teaming up with Mars company to try to save the crop before it's too late.
+
+They're exploring the possibility of using the gene-editing technology CRISPR to make crops that can survive the new challenges.
+
+Beyond the glittery glass-and-sandstone walls of the University of California’s new biosciences building, rows of tiny green cacao seedlings in refrigerated greenhouses await judgment day.
+
+Under the watchful eye of Myeong-Je Cho , the director of plant genomics at an institute that's working with food and candy company Mars, the plants will be transformed. If all goes well, these tiny seedlings will soon be capable of surviving — and thriving — in the dryer, warmer climate that is sending chills through the spines of farmers across the globe.
+
+It's all thanks to a new technology called CRISPR, which allows for tiny, precise tweaks to DNA that were never possible before. These tweaks are already being used to make crops cheaper and more reliable. But their most important use may be in the developing world, where many of the plants that people rely on to avoid starvation are threatened by the impacts of climate change, including more pests and a lack of water.
+
+Cacao plants occupy a precarious position on the globe. They can only grow within a narrow strip of rainforested land roughly 20 degrees north and south of the equator, where temperature, rain, and humidity all stay relatively constant throughout the year. Over half of the world's chocolate now comes from just two countries in West Africa — Côte d’Ivoire and Ghana.
+
+But those areas won't be suitable for chocolate in the next few decades. By 2050, rising temperatures will push today's chocolate-growing regions more than 1,000 feet uphill into mountainous terrain — much of which is currently preserved for wildlife , according to the National Oceanic and Atmospheric Administration.
+
+Mars, the $35 billion corporation best known for Snickers, is aware of these problems and others presented by climate change.
+
+In September, the company pledged $1 billion as part of an effort called "Sustainability in a Generation," which aims to reduce the carbon footprint of its business and supply chain by more than 60% by 2050.
+
+"We're trying to go all in here," Barry Parkin, Mars' chief sustainability officer, told Business Insider. "There are obviously commitments the world is leaning into but, frankly, we don't think we're getting there fast enough collectively."
+
+Its initiative with Cho at UC Berkeley is another arm of that efforts. If all goes as planned, they could develop cacao plants that don’t wilt or rot at their current elevations, doing away with the need to relocate farms or find another approach.
+
+Jennifer Doudna, the UC Berkeley geneticist who invented CRISPR, is overseeing the collaboration with Mars. Although her tool has received more attention for its potential to eradicate human diseases and make so-called “designer babies,” Doudna thinks its most profound applications won’t be on humans but rather on the food they eat.
+
+Courtney Verrill
+
+An avid tomato gardener, Doudna thinks her tool can benefit everyone from large food companies like Mars to individual hobbyists like herself.
+
+”Personally, I’d love a tomato plant with fruit that stayed on the vine longer,” Doudna told Business Insider.
+
+The research lab she oversees at UC Berkeley is called the Innovative Genomics Institute. Many of the efforts by graduate students there focus on using CRISPR to benefit small-holder farmers in the developing world. One such project aims to protect cassava — a key crop that prevents millions of people from starving each year — from climate change by tweaking its DNA to produce less of a dangerous toxin that it makes in hotter temperatures.
+
+Doudna founded a company called Caribou Biosciences to put CRISPR into practice, and has also licensed the technology to agricultural company DuPont Pioneer for use in crops like corn and mushrooms.
+
+Regardless of which crop the public sees CRISPR successfully used in first, the technology will be a key tool in a growing arsenal of techniques we'll need if we plan to continue eating things like chocolate as the planet warms.

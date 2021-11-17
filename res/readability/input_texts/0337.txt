@@ -1,1 +1,33 @@
-b'At least 25 new coronavirus deaths and 848 new cases were reported in Nevada on Aug. 15. Over the past week, there have been an average of 738 cases per day, a decrease of 28 percent from the average two weeks earlier.\n\nAs of Sunday afternoon, there have been at least 61,305 cases and 1,072 deaths in Nevada since the beginning of the pandemic, according to a New York Times database.\n\nHot spots Total cases Deaths Per capita Average daily cases per 100,000 people in the past week Few or no cases Share of population with a reported case No cases reported Double-click to zoom into the map. Use two fingers to pan and zoom. Tap for details. Sources: State and local health agencies and hospitals. About this data For total cases and deaths: The map shows the known locations of coronavirus cases by county. Circles are sized by the number of people there who have tested positive or have a probable case of the virus, which may differ from where they contracted the illness. For per capita: Parts of a county with a population density lower than 10 people per square mile are not shaded. For hot spots: The hot spots map shows the share of population with a new reported case over the last week. Parts of a county with a population density lower than 10 people per square mile are not shaded.\n\nReported cases and deaths by county This table is sorted by places with the most cases per 100,000 residents in the last seven days. Charts are colored to reveal when outbreaks emerged. Cases Deaths Total\n\ncases Per 100,000 Total\n\ndeaths Per 100,000 Cases\n\nin last\n\n7 days Per 100,000 Deaths\n\nin last\n\n7 days Per 100,000 Weekly cases per capita Fewer More Nevada 61,305 1,990 1,072 35 5,167 168 121 4 March 1 Aug. 15 Clark 52,867 2,332 910 40 4,500 199 109 5 Elko 640 1,213 3 6 88 167 1 2 Eureka 5 246   2 99   Washoe 6,191 1,313 125 27 435 92 7 1 Churchill 82 329 1 4 20 80   Lyon 269 468 6 10 45 78   Carson City 388 694 8 14 36 64   Storey 6 146   2 49   Nye 439 944 12 26 21 45 3 6 Douglas 216 442 1 2 13 27 1 2 Show all About this data Weekly cases per capita shows the share of population with a new reported case for each week. Weeks without a reported case are shaded gray. The table includes new cases and deaths that were reported in the last seven days.\n\nIn the tallies shown on this page, The Times is now including cases in some counties that have been identified by public health officials as probable coronavirus patients.\n\nThe New York Times is engaged in a comprehensive effort to track details about every reported case in the United States, collecting information from federal, state and local officials around the clock. The numbers in this article are being updated several times a day based on the latest information our journalists are gathering from around the country.\n\nWere tracking what has reopened in Nevada \n\nNew reported cases by day in Nevada 0 500 1,000 cases March April May June July Aug. New cases 7-day average Note: The seven-day average is the average of a day and the previous six days of data.\n\nNew reported deaths by day in Nevada 0 10 20 30 deaths March April May June July Aug. New deaths 7-day average Note: Scale for deaths chart is adjusted from cases chart to display trend.\n\nThe New York Times has found that official tallies in the United States and in more than a dozen other countries have undercounted deaths during the coronavirus outbreak because of limited testing availability.'
+From the Thursday Morning Jolt:
+
+Is There an ISIS Threat on the Texas-Mexico Border or Not?
+
+Yesterday we noted the surprising statement from Representative Duncan Hunter, Republican of California, that “at least ten ISIS fighters have been caught coming across the border in Texas” by the U.S. Border Patrol.
+
+That statement generated a pretty firm denial from DHS Wednesday:
+
+“The suggestion that individuals who have ties to ISIL have been apprehended at the Southwest border is categorically false, and not supported by any credible intelligence or the facts on the ground,” a DHS spokesman said in a statement today. “DHS continues to have no credible intelligence to suggest terrorist organizations are actively plotting to cross the southwest border.”
+
+But then a few hours later, the government watchdog group Judicial Watch released a shocking statement with some more specific claims about ISIS members being caught — but with no named sources attached to it:
+
+Islamic terrorists have entered the United States through the Mexican border and Homeland Security sources tell Judicial Watch that four have been apprehended in the last 36 hours by federal authorities and the Texas Department of Public Safety in McAllen and Pharr.
+
+Judicial Watch’s release also noted:
+
+In late August JW reported that Islamic terrorist groups are operating in the Mexican border city of Ciudad Juarez and planning to attack the United States with car bombs or other vehicle borne improvised explosive devices (VBIED). High-level federal law enforcement, intelligence and other sources confirmed to JW that a warning bulletin for an imminent terrorist attack on the border has been issued. Agents across a number of Homeland Security, Justice and Defense agencies have all been placed on alert and instructed to aggressively work all possible leads and sources concerning this imminent terrorist threat.
+
+Because we haven’t heard about any car bombs in cities near the U.S.-Mexican border, one might conclude this is merely chatter and rumors.
+
+But then there’s this wrinkle, from KVIA, the ABC affiliate in El Paso, Texas, August 31, 2014:
+
+Fort Bliss officials announced Sunday morning that several recent security concerns have forced them to increase security at the entry gates.
+
+Officials told ABC-7 that their concern for safety will affect vehicle, motorcycle, bicycle and pedestrian access to the installation through 5 a.m. Tuesday morning.
+
+ABC-7 asked Fort Bliss spokesperson Lt. Col. Lee Peters if this was related to the alleged Islamic State threat in Juarez.
+
+He said, “Based on [Department of Defense] guidance from recent nationwide incidents, and our own internal assessments coupled with recent media reporting, we decided to implement increased security measures on Bliss. These changes are not as a result of a specific threat but rather to simply get prudent security measures in place to protect our military, employees and visitors.”
+
+Fort Bliss in El Paso, Texas, is directly across the border from Ciudad Juarez:
+
+So apparently someone in our government was indeed on alert about “several recent security concerns” in late summer.

@@ -1,13 +1,9 @@
-Saudia Airlines – Saudi Arabia's national airline – is planning on segregating passengers after receiving complaints from customers over the free mixing of men and women.
+The world waits with baited breath for more details about the Apple Watch, which should be revealed at a special event in San Francisco next Monday. But Tim Cook is just as anxious as we are to get this party started, and he teased some details in a trip to Germany.
 
-According to the Emirates 247 news website, the new rules would be enforced by airline staff, preventing any one but close relatives sitting next to the opposite gender.
+As reported by 9to5Mac, Cook visited the flagship Apple Store in Berlin, and confirmed to the employees there that the Apple Watch would go on sale in Germany during the month of April. Cook had already confirmed an April launch in the United States during a recent earnings call, so this might mean the watch will launch globally all at once, or that the United States will get it first, followed by Germany later in the month.
 
-Abdul Rahman al-Fahd, assistant manager at Saudia Airlines, briefly commented: "There are solutions to this problem. We will soon enforce rules that will satisfy all passengers."
+Apple has been getting faster about rolling out products, and credited the “fastest rollout ever” of the iPhone 6 and 6 Plus as part of its record-breaking success in Q1 2015. 9to5Mac points out that Apple is already promoting the Apple Watch in China, so we wouldn’t be surprised if the watch launches there in April too.
 
-The new rules follow Saudia Airline's strong flight code of not offering any alcoholic beverages or pork dishes to customers flying with the airline.
+Cook also boasted to employees that “a whole ton of announcements are coming shortly about all of the apps,” according to 9to5Mac’s report. Starwood Hotels was specifically highlighted at the watch’s unveiling last September, and Cook also mentioned Panera Bread (an Apple Pay partner) and Salesforce. Apple has a tradition of inviting third-party app makers on stage to demonstrate, so we can’t wait to see what they’ve been cooking up with the WatchKit SDK.
 
-Saudia Airlines chooses not to employ Saudi women as members of the cabin crew, although female flight desks are operating in their offices in the Murooj district in the Saudi capital of Riyadh.
-
-Other Islamic observations are maintained by the airline: most notably a verse of the Quran is read out as prayer prior to take-off. Designated prayer areas for men are also often available on many of its flights.
-
-Many of the airlines run by the Gulf countries abide by Islamic laws, although some country airlines are more lenient than others. For instance, the female airline crew of Etihad, the Emirati airline, do not wear a veil as part of their uniform.
+We’re wrapping up our own round of interviews with Apple Watch devs that will go live on Macworld later this week. And of course we will be live-blogging and live-tweeting direct from the event on Monday, beginning at 10am Pacific, 1pm Eastern. Besides price and release date, what are you most excited to find out about the Apple Watch? What apps do you hope to use from your wrist?

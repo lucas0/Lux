@@ -72,6 +72,12 @@ def split_into_sentences(text):
         sentences = [s.strip() for s in sentences]
         return sentences
 
+log_filename = cwd+"/feat_log.txt"
+def log_results(data_frame, feat_name):
+    with open(log_filename, "a+") as f:
+        f.write(feat_name+"\n\n")
+        f.write(data_frame.to_string(header=True, index=True))
+
 #this process takes a while, so it should be done before the feature generation step
 def generate_specificity():
     my_data_path = spec_dir+"/dataset/data/my_data_unlabeled.txt"
@@ -325,6 +331,9 @@ def generateFeats():
     pau = pd.DataFrame(pausality_scores.to_list(), columns=["#of '.'-tagged tokens"])
     unc = pd.DataFrame(uncertainty_scores.to_list(), columns=["LUCI score"])
     pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
+
+    #for v,f_name in zip([inf,div,qua,aff,sbj,spe,pau,unc,pas], ["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
+    #    log_results(v,f_name)
 
     features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
     #features = pd.concat([inf,div,aff,sbj,spe,pau,unc,pas], axis=1)

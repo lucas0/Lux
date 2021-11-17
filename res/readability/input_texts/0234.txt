@@ -1,65 +1,107 @@
-Backtracking on its previous report which claimed iOS 8.2 would be released for public consumption this week, BGR is now claiming that the software will be released to the public next week.
+Mississippi Legislature
 
-According to BGR founder and editor Jonathan Geller, Apple’s decided to release one more Gold Master (GM) version crying a build number of 12D508 to employees and testers ahead of an expected launch this coming Monday.
+2016 Regular Session
 
-Jump past the fold for full release notes.
+House Bill 786
 
-Health App improvements
+House Calendar | Senate Calendar | Main Menu
 
-Adds the ability to select the unit of measurement for body temperature, weight, height, distance, and blood glucose
+Amendments | Code Sections | Additional Information
 
-Improves stability when dealing with large amounts of data
+Bill Text for All Versions
 
-Includes the ability to add and visualise workout sessions from 3rd-party apps
+| | Approved by the Governor
 
-Addresses an issue that may have prevented users from adding a photo in Medical ID
+| | As Passed the House
 
-Fixes units for vitamins and minerals
+| | Committee Substitute
 
-Fixes an issue where Health data wouldn’t refresh after changes data source order
+| | As Introduced
 
-Fixes an issue where some graphics showed no data values
+Description: "Mississippi Church Protection Act"; create.
 
-Adds a privacy setting that enables turning off tracking of steps, distance, and flights climbed
+Fiscal Note: No fiscal note conducted
 
-Stability Enhancements
 
-Increases stability of Mail
 
-Improves stability of Flyover in Maps
+Background Information:
 
-Improves stability of Music
+Disposition: Law
 
-Improves VoiceOver reliability
+Deadline: General Bill/Constitutional Amendment
 
-Improves connectivity with Made for iPhone Hearing Aids
+Revenue: No
 
-Bug Fixes
+Vote type required: Majority
 
-Fixes an issue in Maps that prevented navigating to some favorite locations
+Effective date: Passage
 
-Addresses an issue where the last word in a quick reply message wasn’t autocorrected
+Chapter Number: 421
 
-Fixes an issue where duplicate iTunes purchased content could prevent iCloud restore from completing
 
-Resolves an issue where some music or playlists didn’t sync from iTunes to the Music app
 
-Fixes an issue where deleted audiobooks sometimes remained on the device
+History of Actions:
 
-Resolves an issue that could prevent call audio from routing to car speakers while using Siri Eyes Free
+1 02/08 (H) Referred To Judiciary B
 
-Fixes a Bluetooth calling issue where no audio is heard until the call is answered
+2 02/11 (H) Title Suff Do Pass Comm Sub
 
-Fixes a timezone issue where Calendar events appear in GMT
+3 02/17 (H) Committee Substitute Adopted
 
-Addresses an issue that caused certain events in a custom reoccurring meeting to drop from Exchange calendar
+4 02/17 (H) Passed {Vote}
 
-Fixes an certificate error that prevented configuring an Exchange account behind a third-party gateway
+5 02/19 (H) Transmitted To Senate
 
-Fixes an issue that could cause an organizer’s Exchange meeting notes to be overwritten
+6 03/11 (S) Referred To Judiciary, Division A
 
-Resolves an issue that prevented some Calendar events from automatically showing as “busy” after accepting an invite.
+7 03/17 (S) Title Suff Do Pass As Amended
 
-Apple is holding a media event under the “Spring Forward” tagline next Monday so iOS 8.2 would likely officially launched right after the presentation has wrapped up.
+8 03/29 (S) Amended
 
-Source: BGR
+9 03/29 (S) Passed As Amended {Vote}
+
+10 03/29 (S) Motion to Reconsider Entered
+
+11 03/31 (S) Motion to Reconsider Tabled
+
+12 03/31 (S) Returned For Concurrence
+
+13 04/05 (H) Concurred in Amend From Senate {Vote}
+
+14 04/11 (H) Enrolled Bill Signed
+
+15 04/11 (S) Enrolled Bill Signed
+
+16 04/15 Approved by Governor
+
+
+
+Amendments:
+
+| | [S] Committee Amendment No 1 Adopted Voice Vote
+
+| [S] Amendment No 1 to Committee Amendment No 1 Lost Voice Vote
+
+
+
+| | Amendment Report for House Bill No. 786
+
+
+
+Code Section: A 045-0009-0101, A 097-0037-0009, A 097-0003-0015
+
+----- Additional Information -----
+
+House Committee: Judiciary B
+
+Senate Committee: Judiciary, Division A
+
+Principal Author: Gipson
+
+Additional Authors: Morgan, Mettetal, Beckett, Rogers (61st), Tullos, Oliver, Baker, Kinkade, Hale, Rushing, Formby, Chism, Miles, Bain, Mims, Criswell, Willis, Currie, Boyd, Bomgar, Hopkins, Weathersby, Moore, Shirley, Arnold, Staples, Monsour, Barnett, Crawford, Dixon, Ladner
+
+Title: AN ACT TO CREATE THE "MISSISSIPPI CHURCH PROTECTION ACT"; TO AMEND SECTION 45-9-101, MISSISSIPPI CODE OF 1972, TO CONFORM; TO AMEND SECTION 97-37-9, MISSISSIPPI CODE OF 1972, TO REVISE THE LIST OF DEFENSES FOR A PERSON INDICTED OR CHARGED FOR A VIOLATION OF THE PROVISION OF LAW REGULATING THE USE OF FIREARMS; TO AMEND SECTION 97-3-15, MISSISSIPPI CODE OF 1972, TO PROVIDE THAT KILLING A PERSON WHILE ACTING AS A PARTICIPANT OF A CHURCH OR PLACE OF WORSHIP SECURITY TEAM IS JUSTIFIABLE HOMICIDE; TO PROHIBIT ENFORCEMENT OF UNCONSTITUTIONAL FEDERAL RULES AND ORDERS; AND FOR RELATED PURPOSES.
+
+Information pertaining to this measure was last updated on 06/27/2016 at 11:17
+
+End Of Document
