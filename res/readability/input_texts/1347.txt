@@ -1,39 +1,61 @@
-Editor’s note: Widely circulated reports that Pope Francis said dogs could go to heaven were incorrect. Instead he said, "Holy Scripture teaches us that the fulfillment of this wonderful design also affects everything around us,” which an Italian newspaper interpreted to mean animals could go to heaven. Another quote attributed to Francis was actually made by Pope Paul VI while comforting a distraught boy whose dog had died.
+The nomination of Gina Haspel to be the next director of the CIA faces trouble amid accusations that she personally supervised the torture of suspected terrorists and destroyed the evidence of the interrogations.
 
+Haspel supervised a U.S. “black site” in Thailand in 2002 where Abu Zubeidah and Abdul Rahim Nashiri were tortured by CIA personnel. In 2005, she helped destroy 92 videotapes showing their torture. She faced no consequences for those actions, and, assuming senators ask about them at her upcoming confirmation hearing, it’s likely that her answers will be given in a closed, secret session.
 
+But Haspel’s actions may well have violated international law, specifically the U.N. Convention Against Torture. Could she face prosecution?
 
-Pope Francis had an early Christmas president for dogs, and animal lovers everywhere: A chance at heaven for pooches and another creatures.
+Legally speaking, yes. But politically, almost certainly not.
 
-During a recent public appearance, while trying to console a boy whose dog had died, Francis said, according to Italian news sources, “One day, we will see our animals again in the eternity of Christ. Paradise is open to all of God’s creatures.”
+There are two legal avenues for a case against Haspel. The first is the International Criminal Court (ICC), and the second is a domestic court of a European nation.
 
-His comments were greeted with enthusiasm by animal welfare groups.
+The ICC is a better fit conceptually. Its entire purpose is to prosecute people for “genocide, war crimes, crimes against humanity, and aggression.” And despite legal counsel provided to the Bush administration at the time, the kinds of torture which Haspel supervised when she oversaw a CIA “black site” in Thailand are almost certainly violations of the U.N. Convention Against Torture.
 
-“It confirms what many of us have believed and hoped to be true for a long time,” said Christine Gutleban, director of the faith outreach program for The Humane Society of the United States. “I think it’s hard for many of us to imagine heaven without God’s creatures.”
+Mary Ellen O’Connell, professor of international law at Notre Dame Law School, told The Daily Beast that Haspel “clearly broke the law… Every member of the CIA is aware that the U.S. is a party to the Convention Against Torture. Even members of the military would have had the duty to disobey a manifestly unlawful order from superiors to use torture.”
 
-Some religious observers have noted that the pope made the comment casually and so it was unclear what implications it would have.
+Not only did Haspel not disobey orders, some experts believe that she gave them herself, while supervising the interrogation of Zubaydah and Nashiri, and subsequently destroyed the tapes. The answers may be in the 6,000-page Senate intelligence committee report on torture during the Bush administration that remains classified (only the 524-page executive summary is authorized for release).
 
-Gutleban said her organization was waiting confirmation from the Vatican, but thought the comment was very much in line with Christian teachings about compassion toward animals.
+“Every member of the CIA is aware that the U.S. is a party to the Convention against Torture. Even members of the military would have had the duty to disobey a manifestly unlawful order from superiors to use torture.” — Mary Ellen O’Connell, professor of International Law at Notre Dame
 
-The pope's predecessors have offered varying views. Though traditional Catholic teaching held that animals did not have souls, Pope John Paul II implied that they did. Pope Benedict spoke out against factory farming.
+Moreover, O’Connell noted, the ICC itself is “under pressure, with developing world countries leaving, for the court to look even-handed.” Nearly all ICC prosecutions have thus far been of Africans; a high-profile investigation of a sitting CIA director would help dispel concerns that the ICC is biased in favor of “first world” defendants.
 
-The president of the Catholic League, Bill Donohue, said as an animal lover, he welcomed the comment. In the absence of a catechism teaching on subject, popes are free to their own ideas, he said. Whether animals can get to heaven is a matter of conjecture, he said.
+The problem with the ICC is jurisdiction. Under the Rome Statute of the International Criminal Court, which established the body in 1998, the court can only hear of abuses that were either committed by an ICC member nation or took place within an ICC member nation. The United States is not a member: It signed the Rome Statute, but the Senate didn’t ratify it.
 
-"But it’s Christmastime so let’s be cheery and assume that’s the case," he said.
+Thailand, where Haspel’s black site was located—at the international airport outside Bangkok—is in the same situation. It’s a signatory, but not a member.
 
-That said, he planned to enjoy a prime rib at the Catholic League's Christmas party.
+The only way that Haspel could be prosecuted at the ICC, then, is if she had responsibility for war crimes that took place in another country that, unlike Thailand, is an ICC member nation.
 
-The American Kennel Club applauded Pope Francis for reminding the world that dogs deserved love, care and respect.
+The most likely candidate is Poland, where the CIA operated another black site, but it is not known whether Haspel had responsibility for that site, or exactly what took place there.
 
-“Few things in life are more powerful than the human-canine bond, and we firmly believe that all dogs are worthy of an eternity of affection and happiness,” it said in a statement.
+In other words, the ICC may not have jurisdiction at all, and absent additional leaks, it’s hard to see them gaining any information about what did or didn’t happen in Poland.
 
-Other groups used the opportunity to draw attention to American farming methods.
+Even Haspel’s testimony to the Senate may be of little use. It is common practice for intelligence officers to request a closed hearing for matters related to national security, and until the Russia Investigation, it was unheard of for members of Congress to divulge the records of such hearings.
 
-“If indeed (Benedict) said this, that animals have a place in heaven, then I think it’s a clear that animals mean a great deal to God," Gutleban said. "And we really need to be serious about how we treat them, certainly in industrial systems like factory farming, for example."
+At Haspel’s public hearing, you can expect her to refuse to answer any question that has to do with torture, black sites, extraordinary rendition, on the grounds it could compromise national security—to say nothing of her own prosecution.
 
-People for the Ethical Treatment or PETA said in a statement that it hoped Christians would remember that animals raised and killed for food endure hell on earth. The most loving thing people could do toward God’s creatures was not to eat them, said the group, which has a new website directed at Christians, Jesus People for Animals.
+So much, then, for the ICC. What about the second option: domestic courts in other countries?
 
-Sarah Withrow King, the director of PETA’s Christian outreach and engagement, said that the group was contacted almost immediately by supporters who were thrilled by the pope’s statement.
+Andrew Novak, professor of international law at George Mason University, told The Daily Beast that “many countries have universal jurisdiction laws when the law of nations has been violated, as in cases of torture, slavery, or genocide. They would have jurisdiction if someone’s not being prosecuted elsewhere.”
 
-She said she hoped it would change people’s treatment of animals.
+Moreover, “after Rwanda and Yugoslavia, there are very broad laws to prosecute war crimes,” Novak said.
 
-“I say that a world on earth as it is in heaven is a vegan world,” she said.
+This has happened before. According to O’Connell, cases against Americans implicated in torture have proceeded in Spain, Italy, and Belgium. For example, O’Connell said, “Italy issued arrest warrants for CIA agents involved in the kidnapping and rendition of a Muslim cleric. One of the agents… was arrested on the warrant and held for a time in Panama. Another woman was arrested in Portugal a few months ago.”
+
+A similar process is already underway in Haspel’s case. In Germany, the European Center for Constitutional and Human Rights (ECCHR), has filed a series of complaints with the country’s federal prosecutor, urging him to investigate.
+
+Andreas Schüller, director of ECCHR’s International Crimes and Accountability Program, told The Daily Beast that this campaign has been going on for years. “In 2014, when the Senate report on the CIA came out, we filed a brief criminal complaint… They opened a preliminary examination—not yet an investigation, but a file that establishes the initial suspicion to open a case.”
+
+In 2015 and 2016, ECCHR filed two more extended complaints, one regarding the Army’s alleged torture of inmates at Guantanamo Bay and Abu Ghraib, and a second on the CIA’s alleged torture at black sites.
+
+“In 2016, Gina Haspel’s name was not known,” Schüller said, “but when she was nominated as vice-director of the CIA last year, we had a name to connect to other facts we had presented already.”
+
+Now, the ECCHR says, “Gina Haspel must face arrest on traveling to Europe.”
+
+But would the German federal prosecutor really go after the the CIA director, when such a move would gravely damage U.S.-German relations?
+
+Schüller agreed it was unlikely.
+
+“We don’t expect to see that move,” he said. “What we want to achieve is to say: look, there was torture, there is the UN Convention Against Torture, and you [the government] know who this person is. If you allow her to come here, you are making a clear political decision that you prioritize that over your obligations under the Convention Against Torture… They can’t say they didn’t know who was coming here.”
+
+Moreover, Schüller added, “the legal accountability debate continues and makes life at least a little bit harder for the people making those decisions [to conduct torture]. It’s something they have to take into account.”
+
+In sum, while the actions documented in the Senate’s report would be strong grounds for a war crimes prosecution of Gina Haspel, it’s very unlikely that anyone will make use of them. International law often takes a back seat to international relations, and realpolitik often dictates results. Even when the law, and its violation, are clear.

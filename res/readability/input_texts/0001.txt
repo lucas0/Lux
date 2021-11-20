@@ -1,81 +1,53 @@
-Last night, my family and I saw Disney/Pixar’s Incredibles 2, a movie we had all been looking forward to seeing for months. We were excited to see the characters again and wondered how the sequel would compare to the original film, which was shown shortly before in a double feature. After last night, I can say that the movie is unlike anything I have ever seen before, in that the villain’s weapon of choice can hurt not only characters on-screen, but can also hurt the people in the audience as well. The weapon? Continuous sequences of rapidly flashing/strobing lights.
+Five foot tall robots equipped with microphones, speakers and a host of sensors have gone on patrol in silicon valley.
 
-Scene description (NO SPOILERS)
+A robotics firm in Mountain View says it is already using the robots - and say dozens could be on patrol by the end of the year.
 
-There are at least five scenes throughout the movie, all of which feature the villain, that use bright white flashing/strobe lights for more than fifteen seconds, with at least one scene going over 90 seconds in continuous strobing lights. These lights stay at their rapidly flashing speed in the entirety of these scenes, which are scattered throughout the movie. My brother estimated the light flashes being as fast as 3 flashes per second.
+Called the Knightscope, the robots are designed to spot suspicious behaviour and alert controllers.
 
-Why is this an issue?
+Scroll down for video
 
-Many different populations can be sensitive to flashing and strobing lights, not just people with photosensitive epilepsy. Here is a small sampling of conditions that can be affected:
+The five foot tall robots are designed to spot suspicious behaviour and alert controllers.
 
-Migraines
+KNIGHTSCOPE SPECS Height - 60 Inches (1,524 mm) Length - 36 Inches (914 mm) Width - 32 inches (813 mm) ) Weight - 300 pounds (136 kg) Fitted with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners. When on a patrolling duty, uses lasers and GPS to calculate distances.
 
-Vision impairment
+Its inventors hope it could eventually patrol malls, office and even local neighbourhoods - and say they believe it will cut crime by 50%.
 
-Seizure conditions
+'Imagine a friend that can see, hear, feel and smell that would tirelessly watch over your corporate campus or neighborhood, keep your loved ones safe and put a smile on everyone passing by.
 
-Vertigo (specifically flicker vertigo)
+'Imagine if we could utilize technology to make our communities stronger and safer…..together,' the firm says.
 
-Autism
+The five foot tall robots have a combination of laser scanning, wheel encoders, inertial measurements, and GPS that allows fully autonomous operation and charging.
 
-ADHD
+It also has odour detectors, and can even monitor air pollution as it travels around.
 
-PTSD
+Using cameras they can also read upto 300 car numberplates a minute, allowing them to monitor traffic.
 
-Even people who do not have these conditions or have a history of them can still have an adverse reaction to strobe lights. This risk is increased for children and young adults.
+The Knightscope K5 robot security guards are 5ft tall robots that come with GPS, lasers, and heat-detecting technology.
 
-Signs of adverse strobe reactions
+They are designed to function without any human manipulation and are built with surveillance cameras and sensors, odor detectors, thermal imaging system, and scanners which can read an impressive number of 300 car registration plates every single minute. When on a patrolling duty, it uses lasers to calculate the distance and also relies on its GPS system.
 
-Some common signs of adverse strobe reactions include:
+The robots are autonomous and designed to avoid confrontations.
 
-Seizure
+When someone steps right in front of one, the robot will stop, and move around them - while sending video inside to a control center where a human is monitoring.
 
-Blank staring
+The robots are currently being trialled by Microsoft at its San Francisco office
 
-Fumbling
+The robot also has an emergency button people can press to talk to an operator if they are in distress
 
-Chewing
+If a would-be burglar persists, co-founder Stacy Stephens said: 'Then, the robot is looking at the video, listening for glass breakage, any loud sound that breaking in would cause. We'll get the license plate, picture of the vehicle, geotag location, and time.'
 
-Wandering
+The robots patrol using a similar technology as the self-driving Google car.
 
-Shaking
+'It has a LIDAR (light image detection and ranging) that's doing a 3D map,' Stephens told CBS.
 
-Garbled speech
+'It will geofence itself and give itself a perimeter within which it will operate. And it moves around within that perimeter freely and it chooses its own path.'
 
-Muscle twitching
+The robots will be deployed in outdoor settings, such as corporate campuses, college campuses and open air malls.
 
-Loss of consciousness
+The robots patrol using a similar technology as the self-driving Google car.
 
-Migraine
+So far, the company has built seven robots and plans to deploy four of them towards the end of the year.
 
-Large amount of pain centralized in head
+The K5 robot is also built with a button on top of its head.
 
-Light sensitivity
-
-Temporary visual auras (blindness, double vision, floaters)
-
-Nausea/vomiting
-
-This post is not a replacement for medical advice. If you begin experiencing any of these symptoms please seek appropriate medical attention.
-
-How descriptive audio helped
-
-Since I am visually impaired, I use descriptive audio devices provided by my theater to get descriptions of visual information on screen. One of the hidden benefits is that I had a warning about scenes involving strobe lights ahead of time, so I could close my eyes and avoid them. While the descriptive audio did not warn me about all of the flashing lights used in the film, I know that had I not had descriptive audio, I would have had to leave the movie early.
-
-Related links
-
-Isn’t there a flashing light warning in place?
-
-As of publishing time, there is no warning in place about the intense flashing/strobing light effects in Incredibles 2. There are warnings attached to many other media types when strobe and flashing lights are present for long periods of time, such as video games, live concerts, music videos, and even certain theme park attractions, but there are typically no formal or informal warnings in place for movies, and none for Incredibles 2. In addition, I do not know of any apps that provide information about flashing lights in movies.
-
-What can be done about this?
-
-I am not asking for Disney and/or Pixar to remove the movie from theaters, nor am I asking them to change the movie to get rid of the strobing lights (though they certainly can if they want to!). I would like for these companies as well as movie theaters to issue a warning to guests purchasing tickets that this movie has a significant amount of strobing lights that can cause adverse health effects, especially in young children. Families have the right to be able to make informed decisions about movies and to determine if this is safe for their children to watch.
-
-Update June 19
-
-After this post went viral, Disney/Pixar sent a notice to theaters asking them to put up a sign warning guests about the flashing light scenes! Thank you Disney for listening to the needs of your customers!
-
-Should I see Incredibles 2?
-
-This post is not a call to boycott Incredibles 2, or any other Disney/Pixar movies. Despite the large amount of strobe lights, my family and I really enjoyed watching Incredibles 2. We thought that the script was brilliant, with the movie being very well done. If it wasn’t for the large amount of strobes, we would give it a 10/10. However, due to the amount of flashing/strobe lights, I recommend carefully considering whether to watch this movie or not, especially if you have young children.
+This button can be pressed down by anyone who needs some help, and the firm has even addressed fears it will put human security guards out of work.

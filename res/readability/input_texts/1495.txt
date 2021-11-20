@@ -1,29 +1,11 @@
-The TV streaming services market may be on the verge of the biggest change yet given reports HBO and Apple may be talking about an exclusive partnership that would leave Netflix, Amazon and every other market player scrambling to make similar moves to grow subscription base and push TV boxes and sticks into consumer hands.
+Apple has opted to delay production on the rumored larger-screened "iPad Pro" due to issues with display panel supply, reports Bloomberg. Manufacturing on the tablet will reportedly begin in September, rather than earlier in the year.
 
-The news comes as HBO puts the finishing touches on its impending HBO Now standalone streaming service, built and designed by Major League Baseball Advanced Media, which is scheduled to debut by April 12.
+Production of the 12.9-inch-screen iPad is now scheduled to start around September because of delays involving the supply of display panels, said one of the people, who asked not to be identified because the details aren't public. Apple had initially planned to begin making the larger version this quarter, people familiar those plans had said.
 
-Currently HBO subscribers typically pay for the channel's programming and service through a cable, telecomm or satellite provider, paying either a set standalone monthly fee or as part of a content bundle package.
+This isn't the first time that rumors have hinted at delays for the iPad Pro. Apple was said to be targeting an early 2015 release date for the tablet last year, but those plans were reportedly put on hold. Back in October, The Wall Street Journal said that Apple had opted to delay mass production on the iPad in order to focus on iPhone 6 Plus production, and in November, KGI Securities analyst Ming-Chi Kuo said production could be delayed until Q2 2015 because of difficulties related to the production of display components. With production delayed until September, the tablet could see a release in late 2015.
 
-With HBO Now, however, consumers will be able to subscribe directly from HBO for a $15 monthly fee. Reports say Time Warner, which owns HBO, is aiming to build a network of distributors to push the HBO Now service to the 10 million broadband households that are not subscribed to a cable TV bundle service, and the 70 million cable TV subscribers who aren't HBO subscribers.
+Rendering of the iPad Pro by Martin Hajek
 
-Pulling Apple TV on as a partner would be a huge win-win given Apple's computing ecosystem and the access to Apple smartphone consumers.
+Apple is planning to use the "iPad Pro," as the media calls it, to boost its flagging iPad sales. The tablet is expected to measure in somewhere between 12.2 and 12.9 inches, dwarfing both the 9.7-inch iPad Air 2 and the 7.9-inch iPad mini 3.
 
-For Apple, landing HBO Now for its fledgling Apple TV would be a major coup and compliment HBO Go, a mobile streaming service, already available via Apple TV since 2013.
-
-HBO's subscriber price for HBO Now, however, may prove a sticky point as entrenched competitor Netflix has kept its prices at nearly half that cost. There's also the potential of exhausting consumers with fees given they're already laying out money for the Web TV boxes and sticks. While these costs are typically much less than a cable subscription the increasing number of standalone services could prove to be confusing and ultimately more expensive at some point.
-
-It's clear, however, that HBO believes the HBO Now cost is appropriate and isn't about the change the reported pricing of $15 a month.
-
-"It's a premium product, and it will be priced accordingly," HBO CEO Richard Plepler said during an earnings call last month.
-
-Obviously some Time Warner shareholders like the idea of HBO and Apple partnering as shares rallied end of day Wednesday on the reports though ultimately ended flat.
-
-At this point HBO is not providing details regarding the Apple partnership report, and Apple has declined to comment.
-
-"We know there's great anticipation around our standalone streaming service," an HBO spokesman said in a statement. "And when we have details to share, we will do so."
-
-Another compelling aspect for Apple striving to be the sole HBO Now partner is the fact that HBO produces "Games of Thrones," one of the most popular streaming content programs to date. The arrival of HBO Now is expected to debut with the fifth season's premiere.
-
-Yet streaming content competitors' programs have been pulling in strong viewer support as well. Netflix's "House of Cards" series is extremely popular and Amazon's original content program, "Transparent," has won an Emmy award.
-
-ⓒ 2018 TECHTIMES.com All rights reserved. Do not reproduce without permission.
+It may be targeted at the enterprise market, and rumors have suggested it could sport an "ultra" high-resolution display and stereo speakers at the top and bottom edges of the device for an improved audio experience. It may also ship with an optional stylus accessory.

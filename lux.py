@@ -12,7 +12,7 @@ parser.add_argument('--input_features', default='bert', choices=['bert', 'only_b
 args = parser.parse_args()
 
 import tensorflow
-tensorflow.enable_eager_execution()
+#tensorflow.enable_eager_execution()
 import warnings
 #warnings.filterwarnings("once")
 from numpy.random import seed
@@ -47,7 +47,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 12007
+seed = 24103
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -59,13 +59,13 @@ checkpoint_filepath = cwd+'/lux_best_models/'
 model = None
 num_epochs = [200]
 LSTM_DIM = 256
-DENSE_DIM = [64, 128, 256, 512]
+DENSE_DIM = [128, 256, 512]
 DENSE_DIM = [128]
 DATA_SHAPE = None
 learning_rates = [0.0001, 0.001, 0.0005]
 learning_rates = [0.0001]
 batch_size = 64
-DROPOUT = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6]
+DROPOUT = [0.2, 0.3, 0.4, 0.5, 0.6]
 DROPOUT = [0.5]
 
 def build_model(hp):
@@ -97,6 +97,7 @@ def build_model(hp):
 def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
     initializer = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
+    initializer2 = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
 
     layer1 = Dense(DENSE_DIM,
             activation='relu',
@@ -125,7 +126,7 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     #batch normalization makes the the model results inconsistent!!!
     #model.add(batch_norm)
     #model.add(Dropout(DROPOUT))
-    model.add(Dense(target_len, activation='softmax'))
+    model.add(Dense(target_len, activation='softmax', kernel_initializer = initializer2))
     model.summary()
 
     adam = Adam(lr=learning_rate)

@@ -1,21 +1,65 @@
-Hewlett-Packard is now forging ahead with plans to split off its PC-and-printer businesses into a separate company, with the rest of the company’s enterprise portfolio staying together in a separate entity to be called Hewlett-Packard Enterprise, the company said early Monday morning.
+Backtracking on its previous report which claimed iOS 8.2 would be released for public consumption this week, BGR is now claiming that the software will be released to the public next week.
 
-The [company]Hewlett-Packard[/company] enterprise unit, comprising servers, storage, networking, converged systems, services and software and the OpenStack Helion cloud, will be led by Meg Whitman as president and CEO. Pat Russo will be chairman of that board.
+According to BGR founder and editor Jonathan Geller, Apple’s decided to release one more Gold Master (GM) version crying a build number of 12D508 to employees and testers ahead of an expected launch this coming Monday.
 
-The PC and printer entity, to be known as HP Inc., will be led by Dion Weisler as president and CEO, with Whitman as chairman. The Wall Street Journal (registration required) was first to report this news Sunday afternoon.
+Jump past the fold for full release notes.
 
-Here’s a glimpse at how the two companies will look:
+Health App improvements
 
-“Our work during the past three years has significantly strengthened our core businesses to the point where we can more aggressively go after the opportunities created by a rapidly changing market,” Whitman said in a statement. “The decision to separate into two market-leading companies underscores our commitment to the turnaround plan. It will provide each new company with the independence, focus, financial resources, and flexibility they need to adapt quickly to market and customer dynamics, while generating long-term value for shareholders.”
+Adds the ability to select the unit of measurement for body temperature, weight, height, distance, and blood glucose
 
-HP, truly an iconic IT company, has been slammed in the past decade by the shift to mobile devices and cloud and a series of management fiascos including the short-lived tenure of former CEO Leo Apotheker. Under his watch, the company considered selling off its still huge PC business, a plan that was scotched by Whitman when she took the reins in 2011. The rationale behind holding onto the PC business was that it gave HP huge volume buying power advantages in procuring chips and other components for its server business as well.
+Improves stability when dealing with large amounts of data
 
-Toni Sacconaghi, senior analyst with Bernstein Research, wrote in a note that while a split up of HP is hardly a new topic, his take is that the spin off seems to be “fueled by weakness at HP rather than strength.” He also noted that HP in the past few months “came close” to buying Rackspace for nearly $6 billion; nearly bought EMC and “apparently has shopped various parts of its portfolio PCs, its Unix business, IT Services.”
+Includes the ability to add and visualise workout sessions from 3rd-party apps
 
-In another research report released before the news was official, Wells Fargo analyst Maynard Um wrote:
+Addresses an issue that may have prevented users from adding a photo in Medical ID
 
-We believe a separation may suggest HP could become more active in both divestitures and acquisitions, which we believed would be increasingly necessary in FY2015. While this is somewhat of an about face from its prior stance that it was “better together”, we believe this, if true, is likely to be driven by competitive market dynamics as well as a stabilization in its PC business.
+Fixes units for vitamins and minerals
 
-The separation, which HP said will be tax-free to shareholders in terms of federal income taxes, is slated to be done by the end of HP’s 2015 fiscal year, ending October 31, 2015.
+Fixes an issue where Health data wouldn’t refresh after changes data source order
 
-Note: This story was updated several times with additional analyst quotes.
+Fixes an issue where some graphics showed no data values
+
+Adds a privacy setting that enables turning off tracking of steps, distance, and flights climbed
+
+Stability Enhancements
+
+Increases stability of Mail
+
+Improves stability of Flyover in Maps
+
+Improves stability of Music
+
+Improves VoiceOver reliability
+
+Improves connectivity with Made for iPhone Hearing Aids
+
+Bug Fixes
+
+Fixes an issue in Maps that prevented navigating to some favorite locations
+
+Addresses an issue where the last word in a quick reply message wasn’t autocorrected
+
+Fixes an issue where duplicate iTunes purchased content could prevent iCloud restore from completing
+
+Resolves an issue where some music or playlists didn’t sync from iTunes to the Music app
+
+Fixes an issue where deleted audiobooks sometimes remained on the device
+
+Resolves an issue that could prevent call audio from routing to car speakers while using Siri Eyes Free
+
+Fixes a Bluetooth calling issue where no audio is heard until the call is answered
+
+Fixes a timezone issue where Calendar events appear in GMT
+
+Addresses an issue that caused certain events in a custom reoccurring meeting to drop from Exchange calendar
+
+Fixes an certificate error that prevented configuring an Exchange account behind a third-party gateway
+
+Fixes an issue that could cause an organizer’s Exchange meeting notes to be overwritten
+
+Resolves an issue that prevented some Calendar events from automatically showing as “busy” after accepting an invite.
+
+Apple is holding a media event under the “Spring Forward” tagline next Monday so iOS 8.2 would likely officially launched right after the presentation has wrapped up.
+
+Source: BGR

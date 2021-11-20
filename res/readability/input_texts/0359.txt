@@ -1,15 +1,21 @@
-Tonight — finally! — ESPN is going to have an in-depth discussion on the NFL's domestic violence problem. The discussion will feature the opinions of up to 11 men and zero women, in a remarkable showing of the exact flavor of dumb meathead that ESPN is so adept at that it should trademark.
+Hewlett-Packard is now forging ahead with plans to split off its PC-and-printer businesses into a separate company, with the rest of the company’s enterprise portfolio staying together in a separate entity to be called Hewlett-Packard Enterprise, the company said early Monday morning.
 
-Advertisement
+The [company]Hewlett-Packard[/company] enterprise unit, comprising servers, storage, networking, converged systems, services and software and the OpenStack Helion cloud, will be led by Meg Whitman as president and CEO. Pat Russo will be chairman of that board.
 
-The panel was ostensibly was conceived of and approved of by several people who get paid money to do their jobs. Their jobs creating television programs that are good and informative. They are bad at their jobs. A domestic violence panel involving 11 men and 0 women when women constitute the vast majority of domestic violence victims is neither good nor informative.
+The PC and printer entity, to be known as HP Inc., will be led by Dion Weisler as president and CEO, with Whitman as chairman. The Wall Street Journal (registration required) was first to report this news Sunday afternoon.
 
-Understandably, this has upset many people with brains that they use to think rather than promote ESPN programming, including Esquire's Ben Collins. Collins has had about enough of ESPN's blatant NFL defense. He argues that ESPN's pre-Monday Night Football man only domestic violence discussion is even more insidious when you consider just how pathetically cowardly and craven the network is.
+Here’s a glimpse at how the two companies will look:
 
-[...] you will not hear these words: "Roger Goodell is a liar." You will not hear these words because ESPN has a $15.2 billion broadcasting agreement with the NFL. You will not hear these words because it would interfere with the amount of money both ESPN and the NFL can make. You will not hear these words because ESPN is not a company in the business of journalism. It is an entertainment outlet that sometimes reports convenient, timely information to drive interest in future programming. You will not hear these words because ESPN has intimidated its on-air staff into standing down against domestic violence.
+“Our work during the past three years has significantly strengthened our core businesses to the point where we can more aggressively go after the opportunities created by a rapidly changing market,” Whitman said in a statement. “The decision to separate into two market-leading companies underscores our commitment to the turnaround plan. It will provide each new company with the independence, focus, financial resources, and flexibility they need to adapt quickly to market and customer dynamics, while generating long-term value for shareholders.”
 
-Advertisement
+HP, truly an iconic IT company, has been slammed in the past decade by the shift to mobile devices and cloud and a series of management fiascos including the short-lived tenure of former CEO Leo Apotheker. Under his watch, the company considered selling off its still huge PC business, a plan that was scotched by Whitman when she took the reins in 2011. The rationale behind holding onto the PC business was that it gave HP huge volume buying power advantages in procuring chips and other components for its server business as well.
 
-What an excellent way for ESPN and the NFL to lead into October Domestic Violence Awareness Month.
+Toni Sacconaghi, senior analyst with Bernstein Research, wrote in a note that while a split up of HP is hardly a new topic, his take is that the spin off seems to be “fueled by weakness at HP rather than strength.” He also noted that HP in the past few months “came close” to buying Rackspace for nearly $6 billion; nearly bought EMC and “apparently has shopped various parts of its portfolio PCs, its Unix business, IT Services.”
 
-[UPDATE: ESPN publicist Josh Krulewitz tells our sister site Deadspin that despite Esquire's report from the 26th, tonight's programming "was never going to be" a panel on domestic violence. Krulewitz says it's a "regular episode of Countdown, hosted by Suzy Kolber."]
+In another research report released before the news was official, Wells Fargo analyst Maynard Um wrote:
+
+We believe a separation may suggest HP could become more active in both divestitures and acquisitions, which we believed would be increasingly necessary in FY2015. While this is somewhat of an about face from its prior stance that it was “better together”, we believe this, if true, is likely to be driven by competitive market dynamics as well as a stabilization in its PC business.
+
+The separation, which HP said will be tax-free to shareholders in terms of federal income taxes, is slated to be done by the end of HP’s 2015 fiscal year, ending October 31, 2015.
+
+Note: This story was updated several times with additional analyst quotes.

@@ -1,35 +1,39 @@
-Cristina Kirchner, the president of Argentina , has "adopted" a Jewish boy in order, according to legend, to prevent him from turning into a werewolf.
+Innovative Genomics Institute / University of California at Berkeley
 
-Yair Tawil, 21, was born in the Argentine city of Rosario, the seventh son of Shlomo and Nehama Tawil.
+Cacao plants are slated to disappear by as early as 2050 thanks to warmer temperatures and dryer weather conditions.
 
-Under Argentine legend, any seventh consecutive son will grow up to become a werewolf. Any seventh daughter will become a witch.
+Scientists at the University of California are teaming up with Mars company to try to save the crop before it's too late.
 
-The belief in the myth was so strong that, centuries ago, the seventh child was often put to death.
+They're exploring the possibility of using the gene-editing technology CRISPR to make crops that can survive the new challenges.
 
-According to some reports, Jose Figeroa Alcorta, then-president of Argentina, became the godfather of José Brost, the seventh son of a Enrique Brost and Apolonia Holmann who had emigrated from Russia, in 1907 in a bid to counter the myth.
+Beyond the glittery glass-and-sandstone walls of the University of California’s new biosciences building, rows of tiny green cacao seedlings in refrigerated greenhouses await judgment day.
 
-However, Argentine historian Daniel Balmaceda told the Guardian there is no link between the two traditions. “The local myth of the lobizón [werewolf] is not in any way connected to the custom that began over 100 years ago by which every seventh son (or seventh daughter) born in Argentina becomes godchild to the president,” he said.
+Under the watchful eye of Myeong-Je Cho , the director of plant genomics at an institute that's working with food and candy company Mars, the plants will be transformed. If all goes well, these tiny seedlings will soon be capable of surviving — and thriving — in the dryer, warmer climate that is sending chills through the spines of farmers across the globe.
 
-Regardless of its origin, the tradition of Argentine presidents adopting the seventh son born to any couple does exist, and was formalised in 1973 by President Juan Domingo Perón, and a year later the ruling was enshrined in law.
+It's all thanks to a new technology called CRISPR, which allows for tiny, precise tweaks to DNA that were never possible before. These tweaks are already being used to make crops cheaper and more reliable. But their most important use may be in the developing world, where many of the plants that people rely on to avoid starvation are threatened by the impacts of climate change, including more pests and a lack of water.
 
-Those affected by law 20.843 – "The Law of Presidential Godfathership", were entitled to presidential protection, a gold medal and a scholarship for all studies until the 21st birthday.
+Cacao plants occupy a precarious position on the globe. They can only grow within a narrow strip of rainforested land roughly 20 degrees north and south of the equator, where temperature, rain, and humidity all stay relatively constant throughout the year. Over half of the world's chocolate now comes from just two countries in West Africa — Côte d’Ivoire and Ghana.
 
-But the ruling only applied to Catholic families, and so in 1993 Mr and Mrs Tawil wrote to the president asking for the honour to be extended to their son, Yair.
+But those areas won't be suitable for chocolate in the next few decades. By 2050, rising temperatures will push today's chocolate-growing regions more than 1,000 feet uphill into mountainous terrain — much of which is currently preserved for wildlife , according to the National Oceanic and Atmospheric Administration.
 
-The request was denied. But in 2009 the law was changed to apply to all – regardless of their religion.
+Mars, the $35 billion corporation best known for Snickers, is aware of these problems and others presented by climate change.
 
-And just before Christmas, Mrs Kirchner met with Yair, who became the first Jewish godson of a president in Argentina's history.
+In September, the company pledged $1 billion as part of an effort called "Sustainability in a Generation," which aims to reduce the carbon footprint of its business and supply chain by more than 60% by 2050.
 
-The president in her tweets and photos described to her 3.4 million Twitter followers a "magical moment" with a "marvellous family." She described Yair as "a total sweety," and his mother a "Queen Esther."
+"We're trying to go all in here," Barry Parkin, Mars' chief sustainability officer, told Business Insider. "There are obviously commitments the world is leaning into but, frankly, we don't think we're getting there fast enough collectively."
 
-She tweeted that the Tawils "are a very special family. They have a sort of peace, happiness and a lot of love that is not common."
+Its initiative with Cho at UC Berkeley is another arm of that efforts. If all goes as planned, they could develop cacao plants that don’t wilt or rot at their current elevations, doing away with the need to relocate farms or find another approach.
 
-<noframe>Twitter: Cristina Kirchner - Es una familia muy especial. Tienen como paz, alegr&iacute;a y mucho amor. No es com&uacute;n. Buena vibra. <a href="http://t.co/QILUC11xR4" target="_blank">http://t.co/QILUC11xR4</a></noframe>
+Jennifer Doudna, the UC Berkeley geneticist who invented CRISPR, is overseeing the collaboration with Mars. Although her tool has received more attention for its potential to eradicate human diseases and make so-called “designer babies,” Doudna thinks its most profound applications won’t be on humans but rather on the food they eat.
 
-Mrs Kirchner adopted her first "godson" in 2008. In 2012 she adopted another, Natanael Eric, who was also born in Rosario, and last year three more boys – all of them born in the northern province of Santa Fe.
+Courtney Verrill
 
-The Argentine president had been due to usher in the New Year with a visit to the Vatican, to see her compatriot Pope Francis.
+An avid tomato gardener, Doudna thinks her tool can benefit everyone from large food companies like Mars to individual hobbyists like herself.
 
-But a fall on Boxing Day, when she slipped on a wet floor in her home, caused her to fracture her ankle.
+”Personally, I’d love a tomato plant with fruit that stayed on the vine longer,” Doudna told Business Insider.
 
-On Monday it was announced that she had cancelled the trip and suspended official events for the beginning of next month.
+The research lab she oversees at UC Berkeley is called the Innovative Genomics Institute. Many of the efforts by graduate students there focus on using CRISPR to benefit small-holder farmers in the developing world. One such project aims to protect cassava — a key crop that prevents millions of people from starving each year — from climate change by tweaking its DNA to produce less of a dangerous toxin that it makes in hotter temperatures.
+
+Doudna founded a company called Caribou Biosciences to put CRISPR into practice, and has also licensed the technology to agricultural company DuPont Pioneer for use in crops like corn and mushrooms.
+
+Regardless of which crop the public sees CRISPR successfully used in first, the technology will be a key tool in a growing arsenal of techniques we'll need if we plan to continue eating things like chocolate as the planet warms.

@@ -1,7 +1,27 @@
-Commissioner Helric Fredou, the person in charge of the Charlie Hebdo investigation, committed suicide on Thursday night in his office using his service weapon. The reasons behind the suicide are as yet unknown.
+A California company is hoping to revolutionize the security business with autonomous robots.
 
-According to an article on ‘Uprooted Palestinians’ blog:
+The Knightscope K5 is one of four drones now patrolling Microsoft's Silicon Valley Campus.
 
-He was deputy director of the regional police service since 2012. His father was a former police officer, his mother was a nurse in the emergency context CHU Limoges. He was single and had no children. According to the police union commissioner was depressed and experiencing burnout . In November 2013, the Commissioner Fredou had discovered the lifeless body of his colleague, number 3 of SRPJ Limoges, who had also committed suicide with his service weapon in his office. He was also 44 years old. The Commissioner Fredou, like all agents SRPJ worked yesterday on the case of the massacre at the headquarters of Charlie Hebdo. In particular, he surveyed the family of one of the victims. He killed himself before completing its report. A psychological cell was set up in the police station. Source: https://uprootedpalestinians.wordpress.com/2015/01/09/another-mossad-victim-police-chief-helric-fredou-investigating-charlie-hebdo-commits-suicide/
+Matt Stambaugh, the Calgary Eyeopener's science and technology columnist, spoke about how the five feet tall robots learn.
 
-This story has received very little coverage in the media as yet. Are the circumstances around his death suspicious? We will keep you updated with this story as it progresses.
+"You take them to an area, apparently an operator has to walk around the perimeter where they're supposed to patrol once, then they go about learning their environments," said Stambaugh. "What they're using is a variety of different sensors essentially to take the role of what a lot of private security contractors do today."
+
+According to Stambaugh, the robots are capable of detecting anomalies and making decisions.
+
+"It's not quite as advanced as what Google is doing with their self-driving car, but they've got different sensors on board to make a map of the area and then they've got code on board to decide what is something that should be reported back."
+
+"They've got thermal imaging if you need. They've got chemical sensors, licence plate recognition software [and] facial recognition software," said Stambaugh. "It looks kind of like a large Roomba. And so instead of looking for dust bunnies it's looking for, you know, criminals."
+
+K5s to hit the market in 2015
+
+According to Stambaugh, the robots will be hitting the market starting 2015.
+
+"What the company Knightscope is trying to do is to lease these out on a per-hour basis," said Stambaugh. "So $6.25 an hour they'll lease you one of these K5s and that's about half the price of the average security guard."
+
+There are many advantages to a robot over a human patrol.
+
+"They'll work triple shift, 24 hours a day. The battery is supposed to last around a day and when it runs out they go back to a charging carpet and in 20 minutes they are charged up again."
+
+Stambaugh also said the robots do not have any weapons, but that may change in the future.
+
+"Basically what it's doing is calling back to a manned response centre if something is going wrong," he said.

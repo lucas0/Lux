@@ -1,77 +1,29 @@
-The Apple Watch is one of the more intriguing pieces of hardware to come out of Cupertino for some time. It was long-awaited, and at first glance, well-received. So what is it that we've exactly been waiting for all this time? Is this the one smartwatch to rule them all or just another in a long line of "meh?"
+The body of the missing CDC doctor who controversially warned that this year’s “disastrous” flu shot was responsible for the deadly flu epidemic, was found in an Atlanta river on Tuesday evening.
 
-Advertisement
+Dr. Timothy J. Cunningham, 35, a team lead with CDC’s Division of Population Health, went missing on February 12th, according to Atlanta police, with family and police desperate for answers regarding his sudden disappearance.
 
-Apple's been able to spin gold from perceived failure before, even the iPad had its doubters, and they're back this time too. And maybe for good reason. We've learned a lot more about Apple's first wearables since its announcement months ago. This is what we know about what we'll be getting.
+Today police confirmed that his remains were pulled from the Chattahoochee River on April 3rd after being found by fishermen. He was found face up and covered in mud
 
-The Apple Watch will try to replace your credit cards.
+An autopsy has confirmed that the body belonged to the missing doctor.
 
-Of course, Apple Watch will come NFC-equipped to support the new e-payments system, Apple Pay. But it will work a little bit differently here than on your iPhone 6/6 Plus. Essentially, you'll use a passcode to authorize Apple Pay and then you'll stay logged in as long as the watch remains in contact with your skin.
+In January, Dr. Cunningham shared his opinion that this year’s flu shot was behind the deadly outbreak of the flu, while warning that if his name was attached to the widely-circulated quotes, he would lose his job – or suffer an even worse fate.
 
-Advertisement
+Fulton County Chief Medical Examiner Dr. Jan Gorniak said on Thursday that they have not yet ruled out the possibility that Dr. Cunningham was murdered, and are waiting for more witnesses to come forward before they conclude their investigation.
 
-Also, the Apple Watch will allow Apple 5, 5C, and 5S users to finally get on the Apple Pay wagon, which is great for them and for Apple.
+It is also not yet known how Cunningham’s body ended up in its final location.
 
-The Apple Watch's will track health and fitness about as well as anything else.
+“We may never be able to tell you how he got into the river,” Major Michael O’Connor told reporters during a press conference.
 
-When it came to health and fitness, the Apple Watch wanted to be so much more, according to The Wall Street Journal. It was supposed to be a state-of-the-art tracker, one with a built-in EKG and other sensors that would measure stress (much like the new Jawbone Up3). But all those sensors kind of suck and didn't really span well across different types of wrists.
+“We’re open to the idea that somebody could come forth with information that we have not previously been privy to.”
 
-Advertisement
+Video unavailable This video may no longer exist, or you don't have permission to view it. Learn More
 
-So instead, the Apple Watch is stuck with the classics—an accelerometer, gyroscope, and HR monitor (which have also been dinged for inaccuracy in general). The Apple Watch's Activity and Workout apps will track you throughout your typical calorie-counting, step-making, workout-doing day, you know, like every other fitness watch out there. If you want more specifics on what the watch will track, the Apple Watch companion app leak posted by 9to5Mac is a good place to start:
+AOL reports: Cunningham, a highly regarded epidemiologist at the CDC, disappeared without a trace after he left work mid-day in February, complaining of feeling ill.
 
-Advertisement
+After Cunningham failed to report to work or contact his family for two days following his disappearance, his parents, Terrell and Tia-Juana Cunningham, drove down to Georgia from their house in Maryland to check on their son.
 
-Some of the more interesting applications in health and fitness will most likely come from third-party developers like DexCom, who are developing an embeddable chip that will pump out glucose readings for diabetics. But in this scenario, the Apple Watch is merely a display for the information, and other smartwatches, most notably the Pebble Watch, can already do this kind of thing.
+When they arrived at his Atlanta home on Feb. 14, the couple found their son’s phone, keys, wallet, car and dog, with no trace of him in sight.
 
-The Apple Watch might replace your car keys.
+The unusual circumstances surrounding Cunningham’s disappearance baffled authorities for weeks until his remains were discovered on Tuesday.
 
-Speaking with The Telegraph, Cook said that he also wanted the Apple Watch to unlock your car and replace those annoyingly big key fobs. Of course, there's a huge gulf between "want" and "will" but the idea is kind of cool. Only one major problem—dat battery. I hope you don't mind getting stranded when your watch runs out of juice. And if you need to have a backup key in your pocket, what's the point?
-
-Advertisement
-
-The Apple Watch might replace your (Apple TV) remote.
-
-In another pimping session with Bloomberg Businessweek, Apple CEO Too Many Cook(s) ever-so-off-handedly mentioned that he loved controlling his Apple TV with the Apple Watch.
-
-Advertisement
-
-The Apple Watch can join you in the shower.
-
-Cook also says he wears his Apple Watch in the shower. This doesn't match up with what Yahoo's David Pogue said way back in September after the big announcement. So still a bit of a question mark, but you'd think Cook would know.
-
-Advertisement
-
-The Apple Watch will not solve the smartwatch battery problem.
-
-You could say Apple's philosophy is "better right than first" and perhaps the biggest smartwatch failing that needs to be righted is battery life. A lot of smartwatches—specifically Android Wear—can't boast more than a day and a half of life, or two at best. The disappointment began with the Moto 360 and pretty much continued from there. Charging every night is almost inevitable.
-
-Advertisement
-
-The Apple Watch, it seems, won't be much better. In late January, 9to5Mac reported some dismally bad battery results for the Apple Watch: 2.5 hours of "heavy use," 3.5 hours of standard app use, and a goal of 19 hours of mixed use (and even that might be a stretch for the first generation). That is definitely not solving the battery problem. Not to mention Tim Cook himself said he needs to charge it every night.
-
-Apple seems to recognize the issue and is preparing a lot of workarounds. The Apple Watch will use a MagSafe wireless charger, so you don't have to mess around with a cradle or hunt for a lightning port. Apple is also developing a "Power Reserve" mode—basically "just a watch" mode—so you can get the most juice out of your watch. This will be the first power-saving feature on any iDevice.
-
-Advertisement
-
-The Apple Watch will probably have a shit ton of apps.
-
-A rumor was circulating last month that the Apple Watch would launch with 100,000 apps. That seems....ludicrously hopeful. Cult of Mac points out that it took iOS near 16 months to reach 100,000 apps. So we'll see if something relatively iffy and new like a watch can manage to launch with a cool 100k. But even if that number is a few thousand (or tens of thousands) shy of the truth, the Apple Watch won't feel empty at launch by any means.
-
-Advertisement
-
-At a company briefing in Germany, Cook Master Flex said "tons" of apps will soon be announced for the Apple Watch, alongside previously announced partners like Panera, Tesla, and Todoist and many others. In fact, apps will very likely be the center of discussion during Apple's upcoming "Spring Forward" event a week from now.
-
-The Apple Watch will be about as powerful as an iPod Touch.
-
-It's not a huge deal for a watch but let's just touch on specs briefly. The Apple Watch will have an S1 processor, which as Mark Gurman of 9to5Mac notes, offers essentially the same performance as an iPod Touch. But because it's a custom chip made just for the Apple Watch, it's possible the watch will perform a little bit better than most Android Wear watches that generally use off-the-shelf Snapdragon 400s. But not exactly an iPhone on your wrist by any means.
-
-Advertisement
-
-The Apple Watch will come in all kinds of styles, with all kinds of prices.
-
-Right now, the price for Apple's first foray into wearables is $350 for the base model, the Sport. The stainless steel Apple Watch will be around $500 and then there's that 18k gold one that will be lots of $$$. The original figure was $4000, but that's jumped up to $8,000, so probably somewhere in there. Not like you really need to know.
-
-Advertisement
-
-The Apple Watch is also rumored to also be available in international markets at launch. After all, Apple ordered 3-5 million watches for the first batch. For comparison, Android Wear timepieces didn't even get close to breaking a million in 2014, so Apple seems convinced they have a hit on their hands. Come next week when we actually see the real watch we're getting, we'll have much better idea if those hopes are well-founded or misplaced, and whether Apple has any other unknown watch features up its literal sleeves.
+.

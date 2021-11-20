@@ -1,17 +1,1 @@
-Hewlett-Packard to split in 2 companies
-
-WASHINGTON (AP) — Hewlett-Packard Co., the iconic maker of personal computers and printers, reportedly plans to split itself into two separate companies by spinning off its technology services business.
-
-The Wall Street Journal reported the pending split Sunday citing people familiar with the matter, who said an official announcement could come as soon as Monday. A spokeswoman for HP declined to comment on the report.
-
-The breakup would create one company that sells HP's computers and printers and a second that focuses on technology services, including data storage, servers and software.
-
-The Palo Alto, California-based company has laid off tens of thousands of employees in recent years due to flagging sales as consumers turn to mobile devices to perform basic computing chores. The shift has curbed demand for HP's desktop and laptop computers, as well as its printers.
-
-In its most recent quarter, HP posted revenue of $27.6 billion, up 1 percent at the same time last year. Although only a slight uptick, it marked HP's first year-over-year gain in quarterly revenue since its fiscal third quarter in 2011.
-
-Printers and computers contributed 51 percent of the company's quarterly revenue, with the rest coming from four businesses that offer various technology services, including consulting, software and financial programs.
-
-HP previously announced plans to wrap up between 11,000 to 16,000 layoffs by October, expanding upon the 34,000 employees that it had already jettisoned from its payroll.
-
-Investors often reward technology companies for slimming down and focusing on core business offerings.
+b'LONDON  A prominent British laboratory is forming a special partnership that would sidestep the drug industry to sell a potential vaccine against the coronavirus without profits or licensing fees in Britain and in low- and middle-income countries.\n\nScientists, nonprofit groups and public health experts have urged that any successful vaccine to combat the pandemic be distributed at the lowest possible cost and on the basis of need rather than profit. But for-profit drug giants or biotechnology start-ups have dominated the development race, especially in the United States, a vital market because of its high drug prices.\n\nThe British laboratory, at Imperial College London, could alter that landscape, in part because its technology has the potential to develop a vaccine that is cheaper and easier to manufacture than others, said Robin Shattock, the lead scientist on the project.\n\nIf successful, he said, the vaccines lower cost could appeal to the large donor organizations that typically supply low-income countries, which make up much of the world. It could also provide a cheaper alternative in affluent countries.'

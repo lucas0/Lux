@@ -1,13 +1,11 @@
-Last week, Apple sent out the invites for its “Spring Forward” event, slated to be held at the Yerba Buena Center for the Arts in San Francisco on March 9th.
+The FDA has just issued a warning this week noting that they will be putting a ban on triclosan—a common antibacterial agent used in soaps, detergents, toys, cosmetics, and toothpaste. Apparently, the chemical poses a high-degree of health risks and side effects.
 
-Many are expecting Apple talk more about the Apple Watch. However, sources familiar with the matter within Apple have exclusively told The Michael Report that Apple plans to unveil the long-awaited Retina MacBook Air at the same event. The Michael Report has independently verified this information to be highly credible.
+Colgate Total is just one of many products that list triclosan as an active ingredient.
 
-We should note that this information falls in line with what Apple analysts such as KGI Securities’ Ming-Chi Kuo and Oppenheimer’s Andrew Uerkwitz have been predicting for months. Supply chain sources who spoke to the press have also said that Apple ramped up their production in late 2014 and entered the mass production stage in December, with the goal of producing enough units for an early-2015 debut.
+“Based on scientific evidence, the balance of benefit and risk is favorable for these products,” Andrea Fischer, an FDA Spokesperson, said of the announcement.
 
-Apple’s MacBook Air line, which got upgraded in April last year (the only real upgrade being a small speed bump), still features a non-Retina screen with the same screen resolution that hasn’t been updated since late 2010. This is a stark contrast from the rest of the Apple computer lineup, which have been steadily upgraded to a Retina (or at least, a version of it is offered) screen since the first Retina MacBook Pro was unveiled in 2012.
+“The dangers of triclosan (and a related antibacterial chemical, triclocarban) are many,” the Natural Resource Defense Council said in a statement. “For starters, it’s an endocrine disruptor, meaning it interferes with important hormone functions, which can directly affect the brain in addition to our immune and reproductive systems.”
 
-The upcoming Retina MacBook Air, if earlier reports are to be believed, will come in an ultra slim design that combines the productivity of the current larger-screened 13-inch MacBook Air with the portability of the 11-inch MacBook Air.
+“Specifically, the chemical disturbs thyroid, testosterone, and estrogen regulation, which can create a host of issues including early puberty, poor sperm quality, infertility, obesity, and cancer,” the statement continues. “Studies have also shown it can lead to impaired learning and memory, exacerbate allergies, and weaken muscle function. The impacts of prolonged exposure during fetal development, infancy, and childhood can be particularly severe, resulting in permanent damage.”
 
-Internally, the new Retina MacBook Air is said to feature Intel’s next-generation Broadwell Core M low-power processors, which would allow Apple to strip the computer of its fan assembly to create an even thinner profile. Other compromises Apple reportedly made in exchange for a thinner and lighter body includes the full-sized USB ports, MagSafe connectors and SD card slots.
-
-The Retina MacBook Air, currently codenamed “MacBook Stealth” internally, will also come with a modest price decrease according to previous reports.
+Please pass this information on and be sure to go through your toiletries.

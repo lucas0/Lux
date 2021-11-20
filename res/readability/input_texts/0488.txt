@@ -1,13 +1,73 @@
-A 19-YEAR-OLD woman woke up in the middle of brain surgery and was lucid enough to ask doctors how the surgery was going.
+Phishing & Spoof Sites Examples
 
-Iga Jasica, of Poland, was having a cancerous growth removed from her brain at the Central Clinical Hospital in the city of Katowice when, mid-surgery, the anaesthetic wore off, mirror.co.uk reported.
+Phishing emails directing users to spoof websites pretend to represent a reputable source, such as FedEx, when in reality they are operated by criminals attempting to commit theft. Spoof websites attempt to collect user names, passwords, Social Security numbers, credit card details and more. Many spoofed sites even allow users to log in, giving them a false sense of security.
 
-Jasica, whose brain was exposed at the time she awoke, asked the docs how the surgery was going — then started chatting about cats.
+Subject: Regarding Your Online Access
 
-“Despite coming round, she didn’t feel anything and was never in danger,” neurosurgeon Professor Dawid Larysz said.
+From: FedEx.com Online Services
 
-It’s possible the surgery may have triggered something that woke her up, experts said — but doctors are also looking into whether the anaesthesia was administered correctly.
+To:
 
-Jasica later said: “I can’t remember much, but the doctor said he talked to me about cats, which I love. I missed Christmas because of this operation, but it is the best present I could have had as I am now feeling great.”
+Subject: Regarding Your Online Access
 
-This article first appeared in the New York Post and was reproduced with permission.
+Dear Customer,
+
+Due to Ongoing periodic update on all FedEx account, we advise that you update your account to avoid Suspension .
+
+Please click the link below to update your Account access
+
+Log in to fedex.com (links to spoof site)
+
+Please note that this link will expire in 48 hours from the time of your e-mail address reset request. After that time, you will need to re-start the process by logging into fedex.com.
+
+Thank you for choosing FedEx.
+
+This message has been sent by an auto responder system. Please do not reply to this message. The content of this message is protected by copyright and trademark laws under U.S. and international law. Review our privacy policy. All rights reserved.
+
+Subject: Pay your Fedex invoice online.
+
+From: BillingOnline@fedex.com
+
+To:
+
+Subject: Pay your Fedex invoice online
+
+Hello
+
+You have a new not paid invoice(s) from FedEx that is ready for payment.
+
+The following invoice(s) are to be paid now:
+
+Invoice Number
+
+8957-31879
+
+To pay or review these invoices, please sign in to your FedEx BIlling Online account by clicking on this link: http://www.fedex.com/us/account/fbo
+
+Note: Please do not use this email to submit payment. This email may not be used as a remittance notice. To pay your invoices, please visit FedEx Billing Online, http://www/fedex.com/us/account/fbo
+
+Thank you,
+
+Revenue Services
+
+FedEx
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+From: "Shipping Service" <user.vhj@detroit.com>
+
+To:
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+Reply-To: "Shipping Service" <user.vhj@detroit.com>
+
+Order: FD-24762590342635
+
+Dear Customer,
+
+Your parcel has arrived at the post office an November 19. Our postrider was unable to deliver the parcel to your.
+
+To receive a parcel, please, go to the nearest our office and show this postal receipt.
+
+Thank you.

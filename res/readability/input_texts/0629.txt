@@ -1,13 +1,11 @@
-'Miracle cat' rises from the dead five days after burial
+First, call up 719-266-2837 (your local rates will apply).
 
-A Florida cat named Bart will receive surgery after it was hit by a car and mistakenly buried by its owners, who though the cat was dead. The cat managed to dig itself out of its grave and wander home five days later. less A Florida cat named Bart will receive surgery after it was hit by a car and mistakenly buried by its owners, who though the cat was dead. The cat managed to dig itself out of its grave and wander home five days ... more Photo: Humane Society Of Tampa Bay Photo: Humane Society Of Tampa Bay Image 1 of / 51 Caption Close 'Miracle cat' rises from the dead five days after burial 1 / 51 Back to Gallery
+Now that you're back, you should be sufficiently chilled out as you're listening to the Callin' Oates emergency hotline. The Hall & Oates-infused phone number hit our Twitter stream this afternoon, and we tracked down the creators of this Daryl & John project to see how and why it was built. Turns out that while it may not have been built pro bono by a H&O mega-fan for the community, it's still a pretty good story.
 
-A cat in the Tampa Bay region of Florida has seemingly risen from the dead after clawing its way out of a grave after five days.
+It's from "Go Solo" fan Michael Selvidge (@selviano), who recently joined cloud communications company Twilio, and his high school buddy Reid Butler (@rbutlersf). The San Francisco-based company requires that all new employees build an app, whether they're working in marketing, design, or systems. Selvidge, who formerly worked PR part time for Twilio before coming on as a full time employee, knew that he'd have to build something, but lacked an idea. He told me, "I thought, 'If only there was a pun that would work with this...' Then 'Callin' Oates' hit me, and that cinched it."
 
-According to the Humane Society of Tampa Bay, Bart the "Miracle Cat," was buried by its owners who mistook it for dead after being hit by a car.
+With the idea secure, Selvidge and Butler built and launched the hotline this weekend, mixing a bit of PHP and links to public URLs on Dropbox to create a simple interactive voice response system. The custom 1-719-26-OATES number costs $1 / month, and Selvidge found it via an online phrase search. Twilio's obviously helping out here, but any user can build a custom app on the Twilio API, and even with viral success like this, you'd just be out a "couple hundred bucks." Today alone, the first day it's gotten any serious visibility on the web, it's received over 34,223 requests as of 5:00 PM EST. And, if we're decent judges of the '80s revival in modern culture or the need for instant Hall and Oates fulfillment, the @CallinOates hotline should continue growing just fine.
 
-Five days later, neighbors found the cat alive, but in terrible condition wandering through their yard.
+Hello world! Call me... 719-266-2837 — Callin' Oates (@CallinOates) December 20, 2011
 
-RELATED: Jobs you don't realize your cat does
-
-The owners of the cat were unable to pay for Bart's treatment and surrendered the cat to a local Animal Health Center. The roughly 2-year-old cat will have emergency surgery Tuesday to repair his jaw and remove an eye damaged in the crash.
+Thanks, Katie!
