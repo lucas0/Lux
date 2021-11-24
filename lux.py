@@ -9,6 +9,8 @@ parser.add_argument('--num_folds', action='store', type=int, default=9, help='nu
 parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the featyres should be re-generated (feat) or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
+parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
+parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
 args = parser.parse_args()
 
 import tensorflow
@@ -22,10 +24,8 @@ set_random_seed(2)
 
 import traceback
 import resource
-import os
 import itertools
-from itertools import groupby
-from itertools import chain, combinations
+from itertools import groupby, chain, combinations
 
 import gc
 import pandas as pd
@@ -35,7 +35,9 @@ import matplotlib.pyplot as plt
 import random
 from sklearn.metrics import accuracy_score, f1_score
 import numpy as np
-import sys
+import os,sys
+#for comparing dev/deploy datasets and copying the right one into dataset.csv
+import filecmp, shutil
 from data_loader import load_data
 
 from tensorflow.keras import losses, regularizers
@@ -47,7 +49,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 24103
+seed = 4419
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -68,10 +70,20 @@ batch_size = 64
 DROPOUT = [0.2, 0.3, 0.4, 0.5, 0.6]
 DROPOUT = [0.5]
 
+#check which dataset will be used (development or deploy)
+d_dir = cwd+"/data/datasets/"
+dev_data = d_dir+"/dataset_test.csv"
+run_data = d_dir+"/dataset_bck.csv"
+cur_data = d_dir+"/dataset.csv"
+if args.env == "dev" and filecmp.cmp(run_data, cur_data, shallow=True):
+    shutil.copy2(dev_data, cur_data)
+if args.env == "deploy" and filecmp.cmp(dev_data, cur_data, shallow=True):
+    shutil.copy2(run_data, cur_data)
+
 def build_model(hp):
-    hp_units = hp.Int('units', min_value=32, max_value=512, step=32)
-    hp_dropout = hp.Float('dropout', min_value=0, max_value=0.5, step=0.1, default=0.5)
-    hp_lr = hp.Choice('learning_rate', values=[1e-2, 1e-3, 1e-4])
+    hp_units = hp.Int('units', min_value=128, max_value=512, step=32)
+    hp_dropout = hp.Float('dropout', min_value=0.2, max_value=0.6, step=0.1, default=0.5)
+    hp_lr = hp.Choice('learning_rate', values=[1e-3, 5e-4, 1e-4])
 
     initializer = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
 
@@ -189,7 +201,7 @@ for s in setup:
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
     try:
         for fold_test in range(args.num_folds):
-            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=input_feat, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims)
+            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=input_feat, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims, feature_list=args.feat_list)
             args.force_reload = None
             DATA_SHAPE = (train.shape)
             target_len = len(label_to_oh)
@@ -212,7 +224,7 @@ for s in setup:
             if args.tune_flag:
                 tuner = kt.BayesianOptimization(build_model,
                         objective="val_loss",
-                        max_trials=100,
+                        max_trials=300,
                         alpha=1e-3,
                         beta=20,
                         directory=cwd+"/Autotuner",
@@ -225,21 +237,24 @@ for s in setup:
                              callbacks=[early_stop],
                              epochs=200)
 
-                bestHP = tuner.get_best_hyperparameters(num_trials=1)[0]
-                print(bestHP.values)
-
-                model = tuner.hypermodel.build(bestHP)
-                H = model.fit(x=train, y=train_target,
-                            validation_data=(dev, dev_target), batch_size=32,
-                                epochs=100, callbacks=[early_stop], verbose=1, use_multiprocessing=False)
-                # evaluate the network
-                print("[INFO] evaluating network...")
-                predictions = model.predict_classes(test, batch_size=32)
-                f1_best_tune = f1_score(test_target, predictions, average="macro")
-                print(f1_best_tune)
-                with open(os.getcwd()+"/results.txt", "a") as f:
-                    string = ("Tune: "+str(seed)+" BestHP: "+str(bestHP.values)+" F1: "+str(f1_best_tune)+"\n")
-                    f.write(string)
+                bestHPs = tuner.get_best_hyperparameters(num_trials=3)[:3]
+                input(len(bestHPs))
+                for best_idx,best in enumerate(bestHPs):
+                    input(len(bestHPs))
+                    print(bestHP.values)
+                    model = tuner.hypermodel.build(bestHP)
+                    H = model.fit(x=train, y=train_target,
+                                validation_data=(dev, dev_target), batch_size=32,
+                                    epochs=100, callbacks=[early_stop], verbose=1, use_multiprocessing=False)
+                    # evaluate the network
+                    print("[INFO] evaluating network...")
+                    predictions = model.predict_classes(test, batch_size=32)
+                    f1_best_tune = f1_score(test_target, predictions, average="macro")
+                    print(f1_best_tune)
+                    with open(os.getcwd()+"/results.txt", "a") as f:
+                        string = ("Tune: "+str(seed)+" BestHP: "+str(bestHP.values)+" F1: "+str(f1_best_tune)+"\n")
+                        f.write(string)
+                    input(best_idx)
 
             if args.train_flag:
                 history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks, use_multiprocessing=False)

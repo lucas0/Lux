@@ -1,15 +1,9 @@
-The MacBook Air has always won high acclaim for its beautiful design but apparently the company is giving it a major overhaul for its 2015 edition. 9to5Mac’s Mark Gurman has another big Apple-related scoop and this time he’s detailing what he calls a “radical” design of Apple’s iconic ultra-thin laptop.
+The world waits with baited breath for more details about the Apple Watch, which should be revealed at a special event in San Francisco next Monday. But Tim Cook is just as anxious as we are to get this party started, and he teased some details in a trip to Germany.
 
-RELATED: New rumor says the MacBook Air of your dreams will enter production soon
+As reported by 9to5Mac, Cook visited the flagship Apple Store in Berlin, and confirmed to the employees there that the Apple Watch would go on sale in Germany during the month of April. Cook had already confirmed an April launch in the United States during a recent earnings call, so this might mean the watch will launch globally all at once, or that the United States will get it first, followed by Germany later in the month.
 
-According to Gurman, the 2015 MacBook Air will have a 12-inch display and will eliminate a lot of the design features we’ve grown used to seeing from MacBooks in the past. In particular, Gurman writes that the new MacBook “jettisons standards such as full-sized USB ports, MagSafe connectors, and SD card slots in favor of a markedly thinner and lighter body with a higher-resolution display.”
+Apple has been getting faster about rolling out products, and credited the “fastest rollout ever” of the iPhone 6 and 6 Plus as part of its record-breaking success in Q1 2015. 9to5Mac points out that Apple is already promoting the Apple Watch in China, so we wouldn’t be surprised if the watch launches there in April too.
 
-So how light and thin are we talking about? Gurman’s source say the 12-inch laptop will be “approximately a quarter-of-an-inch narrower than the 11-inch version, yet it is also a quarter-of-an-inch taller in order to accommodate the slightly larger display.”
+Cook also boasted to employees that “a whole ton of announcements are coming shortly about all of the apps,” according to 9to5Mac’s report. Starwood Hotels was specifically highlighted at the watch’s unveiling last September, and Cook also mentioned Panera Bread (an Apple Pay partner) and Salesforce. Apple has a tradition of inviting third-party app makers on stage to demonstrate, so we can’t wait to see what they’ve been cooking up with the WatchKit SDK.
 
-Even better, Gurman’s sources have provided such detailed descriptions of the new MacBook Air that artists were able to create beautiful renders of the devices, one of which we’ve posted below.
-
-As you can see in the render above, Apple has eliminated a lot of extra space on the side of the device, as its keyboard nearly extends to the edge of the computer’s aluminum frame.
-
-To get more details on the 2015 MacBook Air and to see more high-quality renders, we highly recommend checking out Gurman’s full post, available at the source link below.
-
-Developing…
+We’re wrapping up our own round of interviews with Apple Watch devs that will go live on Macworld later this week. And of course we will be live-blogging and live-tweeting direct from the event on Monday, beginning at 10am Pacific, 1pm Eastern. Besides price and release date, what are you most excited to find out about the Apple Watch? What apps do you hope to use from your wrist?

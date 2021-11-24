@@ -1,45 +1,73 @@
-Banks, who was falsely convicted of rape but later exonerated, says woman who come forward should be able to "expect to be believed."
+Phishing & Spoof Sites Examples
 
-Brian Banks is a man on a mission.
+Phishing emails directing users to spoof websites pretend to represent a reputable source, such as FedEx, when in reality they are operated by criminals attempting to commit theft. Spoof websites attempt to collect user names, passwords, Social Security numbers, credit card details and more. Many spoofed sites even allow users to log in, giving them a false sense of security.
 
-After being wrongfully convicted of rape at 16 years old and spending 62 months in prison for a crime he didn’t commit, he’s sharing his story in the hopes of helping others.
+Subject: Regarding Your Online Access
 
-In his upcoming Oxygen series, Final Appeal, Banks will attempt to educate the masses about the pitfalls that plague the current legal system. These problems often disproportionately affect black men.
+From: FedEx.com Online Services
 
-While some may expect Banks to have a visceral reaction to very public allegations of sexual assault permeating headlines, we learned the former NFL player is just as serious about empowering sexual assault victims as he is about protecting the wrongfully accused.
+To:
 
-“By the end of that day, I was being accused of kidnapping and rape.”
+Subject: Regarding Your Online Access
 
-“In 2002, when I was 16 years old, I was on my way to USC on a full scholarship,” he tells theGrio.com in an exclusive interview. “I had one more year left to play high school football. I went to a known make-out spot at my high school with a girl who I’ve known since middle school, and we made out. We didn’t have sex. But by the end of that day, I was being accused of kidnapping and rape. I got arrested that very same day, July 8, 2002, and I did not come home until five years and two months later at the age of 22,” he said.
+Dear Customer,
 
-“Then I did an additional five years of strict custody parole. I had to wear a GPS tracking device on my ankle for five total years and register as a sex offender and all kinds of inhumane circumstances I had to deal with for an additional five years, post-prison. All for it to come to an end when the person who made these accusation up came forward and admitted she lied about everything.”
+Due to Ongoing periodic update on all FedEx account, we advise that you update your account to avoid Suspension .
 
-Answers never came
+Please click the link below to update your Account access
 
-Banks’ accuser, Wanetta Gibson, never explained her true motives for making the false accusation.
+Log in to fedex.com (links to spoof site)
 
-“She recanted nine years later,” says Banks, still visibly rattled by a story he’s told dozens of times. “She was, in her words, ‘online on Facebook looking up friends from high school and saw how attractive I was and how much I had grown up,’ and she wanted to hook up,” he explained.
+Please note that this link will expire in 48 hours from the time of your e-mail address reset request. After that time, you will need to re-start the process by logging into fedex.com.
 
-“We still really do not understand. She has pointed the finger at so many other people instead of at herself. She will tell you the initial lie grew and grew once others got involved. She blames a lot of other people when the blame falls on a number of people and a number of reasons why my wrongful conviction took place.”
+Thank you for choosing FedEx.
 
-After Banks’ conviction, Gibson won a $1.5 million judgment against the Long Beach Unified School District after suing them for being unsafe.
+This message has been sent by an auto responder system. Please do not reply to this message. The content of this message is protected by copyright and trademark laws under U.S. and international law. Review our privacy policy. All rights reserved.
 
-Consent is important, and so is justice
+Subject: Pay your Fedex invoice online.
 
-“I have been watching the news the last few months and all the headlines that have been coming out. The subject of force and the subject of consent and the subject of lying about it are two shi**y sides of the same stick. Supporting someone who has experienced being victimized like that and someone who has been wrongfully accused of doing that are both valid things to do,” he says.
+From: BillingOnline@fedex.com
 
-Banks says he’s glad the #metoo movement has brought the subject of sexual assault to the forefront.
+To:
 
-“I think where we are now and what this dialogue does is it opens up a discussion that needs to happen in our society, and that is about sexual assault, that is about consent, and that is about the process in which we go investigate these kinds of cases. I think it’s a discussion that needs to happen,” he explains.
+Subject: Pay your Fedex invoice online
 
-“I think that people who have been sexually assaulted and want to speak up and seek justice for their experience should have the opportunity to do so. As someone who has been wrongfully convicted of rape, these are subjects I think we have to take our time with and be patient and investigate and make sure the right person is being held accountable.”
+Hello
 
-“These people… need to be prosecuted”
+You have a new not paid invoice(s) from FedEx that is ready for payment.
 
-Following her recantation, Gibson was ordered to pay a $2.6 million judgment, including a $750,000 settlement to the LBUSD, plus attorney fees, interest and more than $1 million in punitive damages.
+The following invoice(s) are to be paid now:
 
-“The statute of limitations was expired for perjury. I would have absolutely pressed charges against her if I could. Part of my life was taken away because of her. But more importantly, you have to go after people like this because a person such as herself makes it harder for a woman who is raped to come forward confidently and share their story and hope something is done about what happened to them. They should be able to expect to be believed,” he says.
+Invoice Number
 
-“For all the men and women who have been assaulted and for all the men and women who have been wrongfully convicted for these kinds of crimes, these people who make false claims need to be prosecuted.”
+8957-31879
 
-Stay tuned for our exclusive interview with Brian Banks and the inside scoop on his upcoming series, Final Appeal, coming to Oxygen in January.
+To pay or review these invoices, please sign in to your FedEx BIlling Online account by clicking on this link: http://www.fedex.com/us/account/fbo
+
+Note: Please do not use this email to submit payment. This email may not be used as a remittance notice. To pay your invoices, please visit FedEx Billing Online, http://www/fedex.com/us/account/fbo
+
+Thank you,
+
+Revenue Services
+
+FedEx
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+From: "Shipping Service" <user.vhj@detroit.com>
+
+To:
+
+Subject: ID (k)dbm47-511-511-7465-7465
+
+Reply-To: "Shipping Service" <user.vhj@detroit.com>
+
+Order: FD-24762590342635
+
+Dear Customer,
+
+Your parcel has arrived at the post office an November 19. Our postrider was unable to deliver the parcel to your.
+
+To receive a parcel, please, go to the nearest our office and show this postal receipt.
+
+Thank you.

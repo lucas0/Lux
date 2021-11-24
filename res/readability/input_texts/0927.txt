@@ -1,19 +1,77 @@
-PREMIER ballerina Darcey Bussell took centre stage at the launch of a series of prints of paintings of herself commissioned by a Gerrards Cross company to help raise funds for the Alzheimer's Society.
+The Apple Watch is one of the more intriguing pieces of hardware to come out of Cupertino for some time. It was long-awaited, and at first glance, well-received. So what is it that we've exactly been waiting for all this time? Is this the one smartwatch to rule them all or just another in a long line of "meh?"
 
-The limited edition prints were unveiled at the Royal Opera House last month, produced from three original water colour portraits by Chalfont St Peter water colour artist Gordon King.
+Advertisement
 
-They were commissioned by Ever English Ltd and 1,000 limited edition prints have been produced of each portrait which will be sold either direct from the company or over the internet.
+Apple's been able to spin gold from perceived failure before, even the iPad had its doubters, and they're back this time too. And maybe for good reason. We've learned a lot more about Apple's first wearables since its announcement months ago. This is what we know about what we'll be getting.
 
-Ever English hopes to donate more than £50 from the sale of each print to the Alzheimer's Society.
+The Apple Watch will try to replace your credit cards.
 
-The Darcey Bussell collection was the first venture for Neil Buckley since he set up the company last year.
+Of course, Apple Watch will come NFC-equipped to support the new e-payments system, Apple Pay. But it will work a little bit differently here than on your iPhone 6/6 Plus. Essentially, you'll use a passcode to authorize Apple Pay and then you'll stay logged in as long as the watch remains in contact with your skin.
 
-Mr Buckley, who already has an import business, decided he wanted to start up an export business and at the same time help a charity. He has had personal experience of the effects of Alheimzer's through his late father-in-law and chose to donate part of the proceeds to the charity.
+Advertisement
 
-Mr Buckley said: "I have known Gordon King for about 20 years. I approached Darcey Bussell out of the blue and she was very willing to help from the start." He accompanied Mr King to the Royal Opera House to do the original sketches and photographs.
+Also, the Apple Watch will allow Apple 5, 5C, and 5S users to finally get on the Apple Pay wagon, which is great for them and for Apple.
 
-The launch also provided the latest project for website design company E-creation, also in Gerrards Cross, which Mr Buckley found through the Register of Accredited Service Providers supported by Thames Valley Business Link.
+The Apple Watch's will track health and fitness about as well as anything else.
 
-He said: "It was not only the quality of service, but the level of support that E-creation provided which was impressive."
+When it came to health and fitness, the Apple Watch wanted to be so much more, according to The Wall Street Journal. It was supposed to be a state-of-the-art tracker, one with a built-in EKG and other sensors that would measure stress (much like the new Jawbone Up3). But all those sensors kind of suck and didn't really span well across different types of wrists.
 
-The prints, priced between £225 and £265 are being sold either direct from Ever English Ltd at 31 Howards Wood Drive, Gerrards Cross, Bucks SL9 7HR or via the internet at www.everenglish.com
+Advertisement
+
+So instead, the Apple Watch is stuck with the classics—an accelerometer, gyroscope, and HR monitor (which have also been dinged for inaccuracy in general). The Apple Watch's Activity and Workout apps will track you throughout your typical calorie-counting, step-making, workout-doing day, you know, like every other fitness watch out there. If you want more specifics on what the watch will track, the Apple Watch companion app leak posted by 9to5Mac is a good place to start:
+
+Advertisement
+
+Some of the more interesting applications in health and fitness will most likely come from third-party developers like DexCom, who are developing an embeddable chip that will pump out glucose readings for diabetics. But in this scenario, the Apple Watch is merely a display for the information, and other smartwatches, most notably the Pebble Watch, can already do this kind of thing.
+
+The Apple Watch might replace your car keys.
+
+Speaking with The Telegraph, Cook said that he also wanted the Apple Watch to unlock your car and replace those annoyingly big key fobs. Of course, there's a huge gulf between "want" and "will" but the idea is kind of cool. Only one major problem—dat battery. I hope you don't mind getting stranded when your watch runs out of juice. And if you need to have a backup key in your pocket, what's the point?
+
+Advertisement
+
+The Apple Watch might replace your (Apple TV) remote.
+
+In another pimping session with Bloomberg Businessweek, Apple CEO Too Many Cook(s) ever-so-off-handedly mentioned that he loved controlling his Apple TV with the Apple Watch.
+
+Advertisement
+
+The Apple Watch can join you in the shower.
+
+Cook also says he wears his Apple Watch in the shower. This doesn't match up with what Yahoo's David Pogue said way back in September after the big announcement. So still a bit of a question mark, but you'd think Cook would know.
+
+Advertisement
+
+The Apple Watch will not solve the smartwatch battery problem.
+
+You could say Apple's philosophy is "better right than first" and perhaps the biggest smartwatch failing that needs to be righted is battery life. A lot of smartwatches—specifically Android Wear—can't boast more than a day and a half of life, or two at best. The disappointment began with the Moto 360 and pretty much continued from there. Charging every night is almost inevitable.
+
+Advertisement
+
+The Apple Watch, it seems, won't be much better. In late January, 9to5Mac reported some dismally bad battery results for the Apple Watch: 2.5 hours of "heavy use," 3.5 hours of standard app use, and a goal of 19 hours of mixed use (and even that might be a stretch for the first generation). That is definitely not solving the battery problem. Not to mention Tim Cook himself said he needs to charge it every night.
+
+Apple seems to recognize the issue and is preparing a lot of workarounds. The Apple Watch will use a MagSafe wireless charger, so you don't have to mess around with a cradle or hunt for a lightning port. Apple is also developing a "Power Reserve" mode—basically "just a watch" mode—so you can get the most juice out of your watch. This will be the first power-saving feature on any iDevice.
+
+Advertisement
+
+The Apple Watch will probably have a shit ton of apps.
+
+A rumor was circulating last month that the Apple Watch would launch with 100,000 apps. That seems....ludicrously hopeful. Cult of Mac points out that it took iOS near 16 months to reach 100,000 apps. So we'll see if something relatively iffy and new like a watch can manage to launch with a cool 100k. But even if that number is a few thousand (or tens of thousands) shy of the truth, the Apple Watch won't feel empty at launch by any means.
+
+Advertisement
+
+At a company briefing in Germany, Cook Master Flex said "tons" of apps will soon be announced for the Apple Watch, alongside previously announced partners like Panera, Tesla, and Todoist and many others. In fact, apps will very likely be the center of discussion during Apple's upcoming "Spring Forward" event a week from now.
+
+The Apple Watch will be about as powerful as an iPod Touch.
+
+It's not a huge deal for a watch but let's just touch on specs briefly. The Apple Watch will have an S1 processor, which as Mark Gurman of 9to5Mac notes, offers essentially the same performance as an iPod Touch. But because it's a custom chip made just for the Apple Watch, it's possible the watch will perform a little bit better than most Android Wear watches that generally use off-the-shelf Snapdragon 400s. But not exactly an iPhone on your wrist by any means.
+
+Advertisement
+
+The Apple Watch will come in all kinds of styles, with all kinds of prices.
+
+Right now, the price for Apple's first foray into wearables is $350 for the base model, the Sport. The stainless steel Apple Watch will be around $500 and then there's that 18k gold one that will be lots of $$$. The original figure was $4000, but that's jumped up to $8,000, so probably somewhere in there. Not like you really need to know.
+
+Advertisement
+
+The Apple Watch is also rumored to also be available in international markets at launch. After all, Apple ordered 3-5 million watches for the first batch. For comparison, Android Wear timepieces didn't even get close to breaking a million in 2014, so Apple seems convinced they have a hit on their hands. Come next week when we actually see the real watch we're getting, we'll have much better idea if those hopes are well-founded or misplaced, and whether Apple has any other unknown watch features up its literal sleeves.

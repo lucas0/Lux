@@ -1,31 +1,11 @@
-Saudi Arabia’s national carrier has reportedly decided to impose separate seating on its male and female passengers.
+First, call up 719-266-2837 (your local rates will apply).
 
-The plan is being implemented by Saudi Airlines due to a rash of complaints from men who said they did not want their wives sitting next to other men, the Daily Mail reported, citing Gulf media.
+Now that you're back, you should be sufficiently chilled out as you're listening to the Callin' Oates emergency hotline. The Hall & Oates-infused phone number hit our Twitter stream this afternoon, and we tracked down the creators of this Daryl & John project to see how and why it was built. Turns out that while it may not have been built pro bono by a H&O mega-fan for the community, it's still a pretty good story.
 
-“There are solutions to this problem… we will soon enforce rules that will satisfy all passengers,” Saudi Airlines’ assistant manager for marketing, Abdul Rahman Al Fahd, was quoted as saying.
+It's from "Go Solo" fan Michael Selvidge (@selviano), who recently joined cloud communications company Twilio, and his high school buddy Reid Butler (@rbutlersf). The San Francisco-based company requires that all new employees build an app, whether they're working in marketing, design, or systems. Selvidge, who formerly worked PR part time for Twilio before coming on as a full time employee, knew that he'd have to build something, but lacked an idea. He told me, "I thought, 'If only there was a pun that would work with this...' Then 'Callin' Oates' hit me, and that cinched it."
 
-Get The Times of Israel's Daily Edition by email and never miss our top stories Free Sign Up
+With the idea secure, Selvidge and Butler built and launched the hotline this weekend, mixing a bit of PHP and links to public URLs on Dropbox to create a simple interactive voice response system. The custom 1-719-26-OATES number costs $1 / month, and Selvidge found it via an online phrase search. Twilio's obviously helping out here, but any user can build a custom app on the Twilio API, and even with viral success like this, you'd just be out a "couple hundred bucks." Today alone, the first day it's gotten any serious visibility on the web, it's received over 34,223 requests as of 5:00 PM EST. And, if we're decent judges of the '80s revival in modern culture or the need for instant Hall and Oates fulfillment, the @CallinOates hotline should continue growing just fine.
 
-According to the report, close relatives will be allowed to sit together.
+Hello world! Call me... 719-266-2837 — Callin' Oates (@CallinOates) December 20, 2011
 
-The plan reportedly also follows recent complaints from male passengers about a “flirty” flight attendant.
-
-Saudi women are not employed as flight attendants by the airline, which instead hires women from other countries, the report said.
-
-Saudi Arabia enforces a strict segregation of the sexes in public spaces, and famously forbids women from driving motor vehicles.
-
-Women are required to wear a headscarf and loose, black robes in public.
-
-Operators of flights to and from Israel have faced similar complaints from men who refused to sit next to women.
-
-An international flight from New York to Tel Aviv was delayed for half an hour on December 20 after ultra-Orthodox Jewish men refused to sit between two women.
-
-The flight crew of Delta Flight 468 departing John F. Kennedy Airport attempted to find other seats for the men. But other passengers refused to swap seats in protest at their refusal to sit next to female passengers, according to a Friday report by Israel Radio.
-
-The men were finally accommodated by an American passenger who agreed to switch seats.
-
-According to Federal Aviation Authority regulations, a flight is not permitted to take off until all passengers are seated.
-
-In September, an El Al flight was grounded after a group of ultra-Orthodox men refused to sit next to a female passenger, resulting in an 11-hour delay described as a “nightmare” by passengers.
-
-That incident sparked a petition calling on EL AL to protect its female travelers by reserving “a few rows of separate sex seating on every flight, where for a fee, those passengers who need such seating can pre-book their seats and not annoy or coerce other passengers before take-off to change seats with them — thereby avoiding arguments, bullying, and delayed take-off.”
+Thanks, Katie!

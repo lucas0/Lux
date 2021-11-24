@@ -1,21 +1,65 @@
-A 71-yr-old Catholic priest, John Micheal O’neal has claimed that God is a woman, with a warm and with a comforting motherly figure.
+Backtracking on its previous report which claimed iOS 8.2 would be released for public consumption this week, BGR is now claiming that the software will be released to the public next week.
 
-John Micheal O’neal from Massachussetts was said to have been declared dead for more than 48 minutes, he was miraculously revived by medics and had woken up with a shocking revelation that he had gone to heaven and met God.
+According to BGR founder and editor Jonathan Geller, Apple’s decided to release one more Gold Master (GM) version crying a build number of 12D508 to employees and testers ahead of an expected launch this coming Monday.
 
-Reports say Father O'neal was rushed to the hospital on January 29 after a major heart attack, but was declared clinically dead soon after his arrival.
+Jump past the fold for full release notes.
 
-But with the aid of high-tech machine called LUCAS 2, that kept the blood flowing to his brain, doctors at Massachusetts General Hospital managed to unblock vital arteries and return his heart to a normal rhythm.
+Health App improvements
 
-It was gathered that doctors were afraid he would have suffered some brain damage from the incident, but he woke up less than 48 hours later and seems to have perfectly recovered.
+Adds the ability to select the unit of measurement for body temperature, weight, height, distance, and blood glucose
 
-The elderly priest claims that he has clear and vivid memories of what happened to him while he was dead. He describes a strange out-of-body experience, experiencing an intense feeling of unconditional love and acceptance, as well as being surrounded by an overwhelming light.
+Improves stability when dealing with large amounts of data
 
-He claims that at that point in his experience, he went to heaven and encountered God, which he describes as a feminine, mother-like “Being of Light”.
+Includes the ability to add and visualise workout sessions from 3rd-party apps
 
-“Her presence was both overwhelming and comforting” states the Catholic priest. “She had a soft and soothing voice and her presence was as reassuring as a mother’s embrace. The fact that God is a Holy Mother instead of a Holy Father doesn’t disturb me, she is everything I hoped she would be and even more!”
+Addresses an issue that may have prevented users from adding a photo in Medical ID
 
-It was learnt that declarations of the cleric caused quite a stir in the catholic clergy of the archdiocese over the last few days, causing the Archbishop to summon a press conference to try and calm the rumors.
+Fixes units for vitamins and minerals
 
-Despite the disapproval of his superiors, Father O’neal says that he will continue dedicating his life to God and spread the word of the “Holy Mother”.
+Fixes an issue where Health data wouldn’t refresh after changes data source order
 
-The Roman Catholic Archdiocese of Boston has not confirmed however, if they will allow Father O’neal to resume his preaching in his former parish in South Boston.
+Fixes an issue where some graphics showed no data values
+
+Adds a privacy setting that enables turning off tracking of steps, distance, and flights climbed
+
+Stability Enhancements
+
+Increases stability of Mail
+
+Improves stability of Flyover in Maps
+
+Improves stability of Music
+
+Improves VoiceOver reliability
+
+Improves connectivity with Made for iPhone Hearing Aids
+
+Bug Fixes
+
+Fixes an issue in Maps that prevented navigating to some favorite locations
+
+Addresses an issue where the last word in a quick reply message wasn’t autocorrected
+
+Fixes an issue where duplicate iTunes purchased content could prevent iCloud restore from completing
+
+Resolves an issue where some music or playlists didn’t sync from iTunes to the Music app
+
+Fixes an issue where deleted audiobooks sometimes remained on the device
+
+Resolves an issue that could prevent call audio from routing to car speakers while using Siri Eyes Free
+
+Fixes a Bluetooth calling issue where no audio is heard until the call is answered
+
+Fixes a timezone issue where Calendar events appear in GMT
+
+Addresses an issue that caused certain events in a custom reoccurring meeting to drop from Exchange calendar
+
+Fixes an certificate error that prevented configuring an Exchange account behind a third-party gateway
+
+Fixes an issue that could cause an organizer’s Exchange meeting notes to be overwritten
+
+Resolves an issue that prevented some Calendar events from automatically showing as “busy” after accepting an invite.
+
+Apple is holding a media event under the “Spring Forward” tagline next Monday so iOS 8.2 would likely officially launched right after the presentation has wrapped up.
+
+Source: BGR

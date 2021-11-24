@@ -142,7 +142,7 @@ def reset_hash(force_reload):
             savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
-def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=1, random_state=None, force_reload=None, drop_feat_idx=[], only_claims=False):
+def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=1, random_state=None, force_reload=None, drop_feat_idx=[], only_claims=False, feature_list=["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
     print('Loading data from',dataset_dir)
     data = pd.read_csv(dataset_dir+"/dataset.csv", sep=',')
 
@@ -211,7 +211,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
         ###################################
         #check if new linguistic features should be generated
         flag_concat = False
-        if not check_hash(df_hash, num_folds, stage="complexity"):
+        if not check_hash(df_hash, num_folds, stage="complexity") and "inf" in feature_list:
             flag_concat = True
             #Generate the features ndarray and save it to a pickle
             try:
@@ -221,7 +221,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
                 input("Error occured while GENERATING COMPLEXITY. Press any key to exit.")
                 sys.exit(1)
             savehash("complexity", hashcode=df_hash)
-        if not check_hash(df_hash, num_folds, stage="specificity"):
+        if not check_hash(df_hash, num_folds, stage="specificity") and "spe" in feature_list:
             flag_concat = True
             try:
                 feat.generate_specificity()
@@ -234,7 +234,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
         if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features"):
             flag_concat = True
             try:
-                features = feat.generateFeats()
+                features = feat.generateFeats(feature_list)
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")

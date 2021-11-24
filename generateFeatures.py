@@ -202,7 +202,7 @@ def passiveness_aux(t):
 
     return(count/n_sent)
 
-def generateFeats():
+def generateFeats(feature_list=["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 
@@ -217,125 +217,133 @@ def generateFeats():
     csv['blob'] = csv['body'].swifter.progress_bar(desc="-Enriching with Blob...").apply(TextBlob)
 
     ### SUBJECTIVITY ###
-    print("Generating subjectivity scores")
-    def subjectivity_lex_aux(tagged_tokens, lex):
-        score = 0
-        for idx, token in enumerate(tagged_tokens):
-            same_pos = lex[(lex['word1'] == token[0]) & (lex['pos1'] == token[1][:2])]
-            any_pos = lex[(lex['word1'] == token[0]) & (lex['pos1'] == 'ANY')]
+    if "sub" in feature_list:
+        print("Generating subjectivity scores")
+        def subjectivity_lex_aux(tagged_tokens, lex):
+            score = 0
+            for idx, token in enumerate(tagged_tokens):
+                same_pos = lex[(lex['word1'] == token[0]) & (lex['pos1'] == token[1][:2])]
+                any_pos = lex[(lex['word1'] == token[0]) & (lex['pos1'] == 'ANY')]
 
-            if not same_pos.empty:
-                score += same_pos.priorpolarity.values[0]
-            elif not any_pos.empty:
-                score += any_pos.priorpolarity.values[0]
+                if not same_pos.empty:
+                    score += same_pos.priorpolarity.values[0]
+                elif not any_pos.empty:
+                    score += any_pos.priorpolarity.values[0]
 
-        return score
+            return score
 
-    #blob score
-    blob_subj_scores = csv['blob'].swifter.progress_bar(desc="-Getting Blob subjectivity scores...").apply(lambda x: x.sentiment.subjectivity)
+        #blob score
+        blob_subj_scores = csv['blob'].swifter.progress_bar(desc="-Getting Blob subjectivity scores...").apply(lambda x: x.sentiment.subjectivity)
 
-    #lexicon score
-    mpqa_path = res_path+"/subjectivity/MPQA/"
-    lex = pd.read_csv(mpqa_path+"/lexicon.csv", sep=',')
+        #lexicon score
+        mpqa_path = res_path+"/subjectivity/MPQA/"
+        lex = pd.read_csv(mpqa_path+"/lexicon.csv", sep=',')
 
-    subjectivity_scores = [list(a) for a in zip(csv['tagged'].swifter.progress_bar(desc="-Getting Lexicons subjectivity scores...").apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens'], blob_subj_scores)]
+        subjectivity_scores = [list(a) for a in zip(csv['tagged'].swifter.progress_bar(desc="-Getting Lexicons subjectivity scores...").apply(lambda x: subjectivity_lex_aux(x,lex))/csv['n_tokens'], blob_subj_scores)]
+        sbj = pd.DataFrame(subjectivity_scores, columns=["MPQA subjectivity score over sentences","Blob's Subjectivity over sentences"])
 
     ### SPECIFICITY ###
-    print("Generating specificity scores")
-    with open(spec_dir+"/predictions.txt", 'r+') as file:
-        lines = file.readlines()
+    if "spe" in feature_list:
+        print("Generating specificity scores")
+        with open(spec_dir+"/predictions.txt", 'r+') as file:
+            lines = file.readlines()
 
-    spec_scores = pd.DataFrame(lines, columns=['preds'])
-    specificity_scores = spec_scores['preds'].swifter.progress_bar(desc="-Getting Specificity scores from DASSP...").apply(lambda x: float(x.split('(')[1].split(',')[0]))
+        spec_scores = pd.DataFrame(lines, columns=['preds'])
+        specificity_scores = spec_scores['preds'].swifter.progress_bar(desc="-Getting Specificity scores from DASSP...").apply(lambda x: float(x.split('(')[1].split(',')[0]))
+        spe = pd.DataFrame(specificity_scores.to_list(), columns=["Speciteller's scores"])
 
     ### PAUSALITY ###
-    print("Generating pausality scores")
-    pausality_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Pausality scores...").apply(lambda tagged_tokens: sum([1 for word,tag in tagged_tokens if tag == '.']))/csv['n_tokens']
-
+    if "pau" in feature_list:
+        print("Generating pausality scores")
+        pausality_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Pausality scores...").apply(lambda tagged_tokens: sum([1 for word,tag in tagged_tokens if tag == '.']))/csv['n_tokens']
+        pau = pd.DataFrame(pausality_scores.to_list(), columns=["#of '.'-tagged tokens"])
 
     ### INFORMALITY ####
-    print("Generating informality scores")
-    #readability
-    subprocess.call("rm -f "+cwd+"/res/readability/input_texts/*", shell=True, cwd=read_dir)
-    num_of_digits = len(str(len(csv)))
-    with mp.Pool() as pool:
-        pool.map(readability_aux, [(e['body'],str(idx).zfill(num_of_digits)) for idx,e in csv.iterrows()])
-        pool.map(complexity_aux, [(e['body'],str(idx)) for idx,e in csv.iterrows()])
+    if "inf" in feature_list:
+        print("Generating informality scores")
+        #readability
+        subprocess.call("rm -f "+cwd+"/res/readability/input_texts/*", shell=True, cwd=read_dir)
+        num_of_digits = len(str(len(csv)))
+        with mp.Pool() as pool:
+            pool.map(readability_aux, [(e['body'],str(idx).zfill(num_of_digits)) for idx,e in csv.iterrows()])
+            pool.map(complexity_aux, [(e['body'],str(idx)) for idx,e in csv.iterrows()])
 
-    subprocess.call("readability --csv  "+cwd+"/res/readability/input_texts/* > "+comp_dir+"/readabilitymeasures.csv", shell=True, cwd=comp_dir)
-    read_scores = pd.read_csv(comp_dir+"/readabilitymeasures.csv").iloc[:,range(1,10)]
+        subprocess.call("readability --csv  "+cwd+"/res/readability/input_texts/* > "+comp_dir+"/readabilitymeasures.csv", shell=True, cwd=comp_dir)
+        read_scores = pd.read_csv(comp_dir+"/readabilitymeasures.csv").iloc[:,range(1,10)]
 
-    #complexity
-    compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv")
-    compl_scores = compl_scores.drop(columns="filename")
-    compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv").iloc[:,1:]
-    informality_scores = pd.concat([read_scores, compl_scores], axis=1)
+        #complexity
+        compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv")
+        compl_scores = compl_scores.drop(columns="filename")
+        compl_scores = pd.read_csv(cwd+"/res/complexity/output_file.csv").iloc[:,1:]
+        informality_scores = pd.concat([read_scores, compl_scores], axis=1)
+        inf = informality_scores
 
     ### DIVERISTY ###
-    print("Generating diversity scores")
-    lemmatized_text = csv['body'].swifter.progress_bar(desc="-Lemmatizing...").apply(lambda x: ld.flemmatize(x))
+    if "div" in feature_list:
+        print("Generating diversity scores")
+        lemmatized_text = csv['body'].swifter.progress_bar(desc="-Lemmatizing...").apply(lambda x: ld.flemmatize(x))
 
-    def diversity_aux(text):
-        funcs = [ld.ttr,ld.root_ttr,ld.log_ttr,ld.maas_ttr,ld.msttr,ld.mattr,ld.hdd,ld.mtld,ld.mtld_ma_wrap,ld.mtld_ma_bid]
-        return list(map(lambda x: x(text), funcs))
+        def diversity_aux(text):
+            funcs = [ld.ttr,ld.root_ttr,ld.log_ttr,ld.maas_ttr,ld.msttr,ld.mattr,ld.hdd,ld.mtld,ld.mtld_ma_wrap,ld.mtld_ma_bid]
+            return list(map(lambda x: x(text), funcs))
 
-    diversity_scores = lemmatized_text.swifter.progress_bar(desc="-Getting Diversity scores from Lexical Diversity...").apply(diversity_aux)
+        diversity_scores = lemmatized_text.swifter.progress_bar(desc="-Getting Diversity scores from Lexical Diversity...").apply(diversity_aux)
+        div = pd.DataFrame(diversity_scores.to_list(), columns=["simple TTR", "root TTR", "log TTR", "Mass TTR", "MSTTR", "MATTR", "HDD", "MLTD", "MA-warp", "MA-biD"])
 
     ### QUANTITY ###
-    print("Generating quantity scores")
-    #takes the tagged text as input and outputs simple counts
-    def quantity_aux(tagged_tokens):
-        pos_counts = pos_list
-        for word, tag in tagged_tokens:
-            pos_counts[tag] = pos_counts[tag] + 1
-        num_terms, num_tokens = len(set(tagged_tokens)), len(tagged_tokens)
-        counts = [value/num_terms for key,value in sorted(pos_counts.items())]
+    if "qua" in feature_list:
+        print("Generating quantity scores")
+        #takes the tagged text as input and outputs simple counts
+        def quantity_aux(tagged_tokens):
+            pos_counts = pos_list
+            for word, tag in tagged_tokens:
+                pos_counts[tag] = pos_counts[tag] + 1
+            num_terms, num_tokens = len(set(tagged_tokens)), len(tagged_tokens)
+            counts = [value/num_terms for key,value in sorted(pos_counts.items())]
 
-        return [num_terms, num_tokens]+counts
+            return [num_terms, num_tokens]+counts
 
-    quantity_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Quantity scores...").apply(quantity_aux)
+        quantity_scores = csv['tagged'].swifter.progress_bar(desc="-Getting Quantity scores...").apply(quantity_aux)
+        qua = pd.DataFrame(quantity_scores.to_list(), columns=["#terms", "#tokens", "#", "$", "\"", "(", "''", "''", ".", ":", "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "``"])
 
     ### UNCERTAINTY ###
-    print("Generating uncertainty scores")
-    #cls = Classifier(granularity=True)
-    cls = Classifier()
-    def uncertainty_aux(text):
-        results = cls.predict(text)
-        unc_ratio = sum([1 for r in results if r == 'U'])/len(results)
+    if "unc" in feature_list:
+        print("Generating uncertainty scores")
+        #cls = Classifier(granularity=True)
+        cls = Classifier()
+        def uncertainty_aux(text):
+            results = cls.predict(text)
+            unc_ratio = sum([1 for r in results if r == 'U'])/len(results)
 
-        return unc_ratio
+            return unc_ratio
 
-    uncertainty_scores = csv['body'].swifter.progress_bar(desc="-Getting Uncertainty scores...").apply(uncertainty_aux)
+        uncertainty_scores = csv['body'].swifter.progress_bar(desc="-Getting Uncertainty scores...").apply(uncertainty_aux)
+        unc = pd.DataFrame(uncertainty_scores.to_list(), columns=["LUCI score"])
 
     ### AFFECT ###
-    print("Generating affect scores")
-    #takes the raw text as input, and calculates polarity as the average polarity over the sentences
-    #for vader, takes the text split in sentences
-    p = PathosPool(16)
-    affect_scores = pd.DataFrame(p.map(affect_aux, [(e['body'],e['sent'],e['n_sent'],e['blob']) for _,e in csv.iterrows()]), columns=["BPol-avg","BPol-pos", "BPol-neg", "VPol-avg", "VPol-pos", "VPol-neg"])
+    if "aff" in feature_list:
+        print("Generating affect scores")
+        #takes the raw text as input, and calculates polarity as the average polarity over the sentences
+        #for vader, takes the text split in sentences
+        p = PathosPool(16)
+        affect_scores = pd.DataFrame(p.map(affect_aux, [(e['body'],e['sent'],e['n_sent'],e['blob']) for _,e in csv.iterrows()]), columns=["BPol-avg","BPol-pos", "BPol-neg", "VPol-avg", "VPol-pos", "VPol-neg"])
+        aff = affect_scores
 
     ### PASSIVENESS ###
-    print("Generating passiveness scores")
-    with mp.Pool() as pool:
-        passiveness_scores = pool.map(passiveness_aux, [(e['sent'],e['n_sent']) for _,e in csv.iterrows()])
+    if "pas" in feature_list:
+        print("Generating passiveness scores")
+        with mp.Pool() as pool:
+            passiveness_scores = pool.map(passiveness_aux, [(e['sent'],e['n_sent']) for _,e in csv.iterrows()])
+        pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
 
     ### CONCATENATION ###
     print("Concatenating scores")
-
-    inf = informality_scores
-    div = pd.DataFrame(diversity_scores.to_list(), columns=["simple TTR", "root TTR", "log TTR", "Mass TTR", "MSTTR", "MATTR", "HDD", "MLTD", "MA-warp", "MA-biD"])
-    qua = pd.DataFrame(quantity_scores.to_list(), columns=["#terms", "#tokens", "#", "$", "\"", "(", "''", "''", ".", ":", "CC", "CD", "DT", "EX", "FW", "IN", "JJ", "JJR", "JJS", "LS", "MD", "NN", "NNP", "NNPS", "NNS", "PDT", "POS", "PRP", "PRP$", "RB", "RBR", "RBS", "RP", "SYM", "TO", "UH", "VB", "VBD", "VBG", "VBN", "VBP", "VBZ", "WDT", "WP", "WP$", "WRB", "``"])
-    aff = affect_scores
-    sbj = pd.DataFrame(subjectivity_scores, columns=["MPQA subjectivity score over sentences","Blob's Subjectivity over sentences"])
-    spe = pd.DataFrame(specificity_scores.to_list(), columns=["Speciteller's scores"])
-    pau = pd.DataFrame(pausality_scores.to_list(), columns=["#of '.'-tagged tokens"])
-    unc = pd.DataFrame(uncertainty_scores.to_list(), columns=["LUCI score"])
-    pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
-
-    #for v,f_name in zip([inf,div,qua,aff,sbj,spe,pau,unc,pas], ["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
-    #    log_results(v,f_name)
-
-    features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
+    concat = []
+    for v,f_name in zip([inf,div,qua,aff,sbj,spe,pau,unc,pas], ["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
+        if f_name in feature_list:
+            concat.append(v)
+    #features = pd.concat([inf,div,qua,aff,sbj,spe,pau,unc,pas], axis=1)
+    features = pd.concat(concat, axis=1)
     #features = pd.concat([inf,div,aff,sbj,spe,pau,unc,pas], axis=1)
     print("Features Generated. Shaped: ",features.shape)
     print("Calculating correlation. Saving to results/correlation/")

@@ -1,87 +1,111 @@
-We all have the notion that eating fish would be the better option over bacon when it comes to health. And the truth is, it really is … most of the time! Fish is a low-fat, high-protein food that has a range of health benefits. However, given what we know of fish and its sources today, we may have to re-examine this statement.
+Hewlett-Packard is splitting itself into two separate businesses, the company confirmed on Monday.
 
-Fish can either be one of the best foods for you or detrimental to your health depending on where it’s sourced. There is a world of difference between a fish that is caught in the wild vs. farm-bred or farm-raised fish. The most common farm-raised fish are: salmon, tilapia, catfish, swai, “sea” bass, and cod (the last two surprise a lot of people).
+HP is splitting its personal-computer and printer segments from its corporate hardware and services business. The PC/printer company will be called HP. The remaining units will be called Hewlett-Packard Enterprise. Both will be public companies. The stock split is intended to be a tax-free transaction for existing shareholders. The Wall Street Journal first reported the story.
 
-Tilapia, in particular, became extremely popular in aquaculture and aquaponics across Asia, Mexico, Central America and the U.S. because it grows very quickly, is tolerant of stocking density and is adaptable.
 
-So what’s wrong with that? Well, it all depends on how the fresh or frozen tilapia filets were raised … and where. What are the exact dangers of eating farm-raised fish?
 
-6 Reasons Tilapia Farming Is Dangerous to Your Health
+The company reorganized itself in 2012 under CEO Meg Whitman. That move combined its computer and printer businesses.
 
-1. Recent studies have found that farm-raised tilapia may cause more inflammation
+The PC and computer segment is massive for HP. It accounts for half of the company's revenue. For the first six months this year, it reported $27.8 billion in revenue. That's about three times the size of HP's next biggest unit, the Enterprise Group, which makes servers, storage, and network hardware.
 
-Farm-raised tilapia has always been a popular source for fish, not only because it’s widely available in the U.S., but it’s also very inexpensive. (1) However, before you stock up on tilapia, you may want to know about its correlation to inflammation. Recent studies have shown that eating tilapia may worsen inflammation, which can lead to heart disease, arthritis, asthma and a world of other serious health problems.
+Under the new split, Whitman is chairman of the computer and printer business, and she remains CEO of the separate HP Enterprise company. Patricia Russo, who sits on HP's board, is chairman of the enterprise company. Dion Weisler, who currently leads the printer and PC operation, is being named CEO of the new printer/PC company.
 
-People who resort to eating more fish as a way to get their dose of omega-3 fatty-acids and lessen their risk of heart attacks may want to hold off on the tilapia. In fact, a scientist from Wake Forest University has found that the inflammatory potential of tilapia is far greater than that of a hamburger or pork bacon, and therefore make it a fish you shouldn’t eat. (2)
 
-2. Farmed salmon may have at least 10 times the amount of cancer-causing organic pollutants compared to the wild variety
 
-This can most likely be attributed to the feeds that are used on farm-raised fish. If you knew what went into the feeds of farm-raised fish, you would be horrified. Apparently, chicken feces is one of the main ingredients that go into farm fish feed. Not only that, the transfer of pig and duck waste to fish farms is also a very common practice, such as with Chinese tilapia.
+Whitman has said since 2012 that fixing the supply chain is one of HP's biggest priorities to get the company back on track in terms of revenues and profits. HP reported a beat on revenue for its third quarter, and its profits were right in line.
 
-3. Farm-bred fish have been found to have high concentrations of antibiotics and pesticides
+This isn't the first time HP has been toying with the idea of strategic moves. For almost a year it has contemplated merging with EMC to create what would be one of the biggest enterprise companies in the world. But talks apparently fell through, The Journal reported.
 
-Where do farm-bred fish get their antibiotics? The crowded conditions of fish farms cause the fish to be more susceptible to disease. To keep them alive, farm owners give antibiotics to the fish to stave off disease — similar to what occurs in confined feedlot operations for cattle. (3)
+And HP isn't the only company that sees benefit in splitting itself to create a more-focused company. eBay announced last week that it was spinning off PayPal into a separate business starting next year.
 
-Farm-bred fish, such as Chinese tilapia, are also treated with pesticides to combat sea lice. The pesticides used to treat these fish are so deadly that they will kill wild salmon that are accidentally exposed to them. These pesticides are also eventually released in the ocean, where they get into the bodies and systems of other marine life.
+Here is the press release HP issued Monday morning:
 
-4. Farm-bred fish also have lower levels of healthy nutrients
+October 06, 2014 06:30 ET
 
-Many of us consume fish, hoping to reap the omega-3 fatty acid benefits that come with it. However, did you know that the omega-3-acids that are found in farm-raised fish are less usable in our bodies compared to wild-bred fish? Farm-raised fish also has a lower protein content.
+HP to Separate Into Two New Industry-Leading Public Companies
 
-Not only that, because farm-raised fish are kept in cages, they have the tendency to be fattier, and can have a higher concentration of omega-6 acids. The problem with getting too many omega-3 and omega-6 acids is that they, again, may cause inflammation to the body.
+Hewlett-Packard Enterprise Will Define the Next Generation of Technology Infrastructure, Software and Services for the New Style of IT
 
-5. Dibutylin levels, a chemical used in PVC plastics, is said to be six times higher in farm-raised mussels compared to wild ones
+HP Inc. Will Be the Leading Personal Systems and Printing Company Delivering Innovations That Will Empower People to Create, Interact and Inspire Like Never Before
 
-Dibutylin is toxic and can impair immune system function while also contributing to inflammation. Dibutylin may be the reason as to why there is a rise in asthma, obesity, allergies and other metabolic disorders in recent years. (4, 5)
+Strategic Step Provides Each New Company With the Focus, Financial Resources and Flexibility to Adapt Quickly to Market and Customer Dynamics While Generating Long-Term Value for Shareholders
 
-6. Dioxin levels are 11 times higher in farm-bred salmon compared to wild salmon
+PALO ALTO, CA--(Marketwired - Oct 6, 2014) - HP (NYSE: HPQ)
 
-According to the Environmental Working Group, the “first-ever tests of farmed salmon from U.S. grocery stores show that farmed salmon are likely the most [dioxin-like] PCB-contaminated protein source in the U.S. food supply.” (6) Dioxin is actually a very toxic chemical that can contribute to cancer and other complications. The problem with dioxin is that once it enters our system, it can take a very long time until it leaves. Grimly, the half-life of dioxin is about 7 to 11 years!
+Highlights:
 
-7. Excessive mercury levels among even lake-grown fish and especially dangerous for pregnant women
+Hewlett-Packard Enterprise will build upon HP's leading position in servers, storage, networking, converged systems, services and software as well as its OpenStack Helion cloud platform
 
-In a study by Dr. J.K. McCrary published in the Environmental Pollution journal, total mercury concentrations in the water and fish of Lake Managua and Lake Apoyo were measured. A considerable one-fourth of the commercially fished tilapia in Lake Managua exceeded maximum recommended mercury levels for consumption among pregnant women and other at-risk groups. (7) As a result, the study recommended much closer mercury monitoring among freshwater fish that is meant for international commerce.
+Meg Whitman to be President and Chief Executive Officer of Hewlett-Packard Enterprise; Pat Russo to be Chairman of Hewlett-Packard Enterprise Board
 
-These are only some of the dangers that have been linked back to eating farm-raised fish. What does this tell us? No. 1, we need to find out where our fish is coming from. Not all fish are created equal, and sad to say, farm-raised fish, instead of helping us, may even harm us.
+HP Inc. will be the leading personal systems and printing company with a strong roadmap into the most exciting new technologies like 3D printing and new computing experiences
 
-History of Tilapia, Tilapia Facts + Types of Tilapia
+Dion Weisler to be President and Chief Executive Officer of HP Inc.; Meg Whitman to be Chairman of the HP Inc. Board
 
-The common name for nearly a 100 species of cichlid fish, it comes from three distinct genera: Oreochromis, Sarotherodon and Tilapia. Mainly a freshwater fish, tilapia live in shallow streams, ponds, rivers and lakes — and adapt well to being farmed.
+Company reiterates fiscal 2014 non-GAAP diluted net earnings per share (EPS) outlook of $3.70 to $3.74 and updates GAAP diluted net EPS outlook to $2.60 to $2.64
 
-Historically, tilapia became popular in so-called artisanal fishing in Africa and soon became popular in aquaculture and aquaponics outside of Africa. Because North African tilapia grow quickly, are tolerant of stocking density and are adaptable. In modern aquaculture, the wild-type Nile tilapia (the healthiest variety) are not too often seen, because the dark color of their flesh is considered undesirable by many customers.
+Company issues fiscal 2015 non-GAAP diluted net EPS outlook of $3.83 to $4.03 and GAAP diluted net EPS outlook of $3.23 to $3.43
 
-Tilapia are farmed extensively in many parts of Asia and the U.S. They are increasingly found in outdoor fish farms in tropical countries like as China, Papua New Guinea, the Philippines and Indonesia. In temperate zone climates, such as in U.S., tilapia farming operations need energy in order to warm the water to tropical temperatures. (8)
+HP (NYSE: HPQ) today announced plans to separate into two new publicly traded Fortune 50 companies: one comprising HP's market-leading enterprise technology infrastructure, software and services businesses, which will do business as Hewlett-Packard Enterprise, and one that will comprise HP's market-leading personal systems and printing businesses, which will do business as HP Inc. and retain the current logo. Immediately following the transaction, which is expected to be completed by the end of fiscal 2015, HP shareholders will own shares of both Hewlett-Packard Enterprise and HP Inc. The transaction is intended to be tax-free to HP's shareholders for federal income tax purposes.
 
-The largest tilapia producers in the world are China, then Egypt (!). Currently, it’s the fourth most consumed fish in the U.S.
+Today's announcement comes as HP approaches the fourth year of its five-year turnaround plan. Over this time, the company has executed successfully against its turnaround objectives, keeping customers and partners at the forefront. HP has reignited its innovation pipeline, strengthened its go-to-market capabilities, rebuilt its balance sheet, and inspired its workforce and management teams. The company is now positioned to accelerate performance, drive sustained growth and demonstrate clear industry leadership in key areas.
 
-Going way back, the aquaculture using Nile tilapia began in Ancient Egypt. In fact, tilapia is considered one of the three main types of fish caught from the Sea of Galilee during Biblical times.
+"Our work during the past three years has significantly strengthened our core businesses to the point where we can more aggressively go after the opportunities created by a rapidly changing market," said Meg Whitman, Chairman, President and Chief Executive Officer of HP. "The decision to separate into two market-leading companies underscores our commitment to the turnaround plan. It will provide each new company with the independence, focus, financial resources, and flexibility they need to adapt quickly to market and customer dynamics, while generating long-term value for shareholders. In short, by transitioning now from one HP to two new companies, created out of our successful turnaround efforts, we will be in an even better position to compete in the market, support our customers and partners, and deliver maximum value to our shareholders."
 
-Today, the three most commonly fished and eaten species of tilapia are Nile, Blue and Mozambique. Oreochromis niloticus, or Nile Tilapia, are the oldest variety of tilapia.
+Both companies will be well capitalized and expect to have investment grade credit ratings and capital structures optimized to reflect their distinct growth opportunities and cash flow profiles. The separation into independent publicly traded companies will provide each company with its own, more focused equity currency, and investors with the opportunity to invest in two companies with compelling and unique financial profiles well suited to their respective businesses.
 
-Nile Tilapia is one of the most adaptable fish, as it can be raised in various ways, such as ponds and in pristine lakes — and can be one of the most sustainable farmed fish. The best fresh tilapia eaten in the U.S. is all-natural (not using chemicals or antibiotics) and lake-grown. Most lake-grown tilapia actually comes from Honduras or Mexico. (9)
+Management Structure
 
-Therefore, if you ever do eat tilapia, make sure you ask were it was raised. Seafood Watch recommends to “buy tilapia (“izumidai” in sushi) farmed worldwide in recirculating aquaculture systems, Ecuador in ponds and Peru in raceways.” (10)
+Meg Whitman, President and Chief Executive Officer of HP, and Cathie Lesjak, Chief Financial Officer of HP, will hold these positions with Hewlett-Packard Enterprise. When the separation is complete, Whitman will also serve on the Board of Directors of Hewlett-Packard Enterprise, and Pat Russo will move from Lead Independent Director of HP to Chairman of Hewlett-Packard Enterprise.
 
-Blue Tilapia is found in Florida’s lakes, rivers and streams — and it can live both in saltwater and freshwater. Because it doesn’t grow as quickly as Nile Tilapia, it’s not as commonly farmed. Meanwhile, Mozambique Tilapia was introduced into the U.S. for sport fishing and as a means of aquatic plant control.
+Dion Weisler, Executive Vice President of HP's Printing and Personal Systems business, will lead HP Inc. as President and Chief Executive Officer. Whitman will serve as non-executive Chairman of HP Inc.'s Board of Directors.
 
-Farmed Shrimp: the Dirtiest of All Seafood
+Hewlett-Packard Enterprise
 
-There are a lot of shrimp nutrition facts, but shrimp actually holds the designation of being “the dirtiest of all seafood,” says Marianne Cufone, director of Food and Water Watch. She says it’s hard to avoid, as 90 percent of shrimp sold in the U.S. is imported. (11)
+Hewlett-Packard Enterprise will have a unique portfolio and strong multi-year innovation roadmap across technology infrastructure, software and services to allow customers to take full advantage of the opportunities presented by cloud, big data, security and mobility in the New Style of IT. By leveraging its HP Financial Services capability, the company will be well positioned to create unique technology deployment models for customers and partners based on their specific business needs. Additionally, the company intends for HP Financial Services to continue to provide financing and business model innovation for customers and partners of HP Inc.
 
-“Imported farmed shrimp comes with a whole bevy of contaminants: antibiotics, residues from chemicals used to clean pens, filth like mouse hair, rat hair, and pieces of insects,” Cufone says. “And I didn’t even mention things like E. coli that have been detected in imported shrimp.”
+Customers will have the same unmatched choice of how to deploy and consume technology, and with a simpler, more nimble partner. The separation will provide additional resources, and a reduction of debt at the operating company level, to support investments across key areas of the portfolio. The separation will also allow for greater flexibility in completing the turnaround of Enterprise Services and strengthening the company's go-to-market capabilities.
 
-Part of this has to do with the fact that less than 2 percent of ALL imported seafood (shrimp, crab, catfish or others) gets inspected before its sold, which is why it’s that much more important to buy domestic seafood.
+"Over the past three years, we have reignited our innovation engine with breakthrough offerings for the enterprise like Apollo, Gen 9 and Moonshot servers, our 3PAR storage platform, our HP OneView management platform, our HP Helion Cloud and a host of software and services offerings in security, analytics and application transformation," continued Whitman. "Hewlett-Packard Enterprise will accelerate innovation across key next-generation areas of the portfolio."
 
-What to Eat Instead of Tilapia Recipes
+HP Inc.
 
-Fish can be an incredible health-building food if you go with wild-caught fish liked sockeye salmon, which has proven health benefits. It’s loaded with healthy fats and can help your brain, joints, muscles and skin!
+HP Inc. will be a proven leader in the personal systems and printing markets with exciting new technologies on the horizon. The new company's strong profitability and free cash flow will enable investments in growth markets such as 3-D printing and new computing experiences. At the same time, HP Inc. will continue to execute against a well-defined and established strategic plan, ensuring continuity for customers and consistent value to shareholders.
 
-But rather than buying cheap, frozen tilapia filets, a better option that is both inexpensive and easy to make is a homemade salmon patties recipe that is high in omega-3 fats and protein.
+"Since assuming responsibility for the Printing and Personal Systems Group, Dion and his leadership team have done an excellent job of building our relationships with customers and channel partners, segmenting the market and driving product innovation," added Whitman. "The creation of HP Inc. will only accelerate the progress the team has made."
 
-Plus, salmon contains astaxanthin, which has been proven to be more powerful than almost any other antioxidant at absorbing free radicals. If you are not consuming salmon or another wild-caught fish during the week, then I highly recommend you consume a benefit-rich fish oil supplement with astaxanthin.
+"This is a defining moment in our industry as customers are looking for innovation to enable workforces that are more mobile, connected and productive while at the same time allowing a seamless experience across work and play," said Weisler. "As the market leader in printing and personal systems, an independent HP Inc. will be extremely well positioned to deliver that innovation across our traditional markets as well as extend our leadership into new markets like 3-D printing and new computing experiences -- inventing technology that empowers people to create, interact and inspire like never before."
 
-When I eat out, I also ask my server if the fish is farm-raised or wild-caught. Most servers know this answer or can quickly go ask the head chef. As a quick rule of thumb for salmon, if it’s Pacific or Alaskan, it’s most likely wild-caught; if it’s Atlantic salmon, it’s almost always farm-raised.
+Transaction Details
 
-Read Next: 17 Fish You Should Never Eat
+The separation transaction is intended to be tax-free to HP shareholders for federal income tax purposes. The transaction is currently targeted to be completed by the end of fiscal 2015, subject to certain conditions, including, among others, obtaining final approval from the HP Board of Directors, receipt of a favorable opinion and/or rulings with respect to the tax-free nature of the transaction for federal income tax purposes and the effectiveness of a Form 10 filing with the Securities and Exchange Commission.
 
-From the sound of it, you might think leaky gut only affects the digestive system, but in reality it can affect more. Because Leaky Gut is so common, and such an enigma, I’m offering a free webinar on all things leaky gut. Click here to learn more about the webinar.
+Goldman Sachs & Co. is serving as financial advisor and Wachtell, Lipton, Rosen and Katz is serving as legal advisor to HP.
+
+For more information, please see here.
+
+Financial Outlook
+
+For fiscal 2014, HP reaffirms its non-GAAP diluted net EPS outlook range of $3.70 to $3.74, and updates its fiscal 2014 GAAP diluted net EPS outlook to be in the range of $2.60 to $2.64.
+
+For fiscal 2015, HP estimates non-GAAP diluted net EPS outlook to be in the range of $3.83 to $4.03 and GAAP diluted net EPS outlook to be in the range of $3.23 to $3.43.
+
+HP's outlook does not include one-time GAAP charges the company is expected to incur in connection with the separation, including advisory and tax costs which will be quantified at a later date.
+
+Investment Community Conference Call
+
+For webcast details, go to www.hp.com/investor/2014OctAnnouncement/.
+
+HP Securities Analyst Meeting 2014
+
+HP also announced today that, as a result of the announcement of this separation, its October 8, 2014 Securities Analyst Meeting has been postponed.
+
+About HP
+
+HP creates new possibilities for technology to have a meaningful impact on people, businesses, governments and society. With the broadest technology portfolio spanning printing, personal systems, software, services and IT infrastructure, HP delivers solutions for customers' most complex challenges in every region of the world. More information about HP is available at http://www.hp.com.
+
+Use of non-GAAP financial information
+
+To supplement HP's historical and forecasted financial results presented on a GAAP basis, HP provides non-GAAP diluted net earnings per share. Non-GAAP diluted net earnings per share is defined to exclude the effects of any restructuring charges, charges relating to the amortization of intangible assets and certain other acquisition-related charges recorded or expected to be recorded during the relevant period. In addition, non-GAAP diluted net earnings per share are adjusted by the amount of additional taxes or tax benefit associated with each non-GAAP item. Fiscal 2014 non-GAAP diluted net EPS estimates exclude after-tax costs of approximately $1.10 per share, related primarily to restructuring charges and amortization of intangible assets. Fiscal 2015 non-GAAP diluted net EPS estimates exclude after-tax costs of approximately $0.60 per share, related primarily to amortization of intangible assets and restructuring charges.
+
+HP's management uses non-GAAP financial measures, including HP's non-GAAP diluted net earnings per share, to evaluate and forecast HP's performance before gains, losses or other charges that are considered by HP's management to be outside of HP's core business segment operating results. These non-GAAP financial measures may have limitations as analytical tools, and these measures should not be considered in isolation or as a substitute for analysis of HP's results as reported under GAAP. For example, items such as the amortization of intangible assets, though not directly affecting HP's cash position, represent the loss in value of intangible assets over time. The expense associated with this loss in value is not included in HP's non-GAAP diluted net earnings per share and therefore does not reflect the full economic effect of the loss in value of those intangible assets. In addition, items such as restructuring charges that are excluded from HP's non-GAAP diluted net earnings per share can have a material impact on HP's GAAP diluted net earnings per share. Other companies may calculate non-GAAP diluted net earnings per share differently than HP does, which limits the usefulness of that measure for comparative purposes.
