@@ -6,7 +6,7 @@ parser = argparse.ArgumentParser(description='LUX main script.')
 parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
 parser.add_argument('--tune', action='store', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
 parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
-parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the featyres should be re-generated (feat) or None (default)')
+parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat) or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
 parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
@@ -114,9 +114,9 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     layer1 = Dense(DENSE_DIM,
             activation='relu',
             input_shape=(DATA_SHAPE[1:]),
-            kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
-            bias_regularizer=regularizers.l2(1e-4),
-            activity_regularizer=regularizers.l2(1e-5),
+            #kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+            #bias_regularizer=regularizers.l2(1e-4),
+            #activity_regularizer=regularizers.l2(1e-5),
             kernel_initializer = initializer)
 
     batch_norm = BatchNormalization(axis=-1,

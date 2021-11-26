@@ -217,7 +217,7 @@ def generateFeats(feature_list=["inf","div","qua","aff","sbj","spe","pau","unc",
     csv['blob'] = csv['body'].swifter.progress_bar(desc="-Enriching with Blob...").apply(TextBlob)
 
     ### SUBJECTIVITY ###
-    if "sub" in feature_list:
+    if "sbj" in feature_list:
         print("Generating subjectivity scores")
         def subjectivity_lex_aux(tagged_tokens, lex):
             score = 0

@@ -1,30 +1,21 @@
-Joe Raedle/Getty Images
+While laptop sales continue to drop, Apple's MacBook Air has managed to remain popular and perform well. This year, Apple is set to launch a 12-inch MacBook Air, which could just be Apple's biggest product in 2015.
 
-Some users of the anonymous web browser Tor have reported that Comcast has threatened to cut off their internet service unless they stop using the legal software.
+After being rumored for quite some time, the new laptop from Apple has just been confirmed by the latest report from Mark Gurman of 9to5Mac. Apple has made a number of changes in the MacBook Air, removing and redesigning what users know and love about the machine.
 
-Comcast completely denies their claims. In a blog post, the company said "We have no policy against Tor, or any other browser or software. Customers are free to use their Xfinity Internet service to visit any website, use any app, and so forth."
+"Apple is preparing an all-new MacBook Air for 2015 with a radically new design that jettisons standards such as full-sized USB ports, MagSafe connectors, and SD card slots," said Gurman.
 
-According to a report on Deepdotweb, Comcast customer representatives have branded Tor "illegal" and told customers that using it is against the company's policies.
+The new 12-inch MacBook Air is said to be smaller than its 13-inch sibling and a bit thinner than the 11-inch version. It is also a quarter-of-an-inch taller than the latter, which allows it to keep a slightly bigger display. The bezels around the display have also been reduced, giving the front part of the machine a brand new look.
 
-Tor is a type of web browser that, in theory, makes all your internet activity private. The software routes traffic through a series of other connected internet users, making it difficult for governments and private companies to monitor your internet usage. Up to 1.2 million people use the browser, which became especially popular after Edward Snowden leaked information showing that the NSA was eavesdropping on ordinary citizens. Prior to that, Tor had been popular among people transacting business on Silk Road, the online market for drugs and hitmen.
+Much of the larger proportion of the machine's usable area will be occupied by the display panel and the keyboard. Apple has noticeably deviated from the standard keyboard of the MacBook Air by cramming the keys in order to decrease the spaces in between.
 
-The problem is that downloading or using Tor itself isn't illegal. Plenty of people might have legitimate reasons to want to surf the web in private, without letting others know what they were looking at. But Tor has been pretty popular with criminals.
+Other key changes include the transferring of the power button from the upper left-hand corner to the left side of the escape key and the removal of the travel on the track pad as a way to keep the laptop's slim build.
 
-Some Comcast reps allegedly begun telling users that it is an "illegal service." One Comcast representative, identified only as Kelly, warned a customer over his use of Tor software, DeepDotWeb reports:
+The new MacBook Air is also a minimalist when it comes to ports as it will only be sporting two, namely the headphone jack and a USB Type-C port. This means that fans of the machine will have to do away with the Thunderbolt connection and the MagSafe charger.
 
-Users who try to use anonymity, or cover themselves up on the internet, are usually doing things that aren’t so-to-speak legal. We have the right to terminate, fine, or suspend your account at anytime due to you violating the rules. Do you have any other questions? Thank you for contacting Comcast, have a great day.
+However, the specs of the new USB indicate that the Type-C can support driving displays and device charging.
 
-Comcast customers, speaking to Deepdotweb, claimed that Comcast repeatedly asked them which sites they were accessing using Tor.
+"The new USB Type-C connector is smaller, faster, and more capable than the standard USB 2.0 and 3.0 ports on existing computers," added Gurman.
 
-In a statement to Business Insider, Comcast refuted the claims made in Deepdotweb, stating that they had launched an internal review into the discussions reported above:
+Apple is yet to make an official announcement on the new MacBook Air. The laptop is speculated to ship in mid-2015 and is expected to use one of the new dual-core Broadwell chips from Intel.
 
-Customers are free to use their Xfinity Internet service to visit any website or use it however they wish otherwise. Like virtually all ISPs, Comcast has an acceptable use policy or AUP that outlines appropriate and inappropriate uses of the service. Comcast doesn’t monitor users’ browser software or web surfing and has no program addressing the Tor browser. he anecdotal chat room evidence provided is not consistent with our agents’ messages and is not accurate. Per our own internal review, we have found no evidence that these conversations took place, nor do we employ a Security Assurance team member named Kelly. Tor’s own FAQs clearly state: 'File sharing (peer-to-peer/P2P) is widely unwanted on Tor' and 'BitTorrent is NOT anonymous' on Tor.
-
-Read Comcast's full statement here.
-
-
-
-
-
-More From Business Insider
-
+ⓒ 2018 TECHTIMES.com All rights reserved. Do not reproduce without permission.

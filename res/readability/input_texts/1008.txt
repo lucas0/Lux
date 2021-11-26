@@ -1,9 +1,9 @@
-After a number of complaints from passengers about "random males" being seated next to their wives, Saudi Arabia's national airline is looking in to segregating their flights.
+OK, so the robot apocalypse probably won’t happen any time soon, but the new robot sentries guarding Microsoft’s Silicon Valley campus seem like something straight out of a futuristic sci-fi movie.
 
-Saudi Arabia's national airline, Saudia, will order its staff to keep men and women seated separately on flights from now on after passengers complained about the lack of segregation on their flights.
+According to ExtremeTech, each of the K5 security guard robots from robotics company Knightscope stands 5 feet tall and weighs 300 pounds, so you probably don’t want to mess with one.
 
-The Emirates247 news website reported that the airline, which already complies with many of the religious practices of Islam including not offering alcohol or dishes that contain pork on their flights, have decided to separate men and women on board, unless they are close relatives.
+The K5 robots don’t come with any weapons onboard—thankfully—but they use a suite of alarms, sirens, and cameras to monitor and patrol the grounds of Microsoft’s campus. If one spots trouble, it’ll either sound an alarm or dispatch a human security guard to its location.
 
-Abdul Rahman Al Fahd, Saudia's assistant manager for marketing, said that "there are solutions to this problem…we will soon enforce rules that will satisfy all passengers". According to RT.com, Saudia is not the first airline to encounter these issues after Israeli carrier El Al faced delays to a flight back in October as Orthodox Jews refused to be seated next to women on the plane, while Delta have also faced a similar issue, both occurring on flights between Tel Aviv and New York.
+ExtremeTech notes that the K5 can run for up to 24 hours on a single charge, and can recharge in only about 20 minutes. Its battery won’t die out in the field, though—these bots will return to the charging station by themselves when their batteries start to run dry.
 
-Via RT.com Main pic via Wikimedia
+The story behind the story: Robots are playing an increasingly large role in security and military operations. Google-owned robotics company Boston Dynamics, for example, has been working with DARPA to develop various robots to aid soldiers in combat settings. Meanwhile, South Korea deployed a robotic sentry to guard its side of the Demilitarized Zone in 2010. Unlike K5, though, South Korea’s guard robot came fully armed.

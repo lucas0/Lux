@@ -1,103 +1,122 @@
-"As soon as one journalist starts asking another journalist about how they’re doing their job — forget it, you’re a pariah." - Matt Taibbi
 
-Over the last year, however, the center of gravity of the organization has shifted, as Omidyar and his Silicon Valley braintrust have exerted control over budgets and vacillated over the journalistic mission. Over the summer, Omidyar appointed a longtime confidante, John Temple — a former newspaper editor who previously led an Omidyar-financed civic journalism venture in Hawaii — to be the president for audience and products, putting him in a position above Eric Bates, the former Rolling Stone editor who was brought on as a First Look editorial director, who is close to Taibbi.
 
-Matt Taibbi is taking a "leave of absence" from Pierre Omidyar's First Look Media, according to New York Magazine . The move comes "after disagreements with higher-ups inside Omidyar's organization, a source close to First Look confirmed today."The "leave of absence" also comes three months after I first reported that Omidyar had apparently ordered Taibbi to change his strategy away from purely covering corporate fatcats (like, uh, Pierre Omidyar) to a wider mission, involving more comedy than reporting. Around the same time I heard rumors that Eric Bates was also unhappy at the organization.
 
-I've previously had a... uh... spirited email conversation with Taibbi about both claims, although Taibbi would only engage on the condition that his words were "not for publication" -- a strange demand coming from an editor at a site that's about leaking confidential documents. I emailed Taibbi again today to ask if I can publish his responses in the light of today's news. He replied: "No, you may not."
 
-Here then, for what little it's worth, is my side of the correspondence, from back in July, in which I laid out the state of First Look as I saw it (with a little help from some well placed sources.) The discussion was... uh... spirited on both sides. All words below are mine -- you'll just have to try to infer what Taibbi's stated position might have been.
+The essence of science is figuring out what things are made of, and how things work. This page gives just a brief introduction to the science of snowflakes.
 
-A note on not for publication / off the record: I thought carefully about the ethics of publishing even my half of a "not for publication" conversation. Given First Look's own policy of publishing confidential documents and the fact that it seems clear Taibbi wasn't being entirely truthful about his place at the company, I ultimately came down on the side of publishing my own responses, with Taibbi's words redacted. I'm sure some readers with disagree -- I welcome the discussion.
 
-Also, an important disclosure: Taibbi previously worked with Pando's Mark Ames on Russian ex-pat newspaper, the Exile. It has been widely reported that the two are no longer on speaking terms. I didn't discuss this post with Mark before publishing.
 
-Ok, here are the emails...
+Delving deeper brings one into a fascinating, and still unfolding, story about the molecular dynamics of how crystals grow and develop. For that you can browse the Contents page, and from there jump to a wide variety of topics relating to snowflake science. What is a snowflake?
 
-[The email thread began with Taibbi's emailing me to deny that Omidyar had changed his strategy. I had emailed First Look for comment on my story before publication but received no reply. Taibbi's email was headed "Not for publication."]
+When people say snowflake , they often mean snow crystal . The latter is a single crystal of ice, within which the water molecules are all lined up in a precise hexagonal array. Snow crystals display that characteristic six-fold symmetry we are all familiar with. The picture on the left shows a snow crystal.
 
-From: Paul Carr To: Matt Taibbi Date: Tue, Jul 29, 2014
 
-[Redacted Taibbi quote, denying my story]
 
-Right, but that's not the part that seems to have changed. What's changed is that Omidyar's description of the site yesterday made zero mention of wall street. It's gone from finance first to politics first.
+A snowflake, on the other hand, is a more general term. It can mean an individual snow crystal, but it can also mean just about anything that falls from the winter clouds. Often hundreds or even thousands of snow crystals collide and stick together in mid-air as they fall, forming flimsy puff-balls we call snowflakes. Calling a snow crystal a snowflake is fine, like calling a tulip a flower. Frozen water vapor
 
-More broadly, and happy to stay off the record, there's clearly something weird going on over there. Why does a 250m journalism project have to shift focus before it's launched? It suggests PO has no clue how to handle talent and so is retreating back to technology. [Taibbi responded, with questions of his own. Here's my reply...]
+Snow crystals are not frozen raindrops; that is called sleet . A snow crystal appears when water vapor in the air converts directly into ice without first becoming liquid water. As more water vapor condenses onto a nascent snow crystal, it grow and develops, and that is when its ornate patterns emerge. Why such complex, symmetrical shapes?
 
-From: Paul Carr To: Matt Taibbi Date: Tue, Jul 29, 2014
+And why are no two alike?
 
-I don't think [Omidyar] took you aside and ordered you not to cover his friends. I think either you made the decision yourself for reasons of an easier life, or his blog post was the first you heard about the change and he just publicly fucked you over. Knowing what I do about his management style I'm leaning towards the latter. But I emailed you because I actually want to understand what's going on. [Taibbi responded again. And I replied again...]
+A stellar snow crystal begins with the formation of a small hexagonal plate, and branches sprout from the six corners when the crystal grows larger. As it tumbles through the clouds, the crystal experiences ever changing temperatures and humidities, and each change makes the arms grow a bit differently.
 
-From: Paul Carr To: Matt Taibbi Date: Tue, Jul 29, 2014
 
-[Redacted.]
 
-If I waited for Pierre and his staffers to respond to questions I’d never publish a thing about First Look. I’ve given PO 48hrs to respond before, and still got nothing. I’m sure you’ve always held stories indefinitely until you receive a response?
+The exact shape of the final snow crystal is determined by the precise path it took through the clouds. But the six arms all took the same path, and so each experienced the same changes at the same times. Thus the six arms grow in synchrony, yielding a complex, yet symmetrical shape. And since no two snow crystals follow the exact same path through the clouds as they fall, no two look exactly alike.
 
-As for your bizarre chain of straw man arguments — I didn’t say he’d hired you to shut you up. So, no, I don’t [believe] something you just made up. As you say, that would be real [redacted] analysis.
 
-Here’s what I believe…
 
-I don’t think Pierre has any idea why he hired you, and I don’t think you’re entirely sure either. Perhaps he was looking for names that looked good on a press release and you fit the bill. I think you’re tired, and I think you knew the Rolling Stone gig wasn’t going to last for ever. I think PO offered you complete editorial freedom and promised you a blank check to build your own team. For that reason, I think Omidyar’s announcement yesterday should be terrifying to you, and to anyone else who works at FLM. He’s lost his nerve — for a combination of reasons — and is retreating to something he understands: Technology and platforms. I’ve spoken to people who have known Omidyar for decades and people who have worked with him on previous publications — if you seriously think he’s going to have your back when you go after his pals you’re more naive than… well, than you are.
+We have made "identical-twin" snowflakes by exposing a pair of tiny seed crystals to nearly identical varying conditions as a function of time. This shows essentially what would happen if two snow crystals traveled side-by-side as they fell from the clouds. What synchronizes the growth of the arms?
 
-I’m tired of this conversation now. I honestly can’t tell if you’re being a team player, or if you believe any of this crap. I’m sure I’ll continue to cover FLM and I’ll continue to ask for comment when I do. It’s entirely up to you if you respond before publication or wait until afterwards and then bitch on Twitter. Either way, I’ll continue to read your Wall St stuff if/when you publish it — just as I read, and enjoyed, your most recent book on a long flight a few weeks back.
+Nothing. The six arms of a snow crystal all grow independently, as described in the previous section. But since they grow under the same randomly changing conditions, all six end up with similar shapes. There are no mysterious forces -- quantum-mechanical, acoustical, or anything else you might have heard about -- that provide communication between the arms to ensure they all grow alike.
 
-Best of luck,
 
-Paul [Taibbi responded again.]
 
-From: Paul Carr To: Matt Taibbi Date: Wed, Jul 30, 2014
+One analogy I like is what happens on a rainy day. You look outside, see that it is raining, so you grab your umbrella on your way out. Then you find out that your neighbors are all carrying umbrellas too. You didn't communicate with one another about this, yet everyone's umbrella usage was synchronized. The same goes for the six branches of a snow crystal. When the temperature or humidity changes around the crystal, the six branches all change their growth in snychrony, even though the branches do not communicate with one another.
 
-I’m tired of it because you refuse to actually engage in conversation. I’ve laid out my position, clearly and honestly, and asked follow up questions. You won’t actually address any of my points — you just keep lobbing back straw men and not engaging with what I’m saying. At the very least you’ve turned into a corporate flack for First Look: Continuing to hammer away at a caricatured version of what I said, while refusing to answer questions, and demanding that the whole thing stay off the record so that readers continue to be left in the dark. The last person who tried that line of attack over a Pando story was Lanny Davis.
 
-[Redacted]
 
-I’ve told you what I believe, but I’ll humor you — and your enjoyment at playing PR flack — by saying it again, this time line by line…
+Now, let me assure you that the vast majority of snow crystals are not very symmetrical. Don't be fooled by the pictures -- irregular crystals (see the Guide to Snowflakes) are by far the most common type. Just take a look for yourself next time it snows. Near-perfect, symmetrical snow crystals are fun to look at, and sought after by photographers, but they are not common. Why six?
 
-[Redacted Taibbi quote]
+The six-fold symmetry you see in a snow crystal arises from the arrangement of water molecules in the ice crystal lattice. As this ice crystal model spins around, you can see the hexagons in the structure. But a crystal is a three-dimensional structure, and snowflakes are also three-dimensional. Stellar plates are thin and flat (see the Guide to Snowflakes), but other snow crystals are not.
 
-I think it’s unlikely Pierre *ordered* you to stop writing about Wall Street. I’d say the odds [are] almost zero. He’s not that fucking stupid. Here’s what I said "No, of course I don't think he took you aside and ordered you not to cover his friends. I think either you made the decision yourself for reasons of an easier life, or his blog post was the first you heard about the change and he just publicly fucked you over.”
 
-Here’s my question, which you don’t seem keen to answer: Did you know Pierre was going to leave finance out of his post about what your editorial mission would be? If not, doesn’t that worry you? If so, what is the reasoning behind not mentioning the thing that you are best known for but which is likely to make your sole funder and boss the most uncomfortable?
 
-A follow-up question: What are we to make of the fact that First Look journalists — Greenwald in particular — insist that Pierre has no control over editorial (indeed you’ve insisted similar in this conversation) and yet he’s the one laying out the company’s editorial plan? Why wouldn’t that be the job of the actual editors? Instead we have your $250m funder issuing a statement that marginalizes the one aspect of your work that might sting him while reassuring the world that — don’t worry! — he intends to permit you and Greenwald to continue doing your jobs, but that he has decided to axe plans for all the other editorial sites he previously (in a video starring him) said he would fund. What does the phrase “editorial independence” actually mean at First Look?
+The simplest snowflakes
 
-[Redacted Taibbi quote]
+When snow crystals first begin growing, they are shaped like the simple hexagonal prisms shown here. Each prism has two basal facets and six prism facets .
 
-I think that’s what he told you when you were first hired, yes. People are told lots of things on first dates.
 
-[Redacted Taibbi quote]
 
-I’ve never said otherwise. That’s a total red herring.
+Hexagonal prisms can be long, slender, hexagonal columns, or thin, flat, hexagonal plates, or anything in between.
 
-[Redacted Taibbi quote]
 
-[Redacted] I didn’t mention anything in my story about Pierre ordering you to stop writing (because, as I’ve made clear, I don’t believe that would make any sense); I didn’t mention what I suspect you might have been told when you were hired (because, again, I don’t know. What I know — and what I wrote — is that the public statements about your mission have changed); I didn’t mention it being a satirical publication because that hasn’t changed.
 
-[Redacted Taibbi quote]
+Hexagonal prisms display the simple, perfect order of the molecular lattice. These crystals result from slow growth, and they are usually small in size.
 
-A press release about what your job and focus will be, written by the man who writes your pay checks and who is backing down on almost all of the editorial strategy that was in place when you were hired. A press release that was at odds with all previous statements about what your focus will be; specifically leaving out the one thing that would seem to have the potential to make Omidyar most concerned. Yes, I believe that means you will be focussing far less on that aspect of things and, yes, I believe that it’s either a choice you’ve consciously made, or a choice Pierre is attempting to make for you through passive aggressive public messaging.
 
-Your choice of denial is interesting. "[Redacted]" That’s the same line Greenwald used when he was challenged on whether he would write about Pierre’s business interests. Clear enough to sound like a denial, but general enough to allow you to focus most of your energies away from Wall Street.
 
-Do you at least concede that previously the chief focus of your site was to be on finance and now it’s on politics and “culture”? If the *main focus* of the site still on uncovering financial corruption? Yes or no? If yes, why did your boss mischaracterize the site so badly in his blog post, and if no, why not?
 
-[Redacted Taibbi quote]
 
-Pierre has been interfering with First Look’s editorial plans from the start. Every single editorial plan First Look has exists only at Pierre’s pleasure. He is your sole funder and he is the one making public statements about how he intends to allocate those resources. How is it possible you understand Wall Street so well but don’t understand that?
 
-[Redacted Taibbi quote]
 
-Yes, that is what’s apparent from Omidyar’s statement.
+Snowflake Asymmetry
 
-[Redacted Taibbi quote]
+If you take a close look at the snow crystal on the left, you will see that it is not very symmetrical. Sure it has six similar branches, but the sidebranches are randomly positioned on the each of the branches. This is a fernlike stellar dendrite (see the Guide to Snowflakes), and each branch grows independently of the others. Plus each branch grows rapidly (compared to other snowflake types), sending out sidebranches at irregular intervals.
 
-I had plenty of information, and printed what I knew, after giving you the opportunity to respond before publication. I’d have plenty more information to set the record straight if you’d answer any of the questions above. Or better still, stop hiding behind “not for publication.” Why, if you’re being so unfairly maligned, won’t you let any of the above be shared with readers? Isn’t the whole basis of First Look to make all the information public and let readers decide? Why doesn’t that apply to conversations about First Look and its billionaire owner?
 
-Which leads me to my last question: Have you, or any first look staffer to the best of your knowledge, signed an NDA or non disparagement contract — either as a standalone or as part of your employment contract(s)?
 
-You’re right, this is an enjoyable conversation! Now let’s shift it up a gear and get to some real answers.
+The chaotic branching of a fernlike stellar dendrite arises during rapid ice growth, in contrast to the slow, simple growth of hexagonal prisms.
 
-Paul Despite previously saying he was enjoying our conversation, Taibbi stopped responding when I asked him he had signed any kind of contract restricting his freedom to talk openly about First Look.
 
-When I emailed him earlier today, I asked if he had anything to add to his previous comments. He replied: "Just that your story was wrong then and still is."
+
+
+
+Faceting, Branching, and Sharpening
+
+There is no blueprint or genetic code that guides the growth of a snowflake. Yet they appear in these amazingly ornate, symmetrical shapes. The shape of each crystal is not determined by any plan or predetermined design, but by different processes that govern its growth behavior.
+
+
+
+Faceting. One such process is faceting, which causes flat surfaces to appear on the crystal, surfaces that reflect the underlying molecular symmetry. Click on the link to read more about faceting.
+
+
+
+Branching. This process causes complex structures to grow out from the ice. Click on the link to read more.
+
+
+
+Sharpening. This process pushes snow crystal growth to thin, flat plates, happening mainly at temperatures near -15C (5 F).
+
+
+
+The different growth processes guide snow crystal growth differently. Faceting creates order, as embodied by the simple, perfect, hexagonal prism. Branching brings chaos, as embodied by the randomly spaced sidebranches in a fernlike stellar dendrite. But with the right mix of order and chaos, nature sometimes creates beautiful snow crystals that are both complex and symmetrical.
+
+
+
+As you learn more about snowflakes, you soon find that the underlying science is quite complicated. The growth of a snowflake depends on how water molecules diffuse through the air surrounding a growing crystal, and it depends on how water molecules stick to ice surfaces. There is a lot going on as these crystals form in the clouds. Of course, that is what makes it all so fascinating!
+
+The Snow Crystal Morphology Diagram
+
+The way snow crystals grow depends strongly on the temperature and humidity in the clouds. This is summarized in the Snow Crystal Morphology Diagram shown on the right. This is also called the Nakaya Diagram , after Japanese physicist Ukichiro Nakaya, who discovered this behavior by growing snow crystals in his lab in the 1930s.
+
+
+
+Go ahead, click on the diagram for a closer look. It shows that the largest, most photogenic stellar snow crystals only grow in a narrow temperature range around -15 C (5 F). Needles and columns are best found around -6 C (21 F). Capped columns appear when the temperature changes as the crystals grow. Remember these are temperatures in the clouds; it is often substantially warmer on the ground.
+
+
+
+You can also see that more elaborate, branched crystals grow when the humidity is high. Simple prisms grow when the humidity is low (or when the crystals are tiny).
+
+
+
+Exactly why snow crystals grow this way is not yet fully understood, although much progress has been made. The growth behavior of ice depends on the molecular structure and dynamics at the crystal surface, and this is all so complicated that no one really understands everything about it.
+
+
+
+Although science has made great advances in understanding the secrets of the Universe, there remains a bit of mystery still in these remarkable ice structures. More...
+
+If you find this intriguing so far, please continue to the Contents page, from where you can jump to a wide variety of topics relating to snowflake science.
+
+
+

@@ -5,11 +5,11 @@ docker stop $(docker ps -a -q) > /dev/null
 export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 while true; do
-    rnd=$RANDOM
-    #rnd=11191
+    #rnd=$RANDOM
+    rnd=4419
     echo $rnd
     sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
-    python lux.py --regenerate_features 'all'
+    python lux.py --regenerate_features 'feat'
     best_avg=$(sed -rn 's/^AVG:\s([0-9\.]*)$/\1/p' $DIR/data/bck_best/README.md)
     best_f1=$(sed -rn 's/^F1:\s([0-9\.]*)$/\1/p' $DIR/data/bck_best/README.md)
     c_avg=$(sed -rn '$ s/(.*)AVG:\s([0-9\.]*)(.*)$/\2/p' $DIR/results.txt)
