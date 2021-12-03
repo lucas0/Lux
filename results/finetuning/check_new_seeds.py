@@ -4,11 +4,12 @@ scriptname = sys.argv[0]
 cwd = os.path.abspath(scriptname+"/..")
 
 filename = cwd+"/results11-11-21.txt"
+filename = cwd+"/big_seed_mix.txt"
 
 with open(filename, "r+", encoding="utf-8") as f:
     lines = f.readlines()
 
-ob_lines = [line for line in lines if "only_bert" in line]
+ob_lines = [line for line in lines if "_bert" in line]
 b_lines = [line for line in lines if line not in ob_lines]
 
 f1s, accs, diffs, seeds = [], [], [], []

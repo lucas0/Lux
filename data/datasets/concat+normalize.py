@@ -103,7 +103,11 @@ lens = np.asarray([len(e.split(" ")) for e in c['o_body'].values])
 c = c[lens < MAX_SENT_LEN]
 print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars or more than "+str(MAX_SENT_LEN)+" sentences:",len(c))
 c.drop_duplicates(subset=['o_url'], inplace=True, keep='last')
-print("size of final version of  \"dataset\" (after dropping dupplicated o_url):",len(c))
+print("size of \"dataset\" (after dropping dupplicated o_url):",len(c))
+
+#optional line to manage the size of the dataset
+c = c.sample(frac=0.2)
+print("final size of \"dataset\":",len(c))
 
 print(c['verdict'].value_counts())
 dif = (c['verdict'].value_counts()[0] - c['verdict'].value_counts()[1])

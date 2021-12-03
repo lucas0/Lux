@@ -42,6 +42,7 @@ acronyms = "([A-Z][.][A-Z][.](?:[A-Z][.])?)"
 websites = "[.](com|net|org|io|gov)"
 digits   = "([0-9])"
 
+
 def split_into_sentences(text):
         text = " " + text + "  "
         text = text.replace("\n"," ")
@@ -94,7 +95,7 @@ def generate_specificity():
 
     subprocess.call("cp "+my_data_path+" "+spec_dir+"/dataset/data/my_data_test.txt", shell=True, cwd = spec_dir)
     #calls subprocess to get sentences scores
-    subprocess.call("python3 train.py --gpu_id 0 --test_data my_data", shell=True, cwd = spec_dir)
+    #subprocess.call("python3 train.py --gpu_id 0 --test_data my_data", shell=True, cwd = spec_dir)
     subprocess.call("python3 test.py --gpu_id 0 --test_data my_data", shell=True, cwd = spec_dir)
     print("Specificity Scores Generated")
 
@@ -203,6 +204,8 @@ def passiveness_aux(t):
     return(count/n_sent)
 
 def generateFeats(feature_list=["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
+    inf,div,qua,aff,sbj,spe,pau,unc,pas = None,None,None,None,None,None,None,None,None
+    inf,div,qua,aff,sbj,spe,pau,unc,pas = [None]*9
     csv = pd.read_csv(data_dir+"/data.csv", sep="\t")
     print("Generating Features for dataset shaped: ",csv.shape)
 
@@ -332,8 +335,7 @@ def generateFeats(feature_list=["inf","div","qua","aff","sbj","spe","pau","unc",
     ### PASSIVENESS ###
     if "pas" in feature_list:
         print("Generating passiveness scores")
-        with mp.Pool() as pool:
-            passiveness_scores = pool.map(passiveness_aux, [(e['sent'],e['n_sent']) for _,e in csv.iterrows()])
+        passiveness_scores = tqdm(map(passiveness_aux, [(e['sent'],e['n_sent']) for _,e in csv.iterrows()]), total=len(csv))
         pas = pd.DataFrame(passiveness_scores, columns=["Passiveness score"])
 
     ### CONCATENATION ###

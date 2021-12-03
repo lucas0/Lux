@@ -1,9 +1,0 @@
-The next episode of Beats Music won’t be making an appearance at Apple’s ‘Spring Forward’ event next week.
-
-Sources “with a knowledge of the company’s current plans” have told TechCrunch that Apple will debut the new service — which ditches the Beats branding for tighter iTunes integration — during Apple’s World Wide Developers Conference.
-
-The official unveiling will take place on June 8, reports the site, concurring with a 9to5Mac report that also claims the new Beats service will launch at WWDC, though a specific date hasn’t been announced yet by Apple.
-
-Apple’s updated service will add Beats’ personalization and recommendation features mixed with mostly new software. Cross-platform support on Android and PC will continue to be offered, even though the Beats Music branding will be a thing of the past. The new service will be priced around $7.99, making it competitive against Spotify and Rdio’s monthly subscription fees of $9.99/per month.
-
-Apple allegedly planned to launch the new service at the beginning of 2015, but the departure of key employees cause the project to be delayed. The service will be packaged in an iOS 8.4 update to be released sometime after WWDC, however Apple could also choose to put it into iOS 9, which is expected to lack major new features, focusing mostly on bug fixes and speed.

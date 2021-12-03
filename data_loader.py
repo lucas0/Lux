@@ -367,7 +367,9 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
 
             savehash("concat", hashcode=df_hash)
 
-        checks = ["bert", "features", "concat", "complexity", "specificity"]
+        checks = ["bert", "features", "concat"]
+        if "inf" in feature_list: checks.append("complexity")
+        if "spe" in feature_list: checks.append("specificity")
 
         for e in checks:
             print(e)

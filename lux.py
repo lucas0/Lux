@@ -49,7 +49,7 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 4419
+seed = 16210
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -64,11 +64,11 @@ LSTM_DIM = 256
 DENSE_DIM = [128, 256, 512]
 DENSE_DIM = [128]
 DATA_SHAPE = None
-learning_rates = [0.0001, 0.001, 0.0005]
+learning_rates = [0.0001, 0.0005, 0.001]
 learning_rates = [0.0001]
 batch_size = 64
-DROPOUT = [0.2, 0.3, 0.4, 0.5, 0.6]
-DROPOUT = [0.5]
+DROPOUT = [0.3, 0.5, 0.7]
+DROPOUT = [0.3]
 
 #check which dataset will be used (development or deploy)
 d_dir = cwd+"/data/datasets/"
@@ -137,7 +137,7 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     model.add(layer1)
     #batch normalization makes the the model results inconsistent!!!
     #model.add(batch_norm)
-    #model.add(Dropout(DROPOUT))
+    model.add(Dropout(DROPOUT))
     model.add(Dense(target_len, activation='softmax', kernel_initializer = initializer2))
     model.summary()
 
