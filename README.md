@@ -81,6 +81,8 @@ if 'True' is passed as first argument, force_reload will receive its value and n
 
 ---
 
+# Papers
+
 Please cite the published articles related to this work:
 
 Azevedo, Lucas, et al. "LUX (Linguistic aspects Under eXamination): Discourse Analysis for Automatic Fake News Classification." Findings of the Association for Computational Linguistics: ACL-IJCNLP 2021. 2021.
