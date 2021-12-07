@@ -7,7 +7,9 @@ export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 while true; do
     rnd=$RANDOM
     #rnd=4419
+    #rnd=16210
     #rnd=14564
+    rnd=24660
     echo $rnd
     sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
     python lux.py
@@ -28,7 +30,9 @@ while true; do
     fi
     find . -maxdepth 1 -name 'tmp*' -type d -exec rm -r {} +
 
-    python lux.py --input_features 'only_bert'
+    #cp feat_log.txt feat_log1.txt
+    #cp log_test_folds.txt log_test_folds1.txt
+    #python lux.py --input_features 'only_bert'
 
     #also doing with only claims
     #python lux.py True only_claims

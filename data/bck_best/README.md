@@ -5,6 +5,6 @@ dataset.csv should be placed in the dataset/ dir
 
 after the placement lux.py should run and obtain exaclty the same results [checked]
 
-seed on lux.py: 4419
-AVG: 0.7590518455903071
-F1: 0.7582051306556867
+seed on lux.py: 21901
+AVG: 0.7616934347703578
+F1: 0.7596664046167905

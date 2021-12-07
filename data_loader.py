@@ -140,6 +140,9 @@ def reset_hash(force_reload):
     if force_reload == "feat" :
         for s in ["data", "features", "concat", "complexity", "specificity"]:
             savehash(s,"0")
+    if force_reload == "just_reload" :
+        for s in ["data", "concat"]:
+            savehash(s,"0")
 
 #run concat+normalize.py inside dataset/ before loading data
 def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=1, random_state=None, force_reload=None, drop_feat_idx=[], only_claims=False, feature_list=["inf","div","qua","aff","sbj","spe","pau","unc","pas"]):
@@ -231,10 +234,13 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
                 sys.exit(1)
             savehash("specificity", hashcode=df_hash)
 
-        if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features"):
+        if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features") or (force_reload == 'just_reload'):
             flag_concat = True
             try:
-                features = feat.generateFeats(feature_list)
+                if force_reload != "just_reload":
+                    features = feat.generateFeats(feature_list)
+                else:
+                    features = feat.generateFeats(feature_list, just_reload=True)
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")

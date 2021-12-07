@@ -5,6 +5,8 @@ cwd = os.path.abspath(scriptname+"/..")
 
 f0 = cwd+"/feat_log.txt"
 f1 = cwd+"/feat_log1.txt"
+f0 = cwd+"/log_test_folds.txt"
+f1 = cwd+"/log_test_folds1.txt"
 
 with open(f0,"r+") as f:
     lines0 = f.readlines()

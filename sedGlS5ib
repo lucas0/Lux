@@ -1,0 +1,86 @@
+#!/home/lucas/Lux/envLux/bin/python3
+import argparse
+from distutils import util
+#read these from the call:
+parser = argparse.ArgumentParser(description='LUX main script.')
+parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
+parser.add_argument('--tune', action='store', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
+parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
+parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat', 'just_reload'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat), if the individual features should be just reloaded (just_reload) to be used with --feat_list or None (default)')
+parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
+parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
+parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
+parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
+args = parser.parse_args()
+
+import tensorflow
+#tensorflow.enable_eager_execution()
+import warnings
+#warnings.filterwarnings("once")
+from numpy.random import seed
+seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
+tesorflow.random.set_seed(2)
+
+import traceback
+import resource
+import itertools
+from itertools import groupby, chain, combinations
+
+import gc
+import pandas as pd
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+import random
+from sklearn.metrics import accuracy_score, f1_score
+import numpy as np
+import os,sys
+#for comparing dev/deploy datasets and copying the right one into dataset.csv
+import filecmp, shutil
+from data_loader import load_data
+
+from tensorflow.keras import losses, regularizers
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import Dense, Dropout, LSTM, Flatten, Bidirectional, TimeDistributed, BatchNormalization
+from tensorflow.keras.optimizers import Adam
+from tensorflow.keras.models import load_model
+from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
+from tensorflow.keras.initializers import RandomNormal, RandomUniform
+import keras_tuner as kt
+
+seed = 24660
+random.seed(seed)
+root = random.randint(0,10090000)
+print("ROOT:", root)
+
+filename = sys.argv[0]
+cwd = os.path.abspath(filename+"/..")
+checkpoint_filepath = cwd+'/lux_best_models/'
+
+model = None
+num_epochs = [200]
+LSTM_DIM = 256
+DENSE_DIM = [128, 256, 512]
+DENSE_DIM = [128]
+DATA_SHAPE = None
+learning_rates = [0.0001, 0.0005, 0.001]
+learning_rates = [0.0005]
+DROPOUT = [0.3, 0.5, 0.7]
+DROPOUT = [0.5]
+BATCH_SIZE = [32,64,128,256,512]
+BATCH_SIZE = [32]
+
+#check which dataset will be used (development or deploy)
+d_dir = cwd+"/data/datasets/"
+dev_data = d_dir+"/dataset_test02.csv"
+run_data = d_dir+"/dataset_bck.csv"
+cur_data = d_dir+"/dataset.csv"
+if args.env == "dev" and not filecmp.cmp(dev_data, cur_data, shallow=True):
+    shutil.copy2(dev_data, cur_data)
+if args.env == "deploy" and not filecmp.cmp(run_data, cur_data, shallow=True):
+    shutil.copy2(run_data, cur_data)
+
+def build_model(hp):
+    hp_units = hp.Int('units', min_value=128, max_value=512, step=32)

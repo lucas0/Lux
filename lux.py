@@ -6,21 +6,27 @@ parser = argparse.ArgumentParser(description='LUX main script.')
 parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
 parser.add_argument('--tune', action='store', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
 parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
-parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat) or None (default)')
+parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat', 'just_reload'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat), if the individual features should be just reloaded (just_reload) to be used with --feat_list or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
 parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
 parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
 args = parser.parse_args()
 
+import random
+seed = 24660
+random.seed(seed)
+root = random.randint(0,10090000)
+print("ROOT:", root)
+
 import tensorflow
-#tensorflow.enable_eager_execution()
+#tensorflow.compat.v1.enable_eager_execution
 import warnings
 #warnings.filterwarnings("once")
-from numpy.random import seed
-seed(1)
+import numpy as np
+np.random.seed(root)
 from tensorflow import set_random_seed
-set_random_seed(2)
+set_random_seed(root)
 
 import traceback
 import resource
@@ -32,9 +38,7 @@ import pandas as pd
 import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
-import random
 from sklearn.metrics import accuracy_score, f1_score
-import numpy as np
 import os,sys
 #for comparing dev/deploy datasets and copying the right one into dataset.csv
 import filecmp, shutil
@@ -49,10 +53,9 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-seed = 16210
-random.seed(seed)
-root = random.randint(0,10090000)
-print("ROOT:", root)
+#from keras import backend as K
+#print(K.tensorflow_backend._get_available_gpus())
+#exit(1)
 
 filename = sys.argv[0]
 cwd = os.path.abspath(filename+"/..")
@@ -65,19 +68,20 @@ DENSE_DIM = [128, 256, 512]
 DENSE_DIM = [128]
 DATA_SHAPE = None
 learning_rates = [0.0001, 0.0005, 0.001]
-learning_rates = [0.0001]
-batch_size = 64
+learning_rates = [0.0005]
 DROPOUT = [0.3, 0.5, 0.7]
-DROPOUT = [0.3]
+DROPOUT = [0.5]
+BATCH_SIZE = [32,64,128,256,512]
+BATCH_SIZE = [32]
 
 #check which dataset will be used (development or deploy)
 d_dir = cwd+"/data/datasets/"
-dev_data = d_dir+"/dataset_test.csv"
+dev_data = d_dir+"/dataset_test02.csv"
 run_data = d_dir+"/dataset_bck.csv"
 cur_data = d_dir+"/dataset.csv"
-if args.env == "dev" and filecmp.cmp(run_data, cur_data, shallow=True):
+if args.env == "dev" and not filecmp.cmp(dev_data, cur_data, shallow=True):
     shutil.copy2(dev_data, cur_data)
-if args.env == "deploy" and filecmp.cmp(dev_data, cur_data, shallow=True):
+if args.env == "deploy" and not filecmp.cmp(run_data, cur_data, shallow=True):
     shutil.copy2(run_data, cur_data)
 
 def build_model(hp):
@@ -108,16 +112,13 @@ def build_model(hp):
 
 def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
-    initializer = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
-    initializer2 = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
 
     layer1 = Dense(DENSE_DIM,
             activation='relu',
             input_shape=(DATA_SHAPE[1:]),
-            #kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+            kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
             #bias_regularizer=regularizers.l2(1e-4),
-            #activity_regularizer=regularizers.l2(1e-5),
-            kernel_initializer = initializer)
+            )
 
     batch_norm = BatchNormalization(axis=-1,
             momentum=0.99,
@@ -137,8 +138,8 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
     model.add(layer1)
     #batch normalization makes the the model results inconsistent!!!
     #model.add(batch_norm)
-    model.add(Dropout(DROPOUT))
-    model.add(Dense(target_len, activation='softmax', kernel_initializer = initializer2))
+    #model.add(Dropout(DROPOUT))
+    model.add(Dense(target_len, activation='softmax'))
     model.summary()
 
     adam = Adam(lr=learning_rate)
@@ -188,7 +189,7 @@ drop_features_idx = [[]]
 #    drop_features_idx.remove([i])
 #drop_features_idx.remove([])
 
-setup = itertools.product(drop_features_idx, num_epochs, [args.input_features], learning_rates, DENSE_DIM, DROPOUT)
+setup = itertools.product(drop_features_idx, num_epochs, [args.input_features], learning_rates, DENSE_DIM, DROPOUT, BATCH_SIZE)
 
 for s in setup:
     drop_feat_idx = s[0]
@@ -197,6 +198,7 @@ for s in setup:
     learning_rate = s[3]
     num_dims = s[4]
     dropout = s[5]
+    batch_size = s[6]
     res_acc, res_f1 = [],[]
     model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
     try:
@@ -233,7 +235,7 @@ for s in setup:
 
                 tuner.search(x=train, y=train_target,
                              validation_data=(dev, dev_target),
-                             batch_size=32,
+                             batch_size=batch_size,
                              callbacks=[early_stop],
                              epochs=200)
 
@@ -244,11 +246,11 @@ for s in setup:
                     print(bestHP.values)
                     model = tuner.hypermodel.build(bestHP)
                     H = model.fit(x=train, y=train_target,
-                                validation_data=(dev, dev_target), batch_size=32,
+                                validation_data=(dev, dev_target), batch_size=batch_size,
                                     epochs=100, callbacks=[early_stop], verbose=1, use_multiprocessing=False)
                     # evaluate the network
                     print("[INFO] evaluating network...")
-                    predictions = model.predict_classes(test, batch_size=32)
+                    predictions = model.predict_classes(test, batch_size=batch_size)
                     f1_best_tune = f1_score(test_target, predictions, average="macro")
                     print(f1_best_tune)
                     with open(os.getcwd()+"/results.txt", "a") as f:
@@ -257,11 +259,12 @@ for s in setup:
                     input(best_idx)
 
             if args.train_flag:
-                history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks, use_multiprocessing=False)
-                model_history = pd.DataFrame(history.history)
-                model_history.plot(figsize=(8,5))
-                plt.savefig("plots/model"+str(fold_test))
-                print(model_history['val_loss'].min())
+                with tensorflow.device('/cpu:0'):
+                    history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks, use_multiprocessing=False)
+                    model_history = pd.DataFrame(history.history)
+                    model_history.plot(figsize=(8,5))
+                    plt.savefig("plots/model"+str(fold_test))
+                    print(model_history['val_loss'].min())
 
             else:
                 best_model = checkpoint_filepath+"best_model.h5"
@@ -274,6 +277,8 @@ for s in setup:
             test_preds = model.predict_classes(test)
             print(test_preds)
             print("test:", test)
+            #with open(cwd+"/log_test_folds.txt","a+") as f:
+            #    f.write("fold"+str(fold_test)+"\n")
 
             #prints out the accuracy based on the right values and what the model predicted
             fold_acc = accuracy_score(test_target, test_preds)

@@ -1,0 +1,75 @@
+Index to Five Millennium Catalog of Lunar Eclipses
+
+-1999 to +3000 (2000 BCE to 3000 CE)
+
+Introduction
+
+Eclipses of the Moon can occur when the Moon is near one of its two orbital nodes [1] during the Full Moon phase. It is then possible for the Moon to pass through Earth's penumbral or umbral shadows thereby producing an eclipse. There are three types of lunar eclipses:
+
+Penumbral - Moon traverses Earth's penumbral shadow (Moon misses Earth's umbral shadow) Partial - Moon traverses Earth's penumbral and umbral shadows (Moon does not pass completely into Earth's umbra) Total - Moon traverses Earth's penumbral and umbral shadows (Moon passes completely into Earth's umbra)
+
+
+
+Furthermore, total eclipses can be classified as either central [2] or non-central.
+
+The visual appearance of each of these eclipse types differs dramatically from each other.
+
+The recurrence of lunar eclipses is governed by the Saros cycle. For more information, see Periodicity of Lunar Eclipses.
+
+Statistics for Lunar Eclipses: -1999 to +3000 (2000 BCE to 3000 CE)
+
+During the five Millennium period -1999 to +3000 (2000 BCE to 3000 CE[3]), Earth will experience 12064 lunar eclipses. The following table shows the number of eclipses of each type over this period.
+
+Lunar Eclipses: -1999 to +3000 Eclipse Type Symbol Number Percent All Eclipses - 12064 100.0% Penumbral N 4378 36.3% Partial P 4207 34.9% Total T 3479 28.8%
+
+During most penumbral eclipses, only part of the Moon passes through Earth's penumbral shadow. However, it is also possible to have a penumbral eclipse in which the Moon passes completely within Earth's penumbral shadow without entering the inner umbral shadow. Such total penumbral eclipses are quite rare compared to normal (or partial) penumbral eclipses. The table below shows the distribution of the two penumbral eclipse types during the 5000-year period of this Catalog.
+
+Penumbral Lunar Eclipses: -1999 to +3000 Classification Number Percent All 4378 100.0% Partial Penumbral 4237 96.8% Total Penumbral 141 3.2%
+
+Total lunar eclipses through Earth's umbral shadow can be categorized as:
+
+Central - Some part of the Moon passes through the central axis of Earth's umbral shadow.
+
+Non-Central - The Moon misses the central axis of Earth's umbral shadow.
+
+Using the above categories, the distribution of the 3,479 total eclipses is shown in the table below.
+
+Total Lunar Eclipses: -1999 to +3000 Classification Number Percent All 3479 100.0% Central Total 2074 59.6% Non-Central Total 1405 40.4%
+
+There are a minimum of two and a maximum of five lunar eclipses in every calendar year. Statistics for the number of eclipses each year over the 5000 year period are listed below.
+
+Number of Eclipses Per Year Number of Eclipses Number of Years Percent 2 3541 70.8% 3 887 17.7% 4 539 10.8% 5 33 0.7%
+
+The longest eclipses of the 5,000 year period are listed below.
+
+Longest Penumbral Lunar Eclipse: 1322 Nov 24 Duration = 296.5m Longest Partial Lunar Eclipse: 2669 Feb 08 Duration = 210.0m Longest Total Lunar Eclipse: 0318 May 31 Duration = 106.6m
+
+Five Millennium Catalog of Lunar Eclipses: -1999 to +3000 (2000 BCE to 3000 CE)
+
+The table below summarizes the statistical distribution of lunar eclipse types over this five millennium period. Each line in the table corresponds to one century and gives the breakdown of each eclipse type (penumbral, partial, and total). The date intervals themselves are each a link to a catalog listing complete details for every lunar eclipse in the selected century. The data in these 100 year eclipse tables include the date and time of greatest eclipse[4], ΔT, lunar libration number, Saros series, the eclipse type, quincena solar eclipse parameter, gamma, eclipse magnitudes, eclipse phase durations, and local circumstances. For a detailed key and additional information about the catalogs, see: Key to Catalog of Lunar Eclipses.
+
+Calendar
+
+The Gregorian calendar is used for all dates from 1582 Oct 15 onwards. Before that date, the Julian calendar is used. For more information on this topic, see Calendar Dates. The Julian calendar does not include the year 0. Thus the year 1 BCE is followed by the year 1 CE (See: BCE/CE Dating Conventions ). This is awkward for arithmetic calculations. Years in this catalog are numbered astronomically and include the year 0. Historians should note there is a difference of one year between astronomical dates and BCE dates. Thus, the astronomical year 0 corresponds to 1 BCE, and astronomical year -1 corresponds to 2 BCE, etc..
+
+Predictions
+
+Lunar eclipse predictions must take into account the enlargement of Earth's shadows. In this Catalog, Earth's penumbral and umbral shadow sizes have been calculated using Danjon's enlargement method.
+
+The coordinates of the Sun used in the predictions are based on the VSOP87 theory [Bretagnon and Francou, 1988]. The Moon's coordinates are based on the ELP-2000/82 theory [Chapront-Touze and Chapront, 1983]. For more information, see: Solar and Lunar Ephemerides. The revised value used for the Moon's secular acceleration is n-dot = -25.858 arc-sec/cy*cy, as deduced from the Apollo lunar laser ranging experiment (Chapront, Chapront-Touze, and Francou, 2002).
+
+The largest uncertainty in the eclipse predictions is caused by fluctuations in Earth's rotation due primarily to tidal friction of the Moon. The resultant drift in apparent clock time is expressed as ΔT and is determined as follows:
+
+pre-1950's: ΔT calculated from empirical fits to historical records derived by Morrison and Stephenson (2004) 1955-2006: ΔT obtained from published observations Post-2006: ΔT is extrapolated from current values weighted by the long term trend from tidal effects
+
+A series of polynomial expressions have been derived to simplify the evaluation of ΔT for any time from -1999 to +3000. The uncertainty in ΔT over this period can be estimated from scatter in the measurements.
+
+Footnotes
+
+Acknowledgments
+
+The information presented on this web page is based on data published in Five Millennium Canon of Lunar Eclipses: -1999 to +3000 and Five Millennium Catalog of Lunar Eclipses: -1999 to +3000. The individual diagrams and maps appearing in links were extracted from full page plates appearing in Five Millennium Canon. The Besselian elements were provided by Jean Meeus. Fred Espenak assumes full responsibility for the accuracy of all eclipse calculations.
+
+Permission is freely granted to reproduce this data when accompanied by an acknowledgment:
+
+"Eclipse Predictions by Fred Espenak (NASA's GSFC)"
