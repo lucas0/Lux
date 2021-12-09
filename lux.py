@@ -13,20 +13,22 @@ parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help=
 parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
 args = parser.parse_args()
 
+
 import random
-seed = 24660
+seed = 19745
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
 
-import tensorflow
-#tensorflow.compat.v1.enable_eager_execution
 import warnings
 #warnings.filterwarnings("once")
 import numpy as np
 np.random.seed(root)
-from tensorflow import set_random_seed
-set_random_seed(root)
+import tensorflow
+tensorflow.compat.v1.enable_eager_execution()
+#tensorflow.enable_eager_execution()
+tensorflow.compat.v1.set_random_seed(root)
+#tensorflow.set_random_seed(root)
 
 import traceback
 import resource
@@ -52,6 +54,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
+
 
 #from keras import backend as K
 #print(K.tensorflow_backend._get_available_gpus())
@@ -86,39 +89,19 @@ if args.env == "deploy" and not filecmp.cmp(run_data, cur_data, shallow=True):
 
 def build_model(hp):
     hp_units = hp.Int('units', min_value=128, max_value=512, step=32)
-    hp_dropout = hp.Float('dropout', min_value=0.2, max_value=0.6, step=0.1, default=0.5)
-    hp_lr = hp.Choice('learning_rate', values=[1e-3, 5e-4, 1e-4])
+    hp_dropout = hp.Float('dropout', min_value=0.3, max_value=0.8, step=0.1, default=0.5)
+    hp_lr = hp.Choice('learning_rate', values=[1e-3, 5e-4])
 
     initializer = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
+    initializer2 = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
 
     layer1 = Dense(hp_units,
             activation='relu',
             input_shape=(DATA_SHAPE[1:]),
-            kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
-            bias_regularizer=regularizers.l2(1e-4),
-            activity_regularizer=regularizers.l2(1e-5),
-            kernel_initializer = initializer)
-
-    model = Sequential()
-    model.add(layer1)
-    model.add(Dropout(hp_dropout))
-    model.add(Dense(2, activation='softmax'))
-    model.summary()
-
-    adam = Adam(lr=hp_lr)
-    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
-
-    return model
-
-def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
-    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
-
-    layer1 = Dense(DENSE_DIM,
-            activation='relu',
-            input_shape=(DATA_SHAPE[1:]),
-            kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+            #kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
             #bias_regularizer=regularizers.l2(1e-4),
-            )
+            #activity_regularizer=regularizers.l2(1e-5),
+            kernel_initializer = initializer)
 
     batch_norm = BatchNormalization(axis=-1,
             momentum=0.99,
@@ -131,15 +114,51 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
             moving_variance_initializer="ones",
             beta_regularizer=None,
             gamma_regularizer=None,
-            beta_constraint=None,
-            gamma_constraint=None)
+            beta_constraint=None, gamma_constraint=None)
 
     model = Sequential()
     model.add(layer1)
-    #batch normalization makes the the model results inconsistent!!!
-    #model.add(batch_norm)
-    #model.add(Dropout(DROPOUT))
-    model.add(Dense(target_len, activation='softmax'))
+    model.add(batch_norm)
+    model.add(Dropout(hp_dropout))
+    model.add(Dense(target_len, activation='softmax', kernel_initializer=initializer2))
+    model.summary()
+
+    adam = Adam(lr=hp_lr)
+    model.compile(loss='binary_crossentropy', optimizer=adam, metrics=['binary_accuracy'])
+
+    return model
+
+def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
+    #one suggestion is to determine the size the layers same as the input, instead of hard-coded
+    initializer1 = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
+    initializer2 = RandomUniform(minval=-0.05, maxval=0.05, seed=seed)
+
+    layer1 = Dense(DENSE_DIM,
+        activation='relu',
+        input_shape=(DATA_SHAPE[1:]),
+        kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+        bias_regularizer=regularizers.l2(1e-4),
+        activity_regularizer=regularizers.l2(1e-5),
+        kernel_initializer = initializer1)
+
+    batch_norm = BatchNormalization(axis=-1,
+            momentum=0.99,
+            epsilon=0.001,
+            center=True,
+            scale=True,
+            beta_initializer="zeros",
+            gamma_initializer="ones",
+            moving_mean_initializer="zeros",
+            moving_variance_initializer="ones",
+            beta_regularizer=None,
+            gamma_regularizer=None,
+            beta_constraint=None, gamma_constraint=None)
+
+    model = Sequential()
+    model.add(layer1)
+    model.add(batch_norm)
+    model.add(Dropout(DROPOUT))
+    model.add(Dense(target_len, activation='softmax', kernel_initializer=initializer2))
     model.summary()
 
     adam = Adam(lr=learning_rate)
@@ -190,6 +209,13 @@ drop_features_idx = [[]]
 #drop_features_idx.remove([])
 
 setup = itertools.product(drop_features_idx, num_epochs, [args.input_features], learning_rates, DENSE_DIM, DROPOUT, BATCH_SIZE)
+setup = []
+setup.append([[], 200, args.input_features, 0.0005, 512, 0.7, 32])
+setup.append([[], 200, "only_bert", 0.0005, 512, 0.7, 32])
+setup.append([[], 200, args.input_features, 0.0005, 128, 0.8, 32])
+setup.append([[], 200, "only_bert", 0.0005, 128, 0.8, 32])
+setup.append([[], 200, args.input_features, 0.0005, 128, 0.5, 32])
+setup.append([[], 200, "only_bert", 0.0005, 128, 0.5, 32])
 
 for s in setup:
     drop_feat_idx = s[0]
@@ -224,11 +250,12 @@ for s in setup:
             my_callbacks = [model_checkpoint, early_stop]
 
             if args.tune_flag:
+                print("Tunning!")
                 tuner = kt.BayesianOptimization(build_model,
                         objective="val_loss",
-                        max_trials=300,
-                        alpha=1e-3,
-                        beta=20,
+                        max_trials=100,
+                        alpha=1e-4,
+                        beta=50,
                         directory=cwd+"/Autotuner",
                         project_name="Lux",
                         overwrite=True)
@@ -241,9 +268,7 @@ for s in setup:
 
                 bestHPs = tuner.get_best_hyperparameters(num_trials=3)[:3]
                 input(len(bestHPs))
-                for best_idx,best in enumerate(bestHPs):
-                    input(len(bestHPs))
-                    print(bestHP.values)
+                for best_idx,bestHP in enumerate(bestHPs):
                     model = tuner.hypermodel.build(bestHP)
                     H = model.fit(x=train, y=train_target,
                                 validation_data=(dev, dev_target), batch_size=batch_size,

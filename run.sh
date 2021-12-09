@@ -9,7 +9,7 @@ while true; do
     #rnd=4419
     #rnd=16210
     #rnd=14564
-    rnd=24660
+    #rnd=18255
     echo $rnd
     sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
     python lux.py
