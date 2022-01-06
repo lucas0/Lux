@@ -10,6 +10,7 @@ while true; do
     #rnd=16210
     #rnd=14564
     #rnd=18255
+    #rnd=5630
     echo $rnd
     sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
     python lux.py
@@ -32,7 +33,7 @@ while true; do
 
     #cp feat_log.txt feat_log1.txt
     #cp log_test_folds.txt log_test_folds1.txt
-    #python lux.py --input_features 'only_bert'
+    python lux.py --input_features 'only_bert'
 
     #also doing with only claims
     #python lux.py True only_claims

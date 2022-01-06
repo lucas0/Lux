@@ -15,7 +15,7 @@ args = parser.parse_args()
 
 
 import random
-seed = 19745
+seed = 4678
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -68,17 +68,17 @@ model = None
 num_epochs = [200]
 LSTM_DIM = 256
 DENSE_DIM = [128, 256, 512]
-DENSE_DIM = [128]
+#DENSE_DIM = [128]
 DATA_SHAPE = None
 learning_rates = [0.0001, 0.0005, 0.001]
-learning_rates = [0.0005]
+#learning_rates = [0.0005]
 DROPOUT = [0.3, 0.5, 0.7]
-DROPOUT = [0.5]
-BATCH_SIZE = [32,64,128,256,512]
+#DROPOUT = [0.5]
+#BATCH_SIZE = [32,64,128,256,512]
 BATCH_SIZE = [32]
 
 #check which dataset will be used (development or deploy)
-d_dir = cwd+"/data/datasets/"
+d_dir = cwd+"/data/datasets"
 dev_data = d_dir+"/dataset_test02.csv"
 run_data = d_dir+"/dataset_bck.csv"
 cur_data = d_dir+"/dataset.csv"
@@ -135,11 +135,11 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
 
     layer1 = Dense(DENSE_DIM,
         activation='relu',
-        input_shape=(DATA_SHAPE[1:]),
-        kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
-        bias_regularizer=regularizers.l2(1e-4),
-        activity_regularizer=regularizers.l2(1e-5),
-        kernel_initializer = initializer1)
+        input_shape=(DATA_SHAPE[1:]))
+       # kernel_regularizer=regularizers.l1_l2(l1=1e-5, l2=1e-4),
+       # bias_regularizer=regularizers.l2(1e-4),
+       # activity_regularizer=regularizers.l2(1e-5),
+       # kernel_initializer = initializer1)
 
     batch_norm = BatchNormalization(axis=-1,
             momentum=0.99,
@@ -156,9 +156,10 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
 
     model = Sequential()
     model.add(layer1)
-    model.add(batch_norm)
+    #model.add(batch_norm)
     model.add(Dropout(DROPOUT))
-    model.add(Dense(target_len, activation='softmax', kernel_initializer=initializer2))
+    model.add(Dense(target_len, activation='softmax'))
+    #kernel_initializer=initializer2))
     model.summary()
 
     adam = Adam(lr=learning_rate)
@@ -209,13 +210,6 @@ drop_features_idx = [[]]
 #drop_features_idx.remove([])
 
 setup = itertools.product(drop_features_idx, num_epochs, [args.input_features], learning_rates, DENSE_DIM, DROPOUT, BATCH_SIZE)
-setup = []
-setup.append([[], 200, args.input_features, 0.0005, 512, 0.7, 32])
-setup.append([[], 200, "only_bert", 0.0005, 512, 0.7, 32])
-setup.append([[], 200, args.input_features, 0.0005, 128, 0.8, 32])
-setup.append([[], 200, "only_bert", 0.0005, 128, 0.8, 32])
-setup.append([[], 200, args.input_features, 0.0005, 128, 0.5, 32])
-setup.append([[], 200, "only_bert", 0.0005, 128, 0.5, 32])
 
 for s in setup:
     drop_feat_idx = s[0]
