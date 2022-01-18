@@ -6,6 +6,7 @@ cwd = os.path.abspath(scriptname+"/..")
 filename = cwd+"/results08-12-21.txt"
 filename = cwd+"/results10-12-21.txt"
 filename = cwd+"/results08-01-22.txt"
+filename = cwd+"/results18-01-22.txt"
 
 with open(filename, "r+", encoding="utf-8") as f:
     lines = f.readlines()
