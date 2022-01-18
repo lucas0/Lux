@@ -15,7 +15,8 @@ args = parser.parse_args()
 
 
 import random
-seed = 4678
+seed = 2679
+#seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)
 print("ROOT:", root)
@@ -55,7 +56,6 @@ from tensorflow.keras.callbacks import ModelCheckpoint, EarlyStopping
 from tensorflow.keras.initializers import RandomNormal, RandomUniform
 import keras_tuner as kt
 
-
 #from keras import backend as K
 #print(K.tensorflow_backend._get_available_gpus())
 #exit(1)
@@ -71,9 +71,9 @@ DENSE_DIM = [128, 256, 512]
 #DENSE_DIM = [128]
 DATA_SHAPE = None
 learning_rates = [0.0001, 0.0005, 0.001]
-#learning_rates = [0.0005]
+#learning_rates = [0.0001]
 DROPOUT = [0.3, 0.5, 0.7]
-#DROPOUT = [0.5]
+#DROPOUT = [0.3]
 #BATCH_SIZE = [32,64,128,256,512]
 BATCH_SIZE = [32]
 
