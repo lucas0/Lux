@@ -4,18 +4,22 @@ from distutils import util
 #read these from the call:
 parser = argparse.ArgumentParser(description='LUX main script.')
 parser.add_argument('--train', default=True, type=lambda x: bool(util.strtobool(x)), dest='train_flag', help='boolean that defines if model should be trained or loaded from lux_best_model.')
-parser.add_argument('--tune', action='store', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
-parser.add_argument('--num_folds', action='store', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
+parser.add_argument('--tune', default=False, type=lambda x: bool(util.strtobool(x)), dest='tune_flag', help='boolean that defines if model should be tuned with keras optimizer.')
+parser.add_argument('--num_folds', type=int, default=9, help='number of folds data is split into, 1 fold for val, 1 for test, rest for trainig.')
 parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat', 'just_reload'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat), if the individual features should be just reloaded (just_reload) to be used with --feat_list or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
 parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
 parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
+parser.add_argument('--learning_rate', '--lr', default=0.0005, type=float, help='defines the learning_rate variable for the model.')
+parser.add_argument('--dense_dim', default=256, type=int, help='the number of dimensions of the dense layer.')
+parser.add_argument('--dropout', default=0.5, type=float, help='what is the percentage of nodes that will have their weights updated per training example.')
+parser.add_argument('--batch_size', default=32, type=int, help='number of entries that each training step will consider at once.')
+parser.add_argument('--num_epochs', default=200, type=int, help='number of epochs to train each model.')
 args = parser.parse_args()
 
-
 import random
-seed = 2679
+seed = 9117
 #seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)
@@ -64,18 +68,7 @@ filename = sys.argv[0]
 cwd = os.path.abspath(filename+"/..")
 checkpoint_filepath = cwd+'/lux_best_models/'
 
-model = None
-num_epochs = [200]
-LSTM_DIM = 256
-DENSE_DIM = [128, 256, 512]
-#DENSE_DIM = [128]
 DATA_SHAPE = None
-learning_rates = [0.0001, 0.0005, 0.001]
-#learning_rates = [0.0001]
-DROPOUT = [0.3, 0.5, 0.7]
-#DROPOUT = [0.3]
-#BATCH_SIZE = [32,64,128,256,512]
-BATCH_SIZE = [32]
 
 #check which dataset will be used (development or deploy)
 d_dir = cwd+"/data/datasets"
@@ -167,10 +160,10 @@ def linear_model(target_len, learning_rate, DENSE_DIM, DROPOUT):
 
     return model
 
-def BILSTM_model(target_len, learning_rate, LSTM_DIM):
+def BILSTM_model(target_len, learning_rate, lstm_dim):
     #one suggestion is to determine the size the layers same as the input, instead of hard-coded
     model = Sequential()
-    model.add(Bidirectional(LSTM(LSTM_DIM, return_sequences=True, dropout=0.3, recurrent_dropout=0.3), input_shape=(DATA_SHAPE[1:])))
+    model.add(Bidirectional(LSTM(lstm_dim, return_sequences=True, dropout=0.3, recurrent_dropout=0.3), input_shape=(DATA_SHAPE[1:])))
     model.add(Flatten())
     model.add(Dense(target_len, activation='softmax'))
     model.summary()
@@ -203,49 +196,38 @@ def drop_features(ran):
 
 #drop_features_idx = drop_features(101)
 #drop_features_idx = [[17, 23, 81, 20, 69, 8, 11, 3, 89]]
-drop_features_idx = [[]]
+drop_feat_idx = []
 
 #for i in list(range(79)):
 #    drop_features_idx.remove([i])
 #drop_features_idx.remove([])
 
-setup = itertools.product(drop_features_idx, num_epochs, [args.input_features], learning_rates, DENSE_DIM, DROPOUT, BATCH_SIZE)
+res_acc, res_f1 = [],[]
+try:
+    for fold_test in range(args.num_folds):
+        train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=args.input_features, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims, feature_list=args.feat_list)
+        args.force_reload = None
+        DATA_SHAPE = (train.shape)
+        target_len = len(label_to_oh)
+        test_target = np.array([np.argmax(r) for r in test_target])
 
-for s in setup:
-    drop_feat_idx = s[0]
-    num_epochs = s[1]
-    input_feat = s[2]
-    learning_rate = s[3]
-    num_dims = s[4]
-    dropout = s[5]
-    batch_size = s[6]
-    res_acc, res_f1 = [],[]
-    model_name = "MODEL_e"+str(s[0])+"_"+str(s[1])+"_lr"+str(s[2])+"_d"+str(s[3])
-    try:
-        for fold_test in range(args.num_folds):
-            train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=input_feat, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims, feature_list=args.feat_list)
-            args.force_reload = None
-            DATA_SHAPE = (train.shape)
-            target_len = len(label_to_oh)
-            test_target = np.array([np.argmax(r) for r in test_target])
+        if args.input_features in ['bert', 'only_bert']:
+            model = linear_model(target_len, args.learning_rate, args.dense_dim, args.dropout)
+        else:
+            model = BILSTM_model(target_len, args.learning_rate, args.dense_dim)
 
-            if input_feat in ['bert', 'only_bert']:
-                model = linear_model(target_len, learning_rate, num_dims, dropout)
-            else:
-                model = BILSTM_model(target_len, learning_rate, num_dims)
+        target = [values.tolist().index(max(values.tolist())) for values in train_target]
+        t_count = {str(value): len(list(freq)) for value, freq in groupby(sorted(target))}
+        sum_t = sum(t_count.values())
+        inverse_weights = {0:int(t_count['1'])/sum_t, 1:int(t_count['0'])/sum_t}
 
-            target = [values.tolist().index(max(values.tolist())) for values in train_target]
-            t_count = {str(value): len(list(freq)) for value, freq in groupby(sorted(target))}
-            sum_t = sum(t_count.values())
-            inverse_weights = {0:int(t_count['1'])/sum_t, 1:int(t_count['0'])/sum_t}
+        model_checkpoint = ModelCheckpoint(filepath=checkpoint_filepath+"best_model.h5", save_weights_only=True, monitor='val_loss', mode='min', save_best_only=True)
+        early_stop = EarlyStopping(monitor="val_loss", min_delta=0, patience=10, verbose=0, mode="min", baseline=None, restore_best_weights=True)
+        my_callbacks = [model_checkpoint, early_stop]
 
-            model_checkpoint = ModelCheckpoint(filepath=checkpoint_filepath+"best_model.h5", save_weights_only=True, monitor='val_loss', mode='min', save_best_only=True)
-            early_stop = EarlyStopping(monitor="val_loss", min_delta=0, patience=10, verbose=0, mode="min", baseline=None, restore_best_weights=True)
-            my_callbacks = [model_checkpoint, early_stop]
-
-            if args.tune_flag:
-                print("Tunning!")
-                tuner = kt.BayesianOptimization(build_model,
+        if args.tune_flag:
+            print("Tunning!")
+            tuner = kt.BayesianOptimization(build_model,
                         objective="val_loss",
                         max_trials=100,
                         alpha=1e-4,
@@ -254,77 +236,78 @@ for s in setup:
                         project_name="Lux",
                         overwrite=True)
 
-                tuner.search(x=train, y=train_target,
+            tuner.search(x=train, y=train_target,
                              validation_data=(dev, dev_target),
-                             batch_size=batch_size,
+                             batch_size=args.batch_size,
                              callbacks=[early_stop],
                              epochs=200)
 
-                bestHPs = tuner.get_best_hyperparameters(num_trials=3)[:3]
-                input(len(bestHPs))
-                for best_idx,bestHP in enumerate(bestHPs):
-                    model = tuner.hypermodel.build(bestHP)
-                    H = model.fit(x=train, y=train_target,
-                                validation_data=(dev, dev_target), batch_size=batch_size,
+            bestHPs = tuner.get_best_hyperparameters(num_trials=3)[:3]
+            input(len(bestHPs))
+            for best_idx,bestHP in enumerate(bestHPs):
+                model = tuner.hypermodel.build(bestHP)
+                H = model.fit(x=train, y=train_target,
+                                validation_data=(dev, dev_target), batch_size=args.batch_size,
                                     epochs=100, callbacks=[early_stop], verbose=1, use_multiprocessing=False)
                     # evaluate the network
-                    print("[INFO] evaluating network...")
-                    predictions = model.predict_classes(test, batch_size=batch_size)
-                    f1_best_tune = f1_score(test_target, predictions, average="macro")
-                    print(f1_best_tune)
-                    with open(os.getcwd()+"/results.txt", "a") as f:
-                        string = ("Tune: "+str(seed)+" BestHP: "+str(bestHP.values)+" F1: "+str(f1_best_tune)+"\n")
-                        f.write(string)
-                    input(best_idx)
+                print("[INFO] evaluating network...")
+                predictions = model.predict_classes(test, batch_size=args.batch_size)
+                f1_best_tune = f1_score(test_target, predictions, average="macro")
+                print(f1_best_tune)
+                with open(os.getcwd()+"/results.txt", "a") as f:
+                    string = ("Tune: "+str(seed)+" BestHP: "+str(bestHP.values)+" F1: "+str(f1_best_tune)+"\n")
+                    f.write(string)
+                input(best_idx)
 
-            if args.train_flag:
-                with tensorflow.device('/cpu:0'):
-                    history = model.fit(train, train_target, epochs=num_epochs, batch_size=batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks, use_multiprocessing=False)
-                    model_history = pd.DataFrame(history.history)
-                    model_history.plot(figsize=(8,5))
-                    plt.savefig("plots/model"+str(fold_test))
-                    print(model_history['val_loss'].min())
+        if args.train_flag:
+            with tensorflow.device('/cpu:0'):
+                history = model.fit(train, train_target, epochs=args.num_epochs, batch_size=args.batch_size, validation_data=(dev,dev_target), shuffle=False, callbacks=my_callbacks, use_multiprocessing=False)
+                model_history = pd.DataFrame(history.history)
+                model_history.plot(figsize=(8,5))
+                plt.savefig("plots/model"+str(fold_test))
+                print(model_history['val_loss'].min())
 
-            else:
-                best_model = checkpoint_filepath+"best_model.h5"
-                model.load_weights(best_model)
-                #print(dir(model))
-                #print(model.get_config())
-                #input()
+        else:
+            best_model = checkpoint_filepath+"best_model.h5"
+            model.load_weights(best_model)
+            #print(dir(model))
+            #print(model.get_config())
+            #input()
 
-            #makes predicitons for the test
-            test_preds = model.predict_classes(test)
-            print(test_preds)
-            print("test:", test)
-            #with open(cwd+"/log_test_folds.txt","a+") as f:
-            #    f.write("fold"+str(fold_test)+"\n")
+        #makes predicitons for the test
+        test_preds = model.predict_classes(test)
+        print(test_preds)
+        print("test:", test)
+        #with open(cwd+"/log_test_folds.txt","a+") as f:
+        #    f.write("fold"+str(fold_test)+"\n")
 
-            #prints out the accuracy based on the right values and what the model predicted
-            fold_acc = accuracy_score(test_target, test_preds)
-            fold_f1 = f1_score(test_target, test_preds, average='macro')
-            print("Test Accuracy on fold "+str(fold_test)+": ",fold_acc)
-            print("Test F1 on fold "+str(fold_test)+": ",fold_f1)
-            res_acc.append(fold_acc)
-            res_f1.append(fold_f1)
-            del train, train_target, dev, dev_target, test, test_target, label_to_oh, model
-            gc.collect()
+        #prints out the accuracy based on the right values and what the model predicted
+        fold_acc = accuracy_score(test_target, test_preds)
+        fold_f1 = f1_score(test_target, test_preds, average='macro')
+        print("Test Accuracy on fold "+str(fold_test)+": ",fold_acc)
+        print("Test F1 on fold "+str(fold_test)+": ",fold_f1)
+        res_acc.append(fold_acc)
+        res_f1.append(fold_f1)
+        del train, train_target, dev, dev_target, test, test_target, label_to_oh, model
+        gc.collect()
 
-        avg_acc = sum(res_acc)/args.num_folds
-        avg_f1 = sum(res_f1)/args.num_folds
-        acc_var = np.var(res_acc)
-        print("\n Averaged Test Accuracy over folds: ",avg_acc)
-        print("\n Averaged Test Acc. Variance over folds: ",acc_var)
-        print("\n Averaged Test F1 over folds: ",avg_f1)
-        #salvar no log
-        with open(os.getcwd()+"/results.txt", "a") as f:
-            string = ("TrainShape:"+str(DATA_SHAPE)+" #EPOCH: "+str(s)+" AVG: "+str(avg_acc)+" VAR: "+str(acc_var)+" F1: "+str(avg_f1)+" SEED: "+str(seed)+"\n")
-            f.write(string)
+    avg_acc = sum(res_acc)/args.num_folds
+    avg_f1 = sum(res_f1)/args.num_folds
+    acc_var = np.var(res_acc)
+    print("\n Averaged Test Accuracy over folds: ",avg_acc)
+    print("\n Averaged Test Acc. Variance over folds: ",acc_var)
+    print("\n Averaged Test F1 over folds: ",avg_f1)
+    #salvar no log
+    with open(os.getcwd()+"/results.txt", "a") as f:
+        s = str(drop_feat_idx)+", "+str(args.num_epochs)+", "+str(args.input_features)+", "+str(args.learning_rate)+", "+str(args.dense_dim)+", "+str(args.dropout)+", "+str(args.batch_size)
+        string = ("TrainShape:"+str(DATA_SHAPE)+" #EPOCH: ("+str(s)+") AVG: "+str(avg_acc)+" VAR: "+str(acc_var)+" F1: "+str(avg_f1)+" SEED: "+str(seed)+"\n")
+        f.write(string)
 
-    except Exception as e:
-        print(e)
-        print(traceback.format_exc())
-        sys.exit(1)
-        with open(os.getcwd()+"/results.txt", "a") as f:
-            string = (str(s)+": OOM."+str(type(e))+"\n")
-            mem = "MEMORY: "+str(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)+"\n"
-            f.write(string+mem)
+except Exception as e:
+    print(e)
+    print(traceback.format_exc())
+    sys.exit(1)
+    with open(os.getcwd()+"/results.txt", "a") as f:
+        string = (str(s)+": OOM."+str(type(e))+"\n")
+        mem = "MEMORY: "+str(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)+"\n"
+        f.write(string+mem)
