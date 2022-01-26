@@ -4,31 +4,55 @@ DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 docker stop $(docker ps -a -q) > /dev/null
 export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
-rnd=99999
+DATA_DIR=~/Lux/data/datasets
+
+rnd=
+lr=
+dp=
+dim=
 
 echo $rnd
 sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
 
-BERT V4
-LUX V4
+#SET DATASET TO V4
+cp $DATA_DIR/veritas4.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
 
-LUX V4+EM+T2
-BERT V4+EM+T2
+#SET DATASET TO V4+EM+T2
+cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
 
-BERT V4+EM+T2#
-LUX V4+EM+T2#
+#DATASET TO V4+EM+T2# (only a different call in lux.py)
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --only_claims True
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert' --only_claims True
 
-LUX EM
-LUX V4+T1
-LUX V4+EM+T1
-LUX V4+EM
+#SET DATASET TO EM
+cp $DATA_DIR/emergent_gold.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
 
-LUX SNOPES
-LUX FEVER
+#SET DATASET TO V4+T1
+cp $DATA_DIR/bck_dataset_v4+t1.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+
+#SET DATASET TO V4+EM+T1.csv
+cp $DATA_DIR/bck_dataset_v4+em+t1.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+
+#SET DATASET TO V4+EM
+cp $DATA_DIR/bck_dataset_v4+em.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+
+#SET DATASET TO SNOPES
+cp $DATA_DIR/snopes2019.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim
+
+#SET DATASET TO FEVER
+cp $DATA_DIR/fever.csv $DATA_DIR/dataset.csv
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --only_claims True
 
 #ABLATION (Another script)
 
 #ABLATION INDIVIDUAL!!!
 
-python lux.py --lr $lr --dropout $dp --dense_dim $dim
-python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'

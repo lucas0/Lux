@@ -197,6 +197,8 @@ def drop_features(ran):
 #drop_features_idx = drop_features(101)
 #drop_features_idx = [[17, 23, 81, 20, 69, 8, 11, 3, 89]]
 drop_feat_idx = []
+print(drop_feat_idx)
+lkj
 
 #for i in list(range(79)):
 #    drop_features_idx.remove([i])

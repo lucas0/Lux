@@ -37,7 +37,10 @@ d6 = pd.read_csv(cwd+"/trusted_body.csv", sep="\t")
 d6.o_body = d6.o_body.astype('str')
 d6 = d6[d6['o_body'].map(len) > MIN_BODY_LEN]
 d6.verdict = "true"
-d6 = d6.sample(n=142)
+#roughly the size of trusted to make T2 (the balancing for V4+EM)
+#d6 = d6.sample(n=142)
+#roughly the size of trusted to make T1 (the balancing for V4)
+d6 = d6.sample(n=376)
 print("size of trusted1.csv:", len(d6))
 
 #d7 = pd.read_csv(cwd+"/fever.csv", sep="\t")
@@ -53,16 +56,14 @@ print("size of trusted1.csv:", len(d6))
 #d8['o_url'] = range(len(d8))
 #print("size of thoracle.csv:", len(d8))
 
-d9 = pd.read_csv(cwd+"/snopes2019.csv", sep="\t")
-d9.verdict = d9.verdict.astype('str')
-d9['o_url'] = range(len(d9))
-print("size of snopes2019.csv:", len(d9))
-print("columns of snopes2019.csv:", d9.columns)
+#d9 = pd.read_csv(cwd+"/snopes2019.csv", sep="\t")
+#d9.verdict = d9.verdict.astype('str')
+#d9['o_url'] = range(len(d9))
+#print("size of snopes2019.csv:", len(d9))
+#print("columns of snopes2019.csv:", d9.columns)
 
-d4 = d4.sample(355)
-#dataframes = [d1,d2,d3,d4,d5,d6]
-#dataframes = [d1,d2,d3,d4]
-dataframes = [d1,d2,d3,d4,d5,d6]
+#list that defines which datasets will be concatenated in order to generate dataset.csv
+dataframes = [d1,d2,d3,d4,d5]
 #dataframes = [d9]
 
 cols = set(d1.columns)
@@ -106,12 +107,13 @@ c.drop_duplicates(subset=['o_url'], inplace=True, keep='last')
 print("size of \"dataset\" (after dropping dupplicated o_url):",len(c))
 
 #optional line to manage the size of the dataset
-c = c.sample(frac=0.2)
+c = c.sample(frac=1)
 print("final size of \"dataset\":",len(c))
 
 print(c['verdict'].value_counts())
 dif = (c['verdict'].value_counts()[0] - c['verdict'].value_counts()[1])
 print("Difference False-True:", dif)
 
-#sys.exit(1)
+c.to_csv(cwd+"/bck_dataset_v4+em.csv", index=False, sep=',')
+sys.exit(1)
 c.to_csv(cwd+"/dataset.csv", index=False, sep=',')
