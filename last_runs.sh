@@ -53,6 +53,11 @@ cp $DATA_DIR/fever.csv $DATA_DIR/dataset.csv
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --only_claims True
 
 #ABLATION (Another script)
+declare -a FEAT_LIST=("inf" "div" "qua" "aff" "sbj" "spe" "pau" "unc" "pas")
+for rmv_feat in "${FEAT_LIST[@]}"; do
+    echo "Results without $rmv_feat: " >> $DIR/results.txt
+    python lux.py --regenerate_features "just_reload" --feat_list ${FEAT_LIST[@]/$rmv_feat} --lr $lr --dropout $dp --dense_dim $dim
+done
 
 #ABLATION INDIVIDUAL!!!
 
