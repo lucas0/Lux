@@ -16,10 +16,11 @@ parser.add_argument('--dense_dim', default=256, type=int, help='the number of di
 parser.add_argument('--dropout', default=0.5, type=float, help='what is the percentage of nodes that will have their weights updated per training example.')
 parser.add_argument('--batch_size', default=32, type=int, help='number of entries that each training step will consider at once.')
 parser.add_argument('--num_epochs', default=200, type=int, help='number of epochs to train each model.')
+parser.add_argument('--drop_feat_idx', nargs="+", default=[], type=int, help='list of idxs to be dropped in the data loading step.')
 args = parser.parse_args()
 
 import random
-seed = 9117
+seed = 27237
 #seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)
@@ -178,34 +179,10 @@ def oh_to_label(l, d):
         if np.array_equal(l, d[key]):
             return key
 
-
-def drop_features(ran):
-    initial_feat = list(range(ran))
-    removed_feat = []
-    remaining_feat = [[x] for x in initial_feat if x not in removed_feat]
-    for x in remaining_feat:
-        x.extend(removed_feat)
-        x.sort()
-        x = set(x)
-        if len(x) is not len(removed_feat)+1:
-            del(x)
-
-    remaining_feat.append(removed_feat)
-
-    return sorted(remaining_feat)
-
-#drop_features_idx = drop_features(101)
-#drop_features_idx = [[17, 23, 81, 20, 69, 8, 11, 3, 89]]
-drop_feat_idx = []
-
-#for i in list(range(79)):
-#    drop_features_idx.remove([i])
-#drop_features_idx.remove([])
-
 res_acc, res_f1 = [],[]
 try:
     for fold_test in range(args.num_folds):
-        train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=args.input_features, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=drop_feat_idx, only_claims=args.only_claims, feature_list=args.feat_list)
+        train, train_target, dev, dev_target, test, test_target, label_to_oh = load_data(emb_type=args.input_features, collapse_classes=False, fold_test=fold_test, num_folds=args.num_folds, random_state=root, force_reload=args.force_reload, drop_feat_idx=args.drop_feat_idx, only_claims=args.only_claims, feature_list=args.feat_list)
         args.force_reload = None
         DATA_SHAPE = (train.shape)
         target_len = len(label_to_oh)
@@ -299,7 +276,7 @@ try:
     print("\n Averaged Test F1 over folds: ",avg_f1)
     #salvar no log
     with open(os.getcwd()+"/results.txt", "a") as f:
-        s = str(drop_feat_idx)+", "+str(args.num_epochs)+", "+str(args.input_features)+", "+str(args.learning_rate)+", "+str(args.dense_dim)+", "+str(args.dropout)+", "+str(args.batch_size)
+        s = str(args.drop_feat_idx)+", "+str(args.num_epochs)+", "+str(args.input_features)+", "+str(args.learning_rate)+", "+str(args.dense_dim)+", "+str(args.dropout)+", "+str(args.batch_size)
         string = ("TrainShape:"+str(DATA_SHAPE)+" #EPOCH: ("+str(s)+") AVG: "+str(avg_acc)+" VAR: "+str(acc_var)+" F1: "+str(avg_f1)+" SEED: "+str(seed)+"\n")
         f.write(string)
 
