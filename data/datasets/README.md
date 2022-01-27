@@ -11,6 +11,8 @@ veritas v4.0 contains the good results of the MAIN manual annotation, 722 exampl
 
 concat+normalize.py, as the name indicates, concatenates all those files and normalize them, saving to dataset.csv
 
+IMPORTANT: in order for the dataset to be valid, it HAS to contain AT LEAST the colums 'verdict' and either 'o_body' (in the case of whole text) or 'claim' (in the case of only claims being taken into account.
+
 on the data_loader.py, the dataset.csv file will be read, shuffled with a seed code and saved to data/data.csv, a hash will be generated from that dataframe to allow for checking and skipping of processing steps.
 
 please note that bck_dataset_ablation.csv can be copied to dataset.csv to rerun ablation analysis while keeping the consistency it requires (should be always on the same data, for empirical results)
