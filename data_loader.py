@@ -36,7 +36,7 @@ spec_dir = cwd+"/res/specificity/Domain-Agnostic-Sentence-Specificity-Prediction
 #max num of words in a sentence
 #only used for w2v
 MAX_SENT_LEN = 2000
-
+MIN_BODY_LEN = 50
 EMB_DIM_SIZE = 300
 #EMB_DIM_SIZE = 100
 
@@ -157,14 +157,14 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     data.o_body = data.o_body.astype('str')
     data.verdict = data.verdict.astype('str')
     data['verdict'] = data['verdict'].str.lower()
-    #data = data[data['o_body'].map(len) > MIN_BODY_LEN]
-    #print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(data))
     data = data.reset_index()
 
     if(collapse_classes):
         print("labels before collapse classes:", data.verdict.unique())
         data.loc[data['verdict'] == "mfalse", 'verdict'] = 'false'
+        data.loc[data['verdict'] == "false.", 'verdict'] = 'false'
         data.loc[data['verdict'] == "mtrue", 'verdict'] = 'true'
+        data.loc[data['verdict'] == "true.", 'verdict'] = 'true'
 
     labels = ['true', 'false']
     print(data['verdict'].value_counts())
@@ -199,6 +199,8 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
 
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
         #df = df[lens < MAX_SENT_LEN]
+        df = df[df['body'].map(len) > MIN_BODY_LEN]
+        print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(df))
         df.reset_index(drop = True, inplace = True)
         df.to_csv(data_dir+'/data.csv', sep="\t", index=False)
         num_entries = len(df)

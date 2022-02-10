@@ -9,7 +9,7 @@ parser.add_argument('--num_folds', type=int, default=9, help='number of folds da
 parser.add_argument('--regenerate_features', default=None, choices=[None, 'all', 'emb', 'feat', 'just_reload'], dest='force_reload', help='defines if the data features (including document embeddings) should be re-generated (all), only the embeddings should be re-generated (emb), only the features should be re-generated (feat), if the individual features should be just reloaded (just_reload) to be used with --feat_list or None (default)')
 parser.add_argument('--only_claims', default=False, type=lambda x: bool(util.strtobool(x)), help='boolean that defines if model should take only claims into account instead of whole documents.')
 parser.add_argument('--input_features', default='bert', choices=['bert', 'only_bert'],  help='selection of features to be used in the model.')
-parser.add_argument('--env', default='deploy', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
+parser.add_argument('--env', default='last', choices=['dev', 'deploy'],  help='selection of development(testing) and deployment(running) environments. Basically changes the dataset to be used.')
 parser.add_argument('--feat_list', nargs='+', default=["inf","div","qua","aff","sbj","spe","pau","unc","pas"], help='argument that defines which features will be used by the model. Default is All.\nSyntax:--feat_list inf div qua foo bar')
 parser.add_argument('--learning_rate', '--lr', default=0.0005, type=float, help='defines the learning_rate variable for the model.')
 parser.add_argument('--dense_dim', default=256, type=int, help='the number of dimensions of the dense layer.')
@@ -20,7 +20,7 @@ parser.add_argument('--drop_feat_idx', nargs="+", default=[], type=int, help='li
 args = parser.parse_args()
 
 import random
-seed = 2929
+seed = 27966
 #seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)
@@ -76,10 +76,11 @@ d_dir = cwd+"/data/datasets"
 dev_data = d_dir+"/dataset_test02.csv"
 run_data = d_dir+"/dataset_bck.csv"
 cur_data = d_dir+"/dataset.csv"
-if args.env == "dev" and not filecmp.cmp(dev_data, cur_data, shallow=True):
-    shutil.copy2(dev_data, cur_data)
-if args.env == "deploy" and not filecmp.cmp(run_data, cur_data, shallow=True):
-    shutil.copy2(run_data, cur_data)
+if args.env != "last":
+    if args.env == "dev" and not filecmp.cmp(dev_data, cur_data, shallow=True):
+        shutil.copy2(dev_data, cur_data)
+    if args.env == "deploy" and not filecmp.cmp(run_data, cur_data, shallow=True):
+        shutil.copy2(run_data, cur_data)
 
 def build_model(hp):
     hp_units = hp.Int('units', min_value=128, max_value=512, step=32)

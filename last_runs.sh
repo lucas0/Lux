@@ -6,10 +6,10 @@ export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 DATA_DIR=~/Lux/data/datasets
 
-rnd=
-lr=
-dp=
-dim=
+rnd=27966
+lr=0.0001
+dp=0.5
+dim=256
 
 echo $rnd
 sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
@@ -22,6 +22,7 @@ python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_ber
 
 #SET DATASET TO V4+EM+T2
 cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
+BCK/load_bck.sh
 echo "V4+EM+T2: " >> $DIR/results.txt
 python lux.py --lr $lr --dropout $dp --dense_dim $dim
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
@@ -62,6 +63,7 @@ echo "FEVER: " >> $DIR/results.txt
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --only_claims True
 
 #ABLATION (Another script)
+cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
 echo "GROUP ABLATION: " >> $DIR/results.txt
 declare -a FEAT_LIST=("inf" "div" "qua" "aff" "sbj" "spe" "pau" "unc" "pas")
 for rmv_feat in "${FEAT_LIST[@]}"; do
