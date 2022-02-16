@@ -14,6 +14,8 @@ data/folds/*
 data/masked_embeddings
 res/complexity/vendor/dbpedia/yago_taxonomy.ttl
 res/complexity/vendor/stanford/L2SCA-2016-06-30.tgz
+res/readability/input_texts/*
+res/complexity/input_texts/*
 envLux/
 data/datasets/*
 data/data_wiki.csv
@@ -28,6 +30,5 @@ data/bck_best/folds/2/glove
 data/bck_best/folds/6/glove
 data/bck_best/folds/1/glove
 data/bck_best/folds/7/glove
-
 NVIDIA-Linux-x86_64-470.82.00.run
-NVIDIA-Linux-x86_64-470.82.00.run
+feat_log.txt
