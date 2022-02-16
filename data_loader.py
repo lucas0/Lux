@@ -152,29 +152,38 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     if force_reload is not None: reset_hash(force_reload)
 
     print("size of initial \"dataset\":",len(data))
-    data = data.drop_duplicates(subset='o_url', keep='first')
-    print("after dropping duplicates:",len(data))
-    data.o_body = data.o_body.astype('str')
-    data.verdict = data.verdict.astype('str')
-    data['verdict'] = data['verdict'].str.lower()
-    data = data.reset_index()
+    #determines if data will be whole body or only claims
+    if only_claims:
+        df = data[['claim','verdict']].copy()
+        df = df.rename(columns={"claim": "body"})
+    else:
+        df = data[['o_body','verdict']].copy()
+        df = df.rename(columns={"o_body": "body"})
+    if 'o_url' in df.columns:
+        df = df.drop_duplicates(subset='o_url', keep='first')
+    print("after dropping duplicates:",len(df))
+    df.body = df.body.astype('str')
+    df.verdict = df.verdict.astype('str')
+    df['verdict'] = df['verdict'].str.lower()
+    df.body.apply(clean_text)
+    df = df.reset_index()
 
     if(collapse_classes):
-        print("labels before collapse classes:", data.verdict.unique())
-        data.loc[data['verdict'] == "mfalse", 'verdict'] = 'false'
-        data.loc[data['verdict'] == "false.", 'verdict'] = 'false'
-        data.loc[data['verdict'] == "mtrue", 'verdict'] = 'true'
-        data.loc[data['verdict'] == "true.", 'verdict'] = 'true'
+        print("labels before collapse classes:", df.verdict.unique())
+        df.loc[df['verdict'] == "mfalse", 'verdict'] = 'false'
+        df.loc[df['verdict'] == "false.", 'verdict'] = 'false'
+        df.loc[df['verdict'] == "mtrue", 'verdict'] = 'true'
+        df.loc[df['verdict'] == "true.", 'verdict'] = 'true'
 
     labels = ['true', 'false']
-    print(data['verdict'].value_counts())
-    data = data.loc[data.verdict.isin(labels)]
-    print("considered labels:", data.verdict.unique())
-    print("after dropping invalid labels:",len(data))
+    print(df['verdict'].value_counts())
+    df = df.loc[df.verdict.isin(labels)]
+    print("considered labels:", df.verdict.unique())
+    print("after dropping invalid labels:",len(df))
 
     #creating hash
-    json_data = data.to_json().encode()
-    data = data.sample(frac=1, random_state=random_state)
+    json_data = df.to_json().encode()
+    df = df.sample(frac=1, random_state=random_state)
     df_hash = hashlib.sha256(json_data).hexdigest()
 
     labels_idx = [labels.index(label) for label in labels]
@@ -189,14 +198,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     fold_dev = 0 if fold_test == num_folds-1 else fold_test+1
 
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
-        #determines if data will be whole body or only claims
-        df = data[['o_body','verdict']].copy()
-        df = df.rename(columns={"o_body": "body"})
-        if only_claims:
-            df = data[['claim','verdict']].copy()
-            df = df.rename(columns={"claim": "body"})
-        df.body.apply(clean_text)
-
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
         #df = df[lens < MAX_SENT_LEN]
         df = df[df['body'].map(len) > MIN_BODY_LEN]
@@ -392,7 +393,6 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
         savehash("folds", hashcode=str(num_folds))
 
         return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold_test=fold_test, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx, only_claims=only_claims)
-
 
     else:
         print("Reading already processed data")
