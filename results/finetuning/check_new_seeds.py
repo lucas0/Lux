@@ -12,6 +12,7 @@ filename = cwd+"/results27-01-22.txt"
 filename = cwd+"/results02-02-22.txt"
 filename = cwd+"/results04-02-22.txt"
 filename = cwd+"/results08-02-22.txt"
+filename = cwd+"/r3.txt"
 
 with open(filename, "r+", encoding="utf-8") as f:
     lines = f.readlines()
