@@ -153,9 +153,12 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
 
     print("size of initial \"dataset\":",len(data))
     #determines if data will be whole body or only claims
+    #df = df[lens < MAX_SENT_LEN]
     if only_claims:
         df = data[['claim','verdict']].copy()
         df = df.rename(columns={"claim": "body"})
+        df = df[df['body'].map(len) > MIN_BODY_LEN]
+        print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(df))
     else:
         df = data[['o_body','verdict']].copy()
         df = df.rename(columns={"o_body": "body"})
@@ -199,9 +202,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
 
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
-        #df = df[lens < MAX_SENT_LEN]
-        df = df[df['body'].map(len) > MIN_BODY_LEN]
-        print("after dropping origins with less than "+str(MIN_BODY_LEN)+" chars:",len(df))
+        #IS THIS LINE NEEDED?
         df.reset_index(drop = True, inplace = True)
         df.to_csv(data_dir+'/data.csv', sep="\t", index=False)
         num_entries = len(df)

@@ -20,7 +20,7 @@ parser.add_argument('--drop_feat_idx', nargs="+", default=[], type=int, help='li
 args = parser.parse_args()
 
 import random
-seed = 4966
+seed = 19582
 #seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)

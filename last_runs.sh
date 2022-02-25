@@ -6,8 +6,8 @@ export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 DATA_DIR=~/Lux/data/datasets
 
-rnd=27966
-lr=0.0001
+rnd=19582
+lr=0.0005
 dp=0.5
 dim=256
 
@@ -15,14 +15,14 @@ echo $rnd
 sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
 
 #SET DATASET TO V4+EM+T2
-cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
 bash BCK/load_bck.sh
+cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
 echo "V4+EM+T2: " >> $DIR/results.txt
 python lux.py --lr $lr --dropout $dp --dense_dim $dim
+python lux.py --lr $lr --dropout $dp --dense_dim $dim --regenerate_features "just_reload"
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
 
 #ABLATION (Another script)
-bash BCK/load_bck.sh
 echo "GROUP ABLATION: " >> $DIR/results.txt
 declare -a FEAT_LIST=("inf" "div" "qua" "aff" "sbj" "spe" "pau" "unc" "pas")
 for rmv_feat in "${FEAT_LIST[@]}"; do
@@ -36,6 +36,8 @@ NUM_FEATS=100
 for ((i=0;i<=NUM_FEATS;i++)); do
         python lux.py --regenerate_features "just_reload" --lr $lr --dropout $dp --dense_dim $dim --drop_feat_idx $i
 done
+
+exit 1
 
 #DATASET TO V4+EM+T2# (only a different call in lux.py)
 cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
