@@ -15,11 +15,9 @@ echo $rnd
 sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
 
 #SET DATASET TO V4+EM+T2
-bash BCK/load_bck.sh
 cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
 echo "V4+EM+T2: " >> $DIR/results.txt
 python lux.py --lr $lr --dropout $dp --dense_dim $dim
-python lux.py --lr $lr --dropout $dp --dense_dim $dim --regenerate_features "just_reload"
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
 
 #ABLATION (Another script)
@@ -41,7 +39,6 @@ exit 1
 
 #DATASET TO V4+EM+T2# (only a different call in lux.py)
 cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
-BCK/load_bck.sh
 echo "V4+EM+T2#: " >> $DIR/results.txt
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --only_claims True --regenerate_features 'all'
 python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert' --only_claims True
