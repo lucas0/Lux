@@ -164,7 +164,7 @@ typing-extensions==3.7.4.3
 ujson==1.35
 uncertainty==0.1.1
 update==0.0.1
-urllib3==1.23
+urllib3==1.26.5
 vaderSentiment==3.2.1
 wcwidth==0.2.5
 webencodings==0.5.1
