@@ -210,6 +210,7 @@ def save_feat(data, name):
 
 def load_feat(name):
     filename = feat_dir+name
+    input("loading "+name+" feats from "+filename+"press any key to continue")
     with open(filename, "rb") as p:
         p = pickle.load(p)
         return p

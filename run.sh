@@ -11,7 +11,7 @@ while true; do
     for lr in 0.0001 0.0005 0.001; do
         for dp in 0.3 0.5 0.7; do
             for dim in 128 256 512; do
-                python lux.py --lr $lr --dropout $dp --dense_dim $dim
+                python lux.py --lr $lr --dropout $dp --dense_dim $dim --regenerate_features 'emb' --env 'dev'
             done
         done
     done
@@ -37,7 +37,7 @@ while true; do
     for lr in 0.0001 0.0005 0.001; do
         for dp in 0.3 0.5 0.7; do
             for dim in 128 256 512; do
-                python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
+                python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert' --env 'dev'
             done
         done
     done

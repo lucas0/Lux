@@ -20,7 +20,7 @@ parser.add_argument('--drop_feat_idx', nargs="+", default=[], type=int, help='li
 args = parser.parse_args()
 
 import random
-seed = 23316
+seed = 204
 #seed = 17382
 random.seed(seed)
 root = random.randint(0,10090000)
@@ -74,6 +74,7 @@ DATA_SHAPE = None
 #check which dataset will be used (development or deploy)
 d_dir = cwd+"/data/datasets"
 dev_data = d_dir+"/dataset_test02.csv"
+dev_data = d_dir+"/dataset_test03.csv"
 run_data = d_dir+"/dataset_bck.csv"
 cur_data = d_dir+"/dataset.csv"
 if args.env != "last":

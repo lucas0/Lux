@@ -93,6 +93,7 @@ def read_p(filename):
     with open(filename, "rb") as f:
         return pickle.load(f)
 
+#true if data is the same, False if not
 def check_hash(df_hash, num_folds, drop_feat_idx=None, stage="data"):
     print(stage.upper(), " CHECK> Checking Hash Path on: ",hash_path)
     if os.path.exists(hash_path):
@@ -183,6 +184,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     df = df.loc[df.verdict.isin(labels)]
     print("considered labels:", df.verdict.unique())
     print("after dropping invalid labels:",len(df))
+    df.to_csv(data_dir+'/data.csv', sep="\t", index=False)
 
     #creating hash
     json_data = df.to_json().encode()
@@ -203,8 +205,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
     if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx):
         lens = np.asarray([len(e.split(" ")) for e in df['body'].values])
         #IS THIS LINE NEEDED?
-        df.reset_index(drop = True, inplace = True)
-        df.to_csv(data_dir+'/data.csv', sep="\t", index=False)
+        #df.reset_index(drop = True, inplace = True)
         num_entries = len(df)
 
         #plots the data distribution by number of words
@@ -241,10 +242,11 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
         if not check_hash(df_hash, num_folds, drop_feat_idx=drop_feat_idx, stage="features") or (force_reload == 'just_reload'):
             flag_concat = True
             try:
-                if force_reload != "just_reload":
-                    features = feat.generateFeats(feature_list)
-                else:
-                    features = feat.generateFeats(feature_list, just_reload=True)
+                bool_reload = True if force_reload == "just_reload" else False
+                features = feat.generateFeats(feature_list, just_reload = bool_reload)
+                print(features)
+                input()
+
             except Exception as e:
                 print(traceback.format_exc())
                 input("Error occured while GENERATING FEATURES. Press any key to exit.")
@@ -395,6 +397,7 @@ def load_data(emb_type='w2v', collapse_classes=False, fold_test=None, num_folds=
 
         return load_data(emb_type=emb_type, collapse_classes=collapse_classes, fold_test=fold_test, num_folds=num_folds, random_state=random_state, drop_feat_idx=drop_feat_idx, only_claims=only_claims)
 
+    #check_hash is true
     else:
         print("Reading already processed data")
         #returns the selected emb type (bert/w2v)

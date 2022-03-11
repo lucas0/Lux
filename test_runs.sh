@@ -6,19 +6,19 @@ export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 DATA_DIR=~/Lux/data/datasets
 
-rnd=19582
-lr=0.0005
-dp=0.5
-dim=256
+rnd=204033
+lr=0.0001
+dp=0.3
+dim=128
 
-#echo $rnd
-#sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
+echo $rnd
+sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
 
 #SET DATASET TO V4+EM+T2
-cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
-echo "V4+EM+T2: " >> $DIR/results.txt
-python lux.py --lr $lr --dropout $dp --dense_dim $dim
-python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
+#cp $DATA_DIR/bck_dataset_ablation.csv $DATA_DIR/dataset.csv
+#echo "V4+EM+T2: " >> $DIR/results.txt
+#python lux.py --lr $lr --dropout $dp --dense_dim $dim
+#python lux.py --lr $lr --dropout $dp --dense_dim $dim --input_features 'only_bert'
 
 #ABLATION (Another script)
 echo "GROUP ABLATION: " >> $DIR/results.txt

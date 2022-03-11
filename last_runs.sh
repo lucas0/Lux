@@ -6,10 +6,10 @@ export BERT_BASE_DIR=~/Lux/res/bert/uncased_L-12_H-768_A-12
 
 DATA_DIR=~/Lux/data/datasets
 
-rnd=19582
-lr=0.0005
-dp=0.5
-dim=256
+rnd=25224
+lr=0.0001
+dp=0.3
+dim=128
 
 echo $rnd
 sed -r -i "s/^(seed\s=\s)(.*)$/\1$rnd/" $DIR/lux.py
