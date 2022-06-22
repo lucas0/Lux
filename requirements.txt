@@ -89,7 +89,7 @@ nbformat==5.1.2
 networkx==2.1
 newspaper3k==0.2.8
 nltk==3.5
-numpy==1.19.5
+numpy==1.22.0
 nvidia-ml-py3==7.352.0
 oauthlib==3.1.0
 opencensus==0.7.12
