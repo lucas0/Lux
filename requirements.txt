@@ -161,7 +161,7 @@ tornado==6.1
 tqdm==4.56.1
 traitlets==4.3.3
 typing-extensions==3.7.4.3
-ujson==1.35
+ujson==5.4.0
 uncertainty==0.1.1
 update==0.0.1
 urllib3==1.23
