@@ -78,7 +78,7 @@ kiwisolver==1.0.1
 kt-legacy==1.0.4
 lexical-diversity==0.1.0
 locket==0.2.1
-lxml==4.4.1
+lxml==4.9.1
 Markdown==3.3.4
 matplotlib==2.2.2
 modin==0.8.3
