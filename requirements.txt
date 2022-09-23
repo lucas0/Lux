@@ -109,7 +109,7 @@ pox==0.3.0
 ppft==1.6.6.4
 prometheus-client==0.9.0
 prompt-toolkit==3.0.14
-protobuf==3.14.0
+protobuf==3.18.3
 psutil==5.8.0
 ptyprocess==0.7.0
 py-spy==0.3.4
