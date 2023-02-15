@@ -169,7 +169,7 @@ vaderSentiment==3.2.1
 wcwidth==0.2.5
 webencodings==0.5.1
 websocket-client==0.57.0
-Werkzeug==0.15.4
+Werkzeug==2.2.3
 widgetsnbextension==4.0.0a0
 wrapt==1.12.1
 yarl==1.6.3
