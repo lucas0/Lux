@@ -28,7 +28,7 @@ colorful==0.5.4
 contextvars==2.4
 cssselect==1.1.0
 cycler==0.10.0
-dask==2021.2.0
+dask==2021.10.0
 dataclasses==0.8
 decorator==4.3.0
 dill==0.3.4
